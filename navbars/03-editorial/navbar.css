@@ -209,3 +209,15 @@
     display: flex;
   }
 }
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .nb-editorial-nav,
+  .nb-editorial-actions .nb-editorial-btn-subscribe {
+    display: none;
+  }
+
+  .nb-editorial-hamburger {
+    display: flex;
+  }
+}

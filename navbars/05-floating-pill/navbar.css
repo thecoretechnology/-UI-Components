@@ -223,3 +223,15 @@
     display: flex;
   }
 }
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .nb-floating-nav,
+  .nb-floating-actions .nb-floating-btn-join {
+    display: none;
+  }
+
+  .nb-floating-hamburger {
+    display: flex;
+  }
+}

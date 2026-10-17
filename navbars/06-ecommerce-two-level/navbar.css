@@ -422,3 +422,16 @@
     display: flex;
   }
 }
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .nb-shop-search-bar,
+  .nb-shop-util-text,
+  .nb-shop-bottom-wrapper {
+    display: none;
+  }
+
+  .nb-shop-hamburger {
+    display: flex;
+  }
+}

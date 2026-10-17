@@ -324,3 +324,15 @@
     display: flex;
   }
 }
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .nb-minimal-nav,
+  .nb-minimal-btn-demo {
+    display: none;
+  }
+
+  .nb-minimal-hamburger {
+    display: flex;
+  }
+}

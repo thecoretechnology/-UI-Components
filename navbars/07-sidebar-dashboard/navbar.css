@@ -258,3 +258,28 @@
     transform: translateX(0);
   }
 }
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .nb-sidebar-layout {
+    flex-direction: column;
+  }
+
+  .nb-sidebar-mobile-bar {
+    display: flex;
+  }
+
+  .nb-sidebar-panel {
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+  }
+
+  .nb-sidebar-panel.is-open {
+    transform: translateX(0);
+  }
+}

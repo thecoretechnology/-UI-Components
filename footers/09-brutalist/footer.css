@@ -1,0 +1,218 @@
+/* brutalist footer styles */
+
+:root {
+  --ft-brutal-bg: #e8ff45;
+  --ft-brutal-ink: #111111;
+  --ft-brutal-surface: #ffffff;
+  --ft-brutal-border: #111111;
+  --ft-brutal-shadow: 4px 4px 0 #111111;
+  --ft-brutal-shadow-active: 1px 1px 0 #111111;
+  --ft-brutal-transition: 100ms ease;
+}
+
+.ft-brutal-root {
+  width: 100%;
+  background: var(--ft-brutal-bg);
+  color: var(--ft-brutal-ink);
+  border-top: 2px solid var(--ft-brutal-border);
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.ft-brutal-root * {
+  box-sizing: border-box;
+}
+
+.ft-brutal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 36px;
+}
+
+/* Top Section */
+.ft-brutal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.ft-brutal-brand {
+  font-size: clamp(36px, 7vw, 76px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  color: var(--ft-brutal-ink);
+  text-decoration: none;
+}
+
+.ft-brutal-meta-tag {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* Grid */
+.ft-brutal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.ft-brutal-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--ft-brutal-surface);
+  border: 2px solid var(--ft-brutal-border);
+  box-shadow: var(--ft-brutal-shadow);
+  color: var(--ft-brutal-ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform var(--ft-brutal-transition), box-shadow var(--ft-brutal-transition);
+}
+
+.ft-brutal-card-btn {
+  font-family: inherit;
+  width: 100%;
+  text-align: left;
+}
+
+.ft-brutal-card:hover {
+  background: #ffffff;
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 #111111;
+}
+
+.ft-brutal-card:active {
+  transform: translate(3px, 3px);
+  box-shadow: var(--ft-brutal-shadow-active);
+}
+
+.ft-brutal-num {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 11px;
+  color: #666666;
+}
+
+.ft-brutal-title {
+  flex: 1;
+}
+
+.ft-brutal-arrow {
+  font-size: 14px;
+}
+
+/* Bottom Row */
+.ft-brutal-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 2px solid var(--ft-brutal-border);
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ft-brutal-legal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ft-brutal-link {
+  color: var(--ft-brutal-ink);
+  text-decoration: none;
+}
+
+.ft-brutal-link:hover {
+  text-decoration: underline;
+}
+
+.ft-brutal-slogan {
+  letter-spacing: 0.12em;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .ft-brutal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ft-brutal-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ft-brutal-meta-tag {
+    text-align: left;
+  }
+}
+
+@media (max-width: 520px) {
+  .ft-brutal-container {
+    padding: 48px 16px 28px;
+  }
+
+  .ft-brutal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ft-brutal-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .ft-brutal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ft-brutal-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ft-brutal-meta-tag {
+    text-align: left;
+  }
+}
+
+@container (max-width: 520px) {
+  .ft-brutal-container {
+    padding: 48px 16px 28px;
+  }
+
+  .ft-brutal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ft-brutal-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

@@ -2,23 +2,34 @@
 node_modules/
 package-lock.json
 
-# Scratch and test files
+# Scratch and temporary files
 scratch/
 *.log
+*.tmp
+*.bak
+
+# Environment and local files
+.env
+.env.*
+!.env.example
 
 # Reference materials
 references/
 
-# Windows directory junction alias
+# Directory junction aliases (Windows)
 nav bars
+foot bars
 
-# System files
+# OS and system files
 .DS_Store
 Thumbs.db
 desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
 
-# Editor files
+# Editor and IDE configurations
 .vscode/
 .idea/
 *.swp
 *.swo
+*~

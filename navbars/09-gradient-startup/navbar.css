@@ -236,3 +236,16 @@
     display: flex;
   }
 }
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .nb-gradient-nav,
+  .nb-gradient-btn-login,
+  .nb-gradient-actions .nb-gradient-btn-trial {
+    display: none;
+  }
+
+  .nb-gradient-hamburger {
+    display: flex;
+  }
+}

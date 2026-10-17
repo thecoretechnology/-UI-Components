@@ -351,3 +351,16 @@
     display: flex;
   }
 }
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .nb-saas-nav,
+  .nb-saas-btn-text,
+  .nb-saas-actions .nb-saas-btn-primary {
+    display: none;
+  }
+
+  .nb-saas-hamburger {
+    display: flex;
+  }
+}

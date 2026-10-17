@@ -219,3 +219,15 @@
     display: flex;
   }
 }
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .nb-brutal-nav,
+  .nb-brutal-actions .nb-brutal-btn-talk {
+    display: none;
+  }
+
+  .nb-brutal-hamburger {
+    display: flex;
+  }
+}

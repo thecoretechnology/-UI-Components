@@ -237,3 +237,23 @@
     letter-spacing: 0.12em;
   }
 }
+
+/* Container query responsiveness */
+@container (max-width: 860px) {
+  .nb-centered-container {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .nb-centered-links {
+    display: none;
+  }
+
+  .nb-centered-hamburger {
+    display: block;
+  }
+
+  .nb-centered-brand {
+    font-size: 20px;
+    letter-spacing: 0.12em;
+  }
+}

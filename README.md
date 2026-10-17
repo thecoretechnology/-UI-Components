@@ -1,21 +1,23 @@
-# Navigation Bars
+# UI Components Collection
 
-A collection of 10 responsive navigation bar components written in standard HTML, CSS, and vanilla JavaScript.
+A library of responsive navigation bars and footers built with plain HTML, CSS, and vanilla JavaScript.
 
-No frameworks, no build tools, and no external icon libraries. Every icon is an inline SVG, and each navbar has its own scoped CSS and independent JavaScript controller.
+No frameworks, no build tools, and no external icon libraries. Every icon is an inline SVG, and each component has its own scoped CSS and independent JavaScript controller.
 
 ---
 
 ## Preview
 
-Open `index.html` in any modern web browser to view all 10 navigation bars.
+Open `index.html` in any modern web browser to view the interactive showcase.
 
 The showcase includes:
+- Section toggle to switch between **Navigation Bars (10)** and **Footers (10)**
 - Viewport switcher (Desktop 1200px, Tablet 768px, Mobile 375px)
-- Real-time interaction feedback (dropdowns, mobile hamburger drawers, search bars, cart/bag badges, tab counters)
+- Canvas background switcher (Default, White, Dark)
+- Live interactive behaviors (dropdowns, mobile drawers, newsletter forms with validation, studio time clocks, clipboard helpers, and mobile accordions)
 - Source code modal with tabs for HTML, CSS, and JS with one-click copy
 
-To run locally with a local server (optional, but helpful for ES module imports):
+To run locally with a static server (recommended for ES module imports):
 ```bash
 # Using Python
 python -m http.server 3000
@@ -23,132 +25,114 @@ python -m http.server 3000
 # Or using Node
 npx serve .
 ```
-Then visit `http://localhost:3000`.
+Then open `http://localhost:3000`.
 
 ---
 
 ## File Structure
 
 ```
-├── .gitignore               # Ignores reference files, node_modules, temp files
-├── index.html               # Interactive showcase page for all 10 navbars
+├── .gitignore               # Ignores references/, node_modules/, temp files
+├── index.html               # Interactive showcase page for all components
 ├── README.md                # Project documentation
-└── navbars/                 # Component library
-    ├── navbars.css          # Master stylesheet (imports all 10 components)
-    ├── navbars.js           # Master script (imports and inits all 10 components)
-    ├── README.md            # Component catalog reference
+│
+├── navbars/                 # Navigation Bars (Day 1)
+│   ├── navbars.css          # Master stylesheet bundle for all 10 navbars
+│   ├── navbars.js           # Master script bundle for all 10 navbars
+│   ├── README.md            # Navbar component catalog
+│   │
+│   ├── 01-clean-saas/       # SaaS / B2B header with solutions dropdown & CTA
+│   ├── 02-dark-product/     # Dark developer header with monospace logo & terminal styling
+│   ├── 03-editorial/        # Serif typography layout with issue number & double borders
+│   ├── 04-centered-brand/   # Symmetrical 3-column luxury layout with bag counter
+│   ├── 05-floating-pill/    # Detached floating pill bar with frosted glass backdrop
+│   ├── 06-ecommerce-two-level/  # Two-tier header with live search & department links
+│   ├── 07-sidebar-dashboard/    # Left-hand admin sidebar that collapses to mobile drawer
+│   ├── 08-brutalist/        # High-contrast bold borders, hard offset shadows, marquee
+│   ├── 09-gradient-startup/ # Dark gradient banner with glow accents
+│   └── 10-minimal-utility/  # Clean single-line layout with popover utilities
+│
+└── footers/                 # Footers (Day 2)
+    ├── footers.css          # Master stylesheet bundle for all 10 footers
+    ├── footers.js           # Master script bundle for all 10 footers
+    ├── README.md            # Footer component catalog
     │
-    ├── 01-clean-saas/       # SaaS / B2B header with dropdown & CTA
-    │   ├── navbar.html
-    │   ├── navbar.css
-    │   ├── navbar.js
-    │   └── README.md
-    │
-    ├── 02-dark-product/     # Dark developer / engineering header with terminal accents
-    │   ├── navbar.html
-    │   ├── navbar.css
-    │   ├── navbar.js
-    │   └── README.md
-    │
-    ├── 03-editorial/        # Serif typography layout with issue number & double borders
-    │   ├── navbar.html
-    │   ├── navbar.css
-    │   ├── navbar.js
-    │   └── README.md
-    │
-    ├── 04-centered-brand/   # Symmetrical 3-column luxury / lifestyle layout
-    │   ├── navbar.html
-    │   ├── navbar.css
-    │   ├── navbar.js
-    │   └── README.md
-    │
-    ├── 05-floating-pill/    # Detached floating pill bar with frosted glass backdrop
-    │   ├── navbar.html
-    │   ├── navbar.css
-    │   ├── navbar.js
-    │   └── README.md
-    │
-    ├── 06-ecommerce-two-level/  # Two-tier header with live search & category links
-    │   ├── navbar.html
-    │   ├── navbar.css
-    │   ├── navbar.js
-    │   └── README.md
-    │
-    ├── 07-sidebar-dashboard/    # Left-hand admin sidebar that collapses to mobile drawer
-    │   ├── navbar.html
-    │   ├── navbar.css
-    │   ├── navbar.js
-    │   └── README.md
-    │
-    ├── 08-brutalist/        # High-contrast bold borders, hard offset shadows, marquee
-    │   ├── navbar.html
-    │   ├── navbar.css
-    │   ├── navbar.js
-    │   └── README.md
-    │
-    ├── 09-gradient-startup/ # Dark gradient banner with blurred glow accents
-    │   ├── navbar.html
-    │   ├── navbar.css
-    │   ├── navbar.js
-    │   └── README.md
-    │
-    └── 10-minimal-utility/  # Clean single-line layout with popover utilities
-        ├── navbar.html
-        ├── navbar.css
-        ├── navbar.js
-        └── README.md
+    ├── 01-clean-saas/       # Standard SaaS footer with newsletter validation & social links
+    ├── 02-editorial/        # Publication footer with serif masthead & smooth back-to-top
+    ├── 03-docs/             # Dark developer docs footer with live status ping & version copy
+    ├── 04-ecommerce/        # Storefront footer with 10% coupon reveal & mobile accordions
+    ├── 05-agency/           # Creative agency footer with headline CTA & click-to-copy email
+    ├── 06-conversion/       # Newsletter box with frequency pills (weekly/monthly)
+    ├── 07-app-utility/      # Compact dashboard status bar with keyboard shortcut modal (?)
+    ├── 08-asymmetric/       # Asymmetric editorial layout with live timezone clocks (LON, NYC, TYO)
+    ├── 09-brutalist/        # Neo-brutalist cards with tactile click states & email copy card
+    └── 10-global/           # Travel footer with dynamic language and currency selectors
 ```
+
+---
+
+## Component Structure
+
+Every component folder is self-contained and consists of:
+- `navbar.html` or `footer.html`: Semantic, accessible HTML markup with inline SVGs and ARIA attributes.
+- `navbar.css` or `footer.css`: Scoped CSS using dedicated class prefixes (`.nb-*` for navbars, `.ft-*` for footers) and CSS custom properties (`:root`).
+- `navbar.js` or `footer.js`: ES module controller that manages responsive state, keyboard navigation (`Escape`, `?`), and interactions.
+- `README.md`: Specific usage instructions and theming variables.
 
 ---
 
 ## How to Use
 
-### Option 1: Use a Single Component
+### Using a Single Component
 
-Each folder inside `navbars/` is self-contained. To use one in your project:
+To use any component individually in your own project:
 
-1. Copy the HTML from `navbar.html` into your page.
+1. Copy the component's HTML file into your page.
 2. Link the component's stylesheet in `<head>`:
    ```html
-   <link rel="stylesheet" href="navbars/01-clean-saas/navbar.css">
+   <link rel="stylesheet" href="footers/01-clean-saas/footer.css">
    ```
-3. Load the component script at the end of `<body>`:
+3. Load the component's script at the end of `<body>`:
    ```html
-   <script type="module" src="navbars/01-clean-saas/navbar.js"></script>
+   <script type="module" src="footers/01-clean-saas/footer.js"></script>
    ```
 
-Each component's JavaScript automatically runs when the DOM finishes loading. You can also import and call the initializer manually:
+Each component's JavaScript automatically runs when the DOM finishes loading. You can also import and call initializers manually:
 
 ```javascript
-import { initCleanSaaSNavbar } from './navbars/01-clean-saas/navbar.js';
+import { initCleanSaaSFooter } from './footers/01-clean-saas/footer.js';
 
-initCleanSaaSNavbar(document);
+initCleanSaaSFooter(document);
 ```
 
-### Option 2: Use All Components Together
+### Using Bundles
 
-If you are using several components or testing multiple layouts:
+If you want to use multiple components across an application:
 
 ```html
-<!-- In <head> -->
+<!-- Load all navbar or footer styles -->
 <link rel="stylesheet" href="navbars/navbars.css">
+<link rel="stylesheet" href="footers/footers.css">
 
-<!-- In <body> -->
+<!-- Load all scripts -->
 <script type="module" src="navbars/navbars.js"></script>
+<script type="module" src="footers/footers.js"></script>
 ```
 
 ---
 
 ## Customization
 
-All components use scoped CSS variables defined in their `:root` block (e.g. `--nb-saas-primary`, `--nb-dark-bg`, `--nb-pill-blur`).
-
-To customize colors, padding, or fonts, override the corresponding CSS variables in your own stylesheet:
+All components expose scoped CSS custom properties at the top of their stylesheet. To change colors, fonts, or radiuses, override them in your own CSS:
 
 ```css
 :root {
+  /* Customize SaaS navbar */
   --nb-saas-primary: #0ea5e9;
-  --nb-saas-radius: 8px;
+
+  /* Customize SaaS footer */
+  --ft-saas-primary: #0ea5e9;
+  --ft-saas-radius: 8px;
 }
 ```
 
@@ -156,7 +140,7 @@ To customize colors, padding, or fonts, override the corresponding CSS variables
 
 ## Features
 
-- **No dependencies**: Standard HTML5, CSS3, and ES6 JavaScript.
-- **Accessible**: Hamburger toggles and dropdown menus manage `aria-expanded`, `aria-label`, and keyboard focus (`Escape` key closes open drawers).
-- **Scoped classes**: Each component uses a distinct class prefix (like `.nb-saas-*`, `.nb-dark-*`, `.nb-edit-*`) so styles won't collide with existing page rules.
-- **Responsive**: All headers switch cleanly between desktop layouts and mobile navigation menus below 860px width.
+- **Zero dependencies**: No npm packages, frameworks, or external icon fonts required.
+- **Strictly scoped**: Prefixes like `.nb-saas-*` and `.ft-shop-*` prevent styling leaks or conflicts with your host application styles.
+- **Accessible**: Managed ARIA attributes (`aria-expanded`, `aria-controls`, `aria-label`, `aria-live`), keyboard focus management, and `Escape` key listeners.
+- **Responsive**: Tested across Desktop (1200px), Tablet (768px), and Mobile (375px) breakpoints.

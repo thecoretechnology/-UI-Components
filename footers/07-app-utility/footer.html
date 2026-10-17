@@ -1,0 +1,56 @@
+<!-- application utility footer -->
+<footer class="ft-util-root" data-footer="app-utility">
+  <div class="ft-util-container">
+    <!-- Left: Brand & Status -->
+    <div class="ft-util-left">
+      <a href="#workspace" class="ft-util-brand" aria-label="Workspace Home">
+        <span class="ft-util-brand-mark">◈</span>
+        <span>workspace</span>
+      </a>
+
+      <div class="ft-util-status-badge">
+        <span class="ft-util-dot" aria-hidden="true"></span>
+        <span>All systems normal</span>
+      </div>
+    </div>
+
+    <!-- Center / Right: Utility Actions & Shortcuts -->
+    <div class="ft-util-right">
+      <nav class="ft-util-links" aria-label="Utility navigation">
+        <button type="button" class="ft-util-btn-action" data-modal="shortcuts">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M6 12h.001M10 12h.001M14 12h.001M18 12h.001M8 16h8"/>
+          </svg>
+          <span>Shortcuts</span>
+          <kbd class="ft-util-kbd">?</kbd>
+        </button>
+
+        <a href="#help" class="ft-util-link">Help Center</a>
+        <a href="#api" class="ft-util-link">API Docs</a>
+        <a href="#privacy" class="ft-util-link">Privacy</a>
+      </nav>
+
+      <div class="ft-util-meta">
+        <span class="ft-util-pill">v1.8.2</span>
+        <span class="ft-util-copy">© 2026 Workspace</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keyboard Shortcuts Modal Dialog -->
+  <div class="ft-util-modal" id="ft-util-shortcuts-modal" hidden>
+    <div class="ft-util-modal-dialog">
+      <div class="ft-util-modal-head">
+        <h3 class="ft-util-modal-title">Keyboard Shortcuts</h3>
+        <button type="button" class="ft-util-modal-close" aria-label="Close shortcuts dialog">×</button>
+      </div>
+      <div class="ft-util-shortcuts-grid">
+        <div class="ft-util-sc-row"><span>Quick search</span><kbd>⌘ K</kbd></div>
+        <div class="ft-util-sc-row"><span>Command palette</span><kbd>⌘ P</kbd></div>
+        <div class="ft-util-sc-row"><span>Toggle sidebar</span><kbd>⌘ B</kbd></div>
+        <div class="ft-util-sc-row"><span>Open shortcuts</span><kbd>?</kbd></div>
+      </div>
+    </div>
+  </div>
+</footer>
