@@ -1,0 +1,124 @@
+<!-- ecommerce two level -->
+<header class="nb-shop-header" data-navbar="ecommerce-two-level">
+  <!-- Top Bar: Brand, Search Bar, and User Utilities -->
+  <div class="nb-shop-top-wrapper">
+    <div class="nb-shop-container nb-shop-top">
+      <a href="#" class="nb-shop-brand" aria-label="Goodgoods Home">
+        <span>good<span class="nb-shop-brand-accent">goods</span></span>
+      </a>
+
+      <!-- Search Bar with Suggestions Dropdown -->
+      <div class="nb-shop-search-bar" role="search">
+        <svg class="nb-shop-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="search" placeholder="Search products, brands and essentials..." aria-label="Search catalog" class="nb-shop-search-input">
+        <kbd class="nb-shop-search-kbd">⌘K</kbd>
+
+        <!-- Search Auto-Suggest Dropdown -->
+        <div class="nb-shop-search-dropdown" hidden>
+          <div class="nb-shop-search-dropdown-label">Popular Searches</div>
+          <a href="#search-linen" class="nb-shop-search-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            <span>Linen Summer Shirts</span>
+          </a>
+          <a href="#search-ceramic" class="nb-shop-search-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            <span>Ceramic Coffee Dripper</span>
+          </a>
+          <a href="#search-leather" class="nb-shop-search-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            <span>Heavy Canvas Daily Tote</span>
+          </a>
+          <a href="#search-wool" class="nb-shop-search-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            <span>Merino Wool Throw Blanket</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Utilities: Account, Wishlist, Bag -->
+      <div class="nb-shop-utilities">
+        <a href="#account" class="nb-shop-util-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span class="nb-shop-util-text">Account</span>
+        </a>
+        <button type="button" class="nb-shop-util-btn nb-shop-btn-saved" aria-label="Toggle wishlist">
+          <svg class="nb-shop-heart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span class="nb-shop-util-text">Saved (<span class="nb-shop-saved-count">0</span>)</span>
+        </button>
+        <button type="button" class="nb-shop-cart-btn" aria-label="Shopping bag">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"/>
+            <circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          <span class="nb-shop-cart-text">Bag</span>
+          <span class="nb-shop-cart-badge">2</span>
+        </button>
+
+        <!-- Mobile Toggle Button -->
+        <button type="button" class="nb-shop-hamburger" aria-expanded="false" aria-controls="nb-shop-mobile-menu" aria-label="Toggle navigation menu">
+          <span class="nb-shop-hamburger-line line-1"></span>
+          <span class="nb-shop-hamburger-line line-2"></span>
+          <span class="nb-shop-hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar: Category Navigation & CTA -->
+  <div class="nb-shop-bottom-wrapper">
+    <div class="nb-shop-container nb-shop-bottom">
+      <nav class="nb-shop-categories" aria-label="Product Categories">
+        <ul class="nb-shop-cat-links">
+          <li><a href="#new" class="nb-shop-cat-link active">New arrivals</a></li>
+          <li><a href="#home" class="nb-shop-cat-link">Home & Living</a></li>
+          <li><a href="#clothing" class="nb-shop-cat-link">Clothing</a></li>
+          <li><a href="#accessories" class="nb-shop-cat-link">Accessories</a></li>
+          <li><a href="#sale" class="nb-shop-cat-link nb-shop-sale-link">Sale <span class="nb-shop-sale-badge">-40%</span></a></li>
+        </ul>
+      </nav>
+      <a href="#explore" class="nb-shop-btn-explore">
+        <span>Explore all</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="nb-shop-mobile-menu" id="nb-shop-mobile-menu" hidden>
+    <div class="nb-shop-mobile-inner">
+      <div class="nb-shop-mobile-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="search" placeholder="Search catalog..." class="nb-shop-mobile-input">
+      </div>
+      <nav aria-label="Mobile Categories">
+        <ul class="nb-shop-mobile-cat-links">
+          <li><a href="#new" class="nb-shop-mobile-cat-link active">New arrivals</a></li>
+          <li><a href="#home" class="nb-shop-mobile-cat-link">Home & Living</a></li>
+          <li><a href="#clothing" class="nb-shop-mobile-cat-link">Clothing</a></li>
+          <li><a href="#accessories" class="nb-shop-mobile-cat-link">Accessories</a></li>
+          <li><a href="#sale" class="nb-shop-mobile-cat-link nb-shop-sale-link">Sale (-40%)</a></li>
+          <li><a href="#account" class="nb-shop-mobile-cat-link">My Account</a></li>
+          <li><a href="#saved" class="nb-shop-mobile-cat-link">Saved Items</a></li>
+        </ul>
+      </nav>
+      <div class="nb-shop-mobile-action">
+        <a href="#explore" class="nb-shop-btn-explore nb-shop-btn-block">Explore Entire Catalog →</a>
+      </div>
+    </div>
+  </div>
+</header>

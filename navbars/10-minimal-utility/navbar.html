@@ -1,0 +1,85 @@
+<!-- minimal utility -->
+<header class="nb-minimal-header" data-navbar="minimal-utility">
+  <div class="nb-minimal-container">
+    <a href="#home" class="nb-minimal-brand" aria-label="Northstar Home">
+      <svg class="nb-minimal-star-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+      <span>north<span class="nb-minimal-accent">star</span></span>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="nb-minimal-nav" aria-label="Product Navigation">
+      <ul class="nb-minimal-links">
+        <li><a href="#platform" class="nb-minimal-link active">Platform</a></li>
+        <li><a href="#cases" class="nb-minimal-link">Use cases</a></li>
+        <li><a href="#learn" class="nb-minimal-link">Learn</a></li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Utility Actions -->
+    <div class="nb-minimal-actions">
+      <!-- Inline Expandable Search Bar -->
+      <div class="nb-minimal-search-wrap">
+        <input type="search" placeholder="Search..." class="nb-minimal-search-input" aria-label="Search site" hidden>
+        <button type="button" class="nb-minimal-icon-btn nb-minimal-btn-search" aria-label="Search site">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notifications with Popover Dropdown -->
+      <div class="nb-minimal-notify-wrap">
+        <button type="button" class="nb-minimal-icon-btn nb-minimal-btn-notify" aria-label="Notifications" aria-expanded="false">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+          </svg>
+          <span class="nb-minimal-notify-pip"></span>
+        </button>
+
+        <div class="nb-minimal-notify-dropdown" hidden>
+          <div class="nb-minimal-notify-head">
+            <span>Notifications</span>
+            <span class="nb-minimal-notify-tag">Recent</span>
+          </div>
+          <div class="nb-minimal-notify-item">
+            <div class="nb-minimal-notify-title">Deployment Succeeded</div>
+            <div class="nb-minimal-notify-desc">Production v2.4.1 is live across all regions.</div>
+          </div>
+          <div class="nb-minimal-notify-item">
+            <div class="nb-minimal-notify-title">Team Invitation Accepted</div>
+            <div class="nb-minimal-notify-desc">Sarah Lin joined the Core Tech workspace.</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#demo" class="nb-minimal-btn-demo">Book a demo</a>
+
+      <!-- Mobile Toggle -->
+      <button type="button" class="nb-minimal-hamburger" aria-expanded="false" aria-controls="nb-minimal-mobile-menu" aria-label="Toggle navigation menu">
+        <span class="nb-minimal-hamburger-line line-1"></span>
+        <span class="nb-minimal-hamburger-line line-2"></span>
+        <span class="nb-minimal-hamburger-line line-3"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="nb-minimal-mobile-menu" id="nb-minimal-mobile-menu" hidden>
+    <div class="nb-minimal-mobile-inner">
+      <nav aria-label="Mobile Navigation">
+        <ul class="nb-minimal-mobile-links">
+          <li><a href="#platform" class="nb-minimal-mobile-link active">Platform</a></li>
+          <li><a href="#cases" class="nb-minimal-mobile-link">Use cases</a></li>
+          <li><a href="#learn" class="nb-minimal-mobile-link">Learn</a></li>
+        </ul>
+      </nav>
+      <div class="nb-minimal-mobile-actions">
+        <a href="#demo" class="nb-minimal-btn-demo nb-minimal-btn-block">Book a demo</a>
+      </div>
+    </div>
+  </div>
+</header>

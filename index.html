@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bars — Component Collection</title>
+  <meta name="description" content="Ten clean, interactive, responsive navigation bar components.">
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Component Stylesheets Bundle -->
+  <link rel="stylesheet" href="./navbars/navbars.css">
+
+  <style>
+    /* Showcase styles */
+    :root {
+      --sc-bg: #f8f9fa;
+      --sc-surface: #ffffff;
+      --sc-border: #e5e7eb;
+      --sc-border-subtle: #f3f4f6;
+      --sc-text: #111827;
+      --sc-muted: #6b7280;
+      --sc-tertiary: #9ca3af;
+      --sc-radius: 12px;
+      --sc-radius-sm: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      background-color: var(--sc-bg);
+      color: var(--sc-text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Page Header */
+    .sc-header {
+      padding: 64px 24px 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sc-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sc-muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .sc-title {
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 750;
+      letter-spacing: -0.03em;
+      margin: 0 0 10px;
+      color: var(--sc-text);
+    }
+
+    .sc-subtitle {
+      font-size: 16px;
+      color: var(--sc-muted);
+      max-width: 680px;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Sticky Controls Bar */
+    .sc-controls-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 249, 250, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--sc-border);
+      border-bottom: 1px solid var(--sc-border);
+      padding: 12px 24px;
+    }
+
+    .sc-controls-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .sc-filter-tabs {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+    }
+
+    .sc-tab {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--sc-muted);
+      font-size: 13.5px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: var(--sc-radius-sm);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 120ms ease, color 120ms ease;
+    }
+
+    .sc-tab:hover {
+      background: #f1f3f5;
+      color: var(--sc-text);
+    }
+
+    .sc-tab.active {
+      background: #ffffff;
+      color: var(--sc-text);
+      border-color: var(--sc-border);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      font-weight: 600;
+    }
+
+    .sc-right-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .sc-control-group {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid var(--sc-border);
+      border-radius: var(--sc-radius-sm);
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .sc-control-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--sc-muted);
+      padding: 0 6px 0 8px;
+    }
+
+    .sc-ctrl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      border: none;
+      color: var(--sc-muted);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 120ms ease, color 120ms ease;
+    }
+
+    .sc-ctrl-btn:hover {
+      color: var(--sc-text);
+    }
+
+    .sc-ctrl-btn.active {
+      background: #f1f3f5;
+      color: var(--sc-text);
+      font-weight: 600;
+    }
+
+    /* Showcase Main Grid */
+    .sc-main {
+      max-width: 1200px;
+      margin: 36px auto 90px;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    /* Card */
+    .sc-card {
+      background: var(--sc-surface);
+      border: 1px solid var(--sc-border);
+      border-radius: var(--sc-radius);
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      transition: border-color 150ms ease;
+    }
+
+    .sc-card:hover {
+      border-color: #d1d5db;
+    }
+
+    /* Card Header */
+    .sc-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--sc-border-subtle);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .sc-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sc-num-badge {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      background: #f3f4f6;
+      color: #6b7280;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .sc-card-head h2 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--sc-text);
+    }
+
+    .sc-card-head p {
+      margin: 2px 0 0;
+      font-size: 13px;
+      color: var(--sc-muted);
+    }
+
+    .sc-card-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sc-tag {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: #f8f9fa;
+      color: #4b5563;
+      border: 1px solid var(--sc-border);
+    }
+
+    .sc-btn-code {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      border: 1px solid var(--sc-border);
+      color: var(--sc-text);
+      font-size: 12.5px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+
+    .sc-btn-code:hover {
+      background: #f9fafb;
+      border-color: #d1d5db;
+    }
+
+    /* Card Preview Stage */
+    .sc-card-body {
+      background: #fafafa;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: auto;
+      transition: background-color 200ms ease;
+    }
+
+    /* Backdrop Customization States */
+    body.canvas-white .sc-card-body {
+      background: #ffffff;
+    }
+
+    body.canvas-dark .sc-card-body {
+      background: #18181b;
+    }
+
+    .sc-preview-frame {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid var(--sc-border);
+      border-radius: 10px;
+      overflow: visible;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      transition: max-width 200ms ease;
+    }
+
+    /* Viewport Resizing Modes */
+    body.vp-tablet .sc-preview-frame {
+      max-width: 768px;
+    }
+
+    body.vp-mobile .sc-preview-frame {
+      max-width: 375px;
+    }
+
+    /* Code Modal Drawer */
+    .sc-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .sc-modal-overlay[hidden] {
+      display: none;
+    }
+
+    .sc-modal {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 14px;
+      width: min(840px, 100%);
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .sc-modal-header {
+      padding: 16px 20px;
+      background: #18181b;
+      border-bottom: 1px solid #27272a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sc-modal-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fafafa;
+      margin: 0;
+    }
+
+    .sc-modal-tabs {
+      display: flex;
+      gap: 4px;
+      background: #27272a;
+      padding: 3px;
+      border-radius: 8px;
+    }
+
+    .sc-modal-tab {
+      background: transparent;
+      border: none;
+      color: #a1a1aa;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 120ms ease;
+    }
+
+    .sc-modal-tab.active {
+      background: #3f3f46;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .sc-modal-close {
+      background: transparent;
+      border: none;
+      color: #a1a1aa;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .sc-modal-close:hover {
+      color: #ffffff;
+      background: #27272a;
+    }
+
+    .sc-modal-body {
+      padding: 20px;
+      overflow-y: auto;
+      flex: 1;
+      background: #09090b;
+    }
+
+    .sc-code-block {
+      margin: 0;
+      font-family: 'SF Mono', Monaco, Menlo, Consolas, monospace;
+      font-size: 13px;
+      color: #e4e4e7;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .sc-modal-footer {
+      padding: 12px 20px;
+      background: #18181b;
+      border-top: 1px solid #27272a;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .sc-btn-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      color: #18181b;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 150ms ease;
+    }
+
+    .sc-btn-copy:hover {
+      opacity: 0.9;
+    }
+
+    /* Toast Notification */
+    .sc-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translate(-50%, 80px);
+      background: #18181b;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sc-toast.show {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .sc-header { padding: 40px 20px 24px; }
+      .sc-controls-container { flex-direction: column; align-items: stretch; }
+      .sc-card-head { padding: 14px 16px; }
+      .sc-card-body { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="sc-header">
+    <span class="sc-label">Components</span>
+    <h1 class="sc-title">Navigation Bars</h1>
+    <p class="sc-subtitle">Ten responsive navigation headers with interactive links, dropdowns, cart counters, and mobile drawers. Click items in any navbar to test live behavior.</p>
+  </header>
+
+  <!-- Sticky Controls Bar -->
+  <section class="sc-controls-sticky">
+    <div class="sc-controls-container">
+      <div class="sc-filter-tabs">
+        <button type="button" class="sc-tab active" data-filter="all">All</button>
+        <button type="button" class="sc-tab" data-filter="saas">SaaS</button>
+        <button type="button" class="sc-tab" data-filter="developer">Developer</button>
+        <button type="button" class="sc-tab" data-filter="editorial">Editorial</button>
+        <button type="button" class="sc-tab" data-filter="commerce">Store</button>
+        <button type="button" class="sc-tab" data-filter="creative">Experimental</button>
+      </div>
+
+      <div class="sc-right-controls">
+        <!-- Canvas Background Switcher -->
+        <div class="sc-control-group" aria-label="Canvas Background">
+          <span class="sc-control-label">Canvas:</span>
+          <button type="button" class="sc-ctrl-btn sc-bg-btn active" data-bg="default">Light</button>
+          <button type="button" class="sc-ctrl-btn sc-bg-btn" data-bg="white">White</button>
+          <button type="button" class="sc-ctrl-btn sc-bg-btn" data-bg="dark">Dark</button>
+        </div>
+
+        <!-- Viewport Switcher -->
+        <div class="sc-control-group" aria-label="Simulate Viewport">
+          <span class="sc-control-label">View:</span>
+          <button type="button" class="sc-ctrl-btn sc-vp-btn active" data-vp="desktop" title="Full desktop width">Desktop</button>
+          <button type="button" class="sc-ctrl-btn sc-vp-btn" data-vp="tablet" title="768px width">Tablet</button>
+          <button type="button" class="sc-ctrl-btn sc-vp-btn" data-vp="mobile" title="375px width">Mobile</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Gallery -->
+  <main class="sc-main">
+
+    <!-- 01: Clean SaaS Navbar -->
+    <article class="sc-card" data-category="saas">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">01</span>
+          <div>
+            <h2>Clean SaaS</h2>
+            <p>Product navigation with interactive Solutions dropdown, active link pills, and signup CTA.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">Dropdown</span>
+          <button type="button" class="sc-btn-code" data-code="01-clean-saas">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <header class="nb-saas-header" data-navbar="clean-saas">
+            <div class="nb-saas-container">
+              <a href="#home" class="nb-saas-brand" aria-label="Orbit Home">
+                <svg class="nb-saas-brand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M3.6 9h16.8"/>
+                  <path d="M3.6 15h16.8"/>
+                  <circle cx="12" cy="12" r="3" fill="#3157e5"/>
+                </svg>
+                <span>orbit</span><span class="nb-saas-dot">.</span>
+              </a>
+              <nav class="nb-saas-nav" aria-label="Primary Navigation">
+                <ul class="nb-saas-links">
+                  <li><a href="#product" class="nb-saas-link active">Product</a></li>
+                  <li class="nb-saas-dropdown">
+                    <button type="button" class="nb-saas-link nb-saas-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+                      <span>Solutions</span>
+                      <svg class="nb-saas-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                      </svg>
+                    </button>
+                    <div class="nb-saas-dropdown-menu" hidden>
+                      <a href="#analytics" class="nb-saas-dropdown-item">
+                        <div class="nb-saas-dropdown-icon">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        </div>
+                        <div>
+                          <div class="nb-saas-dropdown-title">Analytics</div>
+                          <div class="nb-saas-dropdown-desc">Real-time performance metrics</div>
+                        </div>
+                      </a>
+                      <a href="#automations" class="nb-saas-dropdown-item">
+                        <div class="nb-saas-dropdown-icon">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <div>
+                          <div class="nb-saas-dropdown-title">Automations</div>
+                          <div class="nb-saas-dropdown-desc">No-code triggers and workflows</div>
+                        </div>
+                      </a>
+                      <a href="#enterprise" class="nb-saas-dropdown-item">
+                        <div class="nb-saas-dropdown-icon">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <div>
+                          <div class="nb-saas-dropdown-title">Enterprise Security</div>
+                          <div class="nb-saas-dropdown-desc">SOC2 compliance & SSO</div>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li><a href="#resources" class="nb-saas-link">Resources</a></li>
+                  <li><a href="#pricing" class="nb-saas-link">Pricing</a></li>
+                </ul>
+              </nav>
+              <div class="nb-saas-actions">
+                <a href="#login" class="nb-saas-btn-text">Log in</a>
+                <a href="#start" class="nb-saas-btn-primary">
+                  <span>Start free</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <button type="button" class="nb-saas-hamburger" aria-expanded="false" aria-controls="nb-saas-mobile-menu-showcase" aria-label="Toggle navigation menu">
+                  <span class="nb-saas-hamburger-line line-1"></span>
+                  <span class="nb-saas-hamburger-line line-2"></span>
+                  <span class="nb-saas-hamburger-line line-3"></span>
+                </button>
+              </div>
+            </div>
+            <div class="nb-saas-mobile-menu" id="nb-saas-mobile-menu-showcase" hidden>
+              <div class="nb-saas-mobile-inner">
+                <nav aria-label="Mobile Navigation">
+                  <ul class="nb-saas-mobile-links">
+                    <li><a href="#product" class="nb-saas-mobile-link active">Product</a></li>
+                    <li><a href="#solutions" class="nb-saas-mobile-link">Solutions</a></li>
+                    <li><a href="#resources" class="nb-saas-mobile-link">Resources</a></li>
+                    <li><a href="#pricing" class="nb-saas-mobile-link">Pricing</a></li>
+                  </ul>
+                </nav>
+                <div class="nb-saas-mobile-actions">
+                  <a href="#login" class="nb-saas-mobile-login">Log in</a>
+                  <a href="#start" class="nb-saas-btn-primary nb-saas-btn-block">Start free</a>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02: Dark Developer / Product Navbar -->
+    <article class="sc-card" data-category="developer">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">02</span>
+          <div>
+            <h2>Dark Developer</h2>
+            <p>Dark surface with code mark, version badge, and interactive links.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">Developer</span>
+          <button type="button" class="sc-btn-code" data-code="02-dark-product">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <header class="nb-dark-header" data-navbar="dark-product">
+            <div class="nb-dark-container">
+              <a href="#home" class="nb-dark-brand" aria-label="Codebase Home">
+                <div class="nb-dark-logo-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <span>code<span class="nb-dark-accent">base</span></span>
+              </a>
+              <nav class="nb-dark-nav" aria-label="Developer Navigation">
+                <ul class="nb-dark-links">
+                  <li><a href="#platform" class="nb-dark-link active">Platform</a></li>
+                  <li><a href="#docs" class="nb-dark-link">Docs</a></li>
+                  <li><a href="#changelog" class="nb-dark-link">Changelog <span class="nb-dark-badge">v2.4</span></a></li>
+                  <li><a href="#community" class="nb-dark-link">Community</a></li>
+                </ul>
+              </nav>
+              <div class="nb-dark-actions">
+                <a href="#signin" class="nb-dark-btn-text">Sign in</a>
+                <a href="#start" class="nb-dark-btn-primary">
+                  <span>Get started</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+                <button type="button" class="nb-dark-hamburger" aria-expanded="false" aria-controls="nb-dark-mobile-menu-showcase" aria-label="Toggle navigation menu">
+                  <span class="nb-dark-hamburger-line line-1"></span>
+                  <span class="nb-dark-hamburger-line line-2"></span>
+                  <span class="nb-dark-hamburger-line line-3"></span>
+                </button>
+              </div>
+            </div>
+            <div class="nb-dark-mobile-menu" id="nb-dark-mobile-menu-showcase" hidden>
+              <div class="nb-dark-mobile-inner">
+                <nav aria-label="Mobile Developer Navigation">
+                  <ul class="nb-dark-mobile-links">
+                    <li><a href="#platform" class="nb-dark-mobile-link active">Platform</a></li>
+                    <li><a href="#docs" class="nb-dark-mobile-link">Docs</a></li>
+                    <li><a href="#changelog" class="nb-dark-mobile-link">Changelog <span class="nb-dark-badge">v2.4</span></a></li>
+                    <li><a href="#community" class="nb-dark-mobile-link">Community</a></li>
+                  </ul>
+                </nav>
+                <div class="nb-dark-mobile-actions">
+                  <a href="#signin" class="nb-dark-mobile-login">Sign in</a>
+                  <a href="#start" class="nb-dark-btn-primary nb-dark-btn-block">Get started ↗</a>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03: Editorial / Magazine Navbar -->
+    <article class="sc-card" data-category="editorial">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">03</span>
+          <div>
+            <h2>Editorial</h2>
+            <p>Serif typography with animated underlines on active and hover states.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">Editorial</span>
+          <button type="button" class="sc-btn-code" data-code="03-editorial">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <header class="nb-editorial-header" data-navbar="editorial">
+            <div class="nb-editorial-container">
+              <a href="#home" class="nb-editorial-brand" aria-label="The Form Home">
+                <span>the form.</span>
+              </a>
+              <nav class="nb-editorial-nav" aria-label="Publication Navigation">
+                <ul class="nb-editorial-links">
+                  <li><a href="#stories" class="nb-editorial-link active">Stories</a></li>
+                  <li><a href="#design" class="nb-editorial-link">Design</a></li>
+                  <li><a href="#culture" class="nb-editorial-link">Culture</a></li>
+                  <li><a href="#about" class="nb-editorial-link">About</a></li>
+                </ul>
+              </nav>
+              <div class="nb-editorial-actions">
+                <a href="#subscribe" class="nb-editorial-btn-subscribe">
+                  <span>Subscribe</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+                <button type="button" class="nb-editorial-hamburger" aria-expanded="false" aria-controls="nb-editorial-mobile-menu-showcase" aria-label="Toggle navigation menu">
+                  <span class="nb-editorial-hamburger-line line-1"></span>
+                  <span class="nb-editorial-hamburger-line line-2"></span>
+                </button>
+              </div>
+            </div>
+            <div class="nb-editorial-mobile-menu" id="nb-editorial-mobile-menu-showcase" hidden>
+              <div class="nb-editorial-mobile-inner">
+                <nav aria-label="Mobile Publication Navigation">
+                  <ul class="nb-editorial-mobile-links">
+                    <li><a href="#stories" class="nb-editorial-mobile-link active">Stories</a></li>
+                    <li><a href="#design" class="nb-editorial-mobile-link">Design</a></li>
+                    <li><a href="#culture" class="nb-editorial-mobile-link">Culture</a></li>
+                    <li><a href="#about" class="nb-editorial-mobile-link">About</a></li>
+                  </ul>
+                </nav>
+                <div class="nb-editorial-mobile-actions">
+                  <a href="#subscribe" class="nb-editorial-btn-subscribe nb-editorial-btn-block">Subscribe to Print Edition ↗</a>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04: Centered Brand Navbar -->
+    <article class="sc-card" data-category="editorial">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">04</span>
+          <div>
+            <h2>Centered Brand</h2>
+            <p>Three-column layout. Click the Bag button to see the counter increment live.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">Interactive Bag</span>
+          <button type="button" class="sc-btn-code" data-code="04-centered-brand">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <header class="nb-centered-header" data-navbar="centered-brand">
+            <div class="nb-centered-container">
+              <nav class="nb-centered-nav-left" aria-label="Collections Navigation">
+                <button type="button" class="nb-centered-hamburger" aria-expanded="false" aria-controls="nb-centered-mobile-menu-showcase" aria-label="Toggle navigation menu">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <ul class="nb-centered-links">
+                  <li><a href="#collections" class="nb-centered-link active">Collections</a></li>
+                  <li><a href="#journal" class="nb-centered-link">Journal</a></li>
+                  <li><a href="#atelier" class="nb-centered-link">Atelier</a></li>
+                </ul>
+              </nav>
+              <div class="nb-centered-brand-wrap">
+                <a href="#home" class="nb-centered-brand" aria-label="Maison Home">
+                  <span>MAISON</span><span class="nb-centered-degree">°</span>
+                </a>
+              </div>
+              <div class="nb-centered-actions-right">
+                <button type="button" class="nb-centered-icon-btn" aria-label="Search items">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="#account" class="nb-centered-icon-btn" aria-label="Customer account">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </a>
+                <a href="#bag" class="nb-centered-btn-bag" aria-label="Shopping bag containing items">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                  <span>Bag</span>
+                  <span class="nb-centered-bag-count">0</span>
+                </a>
+              </div>
+            </div>
+            <div class="nb-centered-mobile-menu" id="nb-centered-mobile-menu-showcase" hidden>
+              <div class="nb-centered-mobile-inner">
+                <div class="nb-centered-mobile-search">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <input type="search" placeholder="Search collections..." class="nb-centered-search-input">
+                </div>
+                <nav aria-label="Mobile Navigation">
+                  <ul class="nb-centered-mobile-links">
+                    <li><a href="#collections" class="nb-centered-mobile-link active">Collections</a></li>
+                    <li><a href="#journal" class="nb-centered-mobile-link">Journal</a></li>
+                    <li><a href="#atelier" class="nb-centered-mobile-link">Atelier</a></li>
+                    <li><a href="#account" class="nb-centered-mobile-link">My Account</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </article>
+
+    <!-- 05: Floating Pill Navbar -->
+    <article class="sc-card" data-category="saas">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">05</span>
+          <div>
+            <h2>Floating Pill</h2>
+            <p>Glassmorphic island navbar with interactive navigation links.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">SaaS</span>
+          <button type="button" class="sc-btn-code" data-code="05-floating-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <header class="nb-floating-header" data-navbar="floating-pill">
+            <div class="nb-floating-wrapper">
+              <div class="nb-floating-bar">
+                <a href="#home" class="nb-floating-brand" aria-label="Bloom Home">
+                  <svg class="nb-floating-brand-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  <span>bloom</span>
+                </a>
+                <nav class="nb-floating-nav" aria-label="Floating Navigation">
+                  <ul class="nb-floating-links">
+                    <li><a href="#discover" class="nb-floating-link active">Discover</a></li>
+                    <li><a href="#features" class="nb-floating-link">Features</a></li>
+                    <li><a href="#stories" class="nb-floating-link">Stories</a></li>
+                    <li><a href="#plans" class="nb-floating-link">Plans</a></li>
+                  </ul>
+                </nav>
+                <div class="nb-floating-actions">
+                  <a href="#join" class="nb-floating-btn-join">Join bloom</a>
+                  <button type="button" class="nb-floating-hamburger" aria-expanded="false" aria-controls="nb-floating-mobile-menu-showcase" aria-label="Toggle navigation menu">
+                    <span class="nb-floating-hamburger-line line-1"></span>
+                    <span class="nb-floating-hamburger-line line-2"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="nb-floating-mobile-menu" id="nb-floating-mobile-menu-showcase" hidden>
+                <div class="nb-floating-mobile-inner">
+                  <nav aria-label="Mobile Navigation">
+                    <ul class="nb-floating-mobile-links">
+                      <li><a href="#discover" class="nb-floating-mobile-link active">Discover</a></li>
+                      <li><a href="#features" class="nb-floating-mobile-link">Features</a></li>
+                      <li><a href="#stories" class="nb-floating-mobile-link">Stories</a></li>
+                      <li><a href="#plans" class="nb-floating-mobile-link">Plans</a></li>
+                    </ul>
+                  </nav>
+                  <div class="nb-floating-mobile-action">
+                    <a href="#join" class="nb-floating-btn-join nb-floating-btn-block">Join bloom</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </article>
+
+    <!-- 06: E-commerce Two-Level Navbar -->
+    <article class="sc-card" data-category="commerce">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">06</span>
+          <div>
+            <h2>Store Two-Tier</h2>
+            <p>Click the search bar for suggestions, click Saved to toggle heart, or click Bag to add items.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">Search & Cart</span>
+          <button type="button" class="sc-btn-code" data-code="06-ecommerce-two-level">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <header class="nb-shop-header" data-navbar="ecommerce-two-level">
+            <div class="nb-shop-top-wrapper">
+              <div class="nb-shop-container nb-shop-top">
+                <a href="#home" class="nb-shop-brand" aria-label="Goodgoods Home">
+                  <span>good<span class="nb-shop-brand-accent">goods</span></span>
+                </a>
+                <div class="nb-shop-search-bar" role="search">
+                  <svg class="nb-shop-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <input type="search" placeholder="Search products, brands and essentials..." class="nb-shop-search-input">
+                  <kbd class="nb-shop-search-kbd">⌘K</kbd>
+
+                  <div class="nb-shop-search-dropdown" hidden>
+                    <div class="nb-shop-search-dropdown-label">Popular Searches</div>
+                    <a href="#search-linen" class="nb-shop-search-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                      <span>Linen Summer Shirts</span>
+                    </a>
+                    <a href="#search-ceramic" class="nb-shop-search-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                      <span>Ceramic Coffee Dripper</span>
+                    </a>
+                    <a href="#search-leather" class="nb-shop-search-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                      <span>Heavy Canvas Daily Tote</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="nb-shop-utilities">
+                  <a href="#account" class="nb-shop-util-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span class="nb-shop-util-text">Account</span>
+                  </a>
+                  <button type="button" class="nb-shop-util-btn nb-shop-btn-saved" aria-label="Toggle wishlist">
+                    <svg class="nb-shop-heart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    <span class="nb-shop-util-text">Saved (<span class="nb-shop-saved-count">0</span>)</span>
+                  </button>
+                  <button type="button" class="nb-shop-cart-btn" aria-label="Shopping bag">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                    <span class="nb-shop-cart-text">Bag</span>
+                    <span class="nb-shop-cart-badge">2</span>
+                  </button>
+                  <button type="button" class="nb-shop-hamburger" aria-expanded="false" aria-controls="nb-shop-mobile-menu-showcase" aria-label="Toggle navigation menu">
+                    <span class="nb-shop-hamburger-line line-1"></span>
+                    <span class="nb-shop-hamburger-line line-2"></span>
+                    <span class="nb-shop-hamburger-line line-3"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="nb-shop-bottom-wrapper">
+              <div class="nb-shop-container nb-shop-bottom">
+                <nav class="nb-shop-categories" aria-label="Product Categories">
+                  <ul class="nb-shop-cat-links">
+                    <li><a href="#new" class="nb-shop-cat-link active">New arrivals</a></li>
+                    <li><a href="#home" class="nb-shop-cat-link">Home & Living</a></li>
+                    <li><a href="#clothing" class="nb-shop-cat-link">Clothing</a></li>
+                    <li><a href="#accessories" class="nb-shop-cat-link">Accessories</a></li>
+                    <li><a href="#sale" class="nb-shop-cat-link nb-shop-sale-link">Sale <span class="nb-shop-sale-badge">-40%</span></a></li>
+                  </ul>
+                </nav>
+                <a href="#explore" class="nb-shop-btn-explore">
+                  <span>Explore all</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="nb-shop-mobile-menu" id="nb-shop-mobile-menu-showcase" hidden>
+              <div class="nb-shop-mobile-inner">
+                <div class="nb-shop-mobile-search">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <input type="search" placeholder="Search catalog..." class="nb-shop-mobile-input">
+                </div>
+                <nav aria-label="Mobile Categories">
+                  <ul class="nb-shop-mobile-cat-links">
+                    <li><a href="#new" class="nb-shop-mobile-cat-link active">New arrivals</a></li>
+                    <li><a href="#home" class="nb-shop-mobile-cat-link">Home & Living</a></li>
+                    <li><a href="#clothing" class="nb-shop-mobile-cat-link">Clothing</a></li>
+                    <li><a href="#accessories" class="nb-shop-mobile-cat-link">Accessories</a></li>
+                    <li><a href="#sale" class="nb-shop-mobile-cat-link nb-shop-sale-link">Sale (-40%)</a></li>
+                    <li><a href="#account" class="nb-shop-mobile-cat-link">My Account</a></li>
+                  </ul>
+                </nav>
+                <div class="nb-shop-mobile-action">
+                  <a href="#explore" class="nb-shop-btn-explore nb-shop-btn-block">Explore Entire Catalog →</a>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </article>
+
+    <!-- 07: Sidebar Dashboard Navigation -->
+    <article class="sc-card" data-category="saas">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">07</span>
+          <div>
+            <h2>Sidebar Dashboard</h2>
+            <p>Click Overview, Activity, Projects, or Settings to see the preview pane update live.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">Live Switcher</span>
+          <button type="button" class="sc-btn-code" data-code="07-sidebar-dashboard">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <div class="nb-sidebar-layout" data-navbar="sidebar-dashboard">
+            <header class="nb-sidebar-mobile-bar">
+              <a href="#home" class="nb-sidebar-brand" aria-label="Grove Home">
+                <svg class="nb-sidebar-brand-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 12 12 22 22 12 12 2"/></svg>
+                <span>grove<span class="nb-sidebar-dot">.</span></span>
+              </a>
+              <button type="button" class="nb-sidebar-hamburger" aria-expanded="false" aria-controls="nb-sidebar-nav-showcase" aria-label="Toggle sidebar navigation">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+              </button>
+            </header>
+            <div class="nb-sidebar-backdrop" hidden></div>
+            <aside class="nb-sidebar-panel" id="nb-sidebar-nav-showcase" aria-label="Dashboard Sidebar">
+              <div class="nb-sidebar-header">
+                <a href="#home" class="nb-sidebar-brand" aria-label="Grove Home">
+                  <svg class="nb-sidebar-brand-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 12 12 22 22 12 12 2"/></svg>
+                  <span>grove<span class="nb-sidebar-dot">.</span></span>
+                </a>
+                <span class="nb-sidebar-plan-pill">Pro</span>
+              </div>
+              <nav class="nb-sidebar-nav">
+                <div class="nb-sidebar-section-title">Workspace</div>
+                <ul class="nb-sidebar-links">
+                  <li>
+                    <a href="#overview" class="nb-sidebar-link active">
+                      <svg class="nb-sidebar-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                      <span>Overview</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#activity" class="nb-sidebar-link">
+                      <svg class="nb-sidebar-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      <span>Activity</span>
+                      <span class="nb-sidebar-count">12</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#projects" class="nb-sidebar-link">
+                      <svg class="nb-sidebar-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+                      <span>Projects</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#settings" class="nb-sidebar-link">
+                      <svg class="nb-sidebar-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="3" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="nb-sidebar-footer">
+                <div class="nb-sidebar-user">
+                  <div class="nb-sidebar-avatar">MK</div>
+                  <div class="nb-sidebar-user-info">
+                    <div class="nb-sidebar-username">Moksh K.</div>
+                    <div class="nb-sidebar-useremail">admin@grove.dev</div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <main class="nb-sidebar-content-area">
+              <div class="nb-sidebar-content-card">
+                <h3 class="nb-sidebar-content-title">Workspace Overview</h3>
+                <p class="nb-sidebar-content-desc">Core metrics and platform health: 1,420 Active members, 99.98% Service uptime, 24 live microservices deployed.</p>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 08: Brutalist / Experimental Navbar -->
+    <article class="sc-card" data-category="creative">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">08</span>
+          <div>
+            <h2>Brutalist</h2>
+            <p>Tactile button click, solid black borders, and active link blocks.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">Brutalist</span>
+          <button type="button" class="sc-btn-code" data-code="08-brutalist">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <header class="nb-brutal-header" data-navbar="brutalist">
+            <div class="nb-brutal-container">
+              <a href="#home" class="nb-brutal-brand" aria-label="NO/FORM Home">
+                <span>NO/FORM</span><span class="nb-brutal-reg">®</span>
+              </a>
+              <nav class="nb-brutal-nav" aria-label="Experimental Navigation">
+                <ul class="nb-brutal-links">
+                  <li><a href="#work" class="nb-brutal-link active">Work_</a></li>
+                  <li><a href="#studio" class="nb-brutal-link">Studio_</a></li>
+                  <li><a href="#manifesto" class="nb-brutal-link">Manifesto_</a></li>
+                </ul>
+              </nav>
+              <div class="nb-brutal-actions">
+                <a href="#contact" class="nb-brutal-btn-talk">
+                  <span>LET'S TALK</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+                <button type="button" class="nb-brutal-hamburger" aria-expanded="false" aria-controls="nb-brutal-mobile-menu-showcase" aria-label="Toggle navigation menu">
+                  <span class="nb-brutal-hamburger-line line-1"></span>
+                  <span class="nb-brutal-hamburger-line line-2"></span>
+                </button>
+              </div>
+            </div>
+            <div class="nb-brutal-mobile-menu" id="nb-brutal-mobile-menu-showcase" hidden>
+              <div class="nb-brutal-mobile-inner">
+                <nav aria-label="Mobile Navigation">
+                  <ul class="nb-brutal-mobile-links">
+                    <li><a href="#work" class="nb-brutal-mobile-link active">Work_</a></li>
+                    <li><a href="#studio" class="nb-brutal-mobile-link">Studio_</a></li>
+                    <li><a href="#manifesto" class="nb-brutal-mobile-link">Manifesto_</a></li>
+                  </ul>
+                </nav>
+                <div class="nb-brutal-mobile-action">
+                  <a href="#contact" class="nb-brutal-btn-talk nb-brutal-btn-block">LET'S TALK ↗</a>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </article>
+
+    <!-- 09: Gradient Startup Navbar -->
+    <article class="sc-card" data-category="creative">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">09</span>
+          <div>
+            <h2>Gradient Startup</h2>
+            <p>Vibrant header with responsive drawer and active link pill states.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">Creative</span>
+          <button type="button" class="sc-btn-code" data-code="09-gradient-startup">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <header class="nb-gradient-header" data-navbar="gradient-startup">
+            <div class="nb-gradient-container">
+              <a href="#home" class="nb-gradient-brand" aria-label="Sparkly Home">
+                <svg class="nb-gradient-sparkle-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>
+                <span>spark<span class="nb-gradient-brand-accent">ly</span></span>
+              </a>
+              <nav class="nb-gradient-nav" aria-label="Startup Navigation">
+                <ul class="nb-gradient-links">
+                  <li><a href="#features" class="nb-gradient-link active">What you get</a></li>
+                  <li><a href="#templates" class="nb-gradient-link">Templates</a></li>
+                  <li><a href="#teams" class="nb-gradient-link">For teams</a></li>
+                </ul>
+              </nav>
+              <div class="nb-gradient-actions">
+                <a href="#login" class="nb-gradient-btn-login">Log in</a>
+                <a href="#signup" class="nb-gradient-btn-trial">
+                  <span>Try it free</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+                <button type="button" class="nb-gradient-hamburger" aria-expanded="false" aria-controls="nb-gradient-mobile-menu-showcase" aria-label="Toggle navigation menu">
+                  <span class="nb-gradient-hamburger-line line-1"></span>
+                  <span class="nb-gradient-hamburger-line line-2"></span>
+                  <span class="nb-gradient-hamburger-line line-3"></span>
+                </button>
+              </div>
+            </div>
+            <div class="nb-gradient-mobile-menu" id="nb-gradient-mobile-menu-showcase" hidden>
+              <div class="nb-gradient-mobile-inner">
+                <nav aria-label="Mobile Navigation">
+                  <ul class="nb-gradient-mobile-links">
+                    <li><a href="#features" class="nb-gradient-mobile-link active">What you get</a></li>
+                    <li><a href="#templates" class="nb-gradient-mobile-link">Templates</a></li>
+                    <li><a href="#teams" class="nb-gradient-mobile-link">For teams</a></li>
+                  </ul>
+                </nav>
+                <div class="nb-gradient-mobile-actions">
+                  <a href="#login" class="nb-gradient-btn-login nb-gradient-login-mobile">Log in</a>
+                  <a href="#signup" class="nb-gradient-btn-trial nb-gradient-btn-block">Try it free ↗</a>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10: Minimal Utility Navbar -->
+    <article class="sc-card" data-category="saas">
+      <div class="sc-card-head">
+        <div class="sc-card-meta">
+          <span class="sc-num-badge">10</span>
+          <div>
+            <h2>Minimal Utility</h2>
+            <p>Click the bell icon to toggle notifications popover, or click search icon to expand search.</p>
+          </div>
+        </div>
+        <div class="sc-card-actions">
+          <span class="sc-tag">Notifications</span>
+          <button type="button" class="sc-btn-code" data-code="10-minimal-utility">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Code</span>
+          </button>
+        </div>
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-preview-frame">
+          <header class="nb-minimal-header" data-navbar="minimal-utility">
+            <div class="nb-minimal-container">
+              <a href="#home" class="nb-minimal-brand" aria-label="Northstar Home">
+                <svg class="nb-minimal-star-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>north<span class="nb-minimal-accent">star</span></span>
+              </a>
+              <nav class="nb-minimal-nav" aria-label="Product Navigation">
+                <ul class="nb-minimal-links">
+                  <li><a href="#platform" class="nb-minimal-link active">Platform</a></li>
+                  <li><a href="#cases" class="nb-minimal-link">Use cases</a></li>
+                  <li><a href="#learn" class="nb-minimal-link">Learn</a></li>
+                </ul>
+              </nav>
+              <div class="nb-minimal-actions">
+                <div class="nb-minimal-search-wrap">
+                  <input type="search" placeholder="Search..." class="nb-minimal-search-input" aria-label="Search site" hidden>
+                  <button type="button" class="nb-minimal-icon-btn nb-minimal-btn-search" aria-label="Search site">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  </button>
+                </div>
+                <div class="nb-minimal-notify-wrap">
+                  <button type="button" class="nb-minimal-icon-btn nb-minimal-btn-notify" aria-label="Notifications" aria-expanded="false">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                    <span class="nb-minimal-notify-pip"></span>
+                  </button>
+                  <div class="nb-minimal-notify-dropdown" hidden>
+                    <div class="nb-minimal-notify-head">
+                      <span>Notifications</span>
+                      <span class="nb-minimal-notify-tag">Recent</span>
+                    </div>
+                    <div class="nb-minimal-notify-item">
+                      <div class="nb-minimal-notify-title">Deployment Succeeded</div>
+                      <div class="nb-minimal-notify-desc">Production v2.4.1 is live across all regions.</div>
+                    </div>
+                    <div class="nb-minimal-notify-item">
+                      <div class="nb-minimal-notify-title">Team Invitation Accepted</div>
+                      <div class="nb-minimal-notify-desc">Sarah Lin joined the Core Tech workspace.</div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#demo" class="nb-minimal-btn-demo">Book a demo</a>
+                <button type="button" class="nb-minimal-hamburger" aria-expanded="false" aria-controls="nb-minimal-mobile-menu-showcase" aria-label="Toggle navigation menu">
+                  <span class="nb-minimal-hamburger-line line-1"></span>
+                  <span class="nb-minimal-hamburger-line line-2"></span>
+                  <span class="nb-minimal-hamburger-line line-3"></span>
+                </button>
+              </div>
+            </div>
+            <div class="nb-minimal-mobile-menu" id="nb-minimal-mobile-menu-showcase" hidden>
+              <div class="nb-minimal-mobile-inner">
+                <nav aria-label="Mobile Navigation">
+                  <ul class="nb-minimal-mobile-links">
+                    <li><a href="#platform" class="nb-minimal-mobile-link active">Platform</a></li>
+                    <li><a href="#cases" class="nb-minimal-mobile-link">Use cases</a></li>
+                    <li><a href="#learn" class="nb-minimal-mobile-link">Learn</a></li>
+                  </ul>
+                </nav>
+                <div class="nb-minimal-mobile-actions">
+                  <a href="#demo" class="nb-minimal-btn-demo nb-minimal-btn-block">Book a demo</a>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Code Modal -->
+  <div class="sc-modal-overlay" id="scCodeModal" hidden>
+    <div class="sc-modal">
+      <div class="sc-modal-header">
+        <h3 class="sc-modal-title" id="scModalTitle">Source Code</h3>
+        <div class="sc-modal-tabs">
+          <button type="button" class="sc-modal-tab active" data-tab="html">HTML</button>
+          <button type="button" class="sc-modal-tab" data-tab="css">CSS</button>
+          <button type="button" class="sc-modal-tab" data-tab="js">JS</button>
+        </div>
+        <button type="button" class="sc-modal-close" id="scModalClose" aria-label="Close modal">✕</button>
+      </div>
+      <div class="sc-modal-body">
+        <pre><code class="sc-code-block" id="scCodeContent">Loading source code...</code></pre>
+      </div>
+      <div class="sc-modal-footer">
+        <button type="button" class="sc-btn-copy" id="scBtnCopy">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span>Copy</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="sc-toast" id="scToast">
+    <span>Copied to clipboard</span>
+  </div>
+
+  <!-- Master JavaScript Bundle for All Navbars -->
+  <script type="module" src="./navbars/navbars.js"></script>
+
+  <!-- Showcase Page Interaction Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Filter Tabs
+      const tabs = document.querySelectorAll('.sc-tab');
+      const cards = document.querySelectorAll('.sc-card');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const filter = tab.dataset.filter;
+          cards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 2. Canvas Background Switcher
+      const bgButtons = document.querySelectorAll('.sc-bg-btn');
+      bgButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          bgButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          document.body.classList.remove('canvas-white', 'canvas-dark');
+          const bgMode = btn.dataset.bg;
+          if (bgMode === 'white') document.body.classList.add('canvas-white');
+          if (bgMode === 'dark') document.body.classList.add('canvas-dark');
+        });
+      });
+
+      // 3. Viewport Toggle
+      const vpButtons = document.querySelectorAll('.sc-vp-btn');
+      vpButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          vpButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          document.body.classList.remove('vp-desktop', 'vp-tablet', 'vp-mobile');
+          const mode = btn.dataset.vp;
+          if (mode === 'tablet') document.body.classList.add('vp-tablet');
+          if (mode === 'mobile') document.body.classList.add('vp-mobile');
+        });
+      });
+
+      // 4. Code Inspection Modal
+      const modal = document.getElementById('scCodeModal');
+      const modalClose = document.getElementById('scModalClose');
+      const modalTitle = document.getElementById('scModalTitle');
+      const codeContent = document.getElementById('scCodeContent');
+      const modalTabs = document.querySelectorAll('.sc-modal-tab');
+      const btnCopy = document.getElementById('scBtnCopy');
+      const toast = document.getElementById('scToast');
+
+      let currentComponent = '01-clean-saas';
+      let currentTab = 'html';
+      const cache = {};
+
+      async function loadFileContent(component, ext) {
+        const path = `./navbars/${component}/navbar.${ext}`;
+        if (cache[path]) return cache[path];
+        try {
+          const res = await fetch(path);
+          if (!res.ok) throw new Error('File not found');
+          const text = await res.text();
+          cache[path] = text;
+          return text;
+        } catch (err) {
+          return `// Error loading ${path}: ${err.message}`;
+        }
+      }
+
+      async function updateModalCode() {
+        codeContent.textContent = 'Loading source code...';
+        const code = await loadFileContent(currentComponent, currentTab);
+        codeContent.textContent = code;
+      }
+
+      document.querySelectorAll('.sc-btn-code').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          currentComponent = btn.dataset.code;
+          modalTitle.textContent = `${currentComponent.replace('-', ' ').toUpperCase()}`;
+          modal.removeAttribute('hidden');
+          await updateModalCode();
+        });
+      });
+
+      modalTabs.forEach(tab => {
+        tab.addEventListener('click', async () => {
+          modalTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentTab = tab.dataset.tab;
+          await updateModalCode();
+        });
+      });
+
+      function closeModal() {
+        modal.setAttribute('hidden', '');
+      }
+
+      modalClose.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+          closeModal();
+        }
+      });
+
+      // 5. Copy to Clipboard
+      btnCopy.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(codeContent.textContent);
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 2000);
+        } catch (e) {
+          alert('Copied to clipboard');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
