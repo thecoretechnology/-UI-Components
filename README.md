@@ -1,8 +1,8 @@
 # UI Components Collection
 
-A library of responsive navigation bars and footers built with plain HTML, CSS, and vanilla JavaScript.
+A curated library of 30 responsive navigation bars, footers, and hero section components built with plain HTML, CSS, and vanilla JavaScript.
 
-No frameworks, no build tools, and no external icon libraries. Every icon is an inline SVG, and each component has its own scoped CSS and independent JavaScript controller.
+No frameworks, build tools, or runtime dependencies. All icons and graphics (chronometer dials, CRT terminal wireframes, colonnade reliefs, and geometric sculptures) are implemented purely with CSS and inline SVGs. Each component includes scoped styling and an independent JavaScript controller.
 
 ---
 
@@ -11,11 +11,11 @@ No frameworks, no build tools, and no external icon libraries. Every icon is an 
 Open `index.html` in any modern web browser to view the interactive showcase.
 
 The showcase includes:
-- Section toggle to switch between **Navigation Bars (10)** and **Footers (10)**
+- Section toggle to switch between **Navigation Bars (10)**, **Footers (10)**, and **Hero Sections (10)**
 - Viewport switcher (Desktop 1200px, Tablet 768px, Mobile 375px)
-- Canvas background switcher (Default, White, Dark)
-- Live interactive behaviors (dropdowns, mobile drawers, newsletter forms with validation, studio time clocks, clipboard helpers, and mobile accordions)
-- Source code modal with tabs for HTML, CSS, and JS with one-click copy
+- Canvas background switcher (Light, White, Dark)
+- Live interactive behaviors (dropdowns, mobile drawers, newsletter validation, chronograph stopwatches, retro CRT terminal commands, variable font weight morphers, material finishes, and mobile accordions)
+- Source code modal with tabs for HTML, CSS, and JS with one-click copy (100% offline & `file://` compatible)
 
 To run locally with a static server (recommended for ES module imports):
 ```bash
@@ -33,7 +33,7 @@ Then open `http://localhost:3000`.
 
 ```
 ├── .gitignore               # Ignores references/, node_modules/, temp files
-├── index.html               # Interactive showcase page for all components
+├── index.html               # Interactive showcase page for all 30 components
 ├── README.md                # Project documentation
 │
 ├── navbars/                 # Navigation Bars (Day 1)
@@ -52,21 +52,37 @@ Then open `http://localhost:3000`.
 │   ├── 09-gradient-startup/ # Dark gradient banner with glow accents
 │   └── 10-minimal-utility/  # Clean single-line layout with popover utilities
 │
-└── footers/                 # Footers (Day 2)
-    ├── footers.css          # Master stylesheet bundle for all 10 footers
-    ├── footers.js           # Master script bundle for all 10 footers
-    ├── README.md            # Footer component catalog
+├── footers/                 # Footers (Day 2)
+│   ├── footers.css          # Master stylesheet bundle for all 10 footers
+│   ├── footers.js           # Master script bundle for all 10 footers
+│   ├── README.md            # Footer component catalog
+│   │
+│   ├── 01-clean-saas/       # Standard SaaS footer with newsletter validation & social links
+│   ├── 02-editorial/        # Publication footer with serif masthead & smooth back-to-top
+│   ├── 03-docs/             # Dark developer docs footer with live status ping & version copy
+│   ├── 04-ecommerce/        # Storefront footer with 10% coupon reveal & mobile accordions
+│   ├── 05-agency/           # Creative agency footer with headline CTA & click-to-copy email
+│   ├── 06-conversion/       # Newsletter box with frequency pills (weekly/monthly)
+│   ├── 07-app-utility/      # Compact dashboard status bar with keyboard shortcut modal (?)
+│   ├── 08-asymmetric/       # Asymmetric editorial layout with live timezone clocks (LON, NYC, TYO)
+│   ├── 09-brutalist/        # Neo-brutalist cards with tactile click states & email copy card
+│   └── 10-global/           # Travel footer with dynamic language and currency selectors
+│
+└── heroes/                  # Hero Sections (Day 3 — 10 Design Movements)
+    ├── heroes.css           # Master stylesheet bundle for all 10 heroes
+    ├── heroes.js            # Master script bundle for all 10 heroes
+    ├── README.md            # Hero section component catalog
     │
-    ├── 01-clean-saas/       # Standard SaaS footer with newsletter validation & social links
-    ├── 02-editorial/        # Publication footer with serif masthead & smooth back-to-top
-    ├── 03-docs/             # Dark developer docs footer with live status ping & version copy
-    ├── 04-ecommerce/        # Storefront footer with 10% coupon reveal & mobile accordions
-    ├── 05-agency/           # Creative agency footer with headline CTA & click-to-copy email
-    ├── 06-conversion/       # Newsletter box with frequency pills (weekly/monthly)
-    ├── 07-app-utility/      # Compact dashboard status bar with keyboard shortcut modal (?)
-    ├── 08-asymmetric/       # Asymmetric editorial layout with live timezone clocks (LON, NYC, TYO)
-    ├── 09-brutalist/        # Neo-brutalist cards with tactile click states & email copy card
-    └── 10-global/           # Travel footer with dynamic language and currency selectors
+    ├── 01-swiss-grid/             # Swiss/grid-based typography with ratio switcher & coordinate tracking
+    ├── 02-editorial-monograph/    # Classical architectural monograph with 3-tier solar lighting simulation
+    ├── 03-graphic-brutalism/      # High-voltage grid dispatch with 3px black borders & tactile rocker breakers
+    ├── 04-image-narrative/        # Svalbard glaciological survey with CSS aurora toggle & surveyor reticle
+    ├── 05-product-spec/           # Swiss mechanical chronometer with functional monopusher chronograph stopwatch
+    ├── 06-personal-portfolio/     # Scandinavian type foundry atelier with variable font weight slider (100-900)
+    ├── 07-retro-digital/          # 1980s vector storage terminal with CRT scanlines, phosphor modes & CLI prompt
+    ├── 08-modular-tectonic/       # Asymmetric tectonic formwork slabs with material switcher & carbon readouts
+    ├── 09-quiet-luxury/           # Radically restrained Didot serif, hand-turned guilloché medallion & salon drawer
+    └── 10-playful-constructivist/ # Bauhaus Dessau elemental geometric laboratory with kinetic shape rotation
 ```
 
 ---
@@ -74,73 +90,54 @@ Then open `http://localhost:3000`.
 ## Component Structure
 
 Every component folder is self-contained and consists of:
-- `navbar.html` or `footer.html`: Semantic, accessible HTML markup with inline SVGs and ARIA attributes.
-- `navbar.css` or `footer.css`: Scoped CSS using dedicated class prefixes (`.nb-*` for navbars, `.ft-*` for footers) and CSS custom properties (`:root`).
-- `navbar.js` or `footer.js`: ES module controller that manages responsive state, keyboard navigation (`Escape`, `?`), and interactions.
+- `hero.html` (or `navbar.html` / `footer.html`): Semantic, accessible HTML markup with inline SVGs and ARIA attributes.
+- `hero.css` (or `navbar.css` / `footer.css`): Scoped CSS using dedicated class prefixes (`.hr-*` for heroes, `.nb-*` for navbars, `.ft-*` for footers), container queries, and CSS custom properties (`:root`).
+- `hero.js` (or `navbar.js` / `footer.js`): ES module controller that manages responsive states, tabs, calculations, and keyboard navigation (`Escape`).
 - `README.md`: Specific usage instructions and theming variables.
 
 ---
 
 ## How to Use
 
-### Using a Single Component
-
-To use any component individually in your own project:
-
-1. Copy the component's HTML file into your page.
-2. Link the component's stylesheet in `<head>`:
-   ```html
-   <link rel="stylesheet" href="footers/01-clean-saas/footer.css">
-   ```
-3. Load the component's script at the end of `<body>`:
-   ```html
-   <script type="module" src="footers/01-clean-saas/footer.js"></script>
-   ```
-
-Each component's JavaScript automatically runs when the DOM finishes loading. You can also import and call initializers manually:
-
-```javascript
-import { initCleanSaaSFooter } from './footers/01-clean-saas/footer.js';
-
-initCleanSaaSFooter(document);
-```
-
-### Using Bundles
-
-If you want to use multiple components across an application:
-
+### 1. Standalone Component
+Every component in `navbars/`, `footers/`, and `heroes/` works completely on its own:
 ```html
-<!-- Load all navbar or footer styles -->
-<link rel="stylesheet" href="navbars/navbars.css">
-<link rel="stylesheet" href="footers/footers.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./heroes/01-swiss-grid/hero.css">
+</head>
+<body>
+  <!-- Insert contents of heroes/01-swiss-grid/hero.html -->
+  <script type="module" src="./heroes/01-swiss-grid/hero.js"></script>
+</body>
+</html>
+```
 
-<!-- Load all scripts -->
-<script type="module" src="navbars/navbars.js"></script>
-<script type="module" src="footers/footers.js"></script>
+### 2. Master Bundle
+To use the entire collection together:
+```html
+<link rel="stylesheet" href="./navbars/navbars.css">
+<link rel="stylesheet" href="./footers/footers.css">
+<link rel="stylesheet" href="./heroes/heroes.css">
+
+<script type="module">
+  import { initAllNavbars } from './navbars/navbars.js';
+  import { initAllFooters } from './footers/footers.js';
+  import { initAllHeroes } from './heroes/heroes.js';
+
+  initAllNavbars();
+  initAllFooters();
+  initAllHeroes();
+</script>
 ```
 
 ---
 
-## Customization
+## Quality & Accessibility Standards
 
-All components expose scoped CSS custom properties at the top of their stylesheet. To change colors, fonts, or radiuses, override them in your own CSS:
-
-```css
-:root {
-  /* Customize SaaS navbar */
-  --nb-saas-primary: #0ea5e9;
-
-  /* Customize SaaS footer */
-  --ft-saas-primary: #0ea5e9;
-  --ft-saas-radius: 8px;
-}
-```
-
----
-
-## Features
-
-- **Zero dependencies**: No npm packages, frameworks, or external icon fonts required.
-- **Strictly scoped**: Prefixes like `.nb-saas-*` and `.ft-shop-*` prevent styling leaks or conflicts with your host application styles.
-- **Accessible**: Managed ARIA attributes (`aria-expanded`, `aria-controls`, `aria-label`, `aria-live`), keyboard focus management, and `Escape` key listeners.
-- **Responsive**: Tested across Desktop (1200px), Tablet (768px), and Mobile (375px) breakpoints.
+- **Accessible markup**: Native button and link elements, `aria-expanded`, `aria-selected`, `aria-pressed`, `aria-label`, and `aria-live` polite regions.
+- **Keyboard navigation**: All interactive elements are fully reachable with the keyboard. Full modal escape key handling (`Escape`).
+- **Zero remote images or fonts needed**: All graphics, vectors, indicators, and dials are drawn locally in CSS and SVG.
+- **Zero layout shifts & horizontal overflow**: Strict `box-sizing: border-box`, fluid clamp typography, and dual-layer `@container` + `@media` query responsiveness.

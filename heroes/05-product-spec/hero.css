@@ -1,0 +1,744 @@
+/* 05: Product-Led with Technical Annotations Hero Styles */
+
+:root {
+  --hr-spec-bg: #090a0f;
+  --hr-spec-surface: #12141c;
+  --hr-spec-border: #232738;
+  --hr-spec-text: #f1f5f9;
+  --hr-spec-muted: #94a3b8;
+  --hr-spec-subtle: #64748b;
+  --hr-spec-orange: #f97316;
+  --hr-spec-blue: #38bdf8;
+  --hr-spec-case-metal: linear-gradient(135deg, #64748b 0%, #334155 50%, #475569 100%);
+  --hr-spec-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hr-spec-font-mono: 'SF Mono', Consolas, Monaco, monospace;
+}
+
+.hr-spec-hero {
+  position: relative;
+  width: 100%;
+  background-color: var(--hr-spec-bg);
+  color: var(--hr-spec-text);
+  font-family: var(--hr-spec-font-sans);
+  border: 1px solid var(--hr-spec-border);
+  box-sizing: border-box;
+  padding: 36px 36px 44px;
+  overflow: hidden;
+}
+
+.hr-spec-hero * {
+  box-sizing: border-box;
+}
+
+.hr-spec-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Header */
+.hr-spec-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--hr-spec-border);
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.hr-spec-ref {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--hr-spec-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--hr-spec-muted);
+}
+
+.hr-spec-brand {
+  color: var(--hr-spec-text);
+}
+
+.hr-spec-dot {
+  opacity: 0.5;
+}
+
+.hr-spec-cert {
+  font-family: var(--hr-spec-font-mono);
+  font-size: 10px;
+  color: var(--hr-spec-blue);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+/* Stage Grid */
+.hr-spec-stage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Left Panel */
+.hr-spec-left-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-spec-kicker {
+  font-family: var(--hr-spec-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--hr-spec-orange);
+  margin-bottom: 12px;
+}
+
+.hr-spec-title {
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0 0 16px;
+}
+
+.hr-spec-lead {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--hr-spec-muted);
+  margin: 0 0 28px;
+}
+
+/* Finish Selector */
+.hr-spec-finish-selector {
+  margin-bottom: 28px;
+}
+
+.hr-spec-selector-label {
+  display: block;
+  font-family: var(--hr-spec-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--hr-spec-subtle);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.hr-spec-finish-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hr-spec-finish-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--hr-spec-surface);
+  border: 1px solid var(--hr-spec-border);
+  color: var(--hr-spec-muted);
+  padding: 8px 12px;
+  font-family: var(--hr-spec-font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 140ms ease;
+}
+
+.hr-spec-finish-btn:hover {
+  border-color: #3b4259;
+  color: var(--hr-spec-text);
+}
+
+.hr-spec-finish-btn.active {
+  border-color: var(--hr-spec-orange);
+  color: #ffffff;
+  background: rgba(249, 115, 22, 0.1);
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.swatch-ti {
+  background: linear-gradient(135deg, #cbd5e1, #64748b);
+}
+
+.swatch-dlc {
+  background: #18181b;
+  border: 1px solid #52525b;
+}
+
+.swatch-bronze {
+  background: linear-gradient(135deg, #d97706, #78350f);
+}
+
+/* Spec Table */
+.hr-spec-table {
+  border: 1px solid var(--hr-spec-border);
+  border-radius: 4px;
+  background: var(--hr-spec-surface);
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.hr-spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--hr-spec-border);
+  font-family: var(--hr-spec-font-mono);
+  font-size: 11px;
+}
+
+.hr-spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-prop {
+  color: var(--hr-spec-subtle);
+  font-weight: 600;
+}
+
+.spec-val {
+  color: var(--hr-spec-text);
+  font-weight: 700;
+}
+
+/* Actions */
+.hr-spec-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hr-spec-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--hr-spec-orange);
+  color: #ffffff;
+  font-family: var(--hr-spec-font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 140ms ease;
+}
+
+.hr-spec-btn-primary:hover {
+  background: #ea580c;
+}
+
+.hr-spec-btn-specs {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: var(--hr-spec-muted);
+  border: 1px solid var(--hr-spec-border);
+  font-family: var(--hr-spec-font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 140ms ease;
+}
+
+.hr-spec-btn-specs:hover {
+  border-color: #475569;
+  color: #ffffff;
+}
+
+/* Right Panel: Watch Apparatus & Annotations */
+.hr-spec-visual-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hr-spec-apparatus-frame {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Annotations */
+.hr-spec-callout {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hr-spec-callout-line {
+  height: 1px;
+  background: var(--hr-spec-orange);
+  position: relative;
+}
+
+.hr-spec-callout-line::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--hr-spec-orange);
+  top: -2px;
+}
+
+.hr-spec-callout-box {
+  background: rgba(18, 20, 28, 0.9);
+  border: 1px solid var(--hr-spec-border);
+  padding: 6px 10px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(6px);
+}
+
+.hr-spec-callout-box .title {
+  font-family: var(--hr-spec-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--hr-spec-orange);
+  letter-spacing: 0.05em;
+}
+
+.hr-spec-callout-box .detail {
+  font-size: 10px;
+  color: var(--hr-spec-muted);
+}
+
+.callout-crystal {
+  top: 40px;
+  left: -20px;
+}
+.callout-crystal .hr-spec-callout-line {
+  width: 45px;
+  order: 2;
+}
+.callout-crystal .hr-spec-callout-line::before {
+  right: 0;
+}
+.callout-crystal .hr-spec-callout-box {
+  order: 1;
+}
+
+.callout-pusher {
+  top: 80px;
+  right: -25px;
+}
+.callout-pusher .hr-spec-callout-line {
+  width: 40px;
+}
+.callout-pusher .hr-spec-callout-line::before {
+  left: 0;
+}
+
+.callout-calibre {
+  bottom: 120px;
+  left: -30px;
+}
+.callout-calibre .hr-spec-callout-line {
+  width: 50px;
+  order: 2;
+}
+.callout-calibre .hr-spec-callout-line::before {
+  right: 0;
+}
+.callout-calibre .hr-spec-callout-box {
+  order: 1;
+}
+
+/* Watch Object */
+.hr-spec-watch-object {
+  position: relative;
+  width: 290px;
+  height: 290px;
+  margin: 20px 0;
+}
+
+/* Monopusher Button at 2 o'clock */
+.hr-spec-pusher-btn {
+  position: absolute;
+  top: 32px;
+  right: 18px;
+  width: 26px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 4;
+  transform: rotate(45deg);
+}
+
+.hr-spec-pusher-stem {
+  display: block;
+  width: 14px;
+  height: 8px;
+  background: #64748b;
+  margin: 0 auto;
+}
+
+.hr-spec-pusher-cap {
+  display: block;
+  width: 24px;
+  height: 8px;
+  background: #94a3b8;
+  border-radius: 2px;
+  border: 1px solid #475569;
+}
+
+.hr-spec-pusher-btn:active .hr-spec-pusher-cap {
+  transform: translateY(2px);
+}
+
+/* Watch Case */
+.hr-spec-case {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--hr-spec-case-metal);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), inset 0 2px 3px rgba(255, 255, 255, 0.2);
+  padding: 12px;
+}
+
+/* Material Variations */
+.hr-spec-hero[data-finish="titanium"] .hr-spec-case {
+  background: linear-gradient(135deg, #64748b 0%, #334155 50%, #475569 100%);
+}
+
+.hr-spec-hero[data-finish="dlc"] .hr-spec-case {
+  background: linear-gradient(135deg, #27272a 0%, #09090b 60%, #18181b 100%);
+  border: 1px solid #3f3f46;
+}
+
+.hr-spec-hero[data-finish="bronze"] .hr-spec-case {
+  background: linear-gradient(135deg, #b45309 0%, #78350f 60%, #92400e 100%);
+}
+
+.hr-spec-bezel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #0f111a;
+  border: 2px solid #282c3f;
+  padding: 10px;
+}
+
+.hr-spec-dial {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #181b26 0%, #0c0d14 100%);
+  overflow: hidden;
+}
+
+.hr-spec-track-outer {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.hr-spec-track-inner {
+  position: absolute;
+  inset: 22px;
+  border-radius: 50%;
+  border: 1px dashed rgba(148, 163, 184, 0.15);
+}
+
+/* Indices */
+.hr-spec-index {
+  position: absolute;
+  background: #ffffff;
+}
+
+.idx-12 {
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 12px;
+}
+
+.idx-3 {
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 3px;
+}
+
+.idx-6 {
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 12px;
+}
+
+.idx-9 {
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 3px;
+}
+
+/* Subdial at 12H */
+.hr-spec-subdial {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(12, 13, 20, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.hr-spec-subdial-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 1px;
+  height: 24px;
+  background: var(--hr-spec-blue);
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.hr-spec-subdial-num {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--hr-spec-font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--hr-spec-subtle);
+}
+
+/* Brand on Dial */
+.hr-spec-dial-brand {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--hr-spec-font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--hr-spec-muted);
+}
+
+.hr-spec-dial-brand .sub {
+  font-size: 6px;
+  color: var(--hr-spec-subtle);
+  letter-spacing: 0.12em;
+}
+
+/* Hands */
+.hr-spec-hour-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 4px;
+  height: 52px;
+  background: #f1f5f9;
+  border-radius: 2px 2px 0 0;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(120deg);
+  z-index: 2;
+}
+
+.hr-spec-minute-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 2px;
+  height: 84px;
+  background: #cbd5e1;
+  border-radius: 2px 2px 0 0;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(340deg);
+  z-index: 2;
+}
+
+/* Functional Sweep Hand */
+.hr-spec-chrono-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 1.5px;
+  height: 100px;
+  background: var(--hr-spec-orange);
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(0deg);
+  z-index: 3;
+}
+
+.hr-spec-center-cap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--hr-spec-orange);
+  border: 2px solid #090a0f;
+  z-index: 4;
+}
+
+/* Stopwatch Control Bar */
+.hr-spec-chrono-controls {
+  margin-top: 18px;
+  background: var(--hr-spec-surface);
+  border: 1px solid var(--hr-spec-border);
+  padding: 10px 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.hr-spec-chrono-digital {
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-spec-chrono-label {
+  font-family: var(--hr-spec-font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--hr-spec-subtle);
+}
+
+.hr-spec-chrono-time {
+  font-family: var(--hr-spec-font-mono);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--hr-spec-orange);
+}
+
+.hr-spec-chrono-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.hr-spec-ctrl-btn {
+  background: #1e2230;
+  border: 1px solid var(--hr-spec-border);
+  color: var(--hr-spec-text);
+  font-family: var(--hr-spec-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.hr-spec-ctrl-btn:hover:not(:disabled) {
+  background: #2a3045;
+  border-color: #475569;
+}
+
+.hr-spec-ctrl-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Toast */
+.hr-spec-toast {
+  position: absolute;
+  bottom: 20px;
+  right: 28px;
+  background: #12141c;
+  color: var(--hr-spec-orange);
+  font-family: var(--hr-spec-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border: 1px solid var(--hr-spec-orange);
+  border-radius: 3px;
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 20;
+}
+
+.hr-spec-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Rules */
+@media (max-width: 960px) {
+  .hr-spec-stage-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .callout-crystal,
+  .callout-pusher,
+  .callout-calibre {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hr-spec-hero {
+    padding: 24px 16px;
+  }
+  .hr-spec-title {
+    font-size: 30px;
+  }
+  .hr-spec-row {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+}
+
+@container (max-width: 860px) {
+  .hr-spec-stage-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .callout-crystal,
+  .callout-pusher,
+  .callout-calibre {
+    display: none;
+  }
+}

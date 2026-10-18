@@ -1,0 +1,107 @@
+<!-- 09: Quiet Luxury Hero -->
+<section class="hr-lux-hero" data-hero="quiet-luxury" data-ambiance="daylight">
+  <div class="hr-lux-container">
+    <!-- Top Minimalist Atelier Folio -->
+    <header class="hr-lux-header">
+      <div class="hr-lux-provenance">
+        <span class="hr-lux-brand">MAISON HÉMISPHÈRE</span>
+        <span class="hr-lux-sep">·</span>
+        <span>LE BRASSUS WORKSHOP</span>
+      </div>
+      <div class="hr-lux-folio-right">
+        <span>BESPOKE COMMISSIONS &amp; UNIQUE PIECES</span>
+      </div>
+    </header>
+
+    <!-- Vast Negative Space Composition -->
+    <div class="hr-lux-stage">
+      <!-- Centered Whispering Typography -->
+      <div class="hr-lux-statement">
+        <div class="hr-lux-tag">Nº VII · HAND GUILLOCHÉ</div>
+        
+        <h1 class="hr-lux-title">
+          The Art of the Unspoken
+        </h1>
+
+        <p class="hr-lux-desc">
+          True mastery requires no clamor. For three generations, our artisans have hand-turned engine rosettes onto solid silver dials, creating micro-reliefs visible only when the wrist catches the quiet morning light.
+        </p>
+
+        <!-- Discreet Private Atelier Action -->
+        <div class="hr-lux-actions">
+          <button type="button" class="hr-lux-btn-salon" id="hrLuxSalonBtn">
+            <span>REQUEST A PRIVATE VIEWING</span>
+            <span class="hr-lux-btn-arrow" aria-hidden="true">⟶</span>
+          </button>
+          <a href="#catalogue-raisonne" class="hr-lux-link-catalogue">
+            <span>CONSULT THE 2026 COMPLETE CATALOG</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Pure CSS & SVG Hand-Turned Guilloché Medallion -->
+      <div class="hr-lux-medallion-frame">
+        <div class="hr-lux-medallion" id="hrLuxMedallion" aria-label="Hand-turned geometric rose-engine guilloche dial">
+          <svg class="hr-lux-rosette-svg" viewBox="0 0 240 240" aria-hidden="true">
+            <!-- Concentric Engine Patterns -->
+            <circle cx="120" cy="120" r="110" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.3"></circle>
+            <circle cx="120" cy="120" r="85" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.4"></circle>
+            <circle cx="120" cy="120" r="60" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 3" opacity="0.45"></circle>
+            <circle cx="120" cy="120" r="30" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"></circle>
+            
+            <!-- Intricate Rose Guilloché Rays (Pure Math Curves) -->
+            <g class="hr-lux-rays" stroke="currentColor" stroke-width="0.65" opacity="0.5">
+              <path d="M120,10 Q145,65 120,120 Q95,175 120,230"></path>
+              <path d="M10,120 Q65,145 120,120 Q175,95 230,120"></path>
+              <path d="M42,42 Q100,75 120,120 Q140,165 198,198"></path>
+              <path d="M198,42 Q140,75 120,120 Q100,165 42,198"></path>
+              <path d="M68,18 Q115,70 120,120 Q125,170 172,222"></path>
+              <path d="M172,18 Q125,70 120,120 Q115,170 68,222"></path>
+            </g>
+            <!-- Center Pivot -->
+            <circle cx="120" cy="120" r="5" fill="currentColor" opacity="0.6"></circle>
+          </svg>
+          <div class="hr-lux-sheen" id="hrLuxSheen" aria-hidden="true"></div>
+        </div>
+
+        <!-- Ambiance Light Reflector Controls -->
+        <div class="hr-lux-ambiance-bar" role="group" aria-label="Atelier Incident Light Angle">
+          <span class="label">INCIDENT AMBIANCE:</span>
+          <button type="button" class="hr-lux-amb-btn active" data-ambiance="daylight">DIFFUSE DAYLIGHT</button>
+          <button type="button" class="hr-lux-amb-btn" data-ambiance="candlelight">SALON WARMTH</button>
+          <button type="button" class="hr-lux-amb-btn" data-ambiance="atelier">RAZOR BEAM</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Private Viewing Appointment Modal / Panel (Inline Expandable) -->
+    <div class="hr-lux-salon-drawer" id="hrLuxSalonDrawer" hidden>
+      <div class="hr-lux-drawer-content">
+        <div class="hr-lux-drawer-head">
+          <span class="title">PRIVATE SALON // APPOINTMENT CONFIRMATION</span>
+          <button type="button" class="hr-lux-drawer-close" id="hrLuxDrawerClose" aria-label="Close salon drawer">✕</button>
+        </div>
+        <p class="desc">
+          Our master watchmaker welcomes private consultations at our Place Vendôme salon or directly at your residence. Please select your preferred consultation format:
+        </p>
+        <div class="hr-lux-options">
+          <button type="button" class="hr-lux-choice-btn" data-choice="vendome">SALON PLACE VENDÔME, PARIS</button>
+          <button type="button" class="hr-lux-choice-btn" data-choice="brassus">LE BRASSUS WORKSHOP, SWITZERLAND</button>
+          <button type="button" class="hr-lux-choice-btn" data-choice="residence">CONFIDENTIAL CONCIERGE VISIT</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Discrete Rule & Atelier Notes -->
+    <div class="hr-lux-footer-rule" aria-hidden="true"></div>
+    <footer class="hr-lux-footer">
+      <span>GENEVA · LE BRASSUS · PARIS · TOKYO</span>
+      <span>LIMITED PRODUCTION OF 24 TIMEPIECES PER YEAR</span>
+    </footer>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="hr-lux-toast" id="hrLuxToast" role="status" aria-live="polite">
+    AMBIANCE ADJUSTED
+  </div>
+</section>

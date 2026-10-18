@@ -1,0 +1,488 @@
+/* 04: Image-First Visual Narrative Hero Styles */
+
+:root {
+  --hr-polar-bg: #030712;
+  --hr-polar-surface: rgba(15, 23, 42, 0.75);
+  --hr-polar-border: rgba(148, 163, 184, 0.25);
+  --hr-polar-text-main: #f8fafc;
+  --hr-polar-text-muted: #94a3b8;
+  --hr-polar-cyan: #38bdf8;
+  --hr-polar-emerald: #34d399;
+  --hr-polar-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hr-polar-font-serif: 'Playfair Display', Georgia, serif;
+  --hr-polar-font-mono: 'SF Mono', Consolas, monospace;
+}
+
+.hr-polar-hero {
+  position: relative;
+  width: 100%;
+  background-color: var(--hr-polar-bg);
+  color: var(--hr-polar-text-main);
+  font-family: var(--hr-polar-font-sans);
+  border: 1px solid var(--hr-polar-border);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hr-polar-hero * {
+  box-sizing: border-box;
+}
+
+.hr-polar-stage {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Atmospheric Canvas */
+.hr-polar-canvas {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: auto;
+  cursor: crosshair;
+}
+
+.hr-polar-sky {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 20%, #0c1a30 0%, #030712 85%);
+}
+
+/* Aurora Borealis */
+.hr-polar-aurora {
+  position: absolute;
+  top: -10%;
+  left: -20%;
+  right: -20%;
+  height: 70%;
+  background: radial-gradient(ellipse at 40% 30%, rgba(52, 211, 153, 0.35) 0%, rgba(56, 189, 248, 0.25) 35%, transparent 70%),
+              radial-gradient(ellipse at 70% 40%, rgba(168, 85, 247, 0.2) 0%, transparent 60%);
+  filter: blur(40px);
+  opacity: 0.9;
+  transition: opacity 400ms ease;
+  pointer-events: none;
+}
+
+.hr-polar-aurora.inactive {
+  opacity: 0;
+}
+
+/* Mountain Silhouette */
+.hr-polar-mountains {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  pointer-events: none;
+}
+
+/* Ice Shelf & Contours */
+.hr-polar-ice-shelf {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.3) 0%, rgba(3, 7, 18, 0.85) 100%);
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  pointer-events: none;
+}
+
+.hr-polar-contours {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Surveyor Crosshair Reticle */
+.hr-polar-crosshair {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 160ms ease;
+}
+
+.hr-polar-reticle-circle {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--hr-polar-cyan);
+  border-radius: 50%;
+}
+
+.hr-polar-reticle-h {
+  position: absolute;
+  top: 15px;
+  left: -12px;
+  width: 56px;
+  height: 1px;
+  background: rgba(56, 189, 248, 0.5);
+}
+
+.hr-polar-reticle-v {
+  position: absolute;
+  left: 15px;
+  top: -12px;
+  width: 1px;
+  height: 56px;
+  background: rgba(56, 189, 248, 0.5);
+}
+
+.hr-polar-reticle-tag {
+  position: absolute;
+  left: 36px;
+  top: 8px;
+  font-family: var(--hr-polar-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--hr-polar-cyan);
+  white-space: nowrap;
+  background: rgba(3, 7, 18, 0.7);
+  padding: 2px 6px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Interface Anchors */
+.hr-polar-interface {
+  position: relative;
+  z-index: 2;
+  padding: 32px 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 580px;
+  pointer-events: none;
+}
+
+.hr-polar-interface > * {
+  pointer-events: auto;
+}
+
+/* Anchor: Top Left */
+.hr-polar-anchor.top-left {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hr-polar-badge {
+  font-family: var(--hr-polar-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--hr-polar-cyan);
+}
+
+.hr-polar-coords {
+  font-family: var(--hr-polar-font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--hr-polar-text-main);
+  letter-spacing: 0.05em;
+}
+
+.hr-polar-subtext {
+  font-size: 11px;
+  color: var(--hr-polar-text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* Anchor: Top Right */
+.hr-polar-anchor.top-right {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.hr-polar-telemetry-cluster {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--hr-polar-border);
+  padding: 8px 14px;
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+}
+
+.hr-polar-datum {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hr-polar-datum .label {
+  font-family: var(--hr-polar-font-mono);
+  font-size: 9px;
+  color: var(--hr-polar-text-muted);
+  letter-spacing: 0.06em;
+}
+
+.hr-polar-datum .val {
+  font-family: var(--hr-polar-font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--hr-polar-text-main);
+}
+
+.hr-polar-aurora-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: var(--hr-polar-emerald);
+  font-family: var(--hr-polar-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 140ms ease;
+}
+
+.hr-polar-aurora-btn .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--hr-polar-emerald);
+  box-shadow: 0 0 6px var(--hr-polar-emerald);
+}
+
+.hr-polar-aurora-btn:not(.active) {
+  border-color: rgba(148, 163, 184, 0.3);
+  color: var(--hr-polar-text-muted);
+}
+
+.hr-polar-aurora-btn:not(.active) .dot {
+  background: #64748b;
+  box-shadow: none;
+}
+
+/* Anchor: Mid Right (Stratigraphy) */
+.hr-polar-anchor.mid-right {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+  align-self: center;
+  margin: 24px 0;
+}
+
+.hr-polar-depth-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--hr-polar-border);
+  padding: 14px;
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+  width: 230px;
+}
+
+.hr-polar-depth-title {
+  font-family: var(--hr-polar-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--hr-polar-cyan);
+  letter-spacing: 0.08em;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.hr-polar-depth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  color: var(--hr-polar-text-muted);
+  padding: 8px 10px;
+  font-family: var(--hr-polar-font-mono);
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 2px;
+  text-align: left;
+  transition: all 120ms ease;
+}
+
+.hr-polar-depth-btn:hover {
+  background: rgba(30, 41, 59, 0.5);
+  color: var(--hr-polar-text-main);
+}
+
+.hr-polar-depth-btn.active {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: var(--hr-polar-cyan);
+  color: var(--hr-polar-cyan);
+  font-weight: 700;
+}
+
+.depth-num {
+  font-weight: 700;
+}
+
+/* Anchor: Bottom Left (Headline & Narrative) */
+.hr-polar-anchor.bottom-left {
+  grid-column: 1;
+  grid-row: 3;
+  max-width: 580px;
+}
+
+.hr-polar-narrative-box {
+  background: rgba(3, 7, 18, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 24px 28px;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.hr-polar-expedition-tag {
+  font-family: var(--hr-polar-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--hr-polar-emerald);
+  margin-bottom: 10px;
+}
+
+.hr-polar-title {
+  font-family: var(--hr-polar-font-serif);
+  font-size: clamp(32px, 3.8vw, 48px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 14px;
+  color: #ffffff;
+}
+
+.hr-polar-deck {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0 0 22px;
+}
+
+.hr-polar-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hr-polar-btn-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--hr-polar-cyan);
+  color: #030712;
+  font-family: var(--hr-polar-font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 10px 18px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 120ms ease;
+}
+
+.hr-polar-btn-explore:hover {
+  background: #7dd3fc;
+}
+
+.hr-polar-btn-sample {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: #f1f5f9;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-family: var(--hr-polar-font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 120ms ease;
+}
+
+.hr-polar-btn-sample:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #f1f5f9;
+}
+
+/* Toast Notification */
+.hr-polar-toast {
+  position: absolute;
+  bottom: 20px;
+  right: 28px;
+  background: #0f172a;
+  color: var(--hr-polar-cyan);
+  font-family: var(--hr-polar-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border: 1px solid var(--hr-polar-cyan);
+  border-radius: 3px;
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 20;
+}
+
+.hr-polar-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Rules */
+@media (max-width: 900px) {
+  .hr-polar-interface {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 20px;
+    padding: 24px;
+  }
+  .hr-polar-anchor.top-right,
+  .hr-polar-anchor.mid-right {
+    grid-column: 1;
+    justify-self: start;
+    margin: 0;
+  }
+  .hr-polar-anchor.bottom-left {
+    grid-column: 1;
+  }
+  .hr-polar-depth-panel {
+    width: 100%;
+  }
+}
+
+@container (max-width: 860px) {
+  .hr-polar-interface {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .hr-polar-anchor.top-right,
+  .hr-polar-anchor.mid-right {
+    grid-column: 1;
+    justify-self: start;
+    margin: 0;
+  }
+  .hr-polar-depth-panel {
+    width: 100%;
+  }
+}

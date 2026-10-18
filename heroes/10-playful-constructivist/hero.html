@@ -1,0 +1,115 @@
+<!-- 10: Playful Graphic Constructivist Hero -->
+<section class="hr-play-hero" data-hero="playful-constructivist" data-study="equilibrium">
+  <div class="hr-play-container">
+    <!-- Top Playful Manifesto Bar -->
+    <header class="hr-play-header">
+      <div class="hr-play-brand-mark">
+        <span class="hr-play-shape-icon circle" aria-hidden="true"></span>
+        <span class="hr-play-shape-icon triangle" aria-hidden="true"></span>
+        <span class="hr-play-shape-icon square" aria-hidden="true"></span>
+        <span class="hr-play-brand-name">BAUHAUS FORM LAB · DESSAU</span>
+      </div>
+      <div class="hr-play-study-indicator">
+        <span class="label">STUDY Nº 10:</span>
+        <span id="hrPlayStudyName">KINETIC EQUILIBRIUM</span>
+      </div>
+    </header>
+
+    <!-- Main Asymmetric Constructivist Grid -->
+    <div class="hr-play-main-grid">
+      <!-- Left: Dynamic Constructivist Typography -->
+      <div class="hr-play-text-col">
+        <div class="hr-play-kicker-badge">
+          <span>THE ELEMENTAL GEOMETRIC ALPHABET</span>
+        </div>
+
+        <h1 class="hr-play-title">
+          Form Follows<br>
+          <span class="hr-play-title-accent">Playful</span> Tension.
+        </h1>
+
+        <p class="hr-play-lead">
+          We reject the tyranny of decorative ornament. By colliding elementary primary shapes—the red square, the yellow triangle, the blue sphere—with unexpected scale, we discover kinetic balance in space.
+        </p>
+
+        <!-- Interactive Kinetic Controls -->
+        <div class="hr-play-kinetic-bar" role="group" aria-label="Form Study Modes">
+          <span class="hr-play-bar-label">FORM HARMONY:</span>
+          <div class="hr-play-mode-btns">
+            <button type="button" class="hr-play-mode-btn active" data-study="equilibrium" aria-pressed="true">
+              EQUILIBRIUM
+            </button>
+            <button type="button" class="hr-play-mode-btn" data-study="tension" aria-pressed="false">
+              DIAGONAL TENSION
+            </button>
+            <button type="button" class="hr-play-mode-btn" data-study="centrifugal" aria-pressed="false">
+              CENTRIFUGAL
+            </button>
+          </div>
+        </div>
+
+        <!-- Action Row -->
+        <div class="hr-play-actions">
+          <button type="button" class="hr-play-btn-rotate" id="hrPlayRotateBtn">
+            <span class="icon" aria-hidden="true">↻</span>
+            <span>ROTATE GEOMETRIC FORMS</span>
+          </button>
+          <a href="#curriculum" class="hr-play-btn-explore">
+            <span>INSPECT 1926 CURRICULUM</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Kinetic Geometric Sculpture Stage (Pure CSS Custom Shapes) -->
+      <div class="hr-play-stage-col">
+        <div class="hr-play-stage" id="hrPlayStage" aria-label="Interactive Bauhaus geometric shape sandbox">
+          <!-- Geometric Form 1: Giant Cobalt Circle with Cutout -->
+          <div class="hr-play-shape shape-blue-circle" id="hrPlayShape1" title="Click to rotate blue circle" tabIndex="0" role="button" aria-label="Rotate blue circle">
+            <div class="hr-play-inner-cutout"></div>
+          </div>
+
+          <!-- Geometric Form 2: Chrome Canary Semicircle -->
+          <div class="hr-play-shape shape-yellow-semi" id="hrPlayShape2" title="Click to rotate yellow semicircle" tabIndex="0" role="button" aria-label="Rotate yellow semicircle"></div>
+
+          <!-- Geometric Form 3: Bold Vermilion Triangle -->
+          <div class="hr-play-shape shape-red-triangle" id="hrPlayShape3" title="Click to flip red triangle" tabIndex="0" role="button" aria-label="Flip red triangle"></div>
+
+          <!-- Geometric Form 4: Monolithic Black Pillar / Rule -->
+          <div class="hr-play-shape shape-black-pillar" id="hrPlayShape4" aria-hidden="true">
+            <span class="pillar-text">KINETICS · 1926</span>
+          </div>
+
+          <!-- Floating Orbiting Dot -->
+          <div class="hr-play-shape shape-dot" id="hrPlayShape5" aria-hidden="true"></div>
+
+          <!-- Micro Hint -->
+          <div class="hr-play-stage-hint">
+            <span>CLICK ANY GEOMETRIC SHAPE TO INTERACT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Constructivist Metric Bar -->
+    <footer class="hr-play-footer">
+      <div class="hr-play-footer-item">
+        <span class="k">PRIMARY AXIOM</span>
+        <span class="v">COLOR + SHAPE CORRESPONDENCE</span>
+      </div>
+      <div class="hr-play-footer-item">
+        <span class="k">PEDAGOGY</span>
+        <span class="v">WASSILY KANDINSKY &amp; PAUL KLEE</span>
+      </div>
+      <div class="hr-play-footer-item">
+        <span class="k">GEOMETRY</span>
+        <span class="v">100% HARD VECTOR MATRICES</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="hr-play-toast" id="hrPlayToast" role="status" aria-live="polite">
+    FORM COMPOSITION BALANCED
+  </div>
+</section>

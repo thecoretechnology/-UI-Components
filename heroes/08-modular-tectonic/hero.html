@@ -1,0 +1,121 @@
+<!-- 08: Modular Tectonic Arrangement Hero -->
+<section class="hr-tect-hero" data-hero="modular-tectonic" data-material="timber">
+  <div class="hr-tect-container">
+    <!-- Asymmetric Tectonic Block System -->
+    <div class="hr-tect-grid">
+      <!-- Block A: Studio Identity & Lat/Long Coordinates (Top Left Wide) -->
+      <div class="hr-tect-block block-ident">
+        <div class="hr-tect-block-header">
+          <span class="hr-tect-tag">TECTONIC 08 // ARCHITECTURAL FORMWORK</span>
+          <span class="hr-tect-coord">46° 12′ N · 06° 09′ E</span>
+        </div>
+        <div class="hr-tect-ident-title">TECTONIC DESIGN STUDIO · ZURICH / GENEVA</div>
+      </div>
+
+      <!-- Block B: Main Monolithic Manifesto (Left Tall Dominant Block) -->
+      <div class="hr-tect-block block-manifesto">
+        <div class="hr-tect-block-header">
+          <span class="hr-tect-num">MODULE 01</span>
+          <span class="hr-tect-type">STRUCTURAL DIRECTIVE</span>
+        </div>
+
+        <h1 class="hr-tect-title">
+          Mass, Gravity, &amp; Embodied Carbon.
+        </h1>
+
+        <p class="hr-tect-lead">
+          Architecture must re-learn the physical honesty of compression. By interlocking massive cross-laminated timber with unstabilized rammed earth, we erect public structures that store carbon for centuries while dispensing with petroleum-based veneers.
+        </p>
+
+        <div class="hr-tect-actions">
+          <a href="#pavilion-registry" class="hr-tect-btn-primary">
+            <span>EXPLORE BUILT PAVILIONS</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <button type="button" class="hr-tect-btn-audit" id="hrTectAuditBtn">
+            <span>CARBON AUDIT PROTOCOL</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Block C: Material Tectonic Switcher & Carbon Metrics (Top Right) -->
+      <div class="hr-tect-block block-material">
+        <div class="hr-tect-block-header">
+          <span class="hr-tect-num">MODULE 02</span>
+          <span class="hr-tect-type">MATERIAL COMPOSITION</span>
+        </div>
+
+        <!-- Material Surface Sample Swatches -->
+        <div class="hr-tect-surface-stage" id="hrTectSurfaceStage">
+          <div class="hr-tect-surface-grain" id="hrTectGrain" aria-hidden="true"></div>
+          <div class="hr-tect-surface-meta">
+            <span class="mat-label" id="hrTectMatName">EUROPEAN SPRUCE (CLT)</span>
+            <span class="mat-carbon" id="hrTectCarbonVal">-48.2 kg CO₂e / m²</span>
+          </div>
+        </div>
+
+        <!-- Interactive Material Switcher Buttons -->
+        <div class="hr-tect-mat-selector" role="group" aria-label="Tectonic Materials">
+          <button type="button" class="hr-tect-mat-btn active" data-mat="timber" aria-pressed="true">
+            <span>01 MASS TIMBER</span>
+          </button>
+          <button type="button" class="hr-tect-mat-btn" data-mat="earth" aria-pressed="false">
+            <span>02 RAMMED EARTH</span>
+          </button>
+          <button type="button" class="hr-tect-mat-btn" data-mat="basalt" aria-pressed="false">
+            <span>03 SPLIT BASALT</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Block D: Interlocking Dovetail Joint Detail Diagram (Mid Right) -->
+      <div class="hr-tect-block block-joint">
+        <div class="hr-tect-block-header">
+          <span class="hr-tect-num">MODULE 03</span>
+          <span class="hr-tect-type">JOINT DETAIL // 1:5 SCALE</span>
+        </div>
+
+        <div class="hr-tect-joint-stage">
+          <svg class="hr-tect-joint-svg" viewBox="0 0 200 130" aria-label="Interlocking compression joint vector">
+            <!-- Mortise and Tenon Interlocking Slabs -->
+            <path d="M20,20 L100,20 L100,50 L80,50 L80,80 L120,80 L120,50 L100,50 L100,20 L180,20 L180,110 L20,110 Z" fill="none" stroke="currentColor" stroke-width="1.75"></path>
+            <!-- Expansion Seam Hash -->
+            <line x1="80" y1="50" x2="80" y2="80" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3 2"></line>
+            <line x1="120" y1="50" x2="120" y2="80" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3 2"></line>
+            <!-- Stress Load Arrow -->
+            <line x1="100" y1="5" x2="100" y2="18" stroke="#10b981" stroke-width="2"></line>
+            <polygon points="96,15 104,15 100,20" fill="#10b981"></polygon>
+            <text x="110" y="16" font-family="monospace" font-size="8" fill="currentColor">LOAD: 120 kN</text>
+          </svg>
+        </div>
+
+        <div class="hr-tect-joint-notes">
+          <span>DRY-FIT COMPRESSION TENON (ZERO ADHESIVE)</span>
+        </div>
+      </div>
+
+      <!-- Block E: Structural Specification Readout Strip (Bottom Spanning) -->
+      <div class="hr-tect-block block-specs">
+        <div class="hr-tect-specs-row">
+          <div class="spec-item">
+            <span class="spec-k">FIRE RATING</span>
+            <span class="spec-v">REI 90 (CHARRING RATE 0.65 mm/min)</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-k">CIRCULAR REUSABILITY</span>
+            <span class="spec-v">98.4% (DEMOUNTABLE BOLTED ASSEMBLIES)</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-k">RESEARCH STATUS</span>
+            <span class="spec-v">ETH ZURICH VALIDATED COMPLIANCE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="hr-tect-toast" id="hrTectToast" role="status" aria-live="polite">
+    TECTONIC MATERIAL APPLIED
+  </div>
+</section>

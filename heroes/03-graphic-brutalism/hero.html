@@ -1,0 +1,158 @@
+<!-- 03: Graphic Brutalism Hero -->
+<section class="hr-brutal-hero" data-hero="graphic-brutalism" data-system-state="nominal">
+  <div class="hr-brutal-container">
+    <!-- Hazard Warning Header Bar -->
+    <div class="hr-brutal-hazard-stripe" aria-hidden="true"></div>
+    
+    <div class="hr-brutal-top-bar">
+      <div class="hr-brutal-node-id">
+        <span class="hr-brutal-tag">TERMINAL // 08-K</span>
+        <span class="hr-brutal-subtag">HEAVY APPARATUS DISPATCH & AUTOMATION</span>
+      </div>
+      <div class="hr-brutal-telemetry-badge">
+        <span class="hr-brutal-live-dot" aria-hidden="true"></span>
+        <span id="hrBrutalGridFreq">50.04 HZ</span>
+        <span class="hr-brutal-badge-divider">|</span>
+        <span id="hrBrutalLoad">4.18 GW</span>
+      </div>
+    </div>
+
+    <!-- Stark Monolithic Hero Grid -->
+    <div class="hr-brutal-main-grid">
+      <!-- Left Panel: Raw Headline & System Directive -->
+      <div class="hr-brutal-statement-col">
+        <div class="hr-brutal-index-flag">SPEC_DOC 089 // LEVEL 4 DIRECTIVE</div>
+        
+        <h1 class="hr-brutal-title">
+          NO DECORATION.<br>
+          RAW POWER.<br>
+          CONTINUOUS FEED.
+        </h1>
+
+        <p class="hr-brutal-lead">
+          Industrial-grade telemetry and circuit dispatch infrastructure built for unyielding high-voltage grid resilience. We reject aesthetic abstraction in favor of structural clarity, hard thresholds, and deterministic hardware performance.
+        </p>
+
+        <!-- Industrial Command Action Strip -->
+        <div class="hr-brutal-actions">
+          <button type="button" class="hr-brutal-btn-primary" id="hrBrutalDispatchBtn">
+            <span>ENGAGE GRID COUPLING</span>
+            <span class="hr-brutal-btn-icon" aria-hidden="true">⚡</span>
+          </button>
+          <a href="#schematics" class="hr-brutal-btn-secondary">
+            <span>AUDIT SCHEMATICS [PDF]</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <!-- Telemetry Data Register -->
+        <div class="hr-brutal-register-table">
+          <div class="hr-brutal-reg-header">
+            <span>PARAM</span>
+            <span>THRESHOLD</span>
+            <span>MEASURED</span>
+            <span>STATUS</span>
+          </div>
+          <div class="hr-brutal-reg-row">
+            <span class="hr-brutal-mono-key">BUS_VOLTAGE_A</span>
+            <span>380.0 kV</span>
+            <span id="hrBrutalVoltA">380.4 kV</span>
+            <span class="hr-brutal-status-ok">PASS</span>
+          </div>
+          <div class="hr-brutal-reg-row">
+            <span class="hr-brutal-mono-key">THERMAL_CORE</span>
+            <span>&lt; 68.0 °C</span>
+            <span id="hrBrutalTemp">54.2 °C</span>
+            <span class="hr-brutal-status-ok">PASS</span>
+          </div>
+          <div class="hr-brutal-reg-row">
+            <span class="hr-brutal-mono-key">TRIP_LATENCY</span>
+            <span>&lt; 4.0 ms</span>
+            <span>1.84 ms</span>
+            <span class="hr-brutal-status-ok">PASS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel: Physical Relay Switchboard (Interactive Pure CSS) -->
+      <div class="hr-brutal-switchboard-col">
+        <div class="hr-brutal-board-housing">
+          <div class="hr-brutal-board-titlebar">
+            <span>RELAY MATRIX // BAY-C</span>
+            <span class="hr-brutal-state-indicator" id="hrBrutalBoardStatus">ALL CIRCUITS ENERGIZED</span>
+          </div>
+
+          <div class="hr-brutal-breaker-bank">
+            <!-- Breaker 1 -->
+            <div class="hr-brutal-breaker" data-breaker="feed-1">
+              <div class="hr-brutal-breaker-meta">
+                <span class="hr-brutal-b-label">FEED 01: MAIN TURBINE</span>
+                <span class="hr-brutal-b-led active" aria-label="Status LED: Active"></span>
+              </div>
+              <button type="button" class="hr-brutal-rocker-switch active" aria-pressed="true" data-circuit="FEED 01">
+                <span class="hr-brutal-rocker-state on">ON</span>
+                <span class="hr-brutal-rocker-state off">OFF</span>
+              </button>
+            </div>
+
+            <!-- Breaker 2 -->
+            <div class="hr-brutal-breaker" data-breaker="feed-2">
+              <div class="hr-brutal-breaker-meta">
+                <span class="hr-brutal-b-label">FEED 02: PUMPED STORAGE</span>
+                <span class="hr-brutal-b-led active" aria-label="Status LED: Active"></span>
+              </div>
+              <button type="button" class="hr-brutal-rocker-switch active" aria-pressed="true" data-circuit="FEED 02">
+                <span class="hr-brutal-rocker-state on">ON</span>
+                <span class="hr-brutal-rocker-state off">OFF</span>
+              </button>
+            </div>
+
+            <!-- Breaker 3 -->
+            <div class="hr-brutal-breaker" data-breaker="aux-3">
+              <div class="hr-brutal-breaker-meta">
+                <span class="hr-brutal-b-label">AUX 03: CRYOGENIC LOOP</span>
+                <span class="hr-brutal-b-led active" aria-label="Status LED: Active"></span>
+              </div>
+              <button type="button" class="hr-brutal-rocker-switch active" aria-pressed="true" data-circuit="AUX 03">
+                <span class="hr-brutal-rocker-state on">ON</span>
+                <span class="hr-brutal-rocker-state off">OFF</span>
+              </button>
+            </div>
+
+            <!-- Breaker 4 -->
+            <div class="hr-brutal-breaker" data-breaker="iso-4">
+              <div class="hr-brutal-breaker-meta">
+                <span class="hr-brutal-b-label">ISO 04: GROUND BYPASS</span>
+                <span class="hr-brutal-b-led" aria-label="Status LED: Standby"></span>
+              </div>
+              <button type="button" class="hr-brutal-rocker-switch" aria-pressed="false" data-circuit="ISO 04">
+                <span class="hr-brutal-rocker-state on">ON</span>
+                <span class="hr-brutal-rocker-state off">OFF</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Console Terminal Event Log -->
+          <div class="hr-brutal-console">
+            <div class="hr-brutal-console-head">OPERATOR DISPATCH LOG</div>
+            <div class="hr-brutal-console-screen" id="hrBrutalLog">
+              <div class="hr-brutal-log-line">&gt; SYSTEM STARTUP: ALL BUS BARS SYNCED</div>
+              <div class="hr-brutal-log-line">&gt; INTERLOCK 4: ENGAGED [ZERO FAULT]</div>
+              <div class="hr-brutal-log-line">&gt; READY FOR MANUAL OVERRIDE INPUT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stark Bottom Rule & Stamp -->
+    <div class="hr-brutal-footer-band">
+      <span>HEAVY GRID ARCHITECTURE · DIN 40050 COMPLIANT · UNRESTRICTED SPECIFICATION</span>
+      <span class="hr-brutal-warning-stamp">ATTENTION: 380,000V AC</span>
+    </div>
+  </div>
+
+  <div class="hr-brutal-toast" id="hrBrutalToast" role="status" aria-live="polite">
+    CIRCUIT BREAKER TOGGLED
+  </div>
+</section>

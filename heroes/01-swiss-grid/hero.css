@@ -1,0 +1,534 @@
+/* 01: Swiss / Grid-Based Typography Styles */
+
+:root {
+  --hr-swiss-bg: #f5f4ef;
+  --hr-swiss-ink: #111111;
+  --hr-swiss-muted: #555555;
+  --hr-swiss-vermilion: #e63920;
+  --hr-swiss-vermilion-hover: #cc2f18;
+  --hr-swiss-border: #d4d2c7;
+  --hr-swiss-surface: #ffffff;
+  --hr-swiss-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --hr-swiss-mono: 'SF Mono', Monaco, Consolas, monospace;
+  --hr-swiss-transition: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hr-swiss-hero {
+  position: relative;
+  width: 100%;
+  background-color: var(--hr-swiss-bg);
+  color: var(--hr-swiss-ink);
+  font-family: var(--hr-swiss-font);
+  border: 1px solid var(--hr-swiss-border);
+  box-sizing: border-box;
+  padding: 40px 32px 48px;
+  overflow: hidden;
+}
+
+.hr-swiss-hero * {
+  box-sizing: border-box;
+}
+
+/* Background Coordinate Hairlines */
+.hr-swiss-frame-lines {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.hr-swiss-line {
+  border-right: 1px dashed var(--hr-swiss-border);
+  height: 100%;
+}
+
+.hr-swiss-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Top System Header */
+.hr-swiss-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--hr-swiss-ink);
+  flex-wrap: wrap;
+}
+
+.hr-swiss-reg-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--hr-swiss-ink);
+}
+
+.hr-swiss-reg-code {
+  font-family: var(--hr-swiss-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.hr-swiss-archive-id {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hr-swiss-pill {
+  background: var(--hr-swiss-ink);
+  color: #ffffff;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.hr-swiss-date {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--hr-swiss-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Grid Matrix Proportions Toggle */
+.hr-swiss-grid-ratio-ctrl {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #ebeae3;
+  padding: 3px;
+  border: 1px solid var(--hr-swiss-border);
+}
+
+.hr-swiss-ratio-label {
+  font-family: var(--hr-swiss-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--hr-swiss-muted);
+  padding: 0 6px 0 4px;
+}
+
+.hr-swiss-ratio-btn {
+  font-family: var(--hr-swiss-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  color: var(--hr-swiss-muted);
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 1px;
+  transition: all var(--hr-swiss-transition);
+}
+
+.hr-swiss-ratio-btn:hover {
+  color: var(--hr-swiss-ink);
+  background: #dedcd3;
+}
+
+.hr-swiss-ratio-btn.active {
+  background: var(--hr-swiss-ink);
+  color: #ffffff;
+}
+
+/* Main Grid Layout */
+.hr-swiss-main-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  margin-top: 36px;
+  align-items: start;
+  transition: all var(--hr-swiss-transition);
+}
+
+/* Dynamic Proportion Matrix Modes */
+.hr-swiss-hero[data-ratio="golden"] .hr-swiss-main-grid {
+  grid-template-columns: 1.618fr 1fr;
+  gap: 56px;
+}
+
+.hr-swiss-hero[data-ratio="square"] .hr-swiss-main-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Left Column */
+.hr-swiss-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-swiss-index-num {
+  font-family: var(--hr-swiss-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--hr-swiss-vermilion);
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.hr-swiss-headline {
+  font-size: clamp(42px, 5.5vw, 68px);
+  font-weight: 900;
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+  margin: 0 0 20px;
+  color: var(--hr-swiss-ink);
+  text-transform: uppercase;
+}
+
+.hr-swiss-statement {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--hr-swiss-muted);
+  max-width: 520px;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.hr-swiss-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.hr-swiss-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--hr-swiss-vermilion);
+  color: #ffffff;
+  padding: 12px 22px;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--hr-swiss-vermilion);
+  border-radius: 2px;
+  transition: background-color var(--hr-swiss-transition), transform var(--hr-swiss-transition);
+}
+
+.hr-swiss-btn-primary:hover {
+  background: var(--hr-swiss-vermilion-hover);
+  transform: translateY(-1px);
+}
+
+.hr-swiss-btn-cross {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.hr-swiss-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--hr-swiss-ink);
+  border: 1px solid var(--hr-swiss-ink);
+  padding: 12px 20px;
+  font-family: var(--hr-swiss-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all var(--hr-swiss-transition);
+}
+
+.hr-swiss-btn-ghost:hover {
+  background: var(--hr-swiss-ink);
+  color: #ffffff;
+}
+
+/* Metric Strip */
+.hr-swiss-metric-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  border-top: 1px solid var(--hr-swiss-border);
+  padding-top: 24px;
+}
+
+.hr-swiss-metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-swiss-m-val {
+  font-family: var(--hr-swiss-mono);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--hr-swiss-ink);
+}
+
+.hr-swiss-m-lbl {
+  font-size: 11.5px;
+  color: var(--hr-swiss-muted);
+  margin-top: 2px;
+}
+
+/* Right Column: Specimen Plate */
+.hr-swiss-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hr-swiss-plate-card {
+  background: var(--hr-swiss-surface);
+  border: 1px solid var(--hr-swiss-border);
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.hr-swiss-plate-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ebe9df;
+  padding-bottom: 12px;
+  font-family: var(--hr-swiss-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--hr-swiss-muted);
+}
+
+.hr-swiss-plate-tag {
+  color: var(--hr-swiss-vermilion);
+}
+
+/* Specimen Stage */
+.hr-swiss-specimen-stage {
+  height: 180px;
+  background: #f8f8f6;
+  border: 1px solid #eeede6;
+  margin: 18px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  overflow: hidden;
+}
+
+.hr-swiss-specimen-symbol {
+  font-size: 110px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--hr-swiss-ink);
+  letter-spacing: -0.06em;
+  user-select: none;
+}
+
+.hr-swiss-specimen-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.hr-swiss-box-accent {
+  width: 48px;
+  height: 4px;
+  background: var(--hr-swiss-vermilion);
+}
+
+.hr-swiss-box-text {
+  font-family: var(--hr-swiss-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--hr-swiss-muted);
+  letter-spacing: 0.1em;
+}
+
+.hr-swiss-specimen-ruler {
+  position: absolute;
+  bottom: 6px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--hr-swiss-mono);
+  font-size: 9px;
+  color: #a8a69d;
+  border-top: 1px solid #dedcd5;
+  padding-top: 4px;
+}
+
+/* Specimen Switcher */
+.hr-swiss-plate-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hr-swiss-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.hr-swiss-tab-btn {
+  font-family: var(--hr-swiss-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  background: transparent;
+  border: 1px solid var(--hr-swiss-border);
+  color: var(--hr-swiss-muted);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 1px;
+  transition: all var(--hr-swiss-transition);
+}
+
+.hr-swiss-tab-btn:hover {
+  color: var(--hr-swiss-ink);
+  border-color: var(--hr-swiss-ink);
+}
+
+.hr-swiss-tab-btn.active {
+  background: var(--hr-swiss-ink);
+  color: #ffffff;
+  border-color: var(--hr-swiss-ink);
+}
+
+.hr-swiss-plate-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--hr-swiss-muted);
+  min-height: 36px;
+}
+
+/* Colophon Metadata Strip */
+.hr-swiss-colophon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  border-top: 1px solid var(--hr-swiss-border);
+  padding-top: 14px;
+}
+
+.hr-swiss-colophon-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hr-swiss-colophon-col strong {
+  font-family: var(--hr-swiss-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  color: var(--hr-swiss-ink);
+}
+
+.hr-swiss-colophon-col span {
+  font-size: 11px;
+  color: var(--hr-swiss-muted);
+  line-height: 1.35;
+}
+
+/* Toast */
+.hr-swiss-toast {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  background: var(--hr-swiss-ink);
+  color: #ffffff;
+  font-family: var(--hr-swiss-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 2px;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: all var(--hr-swiss-transition);
+}
+
+.hr-swiss-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .hr-swiss-main-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hr-swiss-hero {
+    padding: 32px 20px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hr-swiss-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .hr-swiss-headline {
+    font-size: 38px;
+  }
+  .hr-swiss-metric-strip,
+  .hr-swiss-colophon {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hr-swiss-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hr-swiss-btn-primary,
+  .hr-swiss-btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Container Query Responsiveness */
+@container (max-width: 900px) {
+  .hr-swiss-main-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hr-swiss-hero {
+    padding: 32px 20px 40px;
+  }
+}
+
+@container (max-width: 600px) {
+  .hr-swiss-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .hr-swiss-headline {
+    font-size: 38px;
+  }
+  .hr-swiss-metric-strip,
+  .hr-swiss-colophon {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hr-swiss-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hr-swiss-btn-primary,
+  .hr-swiss-btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+}

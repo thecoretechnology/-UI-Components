@@ -1,0 +1,136 @@
+<!-- 01: Swiss / Grid-Based Typography Hero -->
+<section class="hr-swiss-hero" data-hero="swiss-grid" data-ratio="din">
+  <!-- Swiss Grid Coordinate Framework -->
+  <div class="hr-swiss-frame-lines" aria-hidden="true">
+    <div class="hr-swiss-line col-1"></div>
+    <div class="hr-swiss-line col-2"></div>
+    <div class="hr-swiss-line col-3"></div>
+    <div class="hr-swiss-line col-4"></div>
+  </div>
+
+  <div class="hr-swiss-container">
+    <!-- Top System Header & Technical Registration -->
+    <header class="hr-swiss-header">
+      <div class="hr-swiss-reg-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="9"/>
+          <line x1="12" y1="3" x2="12" y2="21"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+        </svg>
+        <span class="hr-swiss-reg-code">CH-8001 / REG. 47°22′N</span>
+      </div>
+
+      <div class="hr-swiss-archive-id">
+        <span class="hr-swiss-pill">SYSTEM ARCHIVE 26</span>
+        <span class="hr-swiss-date">ZURICH · BASEL · WINTERTHUR</span>
+      </div>
+
+      <div class="hr-swiss-grid-ratio-ctrl" role="group" aria-label="Proportion Matrix Selector">
+        <span class="hr-swiss-ratio-label">GRID MATRIX:</span>
+        <button type="button" class="hr-swiss-ratio-btn active" data-ratio="din" aria-pressed="true">DIN [1:√2]</button>
+        <button type="button" class="hr-swiss-ratio-btn" data-ratio="golden" aria-pressed="false">GOLDEN [1:φ]</button>
+        <button type="button" class="hr-swiss-ratio-btn" data-ratio="square" aria-pressed="false">QUAD [1:1]</button>
+      </div>
+    </header>
+
+    <!-- Main Asymmetric Composition Grid -->
+    <div class="hr-swiss-main-grid">
+      <!-- Left Column: Master Typography Hierarchy -->
+      <div class="hr-swiss-left-col">
+        <div class="hr-swiss-index-num">№ 01 / 12</div>
+
+        <h1 class="hr-swiss-headline">
+          ORDER<br>
+          AND FORM.
+        </h1>
+
+        <div class="hr-swiss-statement">
+          A systematic exploration of mathematical asymmetric layout, high-contrast grotesque type scales, and the rational reduction of visual noise.
+        </div>
+
+        <div class="hr-swiss-cta-row">
+          <a href="#specimens" class="hr-swiss-btn-primary" data-action="explore-archive">
+            <span class="hr-swiss-btn-cross" aria-hidden="true">+</span>
+            <span>EXPLORE ARCHIVE</span>
+          </a>
+          <button type="button" class="hr-swiss-btn-ghost" id="hrSwissSpecimenBtn">
+            <span>CATALOG INDEX [24]</span>
+            <span class="hr-swiss-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+
+        <!-- Metric Table Strip -->
+        <div class="hr-swiss-metric-strip">
+          <div class="hr-swiss-metric-item">
+            <span class="hr-swiss-m-val">12 COL</span>
+            <span class="hr-swiss-m-lbl">Modular Division</span>
+          </div>
+          <div class="hr-swiss-metric-item">
+            <span class="hr-swiss-m-val">8 PT</span>
+            <span class="hr-swiss-m-lbl">Strict Baseline</span>
+          </div>
+          <div class="hr-swiss-metric-item">
+            <span class="hr-swiss-m-val">100%</span>
+            <span class="hr-swiss-m-lbl">Grotesque Contrast</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Specimen Plates -->
+      <div class="hr-swiss-right-col">
+        <!-- Specimen Control Card -->
+        <div class="hr-swiss-plate-card">
+          <div class="hr-swiss-plate-head">
+            <span class="hr-swiss-plate-tag">PLATE 01.A — TYPOGRAPHIC STUDY</span>
+            <span class="hr-swiss-plate-coords" id="hrSwissCoords">X: 184 / Y: 092</span>
+          </div>
+
+          <!-- Pure CSS Geometric Typographic Specimen -->
+          <div class="hr-swiss-specimen-stage" id="hrSwissStage">
+            <div class="hr-swiss-specimen-symbol">Aa</div>
+            <div class="hr-swiss-specimen-box">
+              <span class="hr-swiss-box-accent"></span>
+              <div class="hr-swiss-box-text">HAAS GROTESK · 1957</div>
+            </div>
+            <div class="hr-swiss-specimen-ruler" aria-hidden="true">
+              <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span>
+            </div>
+          </div>
+
+          <!-- Specimen Tab Switcher -->
+          <div class="hr-swiss-plate-footer">
+            <div class="hr-swiss-tabs" role="tablist" aria-label="Specimen Studies">
+              <button type="button" class="hr-swiss-tab-btn active" data-spec="01" role="tab" aria-selected="true">01 TAXONOMY</button>
+              <button type="button" class="hr-swiss-tab-btn" data-spec="02" role="tab" aria-selected="false">02 RATIONALE</button>
+              <button type="button" class="hr-swiss-tab-btn" data-spec="03" role="tab" aria-selected="false">03 GEOMETRY</button>
+            </div>
+            <div class="hr-swiss-plate-desc" id="hrSwissPlateDesc">
+              Systematic classification of sans-serif proportions based on Max Miedinger's 1957 drawings.
+            </div>
+          </div>
+        </div>
+
+        <!-- Curated Publication Metadata Strip -->
+        <div class="hr-swiss-colophon">
+          <div class="hr-swiss-colophon-col">
+            <strong>PUBLISHER</strong>
+            <span>Zurich University of the Arts</span>
+          </div>
+          <div class="hr-swiss-colophon-col">
+            <strong>PRINT METHOD</strong>
+            <span>Offset lithography on 180g uncoated stock</span>
+          </div>
+          <div class="hr-swiss-colophon-col">
+            <strong>ARCHIVE LOCATION</strong>
+            <span>Archive Room 4B / Cabinet 12</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="hr-swiss-toast" id="hrSwissToast" role="status" aria-live="polite">
+    <span>Grid matrix updated</span>
+  </div>
+</section>

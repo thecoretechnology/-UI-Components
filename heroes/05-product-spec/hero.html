@@ -1,0 +1,184 @@
+<!-- 05: Product-Led with Technical Annotations Hero -->
+<section class="hr-spec-hero" data-hero="product-spec" data-finish="titanium">
+  <div class="hr-spec-container">
+    <!-- Header Bar: Engineering Registry -->
+    <div class="hr-spec-header">
+      <div class="hr-spec-ref">
+        <span class="hr-spec-brand">VANGUARD PRECISION HOROLOGY</span>
+        <span class="hr-spec-dot" aria-hidden="true">·</span>
+        <span class="hr-spec-calibre">CALIBRE CHR-09 MONOPUSHER</span>
+      </div>
+      <div class="hr-spec-cert">
+        <span>COSC CHRONOMETER CERTIFIED // Nº 84920-B</span>
+      </div>
+    </div>
+
+    <!-- Main Spec Composition Layout -->
+    <div class="hr-spec-stage-grid">
+      <!-- Left Panel: Product Rationale & Specs -->
+      <div class="hr-spec-left-panel">
+        <div class="hr-spec-kicker">SWISS MANUFACTURE</div>
+        
+        <h1 class="hr-spec-title">
+          Instruments of Absolute Time
+        </h1>
+
+        <p class="hr-spec-lead">
+          Machined from a single block of Grade 5 titanium, the CHR-09 strips away luxury ornamentation to reveal pure chronometric geometry. Equipped with an integrated column-wheel monopusher and free-sprung balance wheel.
+        </p>
+
+        <!-- Material Finish Switcher -->
+        <div class="hr-spec-finish-selector" role="group" aria-label="Casing Material Finishes">
+          <span class="hr-spec-selector-label">CASING METALLURGY:</span>
+          <div class="hr-spec-finish-options">
+            <button type="button" class="hr-spec-finish-btn active" data-finish="titanium" aria-pressed="true">
+              <span class="swatch swatch-ti"></span>
+              <span>GRADE 5 TITANIUM</span>
+            </button>
+            <button type="button" class="hr-spec-finish-btn" data-finish="dlc" aria-pressed="false">
+              <span class="swatch swatch-dlc"></span>
+              <span>CARBON DLC MATTE</span>
+            </button>
+            <button type="button" class="hr-spec-finish-btn" data-finish="bronze" aria-pressed="false">
+              <span class="swatch swatch-bronze"></span>
+              <span>PATINATED BRONZE</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Technical Telemetry Matrix -->
+        <div class="hr-spec-table">
+          <div class="hr-spec-row">
+            <span class="spec-prop">CASE DIAMETER</span>
+            <span class="spec-val">41.20 mm (±0.01)</span>
+          </div>
+          <div class="hr-spec-row">
+            <span class="spec-prop">TOTAL THICKNESS</span>
+            <span class="spec-val">11.45 mm including crystal</span>
+          </div>
+          <div class="hr-spec-row">
+            <span class="spec-prop">ESCAPEMENT</span>
+            <span class="spec-val">28,800 vph (4 Hz) Column Wheel</span>
+          </div>
+          <div class="hr-spec-row">
+            <span class="spec-prop">POWER RESERVE</span>
+            <span class="spec-val">72 Hours Twin Barrel</span>
+          </div>
+          <div class="hr-spec-row">
+            <span class="spec-prop">WATER RESISTANCE</span>
+            <span class="spec-val">100 m / 10 bar Dynamic</span>
+          </div>
+        </div>
+
+        <!-- Action Row -->
+        <div class="hr-spec-actions">
+          <a href="#order-allocation" class="hr-spec-btn-primary">
+            <span>REQUEST PRODUCTION ALLOCATION</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <button type="button" class="hr-spec-btn-specs" id="hrSpecDownloadBtn">
+            <span>TECHNICAL BLUEPRINT [DWG/PDF]</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Panel: Pure CSS Mechanical Watch Visual & Caliper Annotations -->
+      <div class="hr-spec-visual-panel">
+        <div class="hr-spec-apparatus-frame">
+          <!-- Caliper Engineering Annotations (Positioned Arrows) -->
+          <div class="hr-spec-callout callout-crystal">
+            <div class="hr-spec-callout-line"></div>
+            <div class="hr-spec-callout-box">
+              <span class="title">SAPPHIRE CRYSTAL</span>
+              <span class="detail">Double-domed, 7-layer AR</span>
+            </div>
+          </div>
+
+          <div class="hr-spec-callout callout-pusher">
+            <div class="hr-spec-callout-line"></div>
+            <div class="hr-spec-callout-box">
+              <span class="title">MONOPUSHER AT 2H</span>
+              <span class="detail">Tactile 3.2 N actuation click</span>
+            </div>
+          </div>
+
+          <div class="hr-spec-callout callout-calibre">
+            <div class="hr-spec-callout-line"></div>
+            <div class="hr-spec-callout-box">
+              <span class="title">30-MIN REGISTER</span>
+              <span class="detail">Instantaneous jump counter</span>
+            </div>
+          </div>
+
+          <!-- Pure CSS Chronograph Object Stage -->
+          <div class="hr-spec-watch-object" id="hrSpecWatchObject">
+            <!-- Monopusher Button -->
+            <button type="button" class="hr-spec-pusher-btn" id="hrSpecPusher" aria-label="Operate Monopusher Chronograph">
+              <span class="hr-spec-pusher-stem"></span>
+              <span class="hr-spec-pusher-cap"></span>
+            </button>
+
+            <!-- Watch Case Outer Ring -->
+            <div class="hr-spec-case">
+              <div class="hr-spec-case-bevel"></div>
+              
+              <!-- Bezel with Milled Ticks -->
+              <div class="hr-spec-bezel">
+                <div class="hr-spec-dial">
+                  <!-- Concentric Track -->
+                  <div class="hr-spec-track-outer"></div>
+                  <div class="hr-spec-track-inner"></div>
+
+                  <!-- Hour Indices -->
+                  <div class="hr-spec-index idx-12"></div>
+                  <div class="hr-spec-index idx-3"></div>
+                  <div class="hr-spec-index idx-6"></div>
+                  <div class="hr-spec-index idx-9"></div>
+
+                  <!-- 30-Minute Subdial at 12H -->
+                  <div class="hr-spec-subdial">
+                    <div class="hr-spec-subdial-track"></div>
+                    <div class="hr-spec-subdial-hand" id="hrSpecSubHand"></div>
+                    <span class="hr-spec-subdial-num">30</span>
+                  </div>
+
+                  <!-- Brand Typography on Dial -->
+                  <div class="hr-spec-dial-brand">
+                    <span>VANGUARD</span>
+                    <span class="sub">CHRONOMETER</span>
+                  </div>
+
+                  <!-- Central Hands -->
+                  <div class="hr-spec-hour-hand"></div>
+                  <div class="hr-spec-minute-hand"></div>
+                  
+                  <!-- Central Chronograph Sweep Hand (Functional Animation) -->
+                  <div class="hr-spec-chrono-hand" id="hrSpecChronoHand"></div>
+                  <div class="hr-spec-center-cap"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chrono Stopwatch Control Bar -->
+          <div class="hr-spec-chrono-controls">
+            <div class="hr-spec-chrono-digital">
+              <span class="hr-spec-chrono-label">CHRONOGRAPH TIMER:</span>
+              <span class="hr-spec-chrono-time" id="hrSpecChronoTime">00:00.00</span>
+            </div>
+            <div class="hr-spec-chrono-btns">
+              <button type="button" class="hr-spec-ctrl-btn" id="hrSpecStartBtn">START</button>
+              <button type="button" class="hr-spec-ctrl-btn" id="hrSpecStopBtn" disabled>STOP</button>
+              <button type="button" class="hr-spec-ctrl-btn" id="hrSpecResetBtn" disabled>RESET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="hr-spec-toast" id="hrSpecToast" role="status" aria-live="polite">
+    METALLURGY UPDATED
+  </div>
+</section>

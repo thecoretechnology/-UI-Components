@@ -1,0 +1,111 @@
+<!-- 04: Image-First Visual Narrative Hero -->
+<section class="hr-polar-hero" data-hero="image-narrative" data-probe-depth="surface">
+  <div class="hr-polar-stage">
+    <!-- Atmospheric Visual Canvas (Pure CSS & Inline SVG Arctic Survey Landscape) -->
+    <div class="hr-polar-canvas" id="hrPolarCanvas" aria-label="Arctic Svalbard glacial research landscape">
+      <!-- Sky & Aurora Borealis Layer -->
+      <div class="hr-polar-sky"></div>
+      <div class="hr-polar-aurora" id="hrPolarAurora" aria-hidden="true"></div>
+      
+      <!-- Distant Glacial Mountain Ridge (SVG Vector Horizon) -->
+      <svg class="hr-polar-mountains" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,240 L180,140 L340,210 L560,90 L780,230 L960,110 L1180,190 L1340,130 L1440,200 L1440,320 L0,320 Z" fill="#0f172a" opacity="0.95"></path>
+        <path d="M0,260 L240,170 L480,250 L680,160 L890,270 L1100,180 L1300,240 L1440,210 L1440,320 L0,320 Z" fill="#0b1120"></path>
+      </svg>
+
+      <!-- Ice Shelf & Topographic Contour Lines -->
+      <div class="hr-polar-ice-shelf">
+        <svg class="hr-polar-contours" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,60 Q250,20 500,50 T1000,40" fill="none" stroke="rgba(148, 163, 184, 0.22)" stroke-width="1.5" stroke-dasharray="4 6"></path>
+          <path d="M0,110 Q300,70 600,120 T1000,90" fill="none" stroke="rgba(148, 163, 184, 0.22)" stroke-width="1.5" stroke-dasharray="4 6"></path>
+          <path d="M0,160 Q200,140 500,170 T1000,150" fill="none" stroke="rgba(148, 163, 184, 0.22)" stroke-width="1.5" stroke-dasharray="4 6"></path>
+        </svg>
+      </div>
+
+      <!-- Interactive Crosshair Surveyor Reticle -->
+      <div class="hr-polar-crosshair" id="hrPolarCrosshair" aria-hidden="true">
+        <div class="hr-polar-reticle-circle"></div>
+        <div class="hr-polar-reticle-h"></div>
+        <div class="hr-polar-reticle-v"></div>
+        <span class="hr-polar-reticle-tag" id="hrPolarReticleTag">GRID: 78.21°N / 15.63°E</span>
+      </div>
+    </div>
+
+    <!-- Edge-Anchored Telemetry Overlay (Non-Centered Narrative) -->
+    <div class="hr-polar-interface">
+      <!-- Top Left: Geographic Coordinates -->
+      <div class="hr-polar-anchor top-left">
+        <span class="hr-polar-badge">SVALBARD SURVEY // SECTOR 04</span>
+        <span class="hr-polar-coords">78° 13′ 22″ N · 15° 38′ 54″ E</span>
+        <span class="hr-polar-subtext">LONGYEARBYEN GLACIOLOGY FIELD BASE</span>
+      </div>
+
+      <!-- Top Right: Environmental Telemetry & Aurora Toggle -->
+      <div class="hr-polar-anchor top-right">
+        <div class="hr-polar-telemetry-cluster">
+          <div class="hr-polar-datum">
+            <span class="label">AMBIENT TEMP</span>
+            <span class="val">-24.6 °C</span>
+          </div>
+          <div class="hr-polar-datum">
+            <span class="label">BAROMETER</span>
+            <span class="val">1014 hPa</span>
+          </div>
+          <button type="button" class="hr-polar-aurora-btn active" id="hrPolarAuroraToggle" aria-pressed="true">
+            <span class="dot"></span>
+            <span>AURORA BOREALIS [ACTIVE]</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bottom Right: Stratigraphic Core Depth Selector -->
+      <div class="hr-polar-anchor mid-right">
+        <div class="hr-polar-depth-panel" role="group" aria-label="Ice Core Depth Layers">
+          <span class="hr-polar-depth-title">STRATIGRAPHY // CORE DEPTH</span>
+          <button type="button" class="hr-polar-depth-btn active" data-depth="surface" aria-pressed="true">
+            <span class="depth-num">000 m</span>
+            <span class="depth-label">SURFACE FIRN [2026]</span>
+          </button>
+          <button type="button" class="hr-polar-depth-btn" data-depth="intermediate" aria-pressed="false">
+            <span class="depth-num">-180 m</span>
+            <span class="depth-label">SUB-GLACIAL ICE [1840]</span>
+          </button>
+          <button type="button" class="hr-polar-depth-btn" data-depth="basal" aria-pressed="false">
+            <span class="depth-num">-540 m</span>
+            <span class="depth-label">BASAL BEDROCK [12,000 BCE]</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bottom Left: Primary Narrative Title & Deep Specimen Deck -->
+      <div class="hr-polar-anchor bottom-left">
+        <div class="hr-polar-narrative-box">
+          <div class="hr-polar-expedition-tag">EXPEDITION PERMAFROST ARCHIVE</div>
+          
+          <h1 class="hr-polar-title">
+            The Last Ice Chronology
+          </h1>
+
+          <p class="hr-polar-deck" id="hrPolarDeck">
+            Deep beneath the Kongsvegen glacier lies an uninterrupted atmospheric log of our planet's past 12,000 years. We extract cylindrical cores before seasonal thaw alters the stratigraphic boundary forever.
+          </p>
+
+          <div class="hr-polar-actions">
+            <a href="#dispatch-archive" class="hr-polar-btn-explore">
+              <span>EXPLORE SPECIMEN REGISTRY</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <button type="button" class="hr-polar-btn-sample" id="hrPolarSampleBtn">
+              <span>ANALYZE CURRENT DRILL CORE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="hr-polar-toast" id="hrPolarToast" role="status" aria-live="polite">
+    CORE DEPTH UPDATED
+  </div>
+</section>

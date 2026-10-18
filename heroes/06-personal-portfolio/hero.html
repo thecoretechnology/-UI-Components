@@ -1,0 +1,131 @@
+<!-- 06: Personal Portfolio Hero -->
+<section class="hr-folio-hero" data-hero="personal-portfolio" data-weight="400">
+  <div class="hr-folio-container">
+    <!-- Top Index & Availability Status -->
+    <header class="hr-folio-header">
+      <div class="hr-folio-identity">
+        <span class="hr-folio-name">ELIN LINDQVIST</span>
+        <span class="hr-folio-slash">/</span>
+        <span class="hr-folio-discipline">TYPE DESIGNER &amp; EPIGRAPHER</span>
+      </div>
+      <div class="hr-folio-status-cluster">
+        <div class="hr-folio-location">STOCKHOLM, SWEDEN (59.3293° N)</div>
+        <div class="hr-folio-availability">
+          <span class="hr-folio-status-dot" aria-hidden="true"></span>
+          <span>AUTUMN 2026 COMMISSIONS OPEN</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="hr-folio-rule" aria-hidden="true"></div>
+
+    <!-- Main Characterful Portfolio Grid -->
+    <div class="hr-folio-main-grid">
+      <!-- Left Column: Manifesto & Research Index -->
+      <div class="hr-folio-bio-col">
+        <h1 class="hr-folio-heading">
+          Designing letterforms with historical weight and computational elasticity.
+        </h1>
+
+        <p class="hr-folio-bio-text">
+          I cut custom optical type systems for international publishing houses, municipal wayfinding, and digital archives. Based between Stockholm and Södermalm, my practice investigates how letterforms absorb material resistance across stone incisions, metal punches, and variable font axes.
+        </p>
+
+        <!-- Selected Project Ledger -->
+        <div class="hr-folio-ledger">
+          <div class="hr-folio-ledger-head">RECENT TYPE COMMISSIONS &amp; SPECIMENS</div>
+          
+          <div class="hr-folio-ledger-item active" data-specimen="nordisk">
+            <span class="num">01</span>
+            <div class="item-meta">
+              <span class="title">Nordisk Grotesk Variable</span>
+              <span class="role">Royal Dramatic Theatre, Stockholm</span>
+            </div>
+            <span class="year">2026</span>
+          </div>
+
+          <div class="hr-folio-ledger-item" data-specimen="epigraph">
+            <span class="num">02</span>
+            <div class="item-meta">
+              <span class="title">Epigraph Antiqua (36 Cuts)</span>
+              <span class="role">Nordic Architectural Monograph Series</span>
+            </div>
+            <span class="year">2025</span>
+          </div>
+
+          <div class="hr-folio-ledger-item" data-specimen="runic">
+            <span class="num">03</span>
+            <div class="item-meta">
+              <span class="title">Sigtuna Monumental Inscription</span>
+              <span class="role">Heritage Digitization Protocol</span>
+            </div>
+            <span class="year">2024</span>
+          </div>
+        </div>
+
+        <!-- Direct Atelier Actions -->
+        <div class="hr-folio-actions">
+          <a href="#inquiries" class="hr-folio-btn-primary">
+            <span>DISCUSS A TYPEFACE COMMISSION</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <button type="button" class="hr-folio-btn-specimen" id="hrFolioSpecimenBtn">
+            <span>ACQUIRE FOUNDRY PDF SPECIMEN</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Variable Glyph Sandbox -->
+      <div class="hr-folio-sandbox-col">
+        <div class="hr-folio-specimen-stage">
+          <div class="hr-folio-stage-head">
+            <span class="label">INTERACTIVE SPECIMEN ENGINE</span>
+            <span class="tag" id="hrFolioSpecimenTag">NORDISK GROTESK · GLYPH MATRIX</span>
+          </div>
+
+          <!-- Heroic Dynamic Glyph Display -->
+          <div class="hr-folio-glyph-frame" aria-label="Interactive typographic glyph stage">
+            <div class="hr-folio-huge-glyph" id="hrFolioHugeGlyph" contenteditable="true" spellcheck="false" title="Click to test your own character">
+              Å
+            </div>
+            <span class="hr-folio-hint">CLICK GLYPH TO TYPE ANY CHARACTER</span>
+          </div>
+
+          <!-- Variable Font Controls -->
+          <div class="hr-folio-controls">
+            <!-- Weight Axis Slider -->
+            <div class="hr-folio-slider-row">
+              <div class="label-cluster">
+                <span class="axis-name">WEIGHT AXIS (wght)</span>
+                <span class="axis-val" id="hrFolioWeightVal">400 (Regular)</span>
+              </div>
+              <input type="range" class="hr-folio-range" id="hrFolioWeightSlider" min="100" max="900" step="25" value="400" aria-label="Font weight axis slider">
+            </div>
+
+            <!-- Optical Size Selector -->
+            <div class="hr-folio-opt-selector" role="group" aria-label="Optical Size Presets">
+              <span class="opt-label">OPTICAL SIZE:</span>
+              <div class="opt-btns">
+                <button type="button" class="hr-folio-opt-btn" data-optical="caption">CAPTION (8pt)</button>
+                <button type="button" class="hr-folio-opt-btn active" data-optical="text">TEXT (12pt)</button>
+                <button type="button" class="hr-folio-opt-btn" data-optical="display">DISPLAY (72pt)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Sample Phrase -->
+          <div class="hr-folio-phrase-box">
+            <p class="hr-folio-live-phrase" id="hrFolioLivePhrase">
+              The quick brown fox jumps over the lazy dog. 1234567890 ÅÄÖ
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="hr-folio-toast" id="hrFolioToast" role="status" aria-live="polite">
+    SPECIMEN PARAMETER UPDATED
+  </div>
+</section>

@@ -1,0 +1,131 @@
+<!-- 02: Editorial Monograph Hero -->
+<section class="hr-mono-hero" data-hero="editorial-monograph" data-light="golden">
+  <div class="hr-mono-container">
+    <!-- Top Folio Header -->
+    <header class="hr-mono-folio">
+      <div class="hr-mono-folio-left">
+        <span class="hr-mono-issue">ISSUE Nº 42 · CRITICAL ESSAYS</span>
+        <span class="hr-mono-sep">/</span>
+        <span>PARIS · MILAN · ATHENS</span>
+      </div>
+      <div class="hr-mono-folio-center">
+        <span>ARCHITECTURE &amp; MATTER</span>
+      </div>
+      <div class="hr-mono-folio-right">
+        <span>ISSN 2819-4021</span>
+        <span class="hr-mono-sep">·</span>
+        <span>AUTUMN 2026</span>
+      </div>
+    </header>
+
+    <div class="hr-mono-divider" aria-hidden="true"></div>
+
+    <!-- Editorial Architectural Visual Field (Pure CSS Light & Stone Relief) -->
+    <div class="hr-mono-visual-frame" aria-label="Architectural light study: Brutalist travertine colonnade">
+      <div class="hr-mono-relief-stage" id="hrMonoReliefStage">
+        <!-- Layered Travertine Colonnade and Sunlight Shadow -->
+        <div class="hr-mono-relief-backdrop"></div>
+        <div class="hr-mono-column col-1"><div class="hr-mono-column-fluting"></div></div>
+        <div class="hr-mono-column col-2"><div class="hr-mono-column-fluting"></div></div>
+        <div class="hr-mono-column col-3"><div class="hr-mono-column-fluting"></div></div>
+        <div class="hr-mono-relief-shadow" id="hrMonoShadow"></div>
+        <div class="hr-mono-beam" id="hrMonoBeam"></div>
+      </div>
+
+      <!-- Plate Metadata Overlay -->
+      <div class="hr-mono-plate-overlay">
+        <div class="hr-mono-plate-tag">FIGURE 07 — LIGHT STUDY</div>
+        <div class="hr-mono-light-ctrl" role="group" aria-label="Sunlight angle study">
+          <span class="hr-mono-ctrl-label">SOLAR ANGLE:</span>
+          <button type="button" class="hr-mono-light-btn" data-light="morning" aria-pressed="false">09:30 MORNING</button>
+          <button type="button" class="hr-mono-light-btn" data-light="noon" aria-pressed="false">12:00 ZENITH</button>
+          <button type="button" class="hr-mono-light-btn active" data-light="golden" aria-pressed="true">18:00 GOLDEN HOUR</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Editorial Text Grid -->
+    <div class="hr-mono-text-grid">
+      <!-- Primary Column: Headline & Essay Deck -->
+      <div class="hr-mono-main-col">
+        <div class="hr-mono-kicker-row">
+          <span class="hr-mono-kicker">THEORETICAL MONOGRAPH</span>
+          <span class="hr-mono-read-time">16 MIN READ</span>
+        </div>
+
+        <h1 class="hr-mono-title">
+          The Silence of Stone
+        </h1>
+
+        <p class="hr-mono-deck">
+          A meditation on mineral permanence, cast shadows through Roman corridors, and an unyielding refusal of digital ephemerality.
+        </p>
+
+        <div class="hr-mono-byline">
+          <div class="hr-mono-author-mark" aria-hidden="true">AV</div>
+          <div class="hr-mono-byline-text">
+            <span class="hr-mono-author-name">Antoine de Vigny</span>
+            <span class="hr-mono-author-role">Professor Emeritus, Paris School of Fine Arts</span>
+          </div>
+        </div>
+
+        <!-- Essay Excerpt with Dropcap -->
+        <div class="hr-mono-excerpt">
+          <span class="hr-mono-dropcap">M</span>atter does not lie. As the contemporary landscape dissolves into volatile feeds and weightless glass interfaces, monumental travertine and raw concrete continue to demand physical presence—imposing the quiet gravity of mass and the steady passage of the sun.
+        </div>
+
+        <!-- Reading & Audio Dispatch Actions -->
+        <div class="hr-mono-actions">
+          <a href="#chapter-1" class="hr-mono-btn-primary" data-action="read-essay">
+            <span>READ FULL CHAPTER</span>
+            <span class="hr-mono-btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <button type="button" class="hr-mono-btn-audio" id="hrMonoAudioBtn" aria-label="Play audio lecture excerpt">
+            <span class="hr-mono-audio-icon" aria-hidden="true">▶</span>
+            <span id="hrMonoAudioLabel">LISTEN TO LECTURE [24:10]</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Secondary Column: Marginalia & Accompanying Folio -->
+      <aside class="hr-mono-side-col">
+        <!-- Pullquote Box -->
+        <div class="hr-mono-pullquote-box">
+          <div class="hr-mono-quote-glyph" aria-hidden="true">“</div>
+          <blockquote class="hr-mono-quote-text">
+            A window is not a screen. It is a calculated rupture in mass designed to tame the light of the sky.
+          </blockquote>
+          <cite class="hr-mono-quote-cite">— Studio Notebooks, Volume 14, p. 88</cite>
+        </div>
+
+        <!-- Interactive Bookmark Card -->
+        <div class="hr-mono-bookmark-card">
+          <div class="hr-mono-bookmark-head">
+            <span class="hr-mono-badge-dot"></span>
+            <span>PERSONAL LIBRARY</span>
+          </div>
+          <p class="hr-mono-bookmark-desc">
+            Save this monograph to your study index for offline reading with typographic notes.
+          </p>
+          <button type="button" class="hr-mono-btn-bookmark" id="hrMonoBookmarkBtn">
+            <span id="hrMonoBookmarkIcon">🔖</span>
+            <span id="hrMonoBookmarkText">Save to My Library</span>
+          </button>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Colophon Bottom Rule -->
+    <div class="hr-mono-bottom-divider" aria-hidden="true"></div>
+    <footer class="hr-mono-colophon">
+      <span>Limited edition of 1,500 numbered folios</span>
+      <span>Set in Playfair Display &amp; Suisse Int'l</span>
+      <span>Printed on heavyweight cotton rag stock</span>
+    </footer>
+  </div>
+
+  <!-- Micro Toast -->
+  <div class="hr-mono-toast" id="hrMonoToast" role="status" aria-live="polite">
+    <span>Sunlight angle calibrated</span>
+  </div>
+</section>

@@ -1,0 +1,480 @@
+/* 07: Retro Digital CAD Workstation Hero Styles */
+
+:root {
+  --hr-retro-chassis-bg: #262930;
+  --hr-retro-bezel-border: #181a1f;
+  --hr-retro-screen-bg: #031409;
+  --hr-retro-phosphor: #22c55e;
+  --hr-retro-phosphor-glow: rgba(34, 197, 94, 0.4);
+  --hr-retro-phosphor-dim: #15803d;
+  --hr-retro-font-mono: 'SF Mono', Consolas, Monaco, 'Courier New', monospace;
+}
+
+.hr-retro-hero {
+  position: relative;
+  width: 100%;
+  background-color: #121316;
+  color: #e2e8f0;
+  font-family: var(--hr-retro-font-mono);
+  box-sizing: border-box;
+  padding: 24px 20px;
+}
+
+.hr-retro-hero * {
+  box-sizing: border-box;
+}
+
+/* Chassis */
+.hr-retro-chassis {
+  max-width: 1140px;
+  margin: 0 auto;
+  background: var(--hr-retro-chassis-bg);
+  border: 4px solid var(--hr-retro-bezel-border);
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), inset 0 2px 2px rgba(255, 255, 255, 0.1);
+  padding: 16px;
+}
+
+/* Bezel Top Bar */
+.hr-retro-bezel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #1c1e24;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.hr-retro-badge {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+  background: #181a1f;
+  padding: 4px 10px;
+  border: 1px solid #334155;
+}
+
+.hr-retro-vents {
+  display: flex;
+  gap: 6px;
+}
+
+.hr-retro-vents span {
+  width: 24px;
+  height: 4px;
+  background: #181a1f;
+  border-radius: 2px;
+}
+
+.hr-retro-power-cluster {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+.hr-retro-led-power {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+/* CRT Screen Frame */
+.hr-retro-screen-frame {
+  position: relative;
+  background: #0a0d0c;
+  border: 8px solid #14171d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.hr-retro-screen {
+  position: relative;
+  background-color: var(--hr-retro-screen-bg);
+  color: var(--hr-retro-phosphor);
+  padding: 24px 28px;
+  min-height: 520px;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Phosphor Color Modes */
+.hr-retro-hero[data-phosphor="green"] {
+  --hr-retro-screen-bg: #031409;
+  --hr-retro-phosphor: #22c55e;
+  --hr-retro-phosphor-glow: rgba(34, 197, 94, 0.35);
+  --hr-retro-phosphor-dim: #15803d;
+}
+
+.hr-retro-hero[data-phosphor="amber"] {
+  --hr-retro-screen-bg: #140d03;
+  --hr-retro-phosphor: #f59e0b;
+  --hr-retro-phosphor-glow: rgba(245, 158, 11, 0.35);
+  --hr-retro-phosphor-dim: #b45309;
+}
+
+.hr-retro-hero[data-phosphor="white"] {
+  --hr-retro-screen-bg: #0a0d14;
+  --hr-retro-phosphor: #f1f5f9;
+  --hr-retro-phosphor-glow: rgba(241, 245, 249, 0.3);
+  --hr-retro-phosphor-dim: #94a3b8;
+}
+
+/* Scanlines & Curvature Overlay */
+.hr-retro-scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.35) 0px,
+    rgba(0, 0, 0, 0.35) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 140ms ease;
+}
+
+.hr-retro-scanlines.hidden {
+  opacity: 0;
+}
+
+.hr-retro-curvature {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  z-index: 6;
+}
+
+/* Terminal Content */
+.hr-retro-terminal-grid {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hr-retro-status-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--hr-retro-phosphor-dim);
+  opacity: 0.85;
+}
+
+/* Display Split */
+.hr-retro-display-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Left: Text & Prompts */
+.hr-retro-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-retro-prompt-kicker {
+  font-size: 11px;
+  opacity: 0.75;
+  margin-bottom: 8px;
+}
+
+.hr-retro-title {
+  font-size: clamp(26px, 3.4vw, 38px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  color: var(--hr-retro-phosphor);
+  text-shadow: 0 0 10px var(--hr-retro-phosphor-glow);
+  margin: 0 0 14px;
+}
+
+.hr-retro-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin: 0 0 20px;
+}
+
+/* Command Chips */
+.hr-retro-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.hr-retro-chip-label {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.hr-retro-chip {
+  background: transparent;
+  border: 1px solid var(--hr-retro-phosphor-dim);
+  color: var(--hr-retro-phosphor);
+  font-family: var(--hr-retro-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.hr-retro-chip:hover {
+  background: var(--hr-retro-phosphor);
+  color: var(--hr-retro-screen-bg);
+}
+
+/* CLI Form */
+.hr-retro-cli-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--hr-retro-phosphor-dim);
+  padding: 6px 10px;
+  margin-bottom: 22px;
+}
+
+.hr-retro-cli-prefix {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--hr-retro-phosphor);
+}
+
+.hr-retro-cli-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--hr-retro-phosphor);
+  font-family: var(--hr-retro-font-mono);
+  font-size: 13px;
+}
+
+.hr-retro-cli-input::placeholder {
+  color: var(--hr-retro-phosphor-dim);
+  opacity: 0.6;
+}
+
+.hr-retro-cli-submit {
+  background: var(--hr-retro-phosphor-dim);
+  border: none;
+  color: var(--hr-retro-screen-bg);
+  font-family: var(--hr-retro-font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.hr-retro-cli-submit:hover {
+  background: var(--hr-retro-phosphor);
+}
+
+/* Actions */
+.hr-retro-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hr-retro-btn-enter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--hr-retro-phosphor);
+  color: var(--hr-retro-screen-bg);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 10px 16px;
+  text-decoration: none;
+  border: 1px solid var(--hr-retro-phosphor);
+  transition: opacity 120ms ease;
+}
+
+.hr-retro-btn-enter:hover {
+  opacity: 0.9;
+}
+
+.hr-retro-btn-scanlines {
+  background: transparent;
+  border: 1px solid var(--hr-retro-phosphor-dim);
+  color: var(--hr-retro-phosphor);
+  font-family: var(--hr-retro-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 9px 14px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.hr-retro-btn-scanlines:hover {
+  background: rgba(34, 197, 94, 0.1);
+}
+
+/* Right: Scope Housing */
+.hr-retro-scope-housing {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--hr-retro-phosphor-dim);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-retro-scope-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 700;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--hr-retro-phosphor-dim);
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+.hr-retro-scope-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin-bottom: 12px;
+}
+
+.hr-retro-wireframe-svg {
+  width: 190px;
+  height: 190px;
+  color: var(--hr-retro-phosphor);
+  filter: drop-shadow(0 0 4px var(--hr-retro-phosphor-glow));
+}
+
+.hr-retro-wire-group {
+  transform-origin: 120px 120px;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hr-retro-wire-group.rotating {
+  animation: hrRetroOrbit 8s linear infinite;
+}
+
+@keyframes hrRetroOrbit {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(0.92); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Phosphor Bar */
+.hr-retro-phosphor-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--hr-retro-phosphor-dim);
+}
+
+.hr-retro-phosphor-bar .label {
+  font-size: 9px;
+  opacity: 0.7;
+}
+
+.hr-retro-ph-btn {
+  background: transparent;
+  border: 1px solid var(--hr-retro-phosphor-dim);
+  color: var(--hr-retro-phosphor);
+  font-family: var(--hr-retro-font-mono);
+  font-size: 9px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.hr-retro-ph-btn.active {
+  background: var(--hr-retro-phosphor);
+  color: var(--hr-retro-screen-bg);
+  font-weight: 800;
+}
+
+/* Terminal Output Log */
+.hr-retro-stdout {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--hr-retro-phosphor-dim);
+  padding: 10px 12px;
+  font-size: 11px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+/* Toast */
+.hr-retro-toast {
+  position: absolute;
+  bottom: 20px;
+  right: 28px;
+  background: #000000;
+  color: var(--hr-retro-phosphor);
+  font-family: var(--hr-retro-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border: 1px solid var(--hr-retro-phosphor);
+  box-shadow: 0 0 10px var(--hr-retro-phosphor-glow);
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 20;
+}
+
+.hr-retro-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Rules */
+@media (max-width: 900px) {
+  .hr-retro-display-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hr-retro-hero {
+    padding: 12px 8px;
+  }
+  .hr-retro-chassis {
+    padding: 10px;
+  }
+  .hr-retro-screen {
+    padding: 16px 14px;
+  }
+  .hr-retro-title {
+    font-size: 24px;
+  }
+}
+
+@container (max-width: 860px) {
+  .hr-retro-display-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,132 @@
+<!-- 07: Retro Digital CAD Workstation Hero -->
+<section class="hr-retro-hero" data-hero="retro-digital" data-phosphor="green">
+  <div class="hr-retro-chassis">
+    <!-- CRT Monitor Bezel Outer Housing -->
+    <div class="hr-retro-bezel">
+      <!-- Top Bezel Vents & Model Badge -->
+      <div class="hr-retro-bezel-top">
+        <div class="hr-retro-badge">VECTOR-GRAPH // SYSTEM 80</div>
+        <div class="hr-retro-vents" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hr-retro-power-cluster">
+          <div class="hr-retro-led-power" aria-label="Power LED: Active"></div>
+          <span class="hr-retro-power-label">64KB CORE MEMORY</span>
+        </div>
+      </div>
+
+      <!-- Curved Phosphor Screen Area with Scanlines -->
+      <div class="hr-retro-screen-frame">
+        <div class="hr-retro-screen" id="hrRetroScreen">
+          <!-- Glass Reflection & Scanlines Overlay -->
+          <div class="hr-retro-scanlines" id="hrRetroScanlines" aria-hidden="true"></div>
+          <div class="hr-retro-curvature" aria-hidden="true"></div>
+
+          <!-- Screen Content Grid -->
+          <div class="hr-retro-terminal-grid">
+            <!-- Terminal Header Status -->
+            <div class="hr-retro-status-line">
+              <span>TEK-4014 VECTOR GRAPHICS TERMINAL (BAUD 9600)</span>
+              <span>COP: 4.77 MHZ · OK</span>
+            </div>
+
+            <!-- Main Workstation Display -->
+            <div class="hr-retro-display-split">
+              <!-- Left: System Narrative & Telemetry -->
+              <div class="hr-retro-text-col">
+                <div class="hr-retro-prompt-kicker">C:\&gt; RUN ARCHIVE_DISPATCH.EXE</div>
+                
+                <h1 class="hr-retro-title">
+                  VECTOR CAD &amp; COMPUTATIONAL TELEMETRY
+                </h1>
+
+                <p class="hr-retro-desc">
+                  Re-engineered 1980s direct-view storage terminal architecture for modern structural vector visualization. Clean monospaced telemetry, hardware-accelerated wireframe plotting, and deterministic keyboard routing.
+                </p>
+
+                <!-- Command Chips -->
+                <div class="hr-retro-chips" role="group" aria-label="Fast Terminal Commands">
+                  <span class="hr-retro-chip-label">COMMAND:</span>
+                  <button type="button" class="hr-retro-chip" data-cmd="PLOT">PLOT 3D</button>
+                  <button type="button" class="hr-retro-chip" data-cmd="SPECS">SYS SPECS</button>
+                  <button type="button" class="hr-retro-chip" data-cmd="ORBIT">ORBIT WIRE</button>
+                  <button type="button" class="hr-retro-chip" data-cmd="CLS">CLEAR</button>
+                </div>
+
+                <!-- Interactive Command Input Prompt -->
+                <form class="hr-retro-cli-form" id="hrRetroCliForm" onsubmit="return false;">
+                  <label for="hrRetroInput" class="hr-retro-cli-prefix">&gt;</label>
+                  <input type="text" id="hrRetroInput" class="hr-retro-cli-input" placeholder="type 'help', 'plot', or 'orbit'..." autocomplete="off" spellcheck="false">
+                  <button type="submit" class="hr-retro-cli-submit">EXEC</button>
+                </form>
+
+                <!-- Primary Action Buttons -->
+                <div class="hr-retro-actions">
+                  <a href="#hardware-specs" class="hr-retro-btn-enter">
+                    <span>LOAD STORAGE TUBE MANUAL</span>
+                    <span aria-hidden="true">&gt;&gt;</span>
+                  </a>
+                  <button type="button" class="hr-retro-btn-scanlines" id="hrRetroScanlineToggle">
+                    <span>SCANLINES: ON</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right: Interactive Vector Wireframe Oscilloscope Plot -->
+              <div class="hr-retro-plot-col">
+                <div class="hr-retro-scope-housing">
+                  <div class="hr-retro-scope-header">
+                    <span>VECTOR PLOTTER // AXIS X-Y-Z</span>
+                    <span id="hrRetroPlotMode">ISOMETRIC CUBE</span>
+                  </div>
+
+                  <!-- Pure SVG Vector Wireframe Model -->
+                  <div class="hr-retro-scope-stage">
+                    <svg class="hr-retro-wireframe-svg" id="hrRetroSvg" viewBox="0 0 240 240" aria-label="3D Vector wireframe wire model">
+                      <!-- Grid Coordinates Background -->
+                      <line x1="20" y1="120" x2="220" y2="120" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 4" opacity="0.4"></line>
+                      <line x1="120" y1="20" x2="120" y2="220" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 4" opacity="0.4"></line>
+                      <circle cx="120" cy="120" r="85" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3 5" opacity="0.3"></circle>
+                      
+                      <!-- 3D Polyhedral Wireframe Object (Target of JS Transform) -->
+                      <g id="hrRetroWireGroup" class="hr-retro-wire-group">
+                        <!-- Front Face -->
+                        <polygon points="70,70 150,70 150,150 70,150" fill="none" stroke="currentColor" stroke-width="1.8"></polygon>
+                        <!-- Back Face -->
+                        <polygon points="100,40 180,40 180,120 100,120" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"></polygon>
+                        <!-- Connecting Edges -->
+                        <line x1="70" y1="70" x2="100" y2="40" stroke="currentColor" stroke-width="1.5"></line>
+                        <line x1="150" y1="70" x2="180" y2="40" stroke="currentColor" stroke-width="1.5"></line>
+                        <line x1="150" y1="150" x2="180" y2="120" stroke="currentColor" stroke-width="1.5"></line>
+                        <line x1="70" y1="150" x2="100" y2="120" stroke="currentColor" stroke-width="1.5"></line>
+                      </g>
+                    </svg>
+                  </div>
+
+                  <!-- Phosphor Tube Color Switcher -->
+                  <div class="hr-retro-phosphor-bar" role="group" aria-label="CRT Phosphor Type">
+                    <span class="label">PHOSPHOR:</span>
+                    <button type="button" class="hr-retro-ph-btn active" data-phosphor="green">P1 GREEN</button>
+                    <button type="button" class="hr-retro-ph-btn" data-phosphor="amber">P3 AMBER</button>
+                    <button type="button" class="hr-retro-ph-btn" data-phosphor="white">P4 WHITE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal Output Feed -->
+            <div class="hr-retro-stdout" id="hrRetroStdout">
+              <div class="hr-retro-line">[SYS]: DIRECT MEMORY ACCESS ALLOCATED AT 0x0040.</div>
+              <div class="hr-retro-line">[SYS]: TEKTRONIX VECTOR ENGINE READY. TYPE COMMAND OR CLICK CHIPS.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="hr-retro-toast" id="hrRetroToast" role="status" aria-live="polite">
+    CRT TUBE SIGNAL ADJUSTED
+  </div>
+</section>
