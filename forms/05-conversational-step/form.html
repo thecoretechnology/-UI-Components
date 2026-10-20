@@ -1,0 +1,107 @@
+<!-- 05: Friendly Conversational Step Form -->
+<section class="cf-conv-root" data-form="conversational-step">
+  <div class="cf-conv-container">
+    <!-- Progress Indicator Bar -->
+    <div class="cf-conv-progress-wrap" aria-label="Form Progress">
+      <div class="cf-conv-progress-meta">
+        <span class="cf-conv-step-badge" id="cfConvStepBadge">Step 1 of 3</span>
+        <span class="cf-conv-step-topic" id="cfConvStepTopic">About You</span>
+      </div>
+      <div class="cf-conv-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" id="cfConvProgressBar">
+        <div class="cf-conv-bar-fill" id="cfConvBarFill" style="width: 33.3%;"></div>
+      </div>
+    </div>
+
+    <form class="cf-conv-form" id="cfConvForm" novalidate>
+      <!-- STEP 1: Basic Introduction -->
+      <fieldset class="cf-conv-step active" id="cfConvStep1" data-step="1" aria-label="Step 1: Introduction">
+        <legend class="cf-conv-legend">First, let's get acquainted.</legend>
+        <p class="cf-conv-prompt">What's your name and where can our team reach back out to you?</p>
+
+        <div class="cf-conv-group">
+          <label for="cf-conv-name" class="cf-conv-label">What should we call you? <span class="cf-conv-req" aria-hidden="true">*</span></label>
+          <input type="text" id="cf-conv-name" name="name" class="cf-conv-input" placeholder="Sarah Chen" required autocomplete="name">
+          <span class="cf-conv-error" id="cf-conv-name-err" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="cf-conv-group">
+          <label for="cf-conv-email" class="cf-conv-label">Your primary email address <span class="cf-conv-req" aria-hidden="true">*</span></label>
+          <input type="email" id="cf-conv-email" name="email" class="cf-conv-input" placeholder="sarah@chen.co" required autocomplete="email">
+          <span class="cf-conv-error" id="cf-conv-email-err" role="alert" aria-live="polite"></span>
+        </div>
+      </fieldset>
+
+      <!-- STEP 2: Project Category & Timeline -->
+      <fieldset class="cf-conv-step" id="cfConvStep2" data-step="2" aria-label="Step 2: Project Scope" hidden>
+        <legend class="cf-conv-legend">Tell us what you're creating.</legend>
+        <p class="cf-conv-prompt">What domain does this project focus on, and when are you looking to start?</p>
+
+        <div class="cf-conv-group">
+          <label class="cf-conv-label">Core Focus Area <span class="cf-conv-req" aria-hidden="true">*</span></label>
+          <div class="cf-conv-options" role="radiogroup" aria-label="Focus Area">
+            <label class="cf-conv-opt">
+              <input type="radio" name="conv-category" value="web-app" checked>
+              <span>Web Application</span>
+            </label>
+            <label class="cf-conv-opt">
+              <input type="radio" name="conv-category" value="brand">
+              <span>Brand Identity</span>
+            </label>
+            <label class="cf-conv-opt">
+              <input type="radio" name="conv-category" value="design-system">
+              <span>Design System</span>
+            </label>
+            <label class="cf-conv-opt">
+              <input type="radio" name="conv-category" value="consulting">
+              <span>Technical Advisory</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="cf-conv-group">
+          <label for="cf-conv-timeframe" class="cf-conv-label">Desired Timeframe</label>
+          <select id="cf-conv-timeframe" name="timeframe" class="cf-conv-select">
+            <option value="immediate">Within the next 2-4 weeks</option>
+            <option value="next-quarter">Within this quarter</option>
+            <option value="exploratory">Early exploration / flexible</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- STEP 3: Message & Goals -->
+      <fieldset class="cf-conv-step" id="cfConvStep3" data-step="3" aria-label="Step 3: Vision & Details" hidden>
+        <legend class="cf-conv-legend">Almost there — what's the vision?</legend>
+        <p class="cf-conv-prompt">Share whatever details feel relevant: challenges, inspirations, or constraints.</p>
+
+        <div class="cf-conv-group">
+          <label for="cf-conv-notes" class="cf-conv-label">Project Details <span class="cf-conv-req" aria-hidden="true">*</span></label>
+          <textarea id="cf-conv-notes" name="notes" class="cf-conv-textarea" rows="4" placeholder="We are modernizing our client onboarding experience..." required></textarea>
+          <span class="cf-conv-error" id="cf-conv-notes-err" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="cf-conv-group">
+          <label for="cf-conv-referral" class="cf-conv-label">How did you come across our work? (Optional)</label>
+          <input type="text" id="cf-conv-referral" name="referral" class="cf-conv-input" placeholder="Word of mouth, read an article, GitHub...">
+        </div>
+      </fieldset>
+
+      <!-- Step Navigation Buttons -->
+      <div class="cf-conv-nav-row">
+        <button type="button" class="cf-conv-btn-back" id="cfConvBack" disabled aria-label="Go to previous step">
+          ← Back
+        </button>
+
+        <button type="button" class="cf-conv-btn-next" id="cfConvNext">
+          <span>Continue</span> →
+        </button>
+
+        <button type="submit" class="cf-conv-btn-submit" id="cfConvSubmit" hidden>
+          <span>Send Message</span> ✓
+        </button>
+      </div>
+
+      <!-- Live Demo Status -->
+      <div class="cf-conv-status" id="cfConvStatus" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>

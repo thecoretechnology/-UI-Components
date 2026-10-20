@@ -1,0 +1,141 @@
+<!-- 04: Creative Agency Brief Form -->
+<section class="cf-agency-root" data-form="agency-brief">
+  <div class="cf-agency-container">
+    <header class="cf-agency-header">
+      <div class="cf-agency-step-tag">STUDIO COMMISSIONS // 2026</div>
+      <h1 class="cf-agency-title">Let's craft your next project.</h1>
+      <p class="cf-agency-lead">
+        Select your required capabilities and investment parameters below. We assemble dedicated multidisciplinary teams for every client partnership.
+      </p>
+    </header>
+
+    <form class="cf-agency-form" id="cfAgencyForm" novalidate>
+      <!-- Capability Selector Chips (Multi-select) -->
+      <div class="cf-agency-section">
+        <label class="cf-agency-section-title">
+          <span>01. Required Services</span>
+          <span class="cf-agency-hint">(Select all that apply)</span>
+        </label>
+        <div class="cf-agency-chip-grid" role="group" aria-label="Services Selection">
+          <label class="cf-agency-chip">
+            <input type="checkbox" name="services" value="brand-identity">
+            <span class="cf-agency-chip-content">
+              <span class="title">Brand Identity</span>
+              <span class="sub">Naming, Visual System, Guidelines</span>
+            </span>
+          </label>
+          <label class="cf-agency-chip">
+            <input type="checkbox" name="services" value="digital-product" checked>
+            <span class="cf-agency-chip-content">
+              <span class="title">Product Design</span>
+              <span class="sub">UI/UX, Prototyping, Mobile App</span>
+            </span>
+          </label>
+          <label class="cf-agency-chip">
+            <input type="checkbox" name="services" value="design-system">
+            <span class="cf-agency-chip-content">
+              <span class="title">Design Systems</span>
+              <span class="sub">Figma Tokens, Code Components</span>
+            </span>
+          </label>
+          <label class="cf-agency-chip">
+            <input type="checkbox" name="services" value="web-engineering">
+            <span class="cf-agency-chip-content">
+              <span class="title">Web Engineering</span>
+              <span class="sub">Custom Web Applications &amp; CMS</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Budget Selector (Single-select radio group) -->
+      <div class="cf-agency-section">
+        <label class="cf-agency-section-title">
+          <span>02. Anticipated Investment</span>
+        </label>
+        <div class="cf-agency-budget-row" role="radiogroup" aria-label="Project Budget">
+          <label class="cf-agency-budget-pill">
+            <input type="radio" name="budget" value="25k-50k">
+            <span>$25k – $50k</span>
+          </label>
+          <label class="cf-agency-budget-pill">
+            <input type="radio" name="budget" value="50k-100k" checked>
+            <span>$50k – $100k</span>
+          </label>
+          <label class="cf-agency-budget-pill">
+            <input type="radio" name="budget" value="100k-250k">
+            <span>$100k – $250k</span>
+          </label>
+          <label class="cf-agency-budget-pill">
+            <input type="radio" name="budget" value="250k+">
+            <span>$250k+</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Timeline Selector -->
+      <div class="cf-agency-section">
+        <label class="cf-agency-section-title">
+          <span>03. Desired Timeline</span>
+        </label>
+        <div class="cf-agency-timeline-row" role="radiogroup" aria-label="Desired Timeline">
+          <label class="cf-agency-time-pill">
+            <input type="radio" name="timeline" value="immediate">
+            <span>Immediate (Under 1 mo)</span>
+          </label>
+          <label class="cf-agency-time-pill">
+            <input type="radio" name="timeline" value="standard" checked>
+            <span>Standard (2 – 4 mos)</span>
+          </label>
+          <label class="cf-agency-time-pill">
+            <input type="radio" name="timeline" value="flexible">
+            <span>Flexible / Exploring</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Contact Fields -->
+      <div class="cf-agency-section">
+        <label class="cf-agency-section-title">
+          <span>04. Your Information</span>
+        </label>
+        <div class="cf-agency-fields-grid">
+          <div class="cf-agency-field">
+            <label for="cf-agency-name" class="cf-agency-label">Full Name <span class="cf-agency-req" aria-hidden="true">*</span></label>
+            <input type="text" id="cf-agency-name" name="name" class="cf-agency-input" placeholder="Maya Lin" required autocomplete="name">
+            <span class="cf-agency-error" id="cf-agency-name-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="cf-agency-field">
+            <label for="cf-agency-company" class="cf-agency-label">Organization / Studio</label>
+            <input type="text" id="cf-agency-company" name="company" class="cf-agency-input" placeholder="Studio Lin" autocomplete="organization">
+          </div>
+
+          <div class="cf-agency-field full">
+            <label for="cf-agency-email" class="cf-agency-label">Work Email <span class="cf-agency-req" aria-hidden="true">*</span></label>
+            <input type="email" id="cf-agency-email" name="email" class="cf-agency-input" placeholder="maya@studiolin.com" required autocomplete="email">
+            <span class="cf-agency-error" id="cf-agency-email-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="cf-agency-field full">
+            <label for="cf-agency-brief" class="cf-agency-label">Project Brief &amp; Context <span class="cf-agency-req" aria-hidden="true">*</span></label>
+            <textarea id="cf-agency-brief" name="brief" class="cf-agency-textarea" rows="4" placeholder="Tell us about your organization, core goals, and deliverables..." required></textarea>
+            <span class="cf-agency-error" id="cf-agency-brief-err" role="alert" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action & Notice -->
+      <div class="cf-agency-submit-row">
+        <button type="submit" class="cf-agency-btn" id="cfAgencySubmit">
+          <span class="cf-agency-btn-text">Submit Project Brief</span>
+          <span class="cf-agency-btn-arrow" aria-hidden="true">→</span>
+        </button>
+        <span class="cf-agency-meta-note">We review all briefs and schedule an introductory sprint call within 48 hours.</span>
+      </div>
+
+      <!-- Status Banner -->
+      <div class="cf-agency-status" id="cfAgencyStatus" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>

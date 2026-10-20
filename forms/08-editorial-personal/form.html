@@ -1,0 +1,82 @@
+<!-- 08: Editorial / Personal Contact Form -->
+<section class="cf-edit-root" data-form="editorial-personal">
+  <div class="cf-edit-container">
+    <div class="cf-edit-layout">
+      <!-- Colophon & Context Column -->
+      <aside class="cf-edit-colophon">
+        <span class="cf-edit-issue-tag">COLOPHON &bull; VOL. IV</span>
+        <h2 class="cf-edit-title">Writings, invitations, &amp; quiet dispatches.</h2>
+        <p class="cf-edit-bio">
+          I read every message personally. If you are reaching out regarding essay translations, university lectures, monograph discussions, or collaborative research, please leave a thoughtful note.
+        </p>
+
+        <div class="cf-edit-direct">
+          <div class="cf-edit-meta-item">
+            <span class="cf-edit-meta-label">Direct Correspondence</span>
+            <span class="cf-edit-meta-val">julian.vance@arcadiapress.pub</span>
+          </div>
+          <div class="cf-edit-meta-item">
+            <span class="cf-edit-meta-label">Physical Archive &amp; Studio</span>
+            <span class="cf-edit-meta-val">Studio 4B, 84 Clerkenwell Rd, London EC1M</span>
+          </div>
+          <div class="cf-edit-meta-item">
+            <span class="cf-edit-meta-label">Encrypted Comms (PGP)</span>
+            <code class="cf-edit-pgp">8A29 F01C 44D3 79B2 01A8</code>
+          </div>
+        </div>
+
+        <div class="cf-edit-cadence">
+          <span class="cf-edit-dot" aria-hidden="true"></span>
+          <span>Typical response cadence: within 3–4 business days.</span>
+        </div>
+      </aside>
+
+      <!-- Form Column -->
+      <div class="cf-edit-form-wrap">
+        <form class="cf-edit-form" id="cfEditForm" novalidate>
+          <div class="cf-edit-row">
+            <div class="cf-edit-field">
+              <label for="cf-edit-name" class="cf-edit-label">Your Name <span class="cf-edit-req" aria-hidden="true">*</span></label>
+              <input type="text" id="cf-edit-name" name="name" class="cf-edit-input" placeholder="Eleanor Sterling" required autocomplete="name">
+              <span class="cf-edit-error" id="cf-edit-name-err" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="cf-edit-field">
+              <label for="cf-edit-email" class="cf-edit-label">Return Address <span class="cf-edit-req" aria-hidden="true">*</span></label>
+              <input type="email" id="cf-edit-email" name="email" class="cf-edit-input" placeholder="eleanor@oxfordpress.edu" required autocomplete="email">
+              <span class="cf-edit-error" id="cf-edit-email-err" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="cf-edit-field">
+            <label for="cf-edit-topic" class="cf-edit-label">Nature of Inquiry</label>
+            <div class="cf-edit-select-wrap">
+              <select id="cf-edit-topic" name="topic" class="cf-edit-select">
+                <option value="essay-monograph">Essay Syndication / Monograph Review</option>
+                <option value="speaking">Lecture / Panel Discussion Invitation</option>
+                <option value="fellowship">Research Fellowship / Academic Exchange</option>
+                <option value="correspondence">Personal Reader Correspondence</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cf-edit-field">
+            <label for="cf-edit-message" class="cf-edit-label">Your Note <span class="cf-edit-req" aria-hidden="true">*</span></label>
+            <textarea id="cf-edit-message" name="message" class="cf-edit-textarea" rows="6" placeholder="Write freely with context, references, or specific questions..." required></textarea>
+            <span class="cf-edit-error" id="cf-edit-message-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="cf-edit-submit-bar">
+            <button type="submit" class="cf-edit-btn" id="cfEditSubmit">
+              <span class="cf-edit-btn-text">Transmit Letter</span>
+              <span class="cf-edit-btn-glyph" aria-hidden="true">&rarr;</span>
+            </button>
+            <span class="cf-edit-fineprint">Handled with editorial discretion. No marketing lists.</span>
+          </div>
+
+          <div class="cf-edit-banner" id="cfEditBanner" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+<!-- 01: Minimal Studio Contact Form -->
+<section class="cf-studio-root" data-form="minimal-studio">
+  <div class="cf-studio-container">
+    <!-- Top Editorial Header -->
+    <header class="cf-studio-header">
+      <div class="cf-studio-meta">
+        <span class="cf-studio-badge">INQUIRIES</span>
+        <span class="cf-studio-status">
+          <span class="cf-studio-dot" aria-hidden="true"></span>
+          Accepting commissions for Q1/Q2
+        </span>
+      </div>
+      <h1 class="cf-studio-title">Start a Conversation</h1>
+      <p class="cf-studio-lead">
+        We collaborate with thoughtful teams on digital products, brand systems, and interactive tools. Tell us about your goals and expected timeline.
+      </p>
+    </header>
+
+    <!-- Main Clean Aligned Form -->
+    <form class="cf-studio-form" id="cfStudioForm" novalidate>
+      <div class="cf-studio-grid">
+        <!-- Name -->
+        <div class="cf-studio-field">
+          <label for="cf-studio-name" class="cf-studio-label">Your Name <span class="cf-studio-req" aria-hidden="true">*</span></label>
+          <input type="text" id="cf-studio-name" name="name" class="cf-studio-input" placeholder="Eleanor Vance" required autocomplete="name">
+          <span class="cf-studio-error" id="cf-studio-name-err" role="alert" aria-live="polite"></span>
+        </div>
+
+        <!-- Organization -->
+        <div class="cf-studio-field">
+          <label for="cf-studio-org" class="cf-studio-label">Organization or Studio</label>
+          <input type="text" id="cf-studio-org" name="organization" class="cf-studio-input" placeholder="Vance &amp; Co." autocomplete="organization">
+        </div>
+
+        <!-- Email -->
+        <div class="cf-studio-field">
+          <label for="cf-studio-email" class="cf-studio-label">Email Address <span class="cf-studio-req" aria-hidden="true">*</span></label>
+          <input type="email" id="cf-studio-email" name="email" class="cf-studio-input" placeholder="eleanor@example.com" required autocomplete="email">
+          <span class="cf-studio-error" id="cf-studio-email-err" role="alert" aria-live="polite"></span>
+        </div>
+
+        <!-- Project Scope -->
+        <div class="cf-studio-field">
+          <label for="cf-studio-scope" class="cf-studio-label">Project Scope</label>
+          <div class="cf-studio-select-wrap">
+            <select id="cf-studio-scope" name="scope" class="cf-studio-select">
+              <option value="digital-product">Digital Product Design</option>
+              <option value="brand-identity">Brand Identity &amp; System</option>
+              <option value="design-system">Design System Architecture</option>
+              <option value="consultation">Strategic Advisory</option>
+              <option value="other">Other Collaboration</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="cf-studio-field full-width">
+          <label for="cf-studio-message" class="cf-studio-label">Project Details <span class="cf-studio-req" aria-hidden="true">*</span></label>
+          <textarea id="cf-studio-message" name="message" class="cf-studio-textarea" rows="4" placeholder="Briefly describe the context, timeline, and what success looks like..." required></textarea>
+          <span class="cf-studio-error" id="cf-studio-msg-err" role="alert" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <!-- Action Row -->
+      <div class="cf-studio-footer">
+        <p class="cf-studio-note">
+          Direct inquiries: <a href="mailto:studio@archetype.design" class="cf-studio-link">studio@archetype.design</a> · Typical response within 48 hours.
+        </p>
+        <button type="submit" class="cf-studio-btn" id="cfStudioSubmit">
+          <span class="cf-studio-btn-text">Send Inquiry</span>
+          <span class="cf-studio-btn-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <!-- Feedback Banner -->
+      <div class="cf-studio-banner" id="cfStudioBanner" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>

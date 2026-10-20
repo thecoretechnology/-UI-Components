@@ -1,0 +1,167 @@
+<!-- 10: Interactive Inquiry Form -->
+<section class="cf-inquiry-root" data-form="interactive-inquiry">
+  <div class="cf-inquiry-container">
+    <div class="cf-inquiry-header">
+      <div class="cf-inquiry-pill">DYNAMIC ROUTING DESK</div>
+      <h2 class="cf-inquiry-title">How can we collaborate?</h2>
+      <p class="cf-inquiry-lead">
+        Select the department that best aligns with your request. The inquiry form adapts its parameters in real time.
+      </p>
+    </div>
+
+    <!-- Category Selector Tabs -->
+    <div class="cf-inquiry-types" role="radiogroup" aria-label="Inquiry Department Selection">
+      <label class="cf-inquiry-type-card active" data-type="sales">
+        <input type="radio" name="inquiry_dept" value="sales" checked>
+        <span class="cf-inquiry-type-icon" aria-hidden="true">🏢</span>
+        <span class="cf-inquiry-type-meta">
+          <strong class="cf-inquiry-type-name">Enterprise Sales</strong>
+          <small class="cf-inquiry-type-desc">Licensing, custom deployments &amp; SLAs</small>
+        </span>
+      </label>
+
+      <label class="cf-inquiry-type-card" data-type="partnership">
+        <input type="radio" name="inquiry_dept" value="partnership">
+        <span class="cf-inquiry-type-icon" aria-hidden="true">🤝</span>
+        <span class="cf-inquiry-type-meta">
+          <strong class="cf-inquiry-type-name">Partnerships</strong>
+          <small class="cf-inquiry-type-desc">Ecosystem integrations &amp; co-selling</small>
+        </span>
+      </label>
+
+      <label class="cf-inquiry-type-card" data-type="press">
+        <input type="radio" name="inquiry_dept" value="press">
+        <span class="cf-inquiry-type-icon" aria-hidden="true">📰</span>
+        <span class="cf-inquiry-type-meta">
+          <strong class="cf-inquiry-type-name">Press &amp; Media</strong>
+          <small class="cf-inquiry-type-desc">Executive interviews, press kit &amp; assets</small>
+        </span>
+      </label>
+
+      <label class="cf-inquiry-type-card" data-type="careers">
+        <input type="radio" name="inquiry_dept" value="careers">
+        <span class="cf-inquiry-type-icon" aria-hidden="true">💼</span>
+        <span class="cf-inquiry-type-meta">
+          <strong class="cf-inquiry-type-name">Fellowships &amp; Talent</strong>
+          <small class="cf-inquiry-type-desc">Open roles, apprenticeships &amp; visits</small>
+        </span>
+      </label>
+    </div>
+
+    <!-- Main Dynamic Form -->
+    <form class="cf-inquiry-form" id="cfInquiryForm" novalidate>
+      <div class="cf-inquiry-dept-header">
+        <span class="cf-inquiry-subheading" id="cfInquiryDeptHeader">Directing inquiry to Enterprise Solutions</span>
+      </div>
+
+      <!-- Core Contact Info (Always Shown) -->
+      <div class="cf-inquiry-grid-2">
+        <div class="cf-inquiry-field">
+          <label for="cf-inq-name" class="cf-inquiry-label">Full Name <span class="cf-inquiry-req" aria-hidden="true">*</span></label>
+          <input type="text" id="cf-inq-name" name="name" class="cf-inquiry-input" placeholder="Sarah Chen" required autocomplete="name">
+          <span class="cf-inquiry-error" id="cf-inq-name-err" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="cf-inquiry-field">
+          <label for="cf-inq-email" class="cf-inquiry-label">Work Email <span class="cf-inquiry-req" aria-hidden="true">*</span></label>
+          <input type="email" id="cf-inq-email" name="email" class="cf-inquiry-input" placeholder="s.chen@metagrid.io" required autocomplete="email">
+          <span class="cf-inquiry-error" id="cf-inq-email-err" role="alert" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <!-- Conditional Pane: Sales -->
+      <div class="cf-inquiry-pane active" id="pane-sales" data-pane="sales">
+        <div class="cf-inquiry-grid-2">
+          <div class="cf-inquiry-field">
+            <label for="cf-inq-org" class="cf-inquiry-label">Organization Name <span class="cf-inquiry-req" aria-hidden="true">*</span></label>
+            <input type="text" id="cf-inq-org" name="organization" class="cf-inquiry-input" placeholder="Metagrid Systems Inc.">
+            <span class="cf-inquiry-error" id="cf-inq-org-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="cf-inquiry-field">
+            <label for="cf-inq-seats" class="cf-inquiry-label">Estimated User Seats</label>
+            <select id="cf-inq-seats" name="seats" class="cf-inquiry-select">
+              <option value="50-200">50 &ndash; 200 Seats</option>
+              <option value="200-1000">200 &ndash; 1,000 Seats</option>
+              <option value="1000+">1,000+ Enterprise Tier</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional Pane: Partnerships -->
+      <div class="cf-inquiry-pane" id="pane-partnership" data-pane="partnership" hidden>
+        <div class="cf-inquiry-grid-2">
+          <div class="cf-inquiry-field">
+            <label for="cf-inq-partner-type" class="cf-inquiry-label">Partner Category</label>
+            <select id="cf-inq-partner-type" name="partner_type" class="cf-inquiry-select">
+              <option value="technology">Technology &amp; API Integration</option>
+              <option value="agency">Consulting / Agency Reseller</option>
+              <option value="strategic">Strategic Co-Development</option>
+            </select>
+          </div>
+
+          <div class="cf-inquiry-field">
+            <label for="cf-inq-partner-website" class="cf-inquiry-label">Organization Website <span class="cf-inquiry-req" aria-hidden="true">*</span></label>
+            <input type="url" id="cf-inq-partner-website" name="partner_website" class="cf-inquiry-input" placeholder="https://alliancetech.org">
+            <span class="cf-inquiry-error" id="cf-inq-partner-website-err" role="alert" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional Pane: Press & Media -->
+      <div class="cf-inquiry-pane" id="pane-press" data-pane="press" hidden>
+        <div class="cf-inquiry-grid-2">
+          <div class="cf-inquiry-field">
+            <label for="cf-inq-publication" class="cf-inquiry-label">Publication / Media Outlet <span class="cf-inquiry-req" aria-hidden="true">*</span></label>
+            <input type="text" id="cf-inq-publication" name="publication" class="cf-inquiry-input" placeholder="Wired, MIT Tech Review, Pod">
+            <span class="cf-inquiry-error" id="cf-inq-publication-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="cf-inquiry-field">
+            <label for="cf-inq-deadline" class="cf-inquiry-label">Broadcast / Publication Deadline</label>
+            <input type="text" id="cf-inq-deadline" name="deadline" class="cf-inquiry-input" placeholder="e.g. Thursday 5pm EST">
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional Pane: Careers & Talent -->
+      <div class="cf-inquiry-pane" id="pane-careers" data-pane="careers" hidden>
+        <div class="cf-inquiry-grid-2">
+          <div class="cf-inquiry-field">
+            <label for="cf-inq-role" class="cf-inquiry-label">Focus Area / Role</label>
+            <select id="cf-inq-role" name="role_focus" class="cf-inquiry-select">
+              <option value="engineering">Core Systems &amp; Distributed Infrastructure</option>
+              <option value="product-design">Principal Product &amp; Visual Design</option>
+              <option value="research">Applied AI &amp; Human-Computer Interaction</option>
+            </select>
+          </div>
+
+          <div class="cf-inquiry-field">
+            <label for="cf-inq-portfolio" class="cf-inquiry-label">Portfolio / GitHub / Resume Link <span class="cf-inquiry-req" aria-hidden="true">*</span></label>
+            <input type="url" id="cf-inq-portfolio" name="portfolio_url" class="cf-inquiry-input" placeholder="https://github.com/handle">
+            <span class="cf-inquiry-error" id="cf-inq-portfolio-err" role="alert" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Universal Message Field -->
+      <div class="cf-inquiry-field">
+        <label for="cf-inq-message" class="cf-inquiry-label">Inquiry Details <span class="cf-inquiry-req" aria-hidden="true">*</span></label>
+        <textarea id="cf-inq-message" name="message" class="cf-inquiry-textarea" rows="4" placeholder="Describe the background, timeline expectations, and initial context..." required></textarea>
+        <span class="cf-inquiry-error" id="cf-inq-message-err" role="alert" aria-live="polite"></span>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="cf-inquiry-footer">
+        <button type="submit" class="cf-inquiry-btn" id="cfInquirySubmit">
+          <span class="cf-inquiry-btn-text">Route Inquiry &rarr;</span>
+        </button>
+        <span class="cf-inquiry-disclaimer">Local simulation mode. Submissions are processed in-browser.</span>
+      </div>
+
+      <!-- Demo Notification Banner -->
+      <div class="cf-inquiry-banner" id="cfInquiryBanner" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>

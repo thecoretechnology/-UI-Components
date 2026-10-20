@@ -1,0 +1,128 @@
+<!-- 06: Booking / Consultation Request Form -->
+<section class="cf-book-root" data-form="booking-request">
+  <div class="cf-book-container">
+    <header class="cf-book-header">
+      <div class="cf-book-badge">CONSULTATION SCHEDULE</div>
+      <h2 class="cf-book-title">Request an Advisory Session</h2>
+      <p class="cf-book-lead">
+        Select your session format, preferred date range, and agenda. Note: This submits an advisory meeting request; times are confirmed via email.
+      </p>
+    </header>
+
+    <form class="cf-book-form" id="cfBookForm" novalidate>
+      <!-- Meeting Type Selector -->
+      <div class="cf-book-section">
+        <label class="cf-book-section-label">1. Select Consultation Type</label>
+        <div class="cf-book-types" role="radiogroup" aria-label="Consultation Format">
+          <label class="cf-book-type-card">
+            <input type="radio" name="meeting-type" value="intro" checked>
+            <span class="card-inner">
+              <span class="type-header">
+                <span class="type-name">Discovery Call</span>
+                <span class="type-duration">30 MIN</span>
+              </span>
+              <span class="type-desc">Introductory alignment on project vision, timeline, and capabilities.</span>
+            </span>
+          </label>
+
+          <label class="cf-book-type-card">
+            <input type="radio" name="meeting-type" value="deep-dive">
+            <span class="card-inner">
+              <span class="type-header">
+                <span class="type-name">Technical Deep Dive</span>
+                <span class="type-duration">60 MIN</span>
+              </span>
+              <span class="type-desc">Detailed architecture evaluation, code audit review, or system roadmapping.</span>
+            </span>
+          </label>
+
+          <label class="cf-book-type-card">
+            <input type="radio" name="meeting-type" value="sprint-review">
+            <span class="card-inner">
+              <span class="type-header">
+                <span class="type-name">Design Advisory</span>
+                <span class="type-duration">45 MIN</span>
+              </span>
+              <span class="type-desc">Critique of existing product UI/UX, interaction systems, or brand identity.</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Date & Window Grid -->
+      <div class="cf-book-section">
+        <label class="cf-book-section-label">2. Timing &amp; Availability</label>
+        <div class="cf-book-schedule-grid">
+          <!-- Preferred Date -->
+          <div class="cf-book-field">
+            <label for="cf-book-date" class="cf-book-label">Preferred Date <span class="cf-book-req" aria-hidden="true">*</span></label>
+            <input type="date" id="cf-book-date" name="preferred-date" class="cf-book-input" required>
+            <span class="cf-book-error" id="cf-book-date-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Time Window -->
+          <div class="cf-book-field">
+            <label for="cf-book-window" class="cf-book-label">Preferred Window</label>
+            <div class="cf-book-select-wrap">
+              <select id="cf-book-window" name="window" class="cf-book-select">
+                <option value="morning">Morning (09:00 – 12:00)</option>
+                <option value="afternoon" selected>Afternoon (13:00 – 17:00)</option>
+                <option value="evening">Late Afternoon (17:00 – 19:00)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Timezone -->
+          <div class="cf-book-field full">
+            <label for="cf-book-timezone" class="cf-book-label">Your Timezone</label>
+            <div class="cf-book-select-wrap">
+              <select id="cf-book-timezone" name="timezone" class="cf-book-select">
+                <option value="PST">Pacific Time (US &amp; Canada) UTC-8</option>
+                <option value="EST" selected>Eastern Time (US &amp; Canada) UTC-5</option>
+                <option value="GMT">Greenwich Mean Time (London) UTC+0</option>
+                <option value="CET">Central European Time (Paris, Berlin) UTC+1</option>
+                <option value="JST">Japan Standard Time (Tokyo) UTC+9</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Attendee Information -->
+      <div class="cf-book-section">
+        <label class="cf-book-section-label">3. Attendee Details</label>
+        <div class="cf-book-details-grid">
+          <div class="cf-book-field">
+            <label for="cf-book-name" class="cf-book-label">Your Name <span class="cf-book-req" aria-hidden="true">*</span></label>
+            <input type="text" id="cf-book-name" name="name" class="cf-book-input" placeholder="Alexander Cruz" required autocomplete="name">
+            <span class="cf-book-error" id="cf-book-name-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="cf-book-field">
+            <label for="cf-book-email" class="cf-book-label">Work Email <span class="cf-book-req" aria-hidden="true">*</span></label>
+            <input type="email" id="cf-book-email" name="email" class="cf-book-input" placeholder="alexander@cruz.io" required autocomplete="email">
+            <span class="cf-book-error" id="cf-book-email-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="cf-book-field full">
+            <label for="cf-book-agenda" class="cf-book-label">Proposed Agenda or Key Topics <span class="cf-book-req" aria-hidden="true">*</span></label>
+            <textarea id="cf-book-agenda" name="agenda" class="cf-book-textarea" rows="3" placeholder="What specific challenges or deliverables would you like to explore during this session?" required></textarea>
+            <span class="cf-book-error" id="cf-book-agenda-err" role="alert" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Row -->
+      <div class="cf-book-action-row">
+        <button type="submit" class="cf-book-btn" id="cfBookSubmit">
+          <span class="cf-book-btn-text">Submit Consultation Request</span>
+          <span class="cf-book-btn-arrow" aria-hidden="true">→</span>
+        </button>
+        <span class="cf-book-demo-pill">Request UI Demonstration Only</span>
+      </div>
+
+      <!-- Feedback Banner -->
+      <div class="cf-book-banner" id="cfBookBanner" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>

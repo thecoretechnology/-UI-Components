@@ -1,0 +1,301 @@
+/* 09: Bold Brutalist Contact Form Styles */
+.cf-brutal-root {
+  --cfb-bg: #fffbe6;
+  --cfb-card: #ffffff;
+  --cfb-border: #000000;
+  --cfb-ink: #000000;
+  --cfb-muted: #333333;
+  --cfb-accent: #facc15;
+  --cfb-err: #dc2626;
+  --cfb-font: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --cfb-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  background-color: var(--cfb-bg);
+  padding: 56px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  container-type: inline-size;
+  font-family: var(--cfb-font);
+  color: var(--cfb-ink);
+}
+
+.cf-brutal-container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--cfb-card);
+  border: 3px solid var(--cfb-border);
+  box-shadow: 7px 7px 0 var(--cfb-border);
+  padding: 44px;
+  box-sizing: border-box;
+}
+
+.cf-brutal-header {
+  border-bottom: 3px solid var(--cfb-border);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+.cf-brutal-tag {
+  display: inline-block;
+  background: var(--cfb-accent);
+  border: 2px solid var(--cfb-border);
+  font-family: var(--cfb-font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  box-shadow: 2px 2px 0 var(--cfb-border);
+}
+
+.cf-brutal-title {
+  font-size: clamp(24px, 3.6vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  line-height: 1.15;
+}
+
+.cf-brutal-lead {
+  font-family: var(--cfb-font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--cfb-muted);
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Form Layout */
+.cf-brutal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.cf-brutal-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cf-brutal-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-brutal-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--cfb-font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.cf-brutal-idx {
+  background: var(--cfb-border);
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.cf-brutal-req {
+  color: var(--cfb-err);
+  font-weight: 900;
+}
+
+.cf-brutal-input,
+.cf-brutal-textarea,
+.cf-brutal-select {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 2.5px solid var(--cfb-border);
+  border-radius: 0;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cfb-ink);
+  outline: none;
+  box-shadow: 3px 3px 0 var(--cfb-border);
+  transition: transform 100ms ease, box-shadow 100ms ease;
+}
+
+.cf-brutal-input:focus,
+.cf-brutal-textarea:focus,
+.cf-brutal-select:focus {
+  background: #ffffff;
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--cfb-border);
+}
+
+.cf-brutal-input.is-invalid,
+.cf-brutal-textarea.is-invalid {
+  border-color: var(--cfb-err);
+  background-color: #fee2e2;
+  box-shadow: 3px 3px 0 var(--cfb-err);
+}
+
+.cf-brutal-textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.cf-brutal-select-wrap {
+  position: relative;
+}
+
+.cf-brutal-select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.cf-brutal-error {
+  font-family: var(--cfb-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cfb-err);
+  margin-top: 5px;
+  min-height: 16px;
+}
+
+/* Dispatch speed pills */
+.cf-brutal-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cf-brutal-pill {
+  position: relative;
+  cursor: pointer;
+  flex: 1 1 auto;
+}
+
+.cf-brutal-pill input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cf-brutal-pill span {
+  display: block;
+  text-align: center;
+  border: 2px solid var(--cfb-border);
+  box-shadow: 2px 2px 0 var(--cfb-border);
+  background: #ffffff;
+  padding: 10px 8px;
+  font-family: var(--cfb-font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--cfb-ink);
+  transition: all 120ms ease;
+  white-space: nowrap;
+}
+
+.cf-brutal-pill:hover span {
+  background: #f4f4f5;
+}
+
+.cf-brutal-pill input:checked + span {
+  background: var(--cfb-border);
+  color: #ffffff;
+}
+
+.cf-brutal-pill input:focus-visible + span {
+  outline: 3px dashed var(--cfb-border);
+  outline-offset: 2px;
+}
+
+/* Action Bar */
+.cf-brutal-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 3px solid var(--cfb-border);
+  padding-top: 24px;
+  flex-wrap: wrap;
+}
+
+.cf-brutal-btn {
+  background: var(--cfb-accent);
+  border: 3px solid var(--cfb-border);
+  box-shadow: 4px 4px 0 var(--cfb-border);
+  padding: 14px 28px;
+  font-family: var(--cfb-font-mono);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--cfb-ink);
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}
+
+.cf-brutal-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--cfb-border);
+}
+
+.cf-brutal-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--cfb-border);
+}
+
+.cf-brutal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cf-brutal-notice {
+  font-family: var(--cfb-font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  color: #555555;
+  letter-spacing: 0.04em;
+}
+
+.cf-brutal-banner {
+  margin-top: 18px;
+  padding: 14px 18px;
+  background: #dcfce7;
+  border: 2.5px solid var(--cfb-border);
+  box-shadow: 4px 4px 0 var(--cfb-border);
+  font-family: var(--cfb-font-mono);
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #065f46;
+}
+
+/* Responsive */
+@container (max-width: 740px) {
+  .cf-brutal-container {
+    padding: 28px 18px;
+  }
+  .cf-brutal-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .cf-brutal-action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cf-brutal-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .cf-brutal-root {
+    padding: 24px 12px;
+  }
+}

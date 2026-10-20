@@ -1,0 +1,97 @@
+<!-- 03: Dark Premium Contact Form -->
+<section class="cf-dark-root" data-form="dark-premium">
+  <div class="cf-dark-container">
+    <div class="cf-dark-card">
+      <!-- Monogram & Header -->
+      <header class="cf-dark-header">
+        <div class="cf-dark-mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span class="cf-dark-folio">CONFIDENTIAL ADVISORY // PRIVATE CLIENT PRACTICE</span>
+        <h2 class="cf-dark-title">Request a Consultation</h2>
+        <p class="cf-dark-subtitle">
+          Our senior partners consult on architecture, capital allocation, and structural design. All inquiries remain strictly confidential.
+        </p>
+      </header>
+
+      <!-- Form -->
+      <form class="cf-dark-form" id="cfDarkForm" novalidate>
+        <div class="cf-dark-grid">
+          <!-- Full Name -->
+          <div class="cf-dark-field">
+            <label for="cf-dark-name" class="cf-dark-label">Principal Name <span class="cf-dark-req" aria-hidden="true">*</span></label>
+            <input type="text" id="cf-dark-name" name="name" class="cf-dark-input" placeholder="Julian Montgomery" required autocomplete="name">
+            <span class="cf-dark-error" id="cf-dark-name-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Organization -->
+          <div class="cf-dark-field">
+            <label for="cf-dark-org" class="cf-dark-label">Organization or Family Office</label>
+            <input type="text" id="cf-dark-org" name="organization" class="cf-dark-input" placeholder="Montgomery Partners" autocomplete="organization">
+          </div>
+
+          <!-- Direct Email -->
+          <div class="cf-dark-field">
+            <label for="cf-dark-email" class="cf-dark-label">Confidential Email <span class="cf-dark-req" aria-hidden="true">*</span></label>
+            <input type="email" id="cf-dark-email" name="email" class="cf-dark-input" placeholder="j.montgomery@domain.com" required autocomplete="email">
+            <span class="cf-dark-error" id="cf-dark-email-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Consultation Domain -->
+          <div class="cf-dark-field">
+            <label for="cf-dark-domain" class="cf-dark-label">Practice Area</label>
+            <div class="cf-dark-select-wrap">
+              <select id="cf-dark-domain" name="domain" class="cf-dark-select">
+                <option value="architectural-heritage">Architectural Heritage &amp; Restoration</option>
+                <option value="private-foundations">Private Foundation Strategy</option>
+                <option value="infrastructure">Civic Infrastructure Design</option>
+                <option value="general-inquiry">General Confidential Inquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message / Scope -->
+          <div class="cf-dark-field full-width">
+            <label for="cf-dark-message" class="cf-dark-label">Brief Context <span class="cf-dark-req" aria-hidden="true">*</span></label>
+            <textarea id="cf-dark-message" name="message" class="cf-dark-textarea" rows="4" placeholder="Outline the advisory requirements, prospective timeline, and key stakeholders..." required></textarea>
+            <span class="cf-dark-error" id="cf-dark-msg-err" role="alert" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <!-- Preferred Channel Checkboxes -->
+        <fieldset class="cf-dark-prefs">
+          <legend class="cf-dark-legend">Preferred Form of Initial Contact</legend>
+          <div class="cf-dark-pref-options">
+            <label class="cf-dark-check">
+              <input type="checkbox" name="pref" value="secure-email" checked>
+              <span>Encrypted Email Exchange</span>
+            </label>
+            <label class="cf-dark-check">
+              <input type="checkbox" name="pref" value="phone">
+              <span>Direct Phone Consultation</span>
+            </label>
+            <label class="cf-dark-check">
+              <input type="checkbox" name="pref" value="in-person">
+              <span>London / Zurich Salon Visit</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Submit & Security Note -->
+        <div class="cf-dark-actions">
+          <button type="submit" class="cf-dark-btn" id="cfDarkSubmit">
+            <span class="cf-dark-btn-text">Submit Confidential Request</span>
+          </button>
+          <span class="cf-dark-seal">TLS 1.3 End-to-End Handshake Simulation</span>
+        </div>
+
+        <!-- Status Banner -->
+        <div class="cf-dark-status" id="cfDarkStatus" role="status" aria-live="polite" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,117 @@
+<!-- 07: Developer / Technical Support Form -->
+<section class="cf-tech-root" data-form="technical-support">
+  <div class="cf-tech-container">
+    <div class="cf-tech-header">
+      <div class="cf-tech-top-meta">
+        <span class="cf-tech-badge">DISPATCH DESK // SYSTEM LEVEL</span>
+        <span class="cf-tech-uptime">ALL SERVICES OPERATIONAL (99.98%)</span>
+      </div>
+      <h2 class="cf-tech-title">Engineering Issue Intake</h2>
+      <p class="cf-tech-lead">
+        Submit structured technical diagnostic reports directly to the core infrastructure group. Include stack traces, runtime flags, and reproduction steps.
+      </p>
+    </div>
+
+    <form class="cf-tech-form" id="cfTechForm" novalidate>
+      <!-- Row 1: Category & Priority -->
+      <div class="cf-tech-grid-2">
+        <div class="cf-tech-field">
+          <label for="cf-tech-cat" class="cf-tech-label">Issue Domain <span class="cf-tech-req" aria-hidden="true">*</span></label>
+          <div class="cf-tech-select-wrap">
+            <select id="cf-tech-cat" name="category" class="cf-tech-select">
+              <option value="api-gateway">API Gateway &amp; Webhooks</option>
+              <option value="auth-oauth">Authentication &amp; OAuth 2.1</option>
+              <option value="database-cache">Database &amp; Redis Latency</option>
+              <option value="sdk-runtime">Node / Python SDK Anomaly</option>
+              <option value="security">Security Vulnerability Disclosure</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cf-tech-field">
+          <label class="cf-tech-label">Impact Severity</label>
+          <div class="cf-tech-pills" role="radiogroup" aria-label="Priority Severity">
+            <label class="cf-tech-pill p1">
+              <input type="radio" name="priority" value="p1">
+              <span>P1 Blocker</span>
+            </label>
+            <label class="cf-tech-pill p2">
+              <input type="radio" name="priority" value="p2">
+              <span>P2 High</span>
+            </label>
+            <label class="cf-tech-pill p3">
+              <input type="radio" name="priority" value="p3" checked>
+              <span>P3 Standard</span>
+            </label>
+            <label class="cf-tech-pill p4">
+              <input type="radio" name="priority" value="p4">
+              <span>P4 Minor</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Environment Parameters -->
+      <div class="cf-tech-grid-3">
+        <div class="cf-tech-field">
+          <label for="cf-tech-os" class="cf-tech-label">Host OS / Target</label>
+          <input type="text" id="cf-tech-os" name="os" class="cf-tech-input" placeholder="Ubuntu 24.04 LTS / macOS 15.1" value="Linux x86_64">
+        </div>
+
+        <div class="cf-tech-field">
+          <label for="cf-tech-runtime" class="cf-tech-label">Runtime / Engine</label>
+          <input type="text" id="cf-tech-runtime" name="runtime" class="cf-tech-input" placeholder="Node.js 22.10 / Go 1.23" value="Node.js 22.x">
+        </div>
+
+        <div class="cf-tech-field">
+          <label for="cf-tech-pkg" class="cf-tech-label">SDK Version</label>
+          <input type="text" id="cf-tech-pkg" name="sdk_version" class="cf-tech-input" placeholder="v4.8.2-rc" value="v4.9.0">
+        </div>
+      </div>
+
+      <!-- Reporter Contact -->
+      <div class="cf-tech-grid-2">
+        <div class="cf-tech-field">
+          <label for="cf-tech-name" class="cf-tech-label">Engineer Name <span class="cf-tech-req" aria-hidden="true">*</span></label>
+          <input type="text" id="cf-tech-name" name="name" class="cf-tech-input" placeholder="Devon Vance" required autocomplete="name">
+          <span class="cf-tech-error" id="cf-tech-name-err" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="cf-tech-field">
+          <label for="cf-tech-email" class="cf-tech-label">Engineer Email <span class="cf-tech-req" aria-hidden="true">*</span></label>
+          <input type="email" id="cf-tech-email" name="email" class="cf-tech-input" placeholder="devon@hypergrid.org" required autocomplete="email">
+          <span class="cf-tech-error" id="cf-tech-email-err" role="alert" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="cf-tech-field">
+        <label for="cf-tech-summary" class="cf-tech-label">Defect Summary <span class="cf-tech-req" aria-hidden="true">*</span></label>
+        <input type="text" id="cf-tech-summary" name="summary" class="cf-tech-input" placeholder="E.g., ECONNRESET during concurrent SSE stream re-authentication" required>
+        <span class="cf-tech-error" id="cf-tech-summary-err" role="alert" aria-live="polite"></span>
+      </div>
+
+      <!-- Code Snippet / Stack Trace -->
+      <div class="cf-tech-field">
+        <div class="cf-tech-label-bar">
+          <label for="cf-tech-trace" class="cf-tech-label">Stack Trace or Minimal Repro <span class="cf-tech-req" aria-hidden="true">*</span></label>
+          <span class="cf-tech-mono-tag">MONOSPACE LOG BUFFER</span>
+        </div>
+        <textarea id="cf-tech-trace" name="trace" class="cf-tech-textarea mono" rows="5" placeholder="// Paste terminal stderr, HTTP request/response payloads, or minimal code snippet..." required></textarea>
+        <span class="cf-tech-error" id="cf-tech-trace-err" role="alert" aria-live="polite"></span>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="cf-tech-footer">
+        <button type="submit" class="cf-tech-btn" id="cfTechSubmit">
+          <span class="icon">⚡</span>
+          <span class="text">Dispatch Diagnostic Report</span>
+        </button>
+        <span class="cf-tech-audit">Deterministic triage simulation. Zero external telemetry.</span>
+      </div>
+
+      <!-- Status Display -->
+      <div class="cf-tech-status" id="cfTechStatus" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>

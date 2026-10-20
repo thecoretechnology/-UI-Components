@@ -1,0 +1,101 @@
+<!-- 02: Split Contact Layout -->
+<section class="cf-split-root" data-form="split-layout">
+  <div class="cf-split-container">
+    <div class="cf-split-layout">
+      <!-- Left Side: Informational Context & Details -->
+      <aside class="cf-split-aside">
+        <div class="cf-split-aside-inner">
+          <div class="cf-split-kicker">DIRECT COMMUNICATION</div>
+          <h2 class="cf-split-heading">Let's build something enduring.</h2>
+          <p class="cf-split-desc">
+            We operate as an integrated design and engineering partner. Whether you have an active RFP or an early concept, we are keen to hear from you.
+          </p>
+
+          <div class="cf-split-info-blocks">
+            <div class="cf-split-info-item">
+              <span class="cf-split-item-lbl">STUDIO DESK</span>
+              <a href="mailto:inquiries@meridian.build" class="cf-split-item-val link">inquiries@meridian.build</a>
+            </div>
+
+            <div class="cf-split-info-item">
+              <span class="cf-split-item-lbl">TELEPHONE</span>
+              <span class="cf-split-item-val">+1 (415) 890-2340</span>
+            </div>
+
+            <div class="cf-split-info-item">
+              <span class="cf-split-item-lbl">LOCATION &amp; HOURS</span>
+              <span class="cf-split-item-val">580 Howard Street, San Francisco, CA<br>Mon – Fri, 09:00 – 18:00 PST</span>
+            </div>
+          </div>
+
+          <div class="cf-split-aside-footer">
+            <span class="cf-split-ping-dot" aria-hidden="true"></span>
+            <span>Current Response Rate: Under 24h</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Side: The Form -->
+      <main class="cf-split-main">
+        <form class="cf-split-form" id="cfSplitForm" novalidate>
+          <div class="cf-split-field-group">
+            <label class="cf-split-label">Inquiry Subject</label>
+            <div class="cf-split-pills" role="radiogroup" aria-label="Inquiry Subject Selection">
+              <label class="cf-split-pill">
+                <input type="radio" name="split-subject" value="project" checked>
+                <span>New Project</span>
+              </label>
+              <label class="cf-split-pill">
+                <input type="radio" name="split-subject" value="consulting">
+                <span>Advisory</span>
+              </label>
+              <label class="cf-split-pill">
+                <input type="radio" name="split-subject" value="partnership">
+                <span>Partnership</span>
+              </label>
+              <label class="cf-split-pill">
+                <input type="radio" name="split-subject" value="press">
+                <span>Press</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="cf-split-row">
+            <div class="cf-split-field">
+              <label for="cf-split-name" class="cf-split-label">Full Name <span class="cf-split-req" aria-hidden="true">*</span></label>
+              <input type="text" id="cf-split-name" name="name" class="cf-split-input" placeholder="Marcus Ward" required autocomplete="name">
+              <span class="cf-split-error" id="cf-split-name-err" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="cf-split-field">
+              <label for="cf-split-email" class="cf-split-label">Email Address <span class="cf-split-req" aria-hidden="true">*</span></label>
+              <input type="email" id="cf-split-email" name="email" class="cf-split-input" placeholder="marcus@company.com" required autocomplete="email">
+              <span class="cf-split-error" id="cf-split-email-err" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="cf-split-field">
+            <label for="cf-split-company" class="cf-split-label">Company / Brand Name</label>
+            <input type="text" id="cf-split-company" name="company" class="cf-split-input" placeholder="Meridian Technologies">
+          </div>
+
+          <div class="cf-split-field">
+            <label for="cf-split-message" class="cf-split-label">Message <span class="cf-split-req" aria-hidden="true">*</span></label>
+            <textarea id="cf-split-message" name="message" class="cf-split-textarea" rows="4" placeholder="Tell us about the scope, timeline, and current team..." required></textarea>
+            <span class="cf-split-error" id="cf-split-msg-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="cf-split-action-row">
+            <button type="submit" class="cf-split-submit" id="cfSplitSubmit">
+              <span>Send Message</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- Inline Status Notice -->
+          <div class="cf-split-notice" id="cfSplitNotice" role="status" aria-live="polite" hidden></div>
+        </form>
+      </main>
+    </div>
+  </div>
+</section>

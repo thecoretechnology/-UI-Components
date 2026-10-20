@@ -1,0 +1,92 @@
+<!-- 09: Bold Brutalist Contact Form -->
+<section class="cf-brutal-root" data-form="bold-brutalist">
+  <div class="cf-brutal-container">
+    <div class="cf-brutal-header">
+      <div class="cf-brutal-tag">[ PROTOCOL // DIRECT DISPATCH ]</div>
+      <h2 class="cf-brutal-title">TRANSMIT DIRECT INQUIRY.</h2>
+      <p class="cf-brutal-lead">
+        NO MARKETING FLUFF. DIRECT LINE TO PRINCIPALS. FILL ALL REQUIRED CELLS ACCURATELY.
+      </p>
+    </div>
+
+    <form class="cf-brutal-form" id="cfBrutalForm" novalidate>
+      <!-- Row 1: Sender & Vector -->
+      <div class="cf-brutal-grid-2">
+        <div class="cf-brutal-cell">
+          <label for="cf-brutal-name" class="cf-brutal-label">
+            <span class="cf-brutal-idx">01</span> SENDER NAME / ENTITY <span class="cf-brutal-req">*</span>
+          </label>
+          <input type="text" id="cf-brutal-name" name="name" class="cf-brutal-input" placeholder="KATE ARCHER // STUDIO X" required autocomplete="name">
+          <span class="cf-brutal-error" id="cf-brutal-name-err" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="cf-brutal-cell">
+          <label for="cf-brutal-email" class="cf-brutal-label">
+            <span class="cf-brutal-idx">02</span> RETURN EMAIL VECTOR <span class="cf-brutal-req">*</span>
+          </label>
+          <input type="email" id="cf-brutal-email" name="email" class="cf-brutal-input" placeholder="k.archer@studiox.network" required autocomplete="email">
+          <span class="cf-brutal-error" id="cf-brutal-email-err" role="alert" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <!-- Row 2: Transmission Nature & Urgency -->
+      <div class="cf-brutal-grid-2">
+        <div class="cf-brutal-cell">
+          <label for="cf-brutal-type" class="cf-brutal-label">
+            <span class="cf-brutal-idx">03</span> INQUIRY CLASSIFICATION
+          </label>
+          <div class="cf-brutal-select-wrap">
+            <select id="cf-brutal-type" name="classification" class="cf-brutal-select">
+              <option value="contract">COMMERCIAL CONTRACT</option>
+              <option value="strategic">STRATEGIC PARTNERSHIP</option>
+              <option value="technical">SYSTEM INTEGRATION / R&amp;D</option>
+              <option value="press">PRESS &amp; BROADCAST</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cf-brutal-cell">
+          <span class="cf-brutal-label">
+            <span class="cf-brutal-idx">04</span> DISPATCH SPEED
+          </span>
+          <div class="cf-brutal-pills" role="radiogroup" aria-label="Dispatch Speed">
+            <label class="cf-brutal-pill">
+              <input type="radio" name="speed" value="standard" checked>
+              <span>STANDARD (48H)</span>
+            </label>
+            <label class="cf-brutal-pill">
+              <input type="radio" name="speed" value="priority">
+              <span>PRIORITY (24H)</span>
+            </label>
+            <label class="cf-brutal-pill">
+              <input type="radio" name="speed" value="immediate">
+              <span>CRITICAL (SAME DAY)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transmission Body -->
+      <div class="cf-brutal-cell">
+        <label for="cf-brutal-body" class="cf-brutal-label">
+          <span class="cf-brutal-idx">05</span> PAYLOAD / TRANSMISSION BODY <span class="cf-brutal-req">*</span>
+        </label>
+        <textarea id="cf-brutal-body" name="body" class="cf-brutal-textarea" rows="5" placeholder="STATE THE SCOPE, OBJECTIVE, BUDGET CONSTRAINTS, AND KEY DATES PLAINLY..." required></textarea>
+        <span class="cf-brutal-error" id="cf-brutal-body-err" role="alert" aria-live="polite"></span>
+      </div>
+
+      <!-- Action Row -->
+      <div class="cf-brutal-action-bar">
+        <button type="submit" class="cf-brutal-btn" id="cfBrutalSubmit">
+          <span class="cf-brutal-btn-text">DISPATCH PAYLOAD &rarr;</span>
+        </button>
+        <div class="cf-brutal-notice">
+          LOCAL EVALUATION ONLY &bull; ZERO PACKETS ESCAPE BROWSER
+        </div>
+      </div>
+
+      <!-- Status banner -->
+      <div class="cf-brutal-banner" id="cfBrutalBanner" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>
