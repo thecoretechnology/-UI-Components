@@ -1,0 +1,165 @@
+<div class="auth-play-stage" data-auth="playful-signup">
+  <div class="auth-play-card">
+    
+    <!-- Top Playful Mascot & Welcome Banner -->
+    <header class="auth-play-header">
+      <div class="auth-play-mascot-row">
+        <!-- Hand-coded geometric vector badge with playful wink -->
+        <div class="auth-play-mascot" aria-hidden="true">
+          <div class="auth-play-mascot-face">
+            <div class="auth-play-eye left"></div>
+            <div class="auth-play-eye right"></div>
+            <div class="auth-play-smile"></div>
+          </div>
+          <span class="auth-play-sparkle">&starf;</span>
+        </div>
+        <div class="auth-play-badge">CREATIVE ATELIER</div>
+      </div>
+      <h2 class="auth-play-title">Build cool things together.</h2>
+      <p class="auth-play-subtitle">Join 8,400+ independent designers, typographers, and software artisans.</p>
+    </header>
+
+    <div class="auth-play-alert" id="authPlayAlert" role="alert" aria-live="polite" hidden></div>
+
+    <form class="auth-play-form" id="authPlayForm" novalidate>
+      <!-- Discipline / Role Selector Pills -->
+      <div class="auth-play-field">
+        <label class="auth-play-label">Your Craft or Discipline</label>
+        <div class="auth-play-roles" role="radiogroup" aria-label="Creative Craft">
+          <label class="auth-play-role-pill">
+            <input type="radio" name="craft" value="Designer" checked>
+            <span>🎨 Designer</span>
+          </label>
+          <label class="auth-play-role-pill">
+            <input type="radio" name="craft" value="Engineer">
+            <span>⚡ Engineer</span>
+          </label>
+          <label class="auth-play-role-pill">
+            <input type="radio" name="craft" value="Artisan">
+            <span>🖋️ Typographer</span>
+          </label>
+          <label class="auth-play-role-pill">
+            <input type="radio" name="craft" value="Founder">
+            <span>🚀 Founder</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Two-column inputs: Name & Handle -->
+      <div class="auth-play-grid-2">
+        <div class="auth-play-field">
+          <label for="auth-play-name" class="auth-play-label">Full Name</label>
+          <input 
+            type="text" 
+            id="auth-play-name" 
+            name="fullname"
+            class="auth-play-input" 
+            placeholder="Maya Lin"
+            autocomplete="name"
+            required
+            aria-describedby="auth-play-name-err"
+          >
+          <div class="auth-play-error" id="auth-play-name-err" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div class="auth-play-field">
+          <div class="auth-play-label-row">
+            <label for="auth-play-handle" class="auth-play-label">Handle</label>
+            <span class="auth-play-handle-status" id="authPlayHandleStatus">✓ available</span>
+          </div>
+          <div class="auth-play-input-group">
+            <span class="auth-play-at">@</span>
+            <input 
+              type="text" 
+              id="auth-play-handle" 
+              name="handle"
+              class="auth-play-input has-prefix" 
+              placeholder="mayalin"
+              autocomplete="username"
+              required
+              aria-describedby="auth-play-handle-err"
+            >
+          </div>
+          <div class="auth-play-error" id="auth-play-handle-err" role="alert" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- Email Field -->
+      <div class="auth-play-field">
+        <label for="auth-play-email" class="auth-play-label">Email Address</label>
+        <input 
+          type="email" 
+          id="auth-play-email" 
+          name="email"
+          class="auth-play-input" 
+          placeholder="maya@studio.design"
+          autocomplete="email"
+          required
+          aria-describedby="auth-play-email-err"
+        >
+        <div class="auth-play-error" id="auth-play-email-err" role="alert" aria-live="polite"></div>
+      </div>
+
+      <!-- Password Field with Strength Meter -->
+      <div class="auth-play-field">
+        <label for="auth-play-pass" class="auth-play-label">Password</label>
+        <div class="auth-play-input-wrap">
+          <input 
+            type="password" 
+            id="auth-play-pass" 
+            name="password"
+            class="auth-play-input" 
+            placeholder="Create a strong password..."
+            autocomplete="new-password"
+            required
+            aria-describedby="auth-play-pass-err"
+          >
+          <button 
+            type="button" 
+            class="auth-play-eye-btn" 
+            id="authPlayEye" 
+            aria-label="Toggle password visibility" 
+            aria-pressed="false"
+          >
+            <svg class="eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" hidden>
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dynamic Password Strength Bar -->
+        <div class="auth-play-meter" aria-hidden="true">
+          <div class="auth-play-meter-bar" id="authPlayBar1"></div>
+          <div class="auth-play-meter-bar" id="authPlayBar2"></div>
+          <div class="auth-play-meter-bar" id="authPlayBar3"></div>
+          <span class="auth-play-meter-text" id="authPlayMeterLabel">Enter password</span>
+        </div>
+        <div class="auth-play-error" id="auth-play-pass-err" role="alert" aria-live="polite"></div>
+      </div>
+
+      <!-- Terms & Manifesto Checkbox -->
+      <div class="auth-play-terms-row">
+        <label class="auth-play-check-wrap">
+          <input type="checkbox" id="auth-play-agree" name="agree" class="auth-play-checkbox" required>
+          <span class="auth-play-check-box"></span>
+          <span class="auth-play-check-text">I agree to collaborate with integrity and respect fellow craftspeople.</span>
+        </label>
+        <div class="auth-play-error" id="auth-play-agree-err" role="alert" aria-live="polite"></div>
+      </div>
+
+      <!-- Action Button -->
+      <button type="submit" class="auth-play-submit" id="authPlaySubmit">
+        <span>Create Artisan Account</span>
+        <span class="auth-play-btn-flare">&#10024;</span>
+      </button>
+    </form>
+
+    <footer class="auth-play-footer">
+      <span>Already have an atelier key?</span>
+      <a href="#signin" class="auth-play-login-link" id="authPlayLoginLink">Sign In here</a>
+    </footer>
+  </div>
+</div>

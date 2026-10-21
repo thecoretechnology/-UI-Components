@@ -1,0 +1,102 @@
+<div class="auth-min-stage" data-auth="minimal-login">
+  <div class="auth-min-container">
+    <header class="auth-min-header">
+      <div class="auth-min-kicker">Account Access</div>
+      <h2 class="auth-min-title">Welcome back</h2>
+      <p class="auth-min-subtitle">Please enter your credentials to access your personal workspace.</p>
+    </header>
+
+    <div class="auth-min-alert" id="authMinAlert" role="alert" aria-live="polite" hidden></div>
+
+    <form class="auth-min-form" id="authMinForm" novalidate>
+      <!-- Identifier Field -->
+      <div class="auth-min-field">
+        <label for="auth-min-email" class="auth-min-label">Work email or handle</label>
+        <div class="auth-min-input-wrap">
+          <input 
+            type="email" 
+            id="auth-min-email" 
+            name="email"
+            class="auth-min-input" 
+            placeholder="name@organization.com"
+            autocomplete="username"
+            required
+            aria-describedby="auth-min-email-err"
+          >
+        </div>
+        <div class="auth-min-error" id="auth-min-email-err" role="alert" aria-live="polite"></div>
+      </div>
+
+      <!-- Password Field -->
+      <div class="auth-min-field">
+        <div class="auth-min-label-row">
+          <label for="auth-min-pass" class="auth-min-label">Passphrase</label>
+          <button type="button" class="auth-min-link-btn" id="authMinForgotBtn">Lost passphrase?</button>
+        </div>
+        <div class="auth-min-input-wrap has-toggle">
+          <input 
+            type="password" 
+            id="auth-min-pass" 
+            name="password"
+            class="auth-min-input" 
+            placeholder="••••••••••••"
+            autocomplete="current-password"
+            required
+            aria-describedby="auth-min-pass-err"
+          >
+          <button 
+            type="button" 
+            class="auth-min-eye-btn" 
+            id="authMinEyeBtn"
+            aria-label="Toggle password visibility" 
+            aria-pressed="false"
+          >
+            <svg class="auth-min-eye-icon eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="auth-min-eye-icon eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" hidden>
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+              <line x1="1" y1="1" x2="23" y2="23"/>
+            </svg>
+          </button>
+        </div>
+        <div class="auth-min-error" id="auth-min-pass-err" role="alert" aria-live="polite"></div>
+      </div>
+
+      <!-- Utilities Row -->
+      <div class="auth-min-utilities">
+        <label class="auth-min-checkbox-label">
+          <input type="checkbox" id="auth-min-remember" name="remember" class="auth-min-checkbox">
+          <span class="auth-min-checkbox-custom"></span>
+          <span class="auth-min-checkbox-text">Keep session active for 30 days</span>
+        </label>
+      </div>
+
+      <!-- Submit Action -->
+      <div class="auth-min-actions">
+        <button type="submit" class="auth-min-submit" id="authMinSubmit">
+          <span>Authenticate</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Recovery Notice Box (Demo feedback) -->
+      <div class="auth-min-recovery-box" id="authMinRecoveryBox" hidden>
+        <div class="auth-min-recovery-head">
+          <span class="auth-min-recovery-title">Passphrase Recovery Simulation</span>
+          <button type="button" class="auth-min-recovery-close" id="authMinRecoveryClose" aria-label="Close recovery notice">&times;</button>
+        </div>
+        <p class="auth-min-recovery-text">Demo mode: Enter your registered email above, and a simulated single-use access link will be dispatched locally without server requests.</p>
+      </div>
+    </form>
+
+    <footer class="auth-min-footer">
+      <span class="auth-min-footer-text">New to the platform?</span>
+      <a href="#signup" class="auth-min-footer-link" id="authMinCreateLink">Request an invite</a>
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,371 @@
+/* 04: Editorial / Luxury Authentication Styles */
+.auth-lux-stage {
+  --al-bg: #f7f5f0;
+  --al-card: #ffffff;
+  --al-ink: #1c1917;
+  --al-serif: 'Playfair Display', Georgia, serif;
+  --al-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --al-bronze: #9a6735;
+  --al-bronze-dark: #784d23;
+  --al-muted: #78716c;
+  --al-border: #e7e5e0;
+  --al-border-subtle: #f0eee9;
+  --al-error: #b91c1c;
+  --al-success: #15803d;
+
+  background-color: var(--al-bg);
+  padding: 56px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  box-sizing: border-box;
+  font-family: var(--al-sans);
+  color: var(--al-ink);
+}
+
+.auth-lux-frame {
+  width: 100%;
+  max-width: 460px;
+  background-color: var(--al-card);
+  border: 1px solid var(--al-border);
+  box-shadow: 0 12px 36px -12px rgba(28, 25, 23, 0.08);
+  padding: 44px 40px;
+  box-sizing: border-box;
+}
+
+/* Masthead */
+.auth-lux-masthead {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-lux-folio {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--al-bronze);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.auth-lux-folio-bullet {
+  font-size: 8px;
+}
+
+.auth-lux-title {
+  font-family: var(--al-serif);
+  font-size: clamp(28px, 4vw, 34px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--al-ink);
+  margin: 0 0 12px;
+  line-height: 1.15;
+}
+
+.auth-lux-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 14px auto 16px;
+  max-width: 180px;
+}
+
+.auth-lux-rule-line {
+  flex: 1;
+  height: 1px;
+  background: var(--al-border);
+}
+
+.auth-lux-rule-diamond {
+  font-size: 9px;
+  color: var(--al-bronze);
+}
+
+.auth-lux-subtitle {
+  font-size: 13.5px;
+  color: var(--al-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Alert Notification */
+.auth-lux-alert {
+  padding: 12px 16px;
+  font-size: 12.5px;
+  font-style: italic;
+  margin-bottom: 24px;
+  border-left: 2px solid;
+  line-height: 1.5;
+}
+
+.auth-lux-alert[hidden] {
+  display: none !important;
+}
+
+.auth-lux-alert.is-success {
+  background: #fdfbf7;
+  color: var(--al-bronze-dark);
+  border-color: var(--al-bronze);
+}
+
+.auth-lux-alert.is-error {
+  background: #fef2f2;
+  color: var(--al-error);
+  border-color: var(--al-error);
+}
+
+/* Form */
+.auth-lux-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-lux-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-lux-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-lux-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--al-ink);
+}
+
+.auth-lux-subtle-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: var(--al-bronze);
+  cursor: pointer;
+  font-family: inherit;
+  font-style: italic;
+}
+
+.auth-lux-subtle-link:hover {
+  text-decoration: underline;
+}
+
+.auth-lux-input-box {
+  position: relative;
+  width: 100%;
+}
+
+.auth-lux-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--al-ink);
+  background-color: #faf9f7;
+  border: 1px solid var(--al-border);
+  border-radius: 0;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: all 140ms ease;
+}
+
+.auth-lux-input:focus {
+  background-color: #ffffff;
+  border-color: var(--al-bronze);
+  box-shadow: 0 0 0 1px var(--al-bronze);
+}
+
+.auth-lux-input.is-invalid {
+  border-color: var(--al-error);
+  background-color: #fffbfb;
+}
+
+.auth-lux-input-box.has-eye .auth-lux-input {
+  padding-right: 44px;
+}
+
+.auth-lux-eye-btn {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: var(--al-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 120ms ease;
+}
+
+.auth-lux-eye-btn:hover {
+  color: var(--al-bronze);
+}
+
+.auth-lux-eye-btn svg[hidden] {
+  display: none !important;
+}
+
+.auth-lux-error {
+  font-size: 12px;
+  color: var(--al-error);
+  min-height: 16px;
+}
+
+/* Security option */
+.auth-lux-pref {
+  margin-top: -2px;
+}
+
+.auth-lux-check-label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.auth-lux-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.auth-lux-check-ring {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--al-border);
+  border-radius: 50%;
+  background: #faf9f7;
+  display: inline-block;
+  margin-top: 2px;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 140ms ease;
+}
+
+.auth-lux-checkbox:checked + .auth-lux-check-ring {
+  border-color: var(--al-bronze);
+  background: var(--al-bronze);
+}
+
+.auth-lux-checkbox:checked + .auth-lux-check-ring::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.auth-lux-check-text {
+  font-size: 12.5px;
+  color: var(--al-muted);
+  line-height: 1.5;
+}
+
+/* Submit Action */
+.auth-lux-action {
+  margin-top: 8px;
+}
+
+.auth-lux-submit {
+  width: 100%;
+  padding: 13px 20px;
+  background-color: var(--al-ink);
+  color: #ffffff;
+  border: 1px solid var(--al-ink);
+  font-family: var(--al-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.auth-lux-submit:hover {
+  background-color: var(--al-bronze-dark);
+  border-color: var(--al-bronze-dark);
+}
+
+.auth-lux-arrow {
+  font-size: 16px;
+  transition: transform 140ms ease;
+}
+
+.auth-lux-submit:hover .auth-lux-arrow {
+  transform: translateX(3px);
+}
+
+/* Footer Colophon */
+.auth-lux-footer {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--al-border);
+  text-align: center;
+}
+
+.auth-lux-colophon {
+  font-size: 13px;
+  color: var(--al-muted);
+  margin-bottom: 12px;
+}
+
+.auth-lux-inquire-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--al-bronze);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  margin-left: 4px;
+  font-family: inherit;
+}
+
+.auth-lux-inquire-link:hover {
+  color: var(--al-bronze-dark);
+}
+
+.auth-lux-seal {
+  margin-top: 14px;
+}
+
+.auth-lux-seal-text {
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  color: #a8a29e;
+  font-weight: 600;
+}
+
+/* Responsive & Container */
+@container (max-width: 480px) {
+  .auth-lux-frame {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-lux-frame {
+    padding: 32px 20px;
+  }
+}

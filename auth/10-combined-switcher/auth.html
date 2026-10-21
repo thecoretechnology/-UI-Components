@@ -1,0 +1,197 @@
+<div class="auth-dual-wrapper" data-auth="combined-switcher">
+  <div class="auth-dual-card">
+    
+    <!-- Top Segmented Switcher Control -->
+    <div class="auth-dual-switcher-wrap" role="tablist" aria-label="Authentication Mode">
+      <button 
+        type="button" 
+        id="authDualTabLogin" 
+        class="auth-dual-tab is-active" 
+        role="tab" 
+        aria-selected="true" 
+        aria-controls="authDualForm"
+        data-mode="login"
+      >
+        Sign In
+      </button>
+      <button 
+        type="button" 
+        id="authDualTabRegister" 
+        class="auth-dual-tab" 
+        role="tab" 
+        aria-selected="false" 
+        aria-controls="authDualForm"
+        data-mode="register"
+      >
+        Create Account
+      </button>
+    </div>
+
+    <!-- Dynamic Header -->
+    <header class="auth-dual-header">
+      <h1 id="authDualTitle" class="auth-dual-title">Welcome back</h1>
+      <p id="authDualSubtitle" class="auth-dual-subtitle">Enter your account credentials to access your console.</p>
+    </header>
+
+    <!-- Alert / Feedback Notification -->
+    <div id="authDualAlert" class="auth-dual-alert" role="alert" hidden></div>
+
+    <!-- Dynamic Form -->
+    <form id="authDualForm" class="auth-dual-form" data-current-mode="login" novalidate>
+      
+      <!-- Full Name (Register Mode Only) -->
+      <div id="authDualNameGroup" class="auth-dual-field is-register-only" hidden>
+        <label for="auth-dual-name" class="auth-dual-label">Full Name</label>
+        <input 
+          type="text" 
+          id="auth-dual-name" 
+          name="name" 
+          class="auth-dual-input" 
+          placeholder="e.g. Jordan Miller" 
+          autocomplete="name" 
+          aria-describedby="auth-dual-name-err"
+        />
+        <p id="auth-dual-name-err" class="auth-dual-error" role="alert"></p>
+      </div>
+
+      <!-- Email Address (Shared, Preserved Across Modes) -->
+      <div class="auth-dual-field">
+        <label for="auth-dual-email" class="auth-dual-label">Work Email</label>
+        <input 
+          type="email" 
+          id="auth-dual-email" 
+          name="email" 
+          class="auth-dual-input" 
+          placeholder="name@company.com" 
+          autocomplete="email" 
+          required 
+          aria-describedby="auth-dual-email-err"
+        />
+        <p id="auth-dual-email-err" class="auth-dual-error" role="alert"></p>
+      </div>
+
+      <!-- Password Field (Shared) -->
+      <div class="auth-dual-field">
+        <div class="auth-dual-label-row">
+          <label for="auth-dual-pass" class="auth-dual-label">Password</label>
+          <button 
+            type="button" 
+            id="authDualForgotLink" 
+            class="auth-dual-link-btn is-login-only"
+          >
+            Forgot password?
+          </button>
+        </div>
+        <div class="auth-dual-input-wrap">
+          <input 
+            type="password" 
+            id="auth-dual-pass" 
+            name="password" 
+            class="auth-dual-input" 
+            placeholder="Account password" 
+            autocomplete="current-password" 
+            required 
+            aria-describedby="auth-dual-pass-err"
+          />
+          <button 
+            type="button" 
+            class="auth-dual-eye-btn" 
+            aria-label="Show password" 
+            aria-pressed="false"
+            data-toggle="auth-dual-pass"
+          >
+            <svg class="eye-show" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <svg class="eye-hide" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none;">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+              <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>
+          </button>
+        </div>
+        <p id="auth-dual-pass-err" class="auth-dual-error" role="alert"></p>
+      </div>
+
+      <!-- Confirm Password (Register Mode Only) -->
+      <div id="authDualConfirmGroup" class="auth-dual-field is-register-only" hidden>
+        <label for="auth-dual-confirm" class="auth-dual-label">Confirm Password</label>
+        <div class="auth-dual-input-wrap">
+          <input 
+            type="password" 
+            id="auth-dual-confirm" 
+            name="confirmPassword" 
+            class="auth-dual-input" 
+            placeholder="Repeat chosen password" 
+            autocomplete="new-password" 
+            aria-describedby="auth-dual-confirm-err"
+          />
+          <button 
+            type="button" 
+            class="auth-dual-eye-btn" 
+            aria-label="Show password confirmation" 
+            aria-pressed="false"
+            data-toggle="auth-dual-confirm"
+          >
+            <svg class="eye-show" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <svg class="eye-hide" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none;">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+              <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>
+          </button>
+        </div>
+        <p id="auth-dual-confirm-err" class="auth-dual-error" role="alert"></p>
+      </div>
+
+      <!-- Mode-Specific Options Checkbox -->
+      <div id="authDualRememberWrap" class="auth-dual-check-wrap is-login-only">
+        <label class="auth-dual-check-label">
+          <input type="checkbox" id="auth-dual-remember" name="remember" class="auth-dual-checkbox" />
+          <span class="auth-dual-custom-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="auth-dual-check-text">Keep me signed in on this trusted workstation</span>
+        </label>
+      </div>
+
+      <div id="authDualTermsWrap" class="auth-dual-check-wrap is-register-only" hidden>
+        <label class="auth-dual-check-label">
+          <input type="checkbox" id="auth-dual-terms" name="terms" class="auth-dual-checkbox" />
+          <span class="auth-dual-custom-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="auth-dual-check-text">I acknowledge the Developer Terms of Service and Privacy Policy</span>
+        </label>
+        <p id="auth-dual-terms-err" class="auth-dual-error" role="alert"></p>
+      </div>
+
+      <!-- Dynamic Submit CTA Button -->
+      <button type="submit" id="authDualSubmit" class="auth-dual-submit-btn">
+        <span id="authDualSubmitText">Sign In to Account</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+
+      <!-- Bottom Contextual Switch Prompt -->
+      <div class="auth-dual-bottom-prompt">
+        <span id="authDualPromptText">Don't have an account yet?</span>
+        <button type="button" id="authDualPromptBtn" class="auth-dual-prompt-link">
+          Create account
+        </button>
+      </div>
+
+      <p class="auth-dual-demo-disclaimer">
+        Interactive demonstration bench. Validated locally — zero credentials transmitted or saved.
+      </p>
+    </form>
+  </div>
+</div>

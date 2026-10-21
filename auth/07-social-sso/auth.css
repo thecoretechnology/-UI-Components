@@ -1,0 +1,293 @@
+/* 07: Social / SSO-first Login Styles */
+.auth-sso-stage {
+  --ao-bg: #f1f5f9;
+  --ao-card: #ffffff;
+  --ao-ink: #0f172a;
+  --ao-muted: #64748b;
+  --ao-border: #e2e8f0;
+  --ao-brand: #0284c7;
+  --ao-brand-hover: #0369a1;
+  --ao-error: #ef4444;
+  --ao-success: #10b981;
+
+  background-color: var(--ao-bg);
+  padding: 48px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--ao-ink);
+}
+
+.auth-sso-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--ao-card);
+  border: 1px solid var(--ao-border);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+  padding: 38px 36px 32px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.auth-sso-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-sso-shield-icon {
+  width: 48px;
+  height: 48px;
+  background: #e0f2fe;
+  color: #0284c7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.auth-sso-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ao-ink);
+  margin: 0 0 8px;
+}
+
+.auth-sso-subtitle {
+  font-size: 13.5px;
+  color: var(--ao-muted);
+  line-height: 1.55;
+  margin: 0 auto;
+  max-width: 380px;
+}
+
+/* Alert Notification */
+.auth-sso-alert {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.auth-sso-alert[hidden] {
+  display: none !important;
+}
+
+.auth-sso-alert.is-success {
+  background: #f0fdf4;
+  color: var(--ao-success);
+  border: 1px solid #bbf7d0;
+}
+
+.auth-sso-alert.is-error {
+  background: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+}
+
+/* Providers Grid */
+.auth-sso-providers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-sso-btn {
+  width: 100%;
+  padding: 11px 16px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #1e293b;
+  font-size: 13.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 120ms ease;
+  user-select: none;
+}
+
+.auth-sso-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.auth-sso-btn:active {
+  transform: translateY(0);
+}
+
+.auth-sso-btn.github {
+  background: #181717;
+  color: #ffffff;
+  border-color: #181717;
+}
+
+.auth-sso-btn.github:hover {
+  background: #2d2b2b;
+  border-color: #2d2b2b;
+}
+
+.auth-sso-btn-icon {
+  flex-shrink: 0;
+}
+
+/* Divider */
+.auth-sso-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 22px 0 20px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.auth-sso-divider::before,
+.auth-sso-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--ao-border);
+}
+
+.auth-sso-divider span {
+  padding: 0 12px;
+}
+
+/* Fallback Form */
+.auth-sso-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-sso-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-sso-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.auth-sso-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.auth-sso-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--ao-ink);
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  font-family: inherit;
+  transition: all 120ms ease;
+}
+
+.auth-sso-input:focus {
+  border-color: var(--ao-brand);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+}
+
+.auth-sso-input.is-invalid {
+  border-color: var(--ao-error);
+  background-color: #fffbfb;
+}
+
+.auth-sso-submit-inline {
+  padding: 10px 16px;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-family: inherit;
+  transition: background-color 140ms ease;
+}
+
+.auth-sso-submit-inline:hover {
+  background-color: #334155;
+}
+
+.auth-sso-error {
+  font-size: 12px;
+  color: var(--ao-error);
+  font-weight: 500;
+  min-height: 16px;
+}
+
+/* Security Trust Footer */
+.auth-sso-footer {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ao-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 11.5px;
+  color: #94a3b8;
+}
+
+.auth-sso-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.auth-sso-trust-bullet {
+  font-size: 10px;
+  color: #cbd5e1;
+}
+
+/* Responsive & Container */
+@container (max-width: 480px) {
+  .auth-sso-card {
+    padding: 28px 20px;
+  }
+  .auth-sso-input-row {
+    flex-direction: column;
+  }
+  .auth-sso-submit-inline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-sso-card {
+    padding: 28px 20px;
+  }
+  .auth-sso-input-row {
+    flex-direction: column;
+  }
+  .auth-sso-submit-inline {
+    width: 100%;
+    justify-content: center;
+  }
+}

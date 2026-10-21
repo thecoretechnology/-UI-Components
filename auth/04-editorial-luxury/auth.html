@@ -1,0 +1,104 @@
+<div class="auth-lux-stage" data-auth="editorial-luxury">
+  <div class="auth-lux-frame">
+    <!-- Masthead -->
+    <header class="auth-lux-masthead">
+      <div class="auth-lux-folio">
+        <span>COLLECTION PRIVÉE</span>
+        <span class="auth-lux-folio-bullet">&bull;</span>
+        <span>EDITION MMXXVI</span>
+      </div>
+      <h2 class="auth-lux-title">Members&rsquo; Salon</h2>
+      <div class="auth-lux-rule">
+        <span class="auth-lux-rule-line"></span>
+        <span class="auth-lux-rule-diamond">&#9670;</span>
+        <span class="auth-lux-rule-line"></span>
+      </div>
+      <p class="auth-lux-subtitle">Private access for registered patrons, collectors, and invited archival fellows.</p>
+    </header>
+
+    <div class="auth-lux-alert" id="authLuxAlert" role="alert" aria-live="polite" hidden></div>
+
+    <form class="auth-lux-form" id="authLuxForm" novalidate>
+      <!-- Member Identifier -->
+      <div class="auth-lux-field">
+        <label for="auth-lux-email" class="auth-lux-label">Patron Identifier or Registry Email</label>
+        <div class="auth-lux-input-box">
+          <input 
+            type="email" 
+            id="auth-lux-email" 
+            name="email"
+            class="auth-lux-input" 
+            placeholder="patron@archival-ateliers.org"
+            autocomplete="username"
+            required
+            aria-describedby="auth-lux-email-err"
+          >
+        </div>
+        <div class="auth-lux-error" id="auth-lux-email-err" role="alert" aria-live="polite"></div>
+      </div>
+
+      <!-- Member Passkey -->
+      <div class="auth-lux-field">
+        <div class="auth-lux-label-row">
+          <label for="auth-lux-pass" class="auth-lux-label">Vault Passphrase</label>
+          <button type="button" class="auth-lux-subtle-link" id="authLuxForgot">Forgotten Passkey?</button>
+        </div>
+        <div class="auth-lux-input-box has-eye">
+          <input 
+            type="password" 
+            id="auth-lux-pass" 
+            name="password"
+            class="auth-lux-input" 
+            placeholder="••••••••••••"
+            autocomplete="current-password"
+            required
+            aria-describedby="auth-lux-pass-err"
+          >
+          <button 
+            type="button" 
+            class="auth-lux-eye-btn" 
+            id="authLuxEye" 
+            aria-label="Toggle passphrase visibility" 
+            aria-pressed="false"
+          >
+            <svg class="eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" hidden>
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>
+            </svg>
+          </button>
+        </div>
+        <div class="auth-lux-error" id="auth-lux-pass-err" role="alert" aria-live="polite"></div>
+      </div>
+
+      <!-- Security Option -->
+      <div class="auth-lux-pref">
+        <label class="auth-lux-check-label">
+          <input type="checkbox" id="auth-lux-remember" name="remember" class="auth-lux-checkbox">
+          <span class="auth-lux-check-ring"></span>
+          <span class="auth-lux-check-text">Preserve private session credentials for this workstation</span>
+        </label>
+      </div>
+
+      <!-- Action Button -->
+      <div class="auth-lux-action">
+        <button type="submit" class="auth-lux-submit" id="authLuxSubmit">
+          <span>Enter Salon</span>
+          <span class="auth-lux-arrow">&mdash;&rsaquo;</span>
+        </button>
+      </div>
+    </form>
+
+    <!-- Footer Colophon -->
+    <footer class="auth-lux-footer">
+      <div class="auth-lux-colophon">
+        <span>Not yet registered?</span>
+        <button type="button" class="auth-lux-inquire-link" id="authLuxInquire">Request Patronage Invitation</button>
+      </div>
+      <div class="auth-lux-seal">
+        <span class="auth-lux-seal-text">VERIFIED ATELIER ARCHIVE &bull; GENEVA &bull; PARIS</span>
+      </div>
+    </footer>
+  </div>
+</div>

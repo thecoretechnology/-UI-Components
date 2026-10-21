@@ -1,0 +1,131 @@
+<div class="auth-brutal-wrapper" data-auth="bold-brutalist">
+  <div class="auth-brutal-box">
+    
+    <!-- Top System Bar -->
+    <div class="auth-brutal-topbar">
+      <span class="auth-brutal-tag">SEC-SYS // REV-5.9</span>
+      <span class="auth-brutal-status">
+        <span class="auth-brutal-dot" aria-hidden="true"></span>
+        STATUS: ONLINE
+      </span>
+    </div>
+
+    <!-- Brutalist Header -->
+    <header class="auth-brutal-header">
+      <h1 class="auth-brutal-title">OPERATOR ENTRY</h1>
+      <p class="auth-brutal-subtitle">MANDATORY IDENTIFICATION DIRECTIVE // AUTH-CORE-09</p>
+    </header>
+
+    <!-- Feedback Box -->
+    <div id="authBrutalAlert" class="auth-brutal-alert" role="alert" hidden></div>
+
+    <!-- Form -->
+    <form id="authBrutalForm" class="auth-brutal-form" novalidate>
+      
+      <!-- Callsign / Operator ID -->
+      <div class="auth-brutal-field">
+        <label for="auth-brutal-callsign" class="auth-brutal-label">
+          <span>01 // OPERATOR CALLSIGN</span>
+          <span class="auth-brutal-req">[REQUIRED]</span>
+        </label>
+        <div class="auth-brutal-input-box">
+          <span class="auth-brutal-prefix" aria-hidden="true">&gt;&gt;</span>
+          <input 
+            type="text" 
+            id="auth-brutal-callsign" 
+            name="callsign" 
+            class="auth-brutal-input" 
+            placeholder="e.g. OPR-7740" 
+            autocomplete="username" 
+            required 
+            aria-describedby="auth-brutal-callsign-err"
+          />
+        </div>
+        <p id="auth-brutal-callsign-err" class="auth-brutal-error" role="alert"></p>
+      </div>
+
+      <!-- Passkey with Brutalist [SHOW]/[HIDE] Text Toggle -->
+      <div class="auth-brutal-field">
+        <label for="auth-brutal-passkey" class="auth-brutal-label">
+          <span>02 // ACCESS PASSKEY</span>
+          <span class="auth-brutal-req">[REQUIRED]</span>
+        </label>
+        <div class="auth-brutal-input-box">
+          <span class="auth-brutal-prefix" aria-hidden="true">**</span>
+          <input 
+            type="password" 
+            id="auth-brutal-passkey" 
+            name="passkey" 
+            class="auth-brutal-input" 
+            placeholder="ENTER SECURE PASSKEY" 
+            autocomplete="current-password" 
+            required 
+            aria-describedby="auth-brutal-passkey-err"
+          />
+          <button 
+            type="button" 
+            id="authBrutalEyeBtn" 
+            class="auth-brutal-text-toggle" 
+            aria-label="Show passkey characters" 
+            aria-pressed="false"
+          >
+            [SHOW]
+          </button>
+        </div>
+        <p id="auth-brutal-passkey-err" class="auth-brutal-error" role="alert"></p>
+      </div>
+
+      <!-- Clearance Level Radio Pills -->
+      <div class="auth-brutal-field">
+        <span class="auth-brutal-label">
+          <span>03 // SELECT CLEARANCE LEVEL</span>
+        </span>
+        <div class="auth-brutal-clearance-grid" role="radiogroup" aria-label="Clearance Level">
+          <label class="auth-brutal-clearance-item">
+            <input type="radio" name="clearance" value="LEVEL 1 (READ ONLY)" checked />
+            <span class="auth-brutal-clearance-btn">
+              <span class="auth-brutal-lvl-num">LVL-1</span>
+              <span class="auth-brutal-lvl-desc">READ-ONLY</span>
+            </span>
+          </label>
+          <label class="auth-brutal-clearance-item">
+            <input type="radio" name="clearance" value="LEVEL 2 (OPERATOR)" />
+            <span class="auth-brutal-clearance-btn">
+              <span class="auth-brutal-lvl-num">LVL-2</span>
+              <span class="auth-brutal-lvl-desc">OPERATOR</span>
+            </span>
+          </label>
+          <label class="auth-brutal-clearance-item">
+            <input type="radio" name="clearance" value="LEVEL 3 (ROOT MAINTENANCE)" />
+            <span class="auth-brutal-clearance-btn">
+              <span class="auth-brutal-lvl-num">LVL-3</span>
+              <span class="auth-brutal-lvl-desc">ROOT/EXEC</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Brutalist Checkbox -->
+      <div class="auth-brutal-field-check">
+        <label class="auth-brutal-check-label">
+          <input type="checkbox" id="auth-brutal-confirm" name="confirmDirective" class="auth-brutal-checkbox" required />
+          <span class="auth-brutal-check-square" aria-hidden="true"></span>
+          <span class="auth-brutal-check-text">
+            CONFIRM PROTOCOL DIRECTIVE: NO CREDENTIAL DISPATCH (LOCAL DEMO ENVIRONMENT ONLY).
+          </span>
+        </label>
+        <p id="auth-brutal-confirm-err" class="auth-brutal-error" role="alert"></p>
+      </div>
+
+      <!-- Heavy Brutalist Submit Button -->
+      <button type="submit" id="authBrutalSubmit" class="auth-brutal-submit-btn">
+        <span>TRANSMIT DISPATCH // AUTHENTICATE</span>
+        <span class="auth-brutal-btn-arrow" aria-hidden="true">&rarr;</span>
+      </button>
+
+      <div class="auth-brutal-footnote">
+        NON-NETWORKED TERMINAL &bull; CLIENT-SIDE TEST BENCH &bull; ZERO DATA LEAK
+      </div>
+    </form>
+  </div>
+</div>

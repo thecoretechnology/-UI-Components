@@ -1,0 +1,200 @@
+<div class="auth-team-wrapper" data-auth="team-invitation">
+  <div class="auth-team-container">
+    
+    <!-- Workspace Header & Inviter Context -->
+    <header class="auth-team-header">
+      <div class="auth-team-org-badge">
+        <div class="auth-team-org-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="auth-team-org-meta">
+          <span class="auth-team-org-tag">Organization Invitation</span>
+          <h1 class="auth-team-org-name">Hyperion Systems</h1>
+        </div>
+      </div>
+
+      <div class="auth-team-inviter-card">
+        <div class="auth-team-inviter-avatar" aria-hidden="true">ER</div>
+        <div class="auth-team-inviter-info">
+          <p class="auth-team-inviter-text">
+            <strong>Elena Rostova</strong> invited you to join the <strong>Core Infrastructure</strong> team as a <strong>Senior Platform Engineer</strong>.
+          </p>
+          <span class="auth-team-badge-pending">Expires in 6 days &bull; Demo Invitation</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Feedback Notification Banner -->
+    <div id="authTeamAlert" class="auth-team-alert" role="alert" hidden></div>
+
+    <!-- Invitation Acceptance Form -->
+    <form id="authTeamForm" class="auth-team-form" novalidate>
+      
+      <!-- Locked Invited Email -->
+      <div class="auth-team-field">
+        <label for="auth-team-email" class="auth-team-label">
+          <span>Invited Email Address</span>
+          <span class="auth-team-locked-tag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            Locked to Invite
+          </span>
+        </label>
+        <div class="auth-team-input-locked-wrap">
+          <input 
+            type="email" 
+            id="auth-team-email" 
+            name="email" 
+            class="auth-team-input is-locked" 
+            value="alex.chen@hyperion.internal" 
+            readonly 
+            aria-describedby="auth-team-email-hint"
+          />
+        </div>
+        <p id="auth-team-email-hint" class="auth-team-hint">
+          This invitation was addressed specifically to this email and cannot be modified.
+        </p>
+      </div>
+
+      <!-- Full Name -->
+      <div class="auth-team-field">
+        <label for="auth-team-name" class="auth-team-label">Full Legal Name</label>
+        <input 
+          type="text" 
+          id="auth-team-name" 
+          name="name" 
+          class="auth-team-input" 
+          placeholder="e.g. Alex Chen" 
+          autocomplete="name" 
+          required 
+          aria-describedby="auth-team-name-err"
+        />
+        <p id="auth-team-name-err" class="auth-team-error" role="alert"></p>
+      </div>
+
+      <!-- Password Grid: Password + Confirm -->
+      <div class="auth-team-grid-2">
+        <div class="auth-team-field">
+          <label for="auth-team-pass" class="auth-team-label">Choose Workspace Password</label>
+          <div class="auth-team-input-wrap">
+            <input 
+              type="password" 
+              id="auth-team-pass" 
+              name="password" 
+              class="auth-team-input" 
+              placeholder="Min. 8 characters" 
+              autocomplete="new-password" 
+              required 
+              aria-describedby="auth-team-pass-err"
+            />
+            <button 
+              type="button" 
+              class="auth-team-eye-btn" 
+              aria-label="Show password" 
+              aria-pressed="false"
+              data-toggle="auth-team-pass"
+            >
+              <svg class="eye-show" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <svg class="eye-hide" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none;">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+          </div>
+          <p id="auth-team-pass-err" class="auth-team-error" role="alert"></p>
+        </div>
+
+        <div class="auth-team-field">
+          <label for="auth-team-confirm" class="auth-team-label">Confirm Password</label>
+          <div class="auth-team-input-wrap">
+            <input 
+              type="password" 
+              id="auth-team-confirm" 
+              name="confirmPassword" 
+              class="auth-team-input" 
+              placeholder="Re-enter password" 
+              autocomplete="new-password" 
+              required 
+              aria-describedby="auth-team-confirm-err"
+            />
+            <button 
+              type="button" 
+              class="auth-team-eye-btn" 
+              aria-label="Show password confirmation" 
+              aria-pressed="false"
+              data-toggle="auth-team-confirm"
+            >
+              <svg class="eye-show" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <svg class="eye-hide" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none;">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+          </div>
+          <p id="auth-team-confirm-err" class="auth-team-error" role="alert"></p>
+        </div>
+      </div>
+
+      <!-- Timezone Selector -->
+      <div class="auth-team-field">
+        <label for="auth-team-tz" class="auth-team-label">Primary Timezone</label>
+        <select id="auth-team-tz" name="timezone" class="auth-team-select">
+          <option value="America/New_York">UTC-05:00 Eastern Time (US &amp; Canada)</option>
+          <option value="America/Chicago">UTC-06:00 Central Time (US &amp; Canada)</option>
+          <option value="America/Los_Angeles">UTC-08:00 Pacific Time (US &amp; Canada)</option>
+          <option value="Europe/London">UTC+00:00 London, Edinburgh, Dublin</option>
+          <option value="Europe/Berlin">UTC+01:00 Berlin, Paris, Amsterdam</option>
+          <option value="Asia/Tokyo">UTC+09:00 Tokyo, Osaka, Sapporo</option>
+        </select>
+      </div>
+
+      <!-- Terms Checkbox -->
+      <div class="auth-team-field-check">
+        <label class="auth-team-check-label">
+          <input type="checkbox" id="auth-team-terms" name="terms" class="auth-team-checkbox" required />
+          <span class="auth-team-check-custom" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="auth-team-check-text">
+            I agree to Hyperion Systems' Workspace Security Guidelines and Acceptable Use Policy.
+          </span>
+        </label>
+        <p id="auth-team-terms-err" class="auth-team-error" role="alert"></p>
+      </div>
+
+      <!-- Action Row: Accept & Decline -->
+      <div class="auth-team-actions">
+        <button type="submit" id="authTeamAccept" class="auth-team-btn auth-team-btn-primary">
+          <span>Accept Invitation &amp; Join Team</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <button type="button" id="authTeamDecline" class="auth-team-btn auth-team-btn-secondary">
+          Decline Invitation
+        </button>
+      </div>
+
+      <p class="auth-team-footer-disclaimer">
+        This is a UI demonstration. No actual account is provisioned and credentials are not sent to any server.
+      </p>
+    </form>
+  </div>
+</div>

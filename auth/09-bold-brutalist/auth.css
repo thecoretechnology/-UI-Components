@@ -1,0 +1,397 @@
+/* 09: Brutalist Authentication Styles */
+
+.auth-brutal-wrapper {
+  container-type: inline-size;
+  container-name: auth-brutal-container;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem;
+  background-color: #f7f3e9;
+  font-family: "Courier New", Courier, monospace, monospace;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.auth-brutal-box {
+  width: 100%;
+  max-width: 580px;
+  background: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 0;
+  box-shadow: 7px 7px 0 #000000;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-sizing: border-box;
+}
+
+/* Top System Status Bar */
+.auth-brutal-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #000000;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.auth-brutal-tag {
+  background: #000000;
+  color: #fff000;
+  padding: 0.2rem 0.5rem;
+}
+
+.auth-brutal-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auth-brutal-dot {
+  width: 8px;
+  height: 8px;
+  background: #00cc44;
+  border: 1.5px solid #000000;
+  display: inline-block;
+}
+
+/* Header */
+.auth-brutal-header {
+  margin-bottom: 1.75rem;
+}
+
+.auth-brutal-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Impact", "Arial Black", sans-serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+  color: #000000;
+}
+
+.auth-brutal-subtitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #555555;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+/* Alert Feedback Box */
+.auth-brutal-alert {
+  border: 3px solid #000000;
+  padding: 0.875rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  box-shadow: 4px 4px 0 #000000;
+}
+
+.auth-brutal-alert.is-success {
+  background: #bbf7d0;
+  color: #000000;
+}
+
+.auth-brutal-alert.is-error {
+  background: #ffcccc;
+  color: #990000;
+}
+
+/* Form & Fields */
+.auth-brutal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.auth-brutal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.auth-brutal-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.auth-brutal-req {
+  color: #d90429;
+}
+
+.auth-brutal-input-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #000000;
+  background: #ffffff;
+  box-shadow: 3px 3px 0 #000000;
+  transition: all 0.1s ease;
+}
+
+.auth-brutal-input-box:focus-within {
+  border-color: #000000;
+  box-shadow: 4px 4px 0 #000000;
+  background: #fffdf0;
+}
+
+.auth-brutal-input-box.is-invalid {
+  border-color: #d90429;
+  background: #fff5f5;
+  box-shadow: 3px 3px 0 #d90429;
+}
+
+.auth-brutal-prefix {
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #000000;
+  user-select: none;
+}
+
+.auth-brutal-input {
+  flex: 1;
+  height: 44px;
+  border: none;
+  background: transparent;
+  padding: 0 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #000000;
+  outline: none;
+}
+
+.auth-brutal-input::placeholder {
+  color: #888888;
+  font-weight: normal;
+}
+
+.auth-brutal-text-toggle {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0 0.875rem;
+  height: 44px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: background-color 0.1s ease;
+}
+
+.auth-brutal-text-toggle:hover {
+  background: #ffe600;
+  color: #000000;
+}
+
+.auth-brutal-text-toggle:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+}
+
+.auth-brutal-error {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #d90429;
+  margin: 0.25rem 0 0;
+  min-height: 1rem;
+}
+
+.auth-brutal-error:empty {
+  display: none;
+}
+
+/* Clearance Radio Pills */
+.auth-brutal-clearance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.625rem;
+}
+
+.auth-brutal-clearance-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.auth-brutal-clearance-item input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.auth-brutal-clearance-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.625rem 0.5rem;
+  border: 2px solid #000000;
+  background: #ffffff;
+  box-shadow: 3px 3px 0 #000000;
+  transition: all 0.1s ease;
+}
+
+.auth-brutal-lvl-num {
+  font-size: 0.8125rem;
+  font-weight: 900;
+}
+
+.auth-brutal-lvl-desc {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #666666;
+}
+
+.auth-brutal-clearance-item input:checked + .auth-brutal-clearance-btn {
+  background: #000000;
+  color: #ffe600;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.auth-brutal-clearance-item input:checked + .auth-brutal-clearance-btn .auth-brutal-lvl-desc {
+  color: #ffffff;
+}
+
+.auth-brutal-clearance-item input:focus-visible + .auth-brutal-clearance-btn {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+/* Brutalist Checkbox */
+.auth-brutal-field-check {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.auth-brutal-check-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.auth-brutal-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.auth-brutal-check-square {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  background: #ffffff;
+  box-shadow: 2px 2px 0 #000000;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+}
+
+.auth-brutal-checkbox:checked + .auth-brutal-check-square {
+  background: #000000;
+}
+
+.auth-brutal-checkbox:checked + .auth-brutal-check-square::after {
+  content: "X";
+  color: #ffe600;
+  font-size: 0.8125rem;
+  font-weight: 900;
+  font-family: monospace;
+}
+
+.auth-brutal-checkbox:focus-visible + .auth-brutal-check-square {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+.auth-brutal-check-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000000;
+}
+
+/* Submit Button */
+.auth-brutal-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 52px;
+  background: #ffe600;
+  border: 3px solid #000000;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, "Arial Black", Impact, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #000000;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+.auth-brutal-submit-btn:hover {
+  background: #fff000;
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.auth-brutal-submit-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.auth-brutal-submit-btn:focus-visible {
+  outline: 3px solid #000000;
+  outline-offset: 2px;
+}
+
+.auth-brutal-btn-arrow {
+  font-size: 1.25rem;
+}
+
+.auth-brutal-footnote {
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #666666;
+  margin-top: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* Container Queries & Media Queries */
+@container auth-brutal-container (max-width: 480px) {
+  .auth-brutal-clearance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-brutal-clearance-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,470 @@
+/* 06: Multi-step Registration Styles */
+.auth-step-stage {
+  --at-bg: #f8fafc;
+  --at-card: #ffffff;
+  --at-ink: #0f172a;
+  --at-muted: #64748b;
+  --at-border: #e2e8f0;
+  --at-border-subtle: #f1f5f9;
+  --at-brand: #2563eb;
+  --at-brand-hover: #1d4ed8;
+  --at-error: #ef4444;
+  --at-success: #10b981;
+
+  background-color: var(--at-bg);
+  padding: 48px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 620px;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--at-ink);
+}
+
+.auth-step-card {
+  width: 100%;
+  max-width: 580px;
+  background-color: var(--at-card);
+  border: 1px solid var(--at-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+  padding: 36px 36px 32px;
+  box-sizing: border-box;
+}
+
+/* Header & Stepper */
+.auth-step-header {
+  margin-bottom: 28px;
+}
+
+.auth-step-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--at-brand);
+  margin-bottom: 6px;
+}
+
+.auth-step-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--at-ink);
+  margin: 0 0 20px;
+}
+
+/* Stepper Nav */
+.auth-step-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-top: 1px solid var(--at-border-subtle);
+  border-bottom: 1px solid var(--at-border-subtle);
+  padding: 14px 0;
+}
+
+.auth-step-progress-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.auth-step-progress-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  transition: all 140ms ease;
+}
+
+.auth-step-progress-item.is-active {
+  color: var(--at-ink);
+}
+
+.auth-step-progress-item.is-active .auth-step-progress-num {
+  background: var(--at-brand);
+  color: #ffffff;
+}
+
+.auth-step-progress-item.is-complete {
+  color: #10b981;
+}
+
+.auth-step-progress-item.is-complete .auth-step-progress-num {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.auth-step-progress-divider {
+  flex: 1;
+  height: 1px;
+  background: var(--at-border);
+  margin: 0 12px;
+}
+
+/* Alert Notification */
+.auth-step-alert {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.auth-step-alert[hidden] {
+  display: none !important;
+}
+
+.auth-step-alert.is-success {
+  background: #f0fdf4;
+  color: var(--at-success);
+  border: 1px solid #bbf7d0;
+}
+
+.auth-step-alert.is-error {
+  background: #fef2f2;
+  color: var(--at-error);
+  border: 1px solid #fecaca;
+}
+
+/* Panels */
+.auth-step-panel {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-step-panel[hidden] {
+  display: none !important;
+}
+
+.auth-step-legend {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--at-ink);
+  margin-bottom: 4px;
+  padding: 0;
+}
+
+.auth-step-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-step-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.auth-step-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.auth-step-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.auth-step-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--at-ink);
+  background: #ffffff;
+  border: 1px solid var(--at-border);
+  border-radius: 6px;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: all 120ms ease;
+}
+
+.auth-step-input:focus,
+.auth-step-select:focus {
+  border-color: var(--at-brand);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.auth-step-input.is-invalid {
+  border-color: var(--at-error);
+  background-color: #fffbfb;
+}
+
+.auth-step-input-wrap .auth-step-input {
+  padding-right: 40px;
+}
+
+.auth-step-eye-btn {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: var(--at-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-step-eye-btn:hover {
+  color: var(--at-ink);
+}
+
+.auth-step-eye-btn svg[hidden] {
+  display: none !important;
+}
+
+.auth-step-select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--at-ink);
+  background: #ffffff;
+  border: 1px solid var(--at-border);
+  border-radius: 6px;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Team Pills */
+.auth-step-team-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.auth-step-pill {
+  position: relative;
+  cursor: pointer;
+}
+
+.auth-step-pill input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.auth-step-pill span {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 6px 14px;
+  background-color: #f8fafc;
+  border: 1px solid var(--at-border);
+  border-radius: 6px;
+  color: #475569;
+  transition: all 120ms ease;
+}
+
+.auth-step-pill:hover span {
+  border-color: #cbd5e1;
+}
+
+.auth-step-pill input:checked + span {
+  background-color: #eff6ff;
+  border-color: var(--at-brand);
+  color: var(--at-brand);
+}
+
+/* Summary Ledger */
+.auth-step-summary-ledger {
+  background-color: #f8fafc;
+  border: 1px solid var(--at-border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-step-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.auth-step-summary-label {
+  color: var(--at-muted);
+}
+
+.auth-step-summary-val {
+  font-weight: 600;
+  color: var(--at-ink);
+}
+
+/* Terms Box */
+.auth-step-terms-box {
+  margin-top: 4px;
+}
+
+.auth-step-terms-label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.auth-step-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.auth-step-checkbox-custom {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--at-border);
+  border-radius: 4px;
+  background: #ffffff;
+  display: inline-block;
+  margin-top: 2px;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 120ms ease;
+}
+
+.auth-step-checkbox:checked + .auth-step-checkbox-custom {
+  background: var(--at-brand);
+  border-color: var(--at-brand);
+}
+
+.auth-step-checkbox:checked + .auth-step-checkbox-custom::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.auth-step-terms-text {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.auth-step-error {
+  font-size: 12px;
+  color: var(--at-error);
+  font-weight: 500;
+  min-height: 16px;
+}
+
+/* Step Navigation Footer */
+.auth-step-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--at-border-subtle);
+}
+
+.auth-step-btn-back {
+  padding: 10px 16px;
+  background: transparent;
+  color: #475569;
+  border: 1px solid var(--at-border);
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  transition: all 120ms ease;
+}
+
+.auth-step-btn-back:hover {
+  background: #f1f5f9;
+  color: var(--at-ink);
+}
+
+.auth-step-btn-back[hidden] {
+  display: none !important;
+}
+
+.auth-step-btn-next,
+.auth-step-btn-submit {
+  margin-left: auto;
+  padding: 11px 20px;
+  background-color: var(--at-brand);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  transition: background-color 140ms ease;
+}
+
+.auth-step-btn-next:hover,
+.auth-step-btn-submit:hover {
+  background-color: var(--at-brand-hover);
+}
+
+.auth-step-btn-submit[hidden],
+.auth-step-btn-next[hidden] {
+  display: none !important;
+}
+
+/* Responsive & Container */
+@container (max-width: 540px) {
+  .auth-step-card {
+    padding: 24px 20px;
+  }
+  .auth-step-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .auth-step-progress-name {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .auth-step-card {
+    padding: 24px 20px;
+  }
+  .auth-step-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .auth-step-progress-name {
+    display: none;
+  }
+}

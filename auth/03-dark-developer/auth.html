@@ -1,0 +1,169 @@
+<div class="auth-dev-stage" data-auth="dark-developer">
+  <div class="auth-dev-console">
+    <!-- Console Titlebar -->
+    <div class="auth-dev-titlebar">
+      <div class="auth-dev-dots">
+        <span class="auth-dev-dot close"></span>
+        <span class="auth-dev-dot min"></span>
+        <span class="auth-dev-dot max"></span>
+      </div>
+      <div class="auth-dev-titlebar-text">session::auth-daemon &mdash; tty1 (encrypted)</div>
+      <div class="auth-dev-badge">v2.14.0</div>
+    </div>
+
+    <!-- Console Main Body -->
+    <div class="auth-dev-body">
+      <header class="auth-dev-header">
+        <div class="auth-dev-sys-line">
+          <span class="auth-dev-status-indicator"></span>
+          <span class="auth-dev-prompt-label">SYSTEM_READY // CLUSTER_AUTH_SERVICE</span>
+        </div>
+        <h2 class="auth-dev-title">Developer Terminal Access</h2>
+        <p class="auth-dev-desc">Authenticate your engineering identity to access the distributed cluster control plane.</p>
+      </header>
+
+      <!-- Auth Method Selector (Password vs Personal Access Token) -->
+      <div class="auth-dev-method-select" role="tablist" aria-label="Authentication Protocol">
+        <button type="button" class="auth-dev-method-btn active" id="authDevTabPass" role="tab" aria-selected="true" data-method="pass">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <span>Password / SSH</span>
+        </button>
+        <button type="button" class="auth-dev-method-btn" id="authDevTabToken" role="tab" aria-selected="false" data-method="token">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>
+          </svg>
+          <span>Personal Access Token</span>
+        </button>
+      </div>
+
+      <div class="auth-dev-alert" id="authDevAlert" role="alert" aria-live="polite" hidden></div>
+
+      <form class="auth-dev-form" id="authDevForm" novalidate>
+        <!-- Environment Cluster Selection -->
+        <div class="auth-dev-field">
+          <label class="auth-dev-label">Target Cluster Environment</label>
+          <div class="auth-dev-clusters" role="radiogroup" aria-label="Cluster Environment">
+            <label class="auth-dev-cluster-pill">
+              <input type="radio" name="cluster" value="prod-us" checked>
+              <span>us-east-1 (prod)</span>
+            </label>
+            <label class="auth-dev-cluster-pill">
+              <input type="radio" name="cluster" value="staging-eu">
+              <span>eu-west-1 (staging)</span>
+            </label>
+            <label class="auth-dev-cluster-pill">
+              <input type="radio" name="cluster" value="isolated-lab">
+              <span>lab-sandbox-0</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Handle / User ID -->
+        <div class="auth-dev-field">
+          <label for="auth-dev-handle" class="auth-dev-label">Developer Handle / SSH Identity</label>
+          <div class="auth-dev-input-group">
+            <span class="auth-dev-prefix">dev@</span>
+            <input 
+              type="text" 
+              id="auth-dev-handle" 
+              name="handle"
+              class="auth-dev-input" 
+              placeholder="operator.name"
+              autocomplete="username"
+              required
+              aria-describedby="auth-dev-handle-err"
+            >
+          </div>
+          <div class="auth-dev-error" id="auth-dev-handle-err" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Password Field (Password Mode) -->
+        <div class="auth-dev-field" id="authDevPassGroup">
+          <div class="auth-dev-label-row">
+            <label for="auth-dev-pass" class="auth-dev-label">Secret Passphrase</label>
+            <button type="button" class="auth-dev-text-btn" id="authDevForgot">Emergency Reset</button>
+          </div>
+          <div class="auth-dev-input-group has-eye">
+            <input 
+              type="password" 
+              id="auth-dev-pass" 
+              name="password"
+              class="auth-dev-input" 
+              placeholder="••••••••••••••••"
+              autocomplete="current-password"
+              required
+              aria-describedby="auth-dev-pass-err"
+            >
+            <button 
+              type="button" 
+              class="auth-dev-eye-btn" 
+              id="authDevEye" 
+              aria-label="Toggle password visibility" 
+              aria-pressed="false"
+            >
+              <svg class="eye-show" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg class="eye-hide" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" hidden>
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </button>
+          </div>
+          <div class="auth-dev-error" id="auth-dev-pass-err" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Token Field (PAT Mode) -->
+        <div class="auth-dev-field" id="authDevTokenGroup" hidden>
+          <label for="auth-dev-token" class="auth-dev-label">Personal Access Token (pat_sec_...)</label>
+          <div class="auth-dev-input-group has-eye">
+            <input 
+              type="password" 
+              id="auth-dev-token" 
+              name="token"
+              class="auth-dev-input" 
+              placeholder="pat_live_84f93c0042a98..."
+              autocomplete="off"
+              aria-describedby="auth-dev-token-err"
+            >
+            <button 
+              type="button" 
+              class="auth-dev-eye-btn" 
+              id="authDevTokenEye" 
+              aria-label="Toggle token visibility" 
+              aria-pressed="false"
+            >
+              <svg class="eye-show" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg class="eye-hide" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" hidden>
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </button>
+          </div>
+          <div class="auth-dev-error" id="auth-dev-token-err" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Submit Terminal Action -->
+        <div class="auth-dev-action-row">
+          <button type="submit" class="auth-dev-submit" id="authDevSubmit">
+            <span class="auth-dev-cursor-prompt">&gt;</span>
+            <span id="authDevSubmitText">auth --exec cluster-connect</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Terminal Command Helper Accordion -->
+      <div class="auth-dev-cli-helper">
+        <div class="auth-dev-cli-head">
+          <span class="auth-dev-cli-tag">HEADLESS CLI EQUIVALENT</span>
+          <button type="button" class="auth-dev-copy-cmd" id="authDevCopyCmd" title="Copy CLI Command">Copy CLI</button>
+        </div>
+        <pre class="auth-dev-code-block"><code id="authDevCodeSnippet">curl -sSf https://auth.cluster.internal/login \
+  -H "X-Identity: dev@operator.name" \
+  -d '{"cluster": "us-east-1"}'</code></pre>
+      </div>
+    </div>
+  </div>
+</div>

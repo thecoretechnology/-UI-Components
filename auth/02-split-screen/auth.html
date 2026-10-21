@@ -1,0 +1,170 @@
+<div class="auth-split-stage" data-auth="split-screen">
+  <div class="auth-split-card">
+    
+    <!-- Left Column: Editorial Brand & Graphic Canvas -->
+    <aside class="auth-split-editorial" aria-label="Brand Overview">
+      <div class="auth-split-editorial-top">
+        <div class="auth-split-brand-mark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+          <span class="auth-split-brand-name">Aether Core</span>
+        </div>
+        <div class="auth-split-edition-badge">Release 4.18 &middot; Stable</div>
+      </div>
+
+      <div class="auth-split-editorial-art">
+        <!-- Generative CSS / SVG isometric prism composition -->
+        <div class="auth-split-isometric-art">
+          <div class="auth-split-art-grid"></div>
+          <svg class="auth-split-prism-svg" viewBox="0 0 200 160" fill="none">
+            <polygon points="100,20 170,60 170,120 100,80" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <polygon points="100,20 30,60 30,120 100,80" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+            <polygon points="100,80 170,120 100,150 30,120" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+            <line x1="100" y1="20" x2="100" y2="80" stroke="#818cf8" stroke-width="2" stroke-dasharray="3 3"/>
+            <circle cx="100" cy="80" r="4" fill="#818cf8"/>
+          </svg>
+        </div>
+        
+        <blockquote class="auth-split-quote">
+          <p>&ldquo;Precision is not the absence of complexity, but the absolute mastering of its structural joints.&rdquo;</p>
+          <cite>&mdash; Atelier Monograph, Vol. IX</cite>
+        </blockquote>
+      </div>
+
+      <div class="auth-split-editorial-footer">
+        <div class="auth-split-telemetry">
+          <span class="auth-split-status-pulse"></span>
+          <span>Global Node: Zurich &middot; UTC+1</span>
+        </div>
+        <span class="auth-split-coords">47.3769&deg; N, 8.5417&deg; E</span>
+      </div>
+    </aside>
+
+    <!-- Right Column: Authentication Console -->
+    <main class="auth-split-form-panel">
+      <!-- Mode Tabs (Sign In vs Request Access) -->
+      <div class="auth-split-mode-nav" role="tablist" aria-label="Authentication Options">
+        <button type="button" class="auth-split-mode-btn active" id="authSplitTabSignIn" role="tab" aria-selected="true" data-mode="signin">Sign In</button>
+        <button type="button" class="auth-split-mode-btn" id="authSplitTabRequest" role="tab" aria-selected="false" data-mode="request">Request Access</button>
+      </div>
+
+      <header class="auth-split-header">
+        <h2 class="auth-split-title" id="authSplitTitle">Sign in to console</h2>
+        <p class="auth-split-subtitle" id="authSplitSubtitle">Enter your enterprise work email to access the studio repository.</p>
+      </header>
+
+      <div class="auth-split-alert" id="authSplitAlert" role="alert" aria-live="polite" hidden></div>
+
+      <form class="auth-split-form" id="authSplitForm" novalidate>
+        <!-- Dynamic Name field for Request Access mode -->
+        <div class="auth-split-field" id="authSplitNameGroup" hidden>
+          <label for="auth-split-name" class="auth-split-label">Full Name</label>
+          <input 
+            type="text" 
+            id="auth-split-name" 
+            name="fullname"
+            class="auth-split-input" 
+            placeholder="Klara Lindqvist"
+            autocomplete="name"
+          >
+          <div class="auth-split-error" id="auth-split-name-err" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Work Email -->
+        <div class="auth-split-field">
+          <label for="auth-split-email" class="auth-split-label">Enterprise Email</label>
+          <input 
+            type="email" 
+            id="auth-split-email" 
+            name="email"
+            class="auth-split-input" 
+            placeholder="klara@aether-studio.ch"
+            autocomplete="email"
+            required
+            aria-describedby="auth-split-email-err"
+          >
+          <div class="auth-split-error" id="auth-split-email-err" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="auth-split-field" id="authSplitPassGroup">
+          <div class="auth-split-label-row">
+            <label for="auth-split-pass" class="auth-split-label">Password</label>
+            <button type="button" class="auth-split-link-btn" id="authSplitForgot">Forgot?</button>
+          </div>
+          <div class="auth-split-input-wrap">
+            <input 
+              type="password" 
+              id="auth-split-pass" 
+              name="password"
+              class="auth-split-input" 
+              placeholder="••••••••••••"
+              autocomplete="current-password"
+              required
+              aria-describedby="auth-split-pass-err"
+            >
+            <button 
+              type="button" 
+              class="auth-split-eye-btn" 
+              id="authSplitEye" 
+              aria-label="Toggle password visibility" 
+              aria-pressed="false"
+            >
+              <svg class="eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg class="eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" hidden>
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </button>
+          </div>
+          <div class="auth-split-error" id="auth-split-pass-err" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Utilities -->
+        <div class="auth-split-utils" id="authSplitUtils">
+          <label class="auth-split-check-wrap">
+            <input type="checkbox" id="auth-split-remember" name="remember" class="auth-split-checkbox">
+            <span class="auth-split-check-box"></span>
+            <span class="auth-split-check-text">Remember workstation</span>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="auth-split-submit" id="authSplitSubmit">
+          <span id="authSplitSubmitText">Sign In to Workspace</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+
+        <!-- Social SSO divider -->
+        <div class="auth-split-divider">
+          <span>or sign in with</span>
+        </div>
+
+        <div class="auth-split-sso-row">
+          <button type="button" class="auth-split-sso-btn" data-sso="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </button>
+          <button type="button" class="auth-split-sso-btn" data-sso="Google">
+            <svg width="16" height="16" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+            </svg>
+            <span>Google</span>
+          </button>
+        </div>
+      </form>
+    </main>
+
+  </div>
+</div>

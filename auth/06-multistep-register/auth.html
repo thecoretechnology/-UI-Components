@@ -1,0 +1,249 @@
+<div class="auth-step-stage" data-auth="multistep-register">
+  <div class="auth-step-card">
+    
+    <!-- Header with 3-Stage Progress Indicator -->
+    <header class="auth-step-header">
+      <div class="auth-step-kicker">Enterprise Onboarding</div>
+      <h2 class="auth-step-title" id="authStepHeaderTitle">Create your workspace account</h2>
+      
+      <!-- Stepper Progress Bar -->
+      <nav class="auth-step-progress" aria-label="Registration Steps">
+        <div class="auth-step-progress-item is-active" id="authStepInd1" data-step="1">
+          <span class="auth-step-progress-num">1</span>
+          <span class="auth-step-progress-name">Credentials</span>
+        </div>
+        <div class="auth-step-progress-divider"></div>
+        <div class="auth-step-progress-item" id="authStepInd2" data-step="2">
+          <span class="auth-step-progress-num">2</span>
+          <span class="auth-step-progress-name">Organization</span>
+        </div>
+        <div class="auth-step-progress-divider"></div>
+        <div class="auth-step-progress-item" id="authStepInd3" data-step="3">
+          <span class="auth-step-progress-num">3</span>
+          <span class="auth-step-progress-name">Review</span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="auth-step-alert" id="authStepAlert" role="alert" aria-live="polite" hidden></div>
+
+    <form class="auth-step-form" id="authStepForm" novalidate>
+      
+      <!-- ================= STEP 1: CREDENTIALS ================= -->
+      <fieldset class="auth-step-panel is-active" id="authStepPanel1" aria-labelledby="authStepInd1">
+        <legend class="auth-step-legend">Account Credentials</legend>
+        
+        <div class="auth-step-field">
+          <label for="auth-step-email" class="auth-step-label">Work Email</label>
+          <input 
+            type="email" 
+            id="auth-step-email" 
+            name="email"
+            class="auth-step-input" 
+            placeholder="alexandra@company.com"
+            autocomplete="email"
+            required
+            aria-describedby="auth-step-email-err"
+          >
+          <div class="auth-step-error" id="auth-step-email-err" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div class="auth-step-field">
+          <label for="auth-step-pass" class="auth-step-label">Choose Password</label>
+          <div class="auth-step-input-wrap">
+            <input 
+              type="password" 
+              id="auth-step-pass" 
+              name="password"
+              class="auth-step-input" 
+              placeholder="Minimum 8 characters"
+              autocomplete="new-password"
+              required
+              aria-describedby="auth-step-pass-err"
+            >
+            <button 
+              type="button" 
+              class="auth-step-eye-btn" 
+              id="authStepEyePass" 
+              aria-label="Toggle password visibility" 
+              aria-pressed="false"
+            >
+              <svg class="eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg class="eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" hidden>
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </button>
+          </div>
+          <div class="auth-step-error" id="auth-step-pass-err" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div class="auth-step-field">
+          <label for="auth-step-confirm" class="auth-step-label">Confirm Password</label>
+          <div class="auth-step-input-wrap">
+            <input 
+              type="password" 
+              id="auth-step-confirm" 
+              name="confirmPassword"
+              class="auth-step-input" 
+              placeholder="Repeat your password"
+              autocomplete="new-password"
+              required
+              aria-describedby="auth-step-confirm-err"
+            >
+            <button 
+              type="button" 
+              class="auth-step-eye-btn" 
+              id="authStepEyeConfirm" 
+              aria-label="Toggle confirm password visibility" 
+              aria-pressed="false"
+            >
+              <svg class="eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg class="eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" hidden>
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </button>
+          </div>
+          <div class="auth-step-error" id="auth-step-confirm-err" role="alert" aria-live="polite"></div>
+        </div>
+      </fieldset>
+
+      <!-- ================= STEP 2: ORGANIZATION ================= -->
+      <fieldset class="auth-step-panel" id="authStepPanel2" aria-labelledby="authStepInd2" hidden>
+        <legend class="auth-step-legend">Organization Profile</legend>
+        
+        <div class="auth-step-grid-2">
+          <div class="auth-step-field">
+            <label for="auth-step-name" class="auth-step-label">Your Full Name</label>
+            <input 
+              type="text" 
+              id="auth-step-name" 
+              name="fullname"
+              class="auth-step-input" 
+              placeholder="Alexandra Vance"
+              autocomplete="name"
+            >
+            <div class="auth-step-error" id="auth-step-name-err" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div class="auth-step-field">
+            <label for="auth-step-company" class="auth-step-label">Organization Name</label>
+            <input 
+              type="text" 
+              id="auth-step-company" 
+              name="company"
+              class="auth-step-input" 
+              placeholder="Acme Global Inc."
+              autocomplete="organization"
+            >
+            <div class="auth-step-error" id="auth-step-company-err" role="alert" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="auth-step-field">
+          <label for="auth-step-role" class="auth-step-label">Primary Role</label>
+          <select id="auth-step-role" name="role" class="auth-step-select">
+            <option value="Engineering Lead">Engineering Lead</option>
+            <option value="Product Manager">Product Manager</option>
+            <option value="Security Architect">Security Architect</option>
+            <option value="Design Director">Design Director</option>
+            <option value="Executive Sponsor">Executive Sponsor</option>
+          </select>
+        </div>
+
+        <div class="auth-step-field">
+          <label class="auth-step-label">Team Size</label>
+          <div class="auth-step-team-pills" role="radiogroup" aria-label="Team Size">
+            <label class="auth-step-pill">
+              <input type="radio" name="teamSize" value="1-10" checked>
+              <span>1&ndash;10</span>
+            </label>
+            <label class="auth-step-pill">
+              <input type="radio" name="teamSize" value="11-50">
+              <span>11&ndash;50</span>
+            </label>
+            <label class="auth-step-pill">
+              <input type="radio" name="teamSize" value="51-200">
+              <span>51&ndash;200</span>
+            </label>
+            <label class="auth-step-pill">
+              <input type="radio" name="teamSize" value="200+">
+              <span>200+</span>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ================= STEP 3: REVIEW & CONFIRM ================= -->
+      <fieldset class="auth-step-panel" id="authStepPanel3" aria-labelledby="authStepInd3" hidden>
+        <legend class="auth-step-legend">Review & Confirm</legend>
+        
+        <!-- Summary Ledger -->
+        <div class="auth-step-summary-ledger">
+          <div class="auth-step-summary-row">
+            <span class="auth-step-summary-label">Account Email</span>
+            <span class="auth-step-summary-val" id="authStepSumEmail">&mdash;</span>
+          </div>
+          <div class="auth-step-summary-row">
+            <span class="auth-step-summary-label">Full Name</span>
+            <span class="auth-step-summary-val" id="authStepSumName">&mdash;</span>
+          </div>
+          <div class="auth-step-summary-row">
+            <span class="auth-step-summary-label">Organization</span>
+            <span class="auth-step-summary-val" id="authStepSumOrg">&mdash;</span>
+          </div>
+          <div class="auth-step-summary-row">
+            <span class="auth-step-summary-label">Role & Team</span>
+            <span class="auth-step-summary-val" id="authStepSumRole">&mdash;</span>
+          </div>
+        </div>
+
+        <div class="auth-step-field">
+          <label for="auth-step-region" class="auth-step-label">Primary Cloud Region</label>
+          <select id="auth-step-region" name="region" class="auth-step-select">
+            <option value="us-east-1">US East (N. Virginia &middot; Standard)</option>
+            <option value="eu-central-1">Europe Central (Frankfurt &middot; GDPR Strict)</option>
+            <option value="ap-southeast-1">Asia Pacific (Singapore &middot; Low Latency)</option>
+          </select>
+        </div>
+
+        <div class="auth-step-terms-box">
+          <label class="auth-step-terms-label">
+            <input type="checkbox" id="auth-step-terms" name="terms" class="auth-step-checkbox" required>
+            <span class="auth-step-checkbox-custom"></span>
+            <span class="auth-step-terms-text">I confirm these details and accept the master services agreement.</span>
+          </label>
+          <div class="auth-step-error" id="auth-step-terms-err" role="alert" aria-live="polite"></div>
+        </div>
+      </fieldset>
+
+      <!-- Step Navigation Footer Buttons -->
+      <div class="auth-step-nav-row">
+        <button type="button" class="auth-step-btn-back" id="authStepBtnBack" hidden>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+          </svg>
+          <span>Previous Step</span>
+        </button>
+
+        <button type="button" class="auth-step-btn-next" id="authStepBtnNext">
+          <span>Continue</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+
+        <button type="submit" class="auth-step-btn-submit" id="authStepBtnSubmit" hidden>
+          <span>Complete Registration</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>

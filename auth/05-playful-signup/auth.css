@@ -1,0 +1,485 @@
+/* 05: Playful Sign-up Styles */
+.auth-play-stage {
+  --ap-bg: #fffbeb;
+  --ap-card: #ffffff;
+  --ap-ink: #1c1917;
+  --ap-muted: #78716c;
+  --ap-accent: #ea580c;
+  --ap-accent-hover: #c2410c;
+  --ap-warm: #fed7aa;
+  --ap-border: #fde68a;
+  --ap-border-field: #e7e5e4;
+  --ap-error: #dc2626;
+  --ap-success: #16a34a;
+
+  background-color: var(--ap-bg);
+  padding: 48px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--ap-ink);
+}
+
+.auth-play-card {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--ap-card);
+  border: 2px solid #1c1917;
+  border-radius: 16px;
+  box-shadow: 6px 6px 0 #1c1917;
+  padding: 36px 36px 32px;
+  box-sizing: border-box;
+}
+
+/* Header & Mascot */
+.auth-play-header {
+  margin-bottom: 24px;
+}
+
+.auth-play-mascot-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.auth-play-mascot {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: #ffedd5;
+  border: 2px solid #1c1917;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-play-mascot-face {
+  position: relative;
+  width: 26px;
+  height: 20px;
+}
+
+.auth-play-eye {
+  position: absolute;
+  top: 3px;
+  width: 4px;
+  height: 4px;
+  background: #1c1917;
+  border-radius: 50%;
+}
+
+.auth-play-eye.left { left: 4px; }
+.auth-play-eye.right { right: 4px; }
+
+.auth-play-smile {
+  position: absolute;
+  bottom: 2px;
+  left: 6px;
+  width: 14px;
+  height: 7px;
+  border-bottom: 2.5px solid #1c1917;
+  border-radius: 0 0 14px 14px;
+}
+
+.auth-play-sparkle {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  font-size: 16px;
+  color: #ea580c;
+}
+
+.auth-play-badge {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ea580c;
+  background: #ffedd5;
+  border: 1.5px solid #fdba74;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.auth-play-title {
+  font-size: clamp(24px, 4vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1c1917;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.auth-play-subtitle {
+  font-size: 14px;
+  color: var(--ap-muted);
+  line-height: 1.5;
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Alert Notification */
+.auth-play-alert {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.auth-play-alert[hidden] {
+  display: none !important;
+}
+
+.auth-play-alert.is-success {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1.5px solid #86efac;
+}
+
+.auth-play-alert.is-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1.5px solid #fca5a5;
+}
+
+/* Form Styles */
+.auth-play-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-play-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-play-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-play-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1c1917;
+}
+
+.auth-play-handle-status {
+  font-size: 11px;
+  font-weight: 700;
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 1px 7px;
+  border-radius: 4px;
+  display: none;
+}
+
+.auth-play-handle-status.is-visible {
+  display: inline-block;
+}
+
+/* Role Pills */
+.auth-play-roles {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.auth-play-role-pill {
+  position: relative;
+  cursor: pointer;
+}
+
+.auth-play-role-pill input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.auth-play-role-pill span {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 6px 12px;
+  background-color: #fafaf9;
+  border: 1.5px solid #e7e5e4;
+  border-radius: 999px;
+  color: #44403c;
+  transition: all 120ms ease;
+  user-select: none;
+}
+
+.auth-play-role-pill:hover span {
+  border-color: #d6d3d1;
+}
+
+.auth-play-role-pill input:checked + span {
+  background-color: #ffedd5;
+  border-color: #ea580c;
+  color: #ea580c;
+}
+
+/* Inputs & Group */
+.auth-play-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.auth-play-input-group {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1.5px solid #d6d3d1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 140ms ease;
+}
+
+.auth-play-input-group:focus-within {
+  border-color: #ea580c;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.12);
+}
+
+.auth-play-at {
+  padding: 10px 10px 10px 14px;
+  font-weight: 700;
+  color: #a8a29e;
+  user-select: none;
+}
+
+.auth-play-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #1c1917;
+  background-color: #ffffff;
+  border: 1.5px solid #d6d3d1;
+  border-radius: 8px;
+  outline: none;
+  font-family: 'Inter', -apple-system, sans-serif;
+  box-sizing: border-box;
+  transition: all 140ms ease;
+}
+
+.auth-play-input.has-prefix {
+  border: none;
+  padding-left: 2px;
+}
+
+.auth-play-input:focus {
+  border-color: #ea580c;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.12);
+}
+
+.auth-play-input.is-invalid {
+  border-color: var(--ap-error) !important;
+  background-color: #fffbfb;
+}
+
+.auth-play-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.auth-play-input-wrap .auth-play-input {
+  padding-right: 42px;
+}
+
+.auth-play-eye-btn {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: #78716c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-play-eye-btn:hover {
+  color: #1c1917;
+}
+
+.auth-play-eye-btn svg[hidden] {
+  display: none !important;
+}
+
+/* Password Strength Meter */
+.auth-play-meter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.auth-play-meter-bar {
+  flex: 1;
+  height: 4px;
+  background: #e7e5e4;
+  border-radius: 2px;
+  transition: background-color 160ms ease;
+}
+
+.auth-play-meter-bar.active-weak { background-color: #ef4444; }
+.auth-play-meter-bar.active-medium { background-color: #f59e0b; }
+.auth-play-meter-bar.active-strong { background-color: #16a34a; }
+
+.auth-play-meter-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: #78716c;
+  min-width: 80px;
+  text-align: right;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.auth-play-error {
+  font-size: 12px;
+  color: var(--ap-error);
+  font-weight: 500;
+  min-height: 15px;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Terms Checkbox */
+.auth-play-terms-row {
+  margin-top: 2px;
+}
+
+.auth-play-check-wrap {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.auth-play-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.auth-play-check-box {
+  width: 17px;
+  height: 17px;
+  border: 1.5px solid #1c1917;
+  border-radius: 4px;
+  background: #ffffff;
+  display: inline-block;
+  margin-top: 1px;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 120ms ease;
+}
+
+.auth-play-checkbox:checked + .auth-play-check-box {
+  background: #ea580c;
+  border-color: #1c1917;
+}
+
+.auth-play-checkbox:checked + .auth-play-check-box::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.auth-play-check-text {
+  font-size: 12.5px;
+  color: #44403c;
+  line-height: 1.45;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Submit Action */
+.auth-play-submit {
+  width: 100%;
+  padding: 13px 20px;
+  background-color: #ea580c;
+  color: #ffffff;
+  border: 2px solid #1c1917;
+  border-radius: 10px;
+  font-size: 14.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 3px 3px 0 #1c1917;
+  font-family: inherit;
+  transition: transform 100ms ease, box-shadow 100ms ease, background-color 120ms ease;
+  margin-top: 6px;
+}
+
+.auth-play-submit:hover {
+  background-color: #c2410c;
+}
+
+.auth-play-submit:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #1c1917;
+}
+
+.auth-play-btn-flare {
+  font-size: 15px;
+}
+
+/* Footer Link */
+.auth-play-footer {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1.5px dashed #e7e5e4;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ap-muted);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.auth-play-login-link {
+  color: #ea580c;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: 4px;
+}
+
+/* Responsive & Container */
+@container (max-width: 520px) {
+  .auth-play-card {
+    padding: 28px 20px;
+  }
+  .auth-play-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .auth-play-card {
+    padding: 28px 20px;
+  }
+  .auth-play-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
