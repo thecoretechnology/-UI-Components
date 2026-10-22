@@ -1,0 +1,728 @@
+/* 09: Credit / Token Bundles Styles - Modern Fintech & Token Wallet Aesthetic */
+
+.pr-bundle-stage {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 52px 24px 60px;
+  background-color: #faf8f5;
+  background-image: 
+    radial-gradient(ellipse at 50% -10%, rgba(124, 58, 237, 0.08) 0%, rgba(250, 248, 245, 0) 65%),
+    radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.05) 0%, rgba(250, 248, 245, 0) 50%);
+  color: #1c1917;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  container-type: inline-size;
+}
+
+.pr-bundle-stage *,
+.pr-bundle-stage *::before,
+.pr-bundle-stage *::after {
+  box-sizing: border-box;
+}
+
+.pr-bundle-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Top Fintech Tenant Wallet Bar */
+.pr-bundle-wallet-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border: 1px solid #e7e3dc;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-bottom: 36px;
+  box-shadow: 0 2px 8px -2px rgba(28, 25, 23, 0.04);
+}
+
+.pr-bundle-wallet-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pr-bundle-wallet-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  color: #7c3aed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pr-bundle-wallet-org {
+  display: block;
+  font-size: 13px;
+  color: #44403c;
+}
+
+.pr-bundle-wallet-org strong {
+  color: #1c1917;
+  font-weight: 700;
+}
+
+.pr-bundle-wallet-sub {
+  display: block;
+  font-size: 11px;
+  color: #78716c;
+}
+
+.pr-bundle-wallet-sub code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: #f5f5f4;
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: #57534e;
+}
+
+.pr-bundle-wallet-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pr-bundle-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.pr-bundle-stat-label {
+  color: #78716c;
+  font-size: 12px;
+}
+
+.pr-bundle-stat-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #92400e;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pr-bundle-stat-value strong {
+  color: #78350f;
+  font-weight: 700;
+}
+
+.pr-bundle-stat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 4px 10px;
+  border-radius: 9999px;
+}
+
+.pr-bundle-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+/* Header */
+.pr-bundle-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+.pr-bundle-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7c3aed;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.pr-bundle-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #1c1917;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.pr-bundle-subtitle {
+  font-size: 15px;
+  color: #57534e;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Feedback Notice */
+.pr-bundle-alert {
+  padding: 12px 18px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* 4-Column Grid */
+.pr-bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+/* Card */
+.pr-bundle-card {
+  background: #ffffff;
+  border: 1px solid #e7e3dc;
+  border-radius: 14px;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  box-shadow: 0 2px 8px -2px rgba(28, 25, 23, 0.04);
+}
+
+.pr-bundle-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px -4px rgba(124, 58, 237, 0.08), 0 2px 8px -2px rgba(28, 25, 23, 0.06);
+}
+
+.pr-bundle-card.is-popular {
+  border-color: #7c3aed;
+  box-shadow: 0 8px 28px -4px rgba(124, 58, 237, 0.15), 0 2px 10px -2px rgba(124, 58, 237, 0.1);
+  background: linear-gradient(180deg, #ffffff 0%, #faf8ff 100%);
+}
+
+.pr-bundle-card.is-recommended-fit {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+}
+
+.pr-bundle-pop-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.35);
+}
+
+.pr-bundle-coin-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  height: 48px;
+}
+
+.pr-bundle-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.pr-bundle-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1917;
+}
+
+.pr-bundle-discount-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: #f5f5f4;
+  color: #57534e;
+  border: 1px solid #e7e5e4;
+}
+
+.pr-bundle-discount-badge.is-saving {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+}
+
+.pr-bundle-discount-badge.is-popular-badge {
+  background: #f5f3ff;
+  color: #6d28d9;
+  border-color: #ddd6fe;
+}
+
+.pr-bundle-qty {
+  margin-bottom: 14px;
+}
+
+.pr-bundle-qty-num {
+  display: block;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1c1917;
+  line-height: 1.1;
+}
+
+.pr-bundle-qty-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #78716c;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.pr-bundle-pricing {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f0ede6;
+  margin-bottom: 14px;
+}
+
+.pr-bundle-total {
+  display: flex;
+  align-items: flex-start;
+  color: #1c1917;
+}
+
+.pr-bundle-curr {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2px;
+  color: #57534e;
+}
+
+.pr-bundle-amt {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pr-bundle-unit-box {
+  text-align: right;
+}
+
+.pr-bundle-unit-rate {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7c3aed;
+}
+
+.pr-bundle-unit-text {
+  display: block;
+  font-size: 10px;
+  color: #78716c;
+}
+
+.pr-bundle-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.pr-bundle-specs li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #44403c;
+}
+
+.pr-bundle-specs li svg {
+  flex-shrink: 0;
+}
+
+/* Action Buttons */
+.pr-bundle-btn {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.pr-bundle-btn-outline {
+  background: #ffffff;
+  color: #1c1917;
+  border-color: #d6d3d1;
+}
+
+.pr-bundle-btn-outline:hover {
+  background: #f5f5f4;
+  border-color: #a8a29e;
+}
+
+.pr-bundle-btn-accent {
+  background: #7c3aed;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.35);
+}
+
+.pr-bundle-btn-accent:hover {
+  background: #6d28d9;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.45);
+}
+
+/* Interactive Recommender Workbench */
+.pr-bundle-recommender {
+  background: #ffffff;
+  border: 1px solid #e7e3dc;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 10px -2px rgba(28, 25, 23, 0.04);
+}
+
+.pr-bundle-rec-header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0ede6;
+}
+
+.pr-bundle-rec-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pr-bundle-rec-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7c3aed;
+  margin-bottom: 4px;
+}
+
+.pr-bundle-rec-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c1917;
+  margin: 0 0 4px;
+}
+
+.pr-bundle-rec-desc {
+  font-size: 13px;
+  color: #78716c;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pr-bundle-rec-workbench {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.pr-bundle-rec-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pr-bundle-rec-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pr-bundle-rec-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #44403c;
+}
+
+.pr-bundle-rec-select {
+  padding: 9px 12px;
+  font-size: 13px;
+  border: 1px solid #d6d3d1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1c1917;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.pr-bundle-rec-select:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
+}
+
+.pr-bundle-rec-slider-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pr-bundle-rec-slider-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pr-bundle-vol-badge {
+  font-size: 12px;
+  color: #7c3aed;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.pr-bundle-slider {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e7e5e4;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+}
+
+.pr-bundle-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #7c3aed;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.4);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.pr-bundle-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.pr-bundle-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #7c3aed;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.4);
+  cursor: pointer;
+}
+
+.pr-bundle-slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #a8a29e;
+  margin-top: 4px;
+}
+
+/* Summary Panel */
+.pr-bundle-rec-summary-panel {
+  background: #faf8ff;
+  border: 1px solid #e9d5ff;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pr-bundle-calc-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pr-bundle-calc-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b21a8;
+}
+
+.pr-bundle-rec-credits {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1c1917;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.pr-bundle-rec-unit {
+  font-size: 13px;
+  font-weight: 600;
+  color: #78716c;
+}
+
+.pr-bundle-rec-pack-val {
+  font-size: 15px;
+  font-weight: 700;
+  color: #7c3aed;
+}
+
+.pr-bundle-rec-footer-tip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #047857;
+  padding-top: 8px;
+  border-top: 1px dashed #d8b4fe;
+}
+
+/* Assurance Badges */
+.pr-bundle-assurances {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.pr-bundle-assure-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e7e3dc;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.pr-bundle-assure-item strong {
+  display: block;
+  font-size: 13px;
+  color: #1c1917;
+  margin-bottom: 2px;
+}
+
+.pr-bundle-assure-item p {
+  font-size: 12px;
+  color: #78716c;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Footnote */
+.pr-bundle-footer {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.pr-bundle-note {
+  font-size: 12px;
+  color: #a8a29e;
+  margin: 0;
+}
+
+/* Responsive & Container Queries */
+@container (max-width: 900px) {
+  .pr-bundle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pr-bundle-rec-workbench {
+    grid-template-columns: 1fr;
+  }
+  .pr-bundle-assurances {
+    grid-template-columns: 1fr;
+  }
+}
+
+@container (max-width: 540px) {
+  .pr-bundle-grid {
+    grid-template-columns: 1fr;
+  }
+  .pr-bundle-wallet-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pr-bundle-wallet-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 900px) {
+  .pr-bundle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pr-bundle-rec-workbench {
+    grid-template-columns: 1fr;
+  }
+  .pr-bundle-assurances {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .pr-bundle-grid {
+    grid-template-columns: 1fr;
+  }
+}

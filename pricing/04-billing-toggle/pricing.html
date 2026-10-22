@@ -1,0 +1,178 @@
+<div class="pr-toggle-stage" data-pricing="billing-toggle">
+  <div class="pr-toggle-container">
+    
+    <!-- Header -->
+    <header class="pr-toggle-header">
+      <span class="pr-toggle-kicker">Flexible Cadence</span>
+      <h2 class="pr-toggle-title">Simple Pricing for Growing Teams</h2>
+      <p class="pr-toggle-subtitle">
+        Switch between monthly flexibility or annual efficiency. Save 20% on all plans when committing annually.
+      </p>
+
+      <!-- Billing Cycle Toggle Switch -->
+      <div class="pr-toggle-switch-wrap">
+        <span class="pr-toggle-cycle-label" id="prToggleMonthlyLabel">Monthly</span>
+        <button 
+          type="button" 
+          id="prToggleSwitch" 
+          class="pr-toggle-switch" 
+          role="switch" 
+          aria-checked="false" 
+          aria-labelledby="prToggleMonthlyLabel prToggleAnnualLabel"
+        >
+          <span class="pr-toggle-switch-handle" aria-hidden="true"></span>
+        </button>
+        <span class="pr-toggle-cycle-label" id="prToggleAnnualLabel">
+          Annual
+          <span class="pr-toggle-discount-badge">Save 20%</span>
+        </span>
+      </div>
+    </header>
+
+    <!-- Feedback Notice -->
+    <div id="prToggleAlert" class="pr-toggle-alert" role="alert" aria-live="polite" hidden></div>
+
+    <!-- Cards Comparison Grid -->
+    <div class="pr-toggle-grid" role="region" aria-label="Plans with Billing Switch">
+      
+      <!-- Plan 1: Starter -->
+      <article class="pr-toggle-card" data-plan="Starter">
+        <div class="pr-toggle-card-head">
+          <h3 class="pr-toggle-card-title">Starter</h3>
+          <p class="pr-toggle-card-desc">Essential toolchain for early-stage builders and pilots.</p>
+          <div class="pr-toggle-price-box">
+            <span class="pr-toggle-curr">$</span>
+            <span class="pr-toggle-price-num" data-monthly="18" data-annual="14">18</span>
+            <span class="pr-toggle-period">/ month</span>
+          </div>
+          <span class="pr-toggle-cadence" data-cadence-monthly="Billed monthly ($216 / yr)" data-cadence-annual="Billed $168 annually (Save $48 / yr)">
+            Billed monthly ($216 / yr)
+          </span>
+        </div>
+
+        <button type="button" class="pr-toggle-btn pr-toggle-btn-outline" data-plan="Starter">
+          <span>Choose Starter</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <ul class="pr-toggle-features">
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Up to 3 team collaborators</span>
+          </li>
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Standard CI/CD execution pipeline</span>
+          </li>
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>14-day telemetry log retention</span>
+          </li>
+          <li class="pr-toggle-disabled">
+            <svg class="pr-toggle-dash" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <span>Custom domain routing</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Plan 2: Growth (Featured) -->
+      <article class="pr-toggle-card is-primary" data-plan="Growth">
+        <div class="pr-toggle-badge-top" aria-hidden="true">Recommended</div>
+        <div class="pr-toggle-card-head">
+          <h3 class="pr-toggle-card-title">Growth</h3>
+          <p class="pr-toggle-card-desc">For fast-moving teams requiring scale and automation.</p>
+          <div class="pr-toggle-price-box">
+            <span class="pr-toggle-curr">$</span>
+            <span class="pr-toggle-price-num" data-monthly="48" data-annual="38">48</span>
+            <span class="pr-toggle-period">/ month</span>
+          </div>
+          <span class="pr-toggle-cadence" data-cadence-monthly="Billed monthly ($576 / yr)" data-cadence-annual="Billed $456 annually (Save $120 / yr)">
+            Billed monthly ($576 / yr)
+          </span>
+        </div>
+
+        <button type="button" class="pr-toggle-btn pr-toggle-btn-primary" data-plan="Growth">
+          <span>Choose Growth</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <ul class="pr-toggle-features">
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Up to 15 team collaborators</span>
+          </li>
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>High-concurrency parallel builders</span>
+          </li>
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>90-day telemetry log retention</span>
+          </li>
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Custom domain SSL routing</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Plan 3: Scale -->
+      <article class="pr-toggle-card" data-plan="Scale">
+        <div class="pr-toggle-card-head">
+          <h3 class="pr-toggle-card-title">Scale</h3>
+          <p class="pr-toggle-card-desc">For high-throughput organizations with strict uptime SLAs.</p>
+          <div class="pr-toggle-price-box">
+            <span class="pr-toggle-curr">$</span>
+            <span class="pr-toggle-price-num" data-monthly="120" data-annual="96">120</span>
+            <span class="pr-toggle-period">/ month</span>
+          </div>
+          <span class="pr-toggle-cadence" data-cadence-monthly="Billed monthly ($1,440 / yr)" data-cadence-annual="Billed $1,152 annually (Save $288 / yr)">
+            Billed monthly ($1,440 / yr)
+          </span>
+        </div>
+
+        <button type="button" class="pr-toggle-btn pr-toggle-btn-outline" data-plan="Scale">
+          <span>Choose Scale</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <ul class="pr-toggle-features">
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Unlimited team collaborators</span>
+          </li>
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Dedicated isolated build runners</span>
+          </li>
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>365-day cold archive storage</span>
+          </li>
+          <li>
+            <svg class="pr-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>SAML / Okta SSO &amp; 99.95% SLA</span>
+          </li>
+        </ul>
+      </article>
+
+    </div>
+
+    <!-- Footnote -->
+    <footer class="pr-toggle-footer">
+      <p class="pr-toggle-note">
+        All calculations are based on actual sample data (20% off). Demonstrative billing simulation &bull; Zero real charges.
+      </p>
+    </footer>
+
+  </div>
+</div>

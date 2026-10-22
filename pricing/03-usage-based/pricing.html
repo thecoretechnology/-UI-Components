@@ -1,0 +1,180 @@
+<div class="pr-usage-stage" data-pricing="usage-based">
+  <div class="pr-usage-container">
+    
+    <!-- Header -->
+    <header class="pr-usage-header">
+      <div class="pr-usage-badge-wrap">
+        <span class="pr-usage-badge">Pay-As-You-Go Ingestion</span>
+        <span class="pr-usage-status-live"><span class="pr-usage-ping"></span> Live Metric Engine</span>
+      </div>
+      <h2 class="pr-usage-title">Transparent Volume Ingestion Pricing</h2>
+      <p class="pr-usage-subtitle">
+        Zero upfront commitments or platform seat taxes. Every account starts with 100,000 complimentary API calls each month, billing strictly for additional volume at a flat rate of $0.0020 per 1,000 requests.
+      </p>
+    </header>
+
+    <!-- Feedback Notice -->
+    <div id="prUsageAlert" class="pr-usage-alert" role="alert" aria-live="polite" hidden></div>
+
+    <!-- 2-Column Split Workbench Layout -->
+    <div class="pr-usage-workbench">
+      
+      <!-- Left Column: Controls, Ingestion Slider & Volume Presets -->
+      <div class="pr-usage-controls-card">
+        
+        <div class="pr-usage-unit-callout">
+          <div class="pr-usage-unit-left">
+            <span class="pr-usage-unit-label">Standard Ingestion Unit Rate</span>
+            <div class="pr-usage-unit-price">
+              <span class="pr-usage-unit-dollar">$0.0020</span>
+              <span class="pr-usage-unit-per">/ 1,000 calls</span>
+            </div>
+          </div>
+          <div class="pr-usage-unit-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>First 100K calls Free</span>
+          </div>
+        </div>
+
+        <!-- Slider Section -->
+        <div class="pr-usage-slider-box">
+          <div class="pr-usage-slider-top">
+            <div>
+              <label for="prUsageSlider" class="pr-usage-input-title">Monthly Projected Traffic</label>
+              <span class="pr-usage-input-desc">Drag the scrubber to model your service throughput</span>
+            </div>
+            <div class="pr-usage-vol-tag">
+              <span id="prUsageVolumeDisplay" class="pr-usage-vol-num">5,000,000</span>
+              <span class="pr-usage-vol-sub">calls / mo</span>
+            </div>
+          </div>
+
+          <div class="pr-usage-range-wrap">
+            <input 
+              type="range" 
+              id="prUsageSlider" 
+              class="pr-usage-range" 
+              min="100000" 
+              max="50000000" 
+              step="100000" 
+              value="5000000"
+              aria-label="Monthly API request volume slider"
+            >
+            <div class="pr-usage-ticks">
+              <span>100K (Free)</span>
+              <span>10M</span>
+              <span>25M</span>
+              <span>50M (Cluster Max)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Volume Presets -->
+        <div class="pr-usage-preset-group">
+          <span class="pr-usage-preset-title">Jump to Volume Archetype:</span>
+          <div class="pr-usage-preset-btns" role="group" aria-label="Preset traffic volumes">
+            <button type="button" class="pr-usage-preset-btn" data-volume="100000">100K (Free)</button>
+            <button type="button" class="pr-usage-preset-btn" data-volume="1000000">1M Calls</button>
+            <button type="button" class="pr-usage-preset-btn is-active" data-volume="5000000">5M Calls</button>
+            <button type="button" class="pr-usage-preset-btn" data-volume="20000000">20M Calls</button>
+            <button type="button" class="pr-usage-preset-btn" data-volume="50000000">50M Calls</button>
+          </div>
+        </div>
+
+        <!-- Technical Telemetry Notes -->
+        <div class="pr-usage-specs-grid">
+          <div class="pr-usage-spec-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            <div>
+              <strong>Sub-Millisecond Metering</strong>
+              <p>Telemetry syncs via local edge daemon without adding request latency.</p>
+            </div>
+          </div>
+          <div class="pr-usage-spec-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <div>
+              <strong>Configurable Budget Caps</strong>
+              <p>Hard limits and automated webhooks alert your ops team at 80% and 95% spend.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Simulated Cloud Invoice Ledger -->
+      <div class="pr-usage-ledger-card">
+        <div class="pr-usage-ledger-head">
+          <div>
+            <h3 class="pr-usage-ledger-title">Cloud Invoice Simulation</h3>
+            <span class="pr-usage-ledger-sub">Current Billing Cycle &bull; Calendar Month</span>
+          </div>
+          <span class="pr-usage-currency-tag">USD ($)</span>
+        </div>
+
+        <div class="pr-usage-ledger-rows">
+          <div class="pr-usage-row">
+            <div class="pr-usage-row-desc">
+              <span class="pr-usage-item-name">Base Cluster Provisioning</span>
+              <span class="pr-usage-item-detail">Shared multi-region edge mesh</span>
+            </div>
+            <span class="pr-usage-row-val">$0.00</span>
+          </div>
+
+          <div class="pr-usage-row">
+            <div class="pr-usage-row-desc">
+              <span class="pr-usage-item-name">Complimentary Quota</span>
+              <span class="pr-usage-item-detail">First 100,000 requests/mo</span>
+            </div>
+            <span class="pr-usage-row-val pr-usage-waived">-$0.20 (Waived)</span>
+          </div>
+
+          <div class="pr-usage-row">
+            <div class="pr-usage-row-desc">
+              <span class="pr-usage-item-name" id="prUsageBillableCallsLabel">Billable Ingestion (4,900,000 calls &times; $0.0020/1k)</span>
+              <span class="pr-usage-item-detail">Metered edge network ingestion</span>
+            </div>
+            <span class="pr-usage-row-val pr-usage-bold" id="prUsageBillableAmount">$9.80</span>
+          </div>
+        </div>
+
+        <!-- Total Box -->
+        <div class="pr-usage-total-panel">
+          <div class="pr-usage-total-meta">
+            <span class="pr-usage-total-heading">Estimated Monthly Total</span>
+            <span class="pr-usage-total-cadence">Billed on the 1st of each month</span>
+          </div>
+          <div class="pr-usage-total-cost">
+            <span class="pr-usage-currency">$</span>
+            <span class="pr-usage-total-num" id="prUsageTotalAmount">$9.80</span>
+          </div>
+        </div>
+
+        <!-- Action & Mock Code -->
+        <div class="pr-usage-action-box">
+          <button type="button" id="prUsageKeyBtn" class="pr-usage-cta-btn">
+            <span>Generate Test Sandbox Token</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+          </button>
+          
+          <div class="pr-usage-mock-cli">
+            <span class="pr-usage-cli-prompt">$</span>
+            <code>curl -H "Authorization: Bearer test_metered_..." https://api.core.tech/v1/ingest</code>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Footnote -->
+    <footer class="pr-usage-footer">
+      <p class="pr-usage-note">
+        Illustrative usage-based telemetry model. Pure client-side simulation &bull; Zero credit cards or subscriptions charged.
+      </p>
+    </footer>
+
+  </div>
+</div>

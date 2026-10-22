@@ -1,0 +1,210 @@
+<div class="pr-matrix-stage" data-pricing="feature-matrix">
+  <div class="pr-matrix-container">
+    
+    <!-- Header -->
+    <header class="pr-matrix-header">
+      <span class="pr-matrix-kicker">Deep Comparison</span>
+      <h2 class="pr-matrix-title">Full Capability &amp; Feature Matrix</h2>
+      <p class="pr-matrix-subtitle">
+        A line-by-line inspection of specifications, operational limits, security guarantees, and governance policies across every edition.
+      </p>
+
+      <!-- Matrix Controls -->
+      <div class="pr-matrix-controls">
+        <label class="pr-matrix-diff-filter">
+          <input type="checkbox" id="prMatrixDiffToggle" class="pr-matrix-filter-check">
+          <span class="pr-matrix-filter-slider" aria-hidden="true"></span>
+          <span class="pr-matrix-filter-text">Show differences only</span>
+        </label>
+      </div>
+    </header>
+
+    <!-- Feedback Notice -->
+    <div id="prMatrixAlert" class="pr-matrix-alert" role="alert" aria-live="polite" hidden></div>
+
+    <!-- Table Wrapper with Horizontal Scroll Protection -->
+    <div class="pr-matrix-table-wrap" tabindex="0" role="region" aria-label="Feature Comparison Matrix (scroll horizontally if needed)">
+      <table class="pr-matrix-table">
+        <thead>
+          <tr>
+            <th class="pr-matrix-th-feature" scope="col">Capabilities &amp; Quotas</th>
+            <th class="pr-matrix-th-plan" scope="col">
+              <div class="pr-matrix-plan-col">
+                <span class="pr-matrix-col-tier">Standard</span>
+                <span class="pr-matrix-col-price">$24<span>/mo</span></span>
+                <button type="button" class="pr-matrix-col-btn" data-plan="Standard">Select Standard</button>
+              </div>
+            </th>
+            <th class="pr-matrix-th-plan is-highlight" scope="col">
+              <div class="pr-matrix-plan-col">
+                <span class="pr-matrix-pop-tag">Most Popular</span>
+                <span class="pr-matrix-col-tier">Pro Team</span>
+                <span class="pr-matrix-col-price">$79<span>/mo</span></span>
+                <button type="button" class="pr-matrix-col-btn is-primary" data-plan="Pro Team">Select Pro Team</button>
+              </div>
+            </th>
+            <th class="pr-matrix-th-plan" scope="col">
+              <div class="pr-matrix-plan-col">
+                <span class="pr-matrix-col-tier">Enterprise</span>
+                <span class="pr-matrix-col-price">$249<span>/mo</span></span>
+                <button type="button" class="pr-matrix-col-btn" data-plan="Enterprise">Select Enterprise</button>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Section 1: Core Compute & Execution -->
+          <tr class="pr-matrix-group-row">
+            <th colspan="4" scope="colgroup">Compute &amp; Execution Pipeline</th>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">Active Workspaces</td>
+            <td>5 workspaces</td>
+            <td class="is-highlight">25 workspaces</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">Parallel Build Runners</td>
+            <td>2 concurrent</td>
+            <td class="is-highlight">8 concurrent</td>
+            <td>32 concurrent dedicated</td>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">Monthly CI Compute Minutes</td>
+            <td>1,500 min</td>
+            <td class="is-highlight">10,000 min</td>
+            <td>100,000 min</td>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="false">
+            <td class="pr-matrix-label">Automated Webhook Triggers</td>
+            <td>
+              <span class="pr-matrix-status has-feature" title="Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="pr-matrix-sr">Included</span>
+              </span>
+            </td>
+            <td class="is-highlight">
+              <span class="pr-matrix-status has-feature" title="Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="pr-matrix-sr">Included</span>
+              </span>
+            </td>
+            <td>
+              <span class="pr-matrix-status has-feature" title="Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="pr-matrix-sr">Included</span>
+              </span>
+            </td>
+          </tr>
+
+          <!-- Section 2: Storage & Retention -->
+          <tr class="pr-matrix-group-row">
+            <th colspan="4" scope="colgroup">Data Storage &amp; Audit Retention</th>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">Telemetry Log Storage</td>
+            <td>14 days</td>
+            <td class="is-highlight">90 days</td>
+            <td>365 days hot + cold archive</td>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">Artifact Cache Quota</td>
+            <td>10 GB</td>
+            <td class="is-highlight">100 GB</td>
+            <td>1 TB dedicated NVMe</td>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">Snapshot Rollbacks</td>
+            <td>Last 3 versions</td>
+            <td class="is-highlight">Last 30 versions</td>
+            <td>Immutable point-in-time</td>
+          </tr>
+
+          <!-- Section 3: Security & Governance -->
+          <tr class="pr-matrix-group-row">
+            <th colspan="4" scope="colgroup">Security &amp; Compliance</th>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="false">
+            <td class="pr-matrix-label">End-to-End TLS Encryption</td>
+            <td>
+              <span class="pr-matrix-status has-feature" title="Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="pr-matrix-sr">Included</span>
+              </span>
+            </td>
+            <td class="is-highlight">
+              <span class="pr-matrix-status has-feature" title="Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="pr-matrix-sr">Included</span>
+              </span>
+            </td>
+            <td>
+              <span class="pr-matrix-status has-feature" title="Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="pr-matrix-sr">Included</span>
+              </span>
+            </td>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">SAML 2.0 / Okta SSO</td>
+            <td>
+              <span class="pr-matrix-status no-feature" title="Not Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                <span class="pr-matrix-sr">Not Included</span>
+              </span>
+            </td>
+            <td class="is-highlight">
+              <span class="pr-matrix-status has-feature" title="Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="pr-matrix-sr">Included</span>
+              </span>
+            </td>
+            <td>
+              <span class="pr-matrix-status has-feature" title="Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="pr-matrix-sr">Included</span>
+              </span>
+            </td>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">Custom Audit Trail Export</td>
+            <td>
+              <span class="pr-matrix-status no-feature" title="Not Included">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                <span class="pr-matrix-sr">Not Included</span>
+              </span>
+            </td>
+            <td class="is-highlight">CSV format</td>
+            <td>Automated SIEM streaming</td>
+          </tr>
+
+          <!-- Section 4: Support & Operations -->
+          <tr class="pr-matrix-group-row">
+            <th colspan="4" scope="colgroup">Support &amp; Guarantees</th>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">Service Level Agreement (SLA)</td>
+            <td>Best-effort</td>
+            <td class="is-highlight">99.9% uptime target</td>
+            <td>99.99% financially backed</td>
+          </tr>
+          <tr class="pr-matrix-row" data-diff="true">
+            <td class="pr-matrix-label">Support Response Time</td>
+            <td>Within 24 business hours</td>
+            <td class="is-highlight">Within 4 business hours</td>
+            <td>1-hour 24/7 dedicated lead</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footnote -->
+    <footer class="pr-matrix-footer">
+      <p class="pr-matrix-note">
+        All specifications reflect production release v2.4. Illustrative benchmark data &bull; Pure client-side simulation.
+      </p>
+    </footer>
+
+  </div>
+</div>

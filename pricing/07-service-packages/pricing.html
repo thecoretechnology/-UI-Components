@@ -1,0 +1,199 @@
+<div class="pr-pack-stage" data-pricing="service-packages">
+  <div class="pr-pack-container">
+    
+    <!-- Header -->
+    <header class="pr-pack-header">
+      <span class="pr-pack-tag">Studio Engagements</span>
+      <h2 class="pr-pack-title">Fixed-Scope Engineering &amp; Design Packages</h2>
+      <p class="pr-pack-subtitle">
+        Transparent deliverables, defined timelines, and predictable fixed investments for design systems, architecture overhauls, and frontend platforms.
+      </p>
+    </header>
+
+    <!-- Feedback Notice -->
+    <div id="prPackAlert" class="pr-pack-alert" role="alert" aria-live="polite" hidden></div>
+
+    <!-- SOW Details Dialog/Modal (Demo) -->
+    <div id="prPackModal" class="pr-pack-modal" role="dialog" aria-modal="true" aria-labelledby="prPackModalTitle" hidden>
+      <div class="pr-pack-modal-card">
+        <div class="pr-pack-modal-head">
+          <h3 id="prPackModalTitle" class="pr-pack-modal-title">Statement of Work (SOW) Scope</h3>
+          <button type="button" class="pr-pack-modal-close" id="prPackModalClose" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="pr-pack-modal-body" id="prPackModalContent">
+          <!-- Populated dynamically via JS -->
+        </div>
+        <div class="pr-pack-modal-foot">
+          <button type="button" class="pr-pack-modal-dismiss" id="prPackModalDismiss">Close Preview</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Service Package Cards Grid -->
+    <div class="pr-pack-grid">
+
+      <!-- Package 1: Sprint Audit -->
+      <article class="pr-pack-card" data-package="Design System Sprint">
+        <div class="pr-pack-card-top">
+          <div class="pr-pack-timeline-badge">2-Week Intensive</div>
+          <h3 class="pr-pack-card-name">Design System Sprint</h3>
+          <p class="pr-pack-card-lead">Rapid audit, token foundation, and atomic component scaffolding.</p>
+        </div>
+
+        <div class="pr-pack-price-block">
+          <span class="pr-pack-currency">$</span>
+          <span class="pr-pack-fee">4,800</span>
+          <span class="pr-pack-terms">Fixed project investment</span>
+        </div>
+
+        <div class="pr-pack-fit">
+          <span class="pr-pack-fit-label">Ideal For:</span>
+          <p class="pr-pack-fit-text">Early-stage teams needing brand unification before product launch.</p>
+        </div>
+
+        <div class="pr-pack-scope">
+          <span class="pr-pack-scope-title">Key Deliverables:</span>
+          <ul class="pr-pack-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Design token schema (Colors, Typography, Elevation)</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>15 Core atomic UI components (Figma + CSS)</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>WCAG AA accessibility compliance audit</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Implementation guide &amp; developer handoff workshop</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pr-pack-card-actions">
+          <button type="button" class="pr-pack-action-btn pr-pack-btn-secondary" data-action="sow" data-package="Design System Sprint">
+            <span>View Sample SOW</span>
+          </button>
+          <button type="button" class="pr-pack-action-btn pr-pack-btn-primary" data-action="inquire" data-package="Design System Sprint">
+            <span>Reserve Sprint Slot</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Package 2: Full Buildout (Featured) -->
+      <article class="pr-pack-card is-spotlight" data-package="Full Platform Overhaul">
+        <div class="pr-pack-spotlight-banner">Comprehensive Turnkey Package</div>
+        <div class="pr-pack-card-top">
+          <div class="pr-pack-timeline-badge">6-Week Turnkey</div>
+          <h3 class="pr-pack-card-name">Full Platform Overhaul</h3>
+          <p class="pr-pack-card-lead">End-to-end design system, full component library, and direct frontend integration.</p>
+        </div>
+
+        <div class="pr-pack-price-block">
+          <span class="pr-pack-currency">$</span>
+          <span class="pr-pack-fee">16,500</span>
+          <span class="pr-pack-terms">Milestone-based (50% / 50%)</span>
+        </div>
+
+        <div class="pr-pack-fit">
+          <span class="pr-pack-fit-label">Ideal For:</span>
+          <p class="pr-pack-fit-text">Scaling products replacing fragmented technical debt with a robust UI engine.</p>
+        </div>
+
+        <div class="pr-pack-scope">
+          <span class="pr-pack-scope-title">Key Deliverables:</span>
+          <ul class="pr-pack-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Complete Figma component kit with responsive variants</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Production-ready HTML/CSS/JS components</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Direct PR integration into your active frontend repo</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Documentation site, test harness &amp; 30-day bug warranty</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pr-pack-card-actions">
+          <button type="button" class="pr-pack-action-btn pr-pack-btn-secondary" data-action="sow" data-package="Full Platform Overhaul">
+            <span>View Sample SOW</span>
+          </button>
+          <button type="button" class="pr-pack-action-btn pr-pack-btn-primary" data-action="inquire" data-package="Full Platform Overhaul">
+            <span>Schedule Project Call</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Package 3: Fractional Retainer -->
+      <article class="pr-pack-card" data-package="Architecture Retainer">
+        <div class="pr-pack-card-top">
+          <div class="pr-pack-timeline-badge">Ongoing Partnership</div>
+          <h3 class="pr-pack-card-name">Architecture Retainer</h3>
+          <p class="pr-pack-card-lead">Continuous architectural leadership, UI review cycles, and team mentorship.</p>
+        </div>
+
+        <div class="pr-pack-price-block">
+          <span class="pr-pack-currency">$</span>
+          <span class="pr-pack-fee">6,200</span>
+          <span class="pr-pack-terms">Per month (3-month initial term)</span>
+        </div>
+
+        <div class="pr-pack-fit">
+          <span class="pr-pack-fit-label">Ideal For:</span>
+          <p class="pr-pack-fit-text">Engineering teams wanting dedicated senior staff design guidance on call.</p>
+        </div>
+
+        <div class="pr-pack-scope">
+          <span class="pr-pack-scope-title">Key Deliverables:</span>
+          <ul class="pr-pack-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>15 Dedicated hours/week of principal engineer advisory</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Weekly asynchronous and live code/design PR reviews</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Quarterly accessibility and performance audits</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Private Slack channel with direct same-day response SLA</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pr-pack-card-actions">
+          <button type="button" class="pr-pack-action-btn pr-pack-btn-secondary" data-action="sow" data-package="Architecture Retainer">
+            <span>View Sample SOW</span>
+          </button>
+          <button type="button" class="pr-pack-action-btn pr-pack-btn-primary" data-action="inquire" data-package="Architecture Retainer">
+            <span>Inquire Availability</span>
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Footnote -->
+    <footer class="pr-pack-footer">
+      <p class="pr-pack-note">
+        All package fees reflect sample agency benchmark rates. Transparent client-side demo — no real booking or billing occurs.
+      </p>
+    </footer>
+
+  </div>
+</div>

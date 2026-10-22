@@ -1,0 +1,195 @@
+<div class="pr-calc-stage" data-pricing="pricing-calculator">
+  <div class="pr-calc-container">
+    
+    <!-- Header -->
+    <header class="pr-calc-header">
+      <span class="pr-calc-pill">Dynamic Estimator</span>
+      <h2 class="pr-calc-title">Interactive Cost &amp; Infrastructure Calculator</h2>
+      <p class="pr-calc-subtitle">
+        Adjust active team seats, encrypted storage capacity, and support SLA levels to preview real-time monthly billing estimates.
+      </p>
+    </header>
+
+    <!-- Feedback Notice -->
+    <div id="prCalcAlert" class="pr-calc-alert" role="alert" aria-live="polite" hidden></div>
+
+    <!-- 2-Column Calculator Layout -->
+    <div class="pr-calc-layout">
+      
+      <!-- Left Column: Interactive Input Controls -->
+      <div class="pr-calc-controls-pane">
+        <h3 class="pr-calc-pane-title">Configure Resource Requirements</h3>
+
+        <!-- Input 1: Team Seats Slider -->
+        <div class="pr-calc-group">
+          <div class="pr-calc-group-head">
+            <label for="prCalcSeatsSlider" class="pr-calc-label">Active Team Seats</label>
+            <div class="pr-calc-val-badge">
+              <span id="prCalcSeatsVal">10</span> seats
+            </div>
+          </div>
+          <input 
+            type="range" 
+            id="prCalcSeatsSlider" 
+            class="pr-calc-slider" 
+            min="1" 
+            max="100" 
+            value="10" 
+            step="1"
+            aria-label="Active Team Seats slider"
+          >
+          <div class="pr-calc-scale-labels">
+            <span>1 seat</span>
+            <span>25 seats (15% off)</span>
+            <span>50 seats</span>
+            <span>100 seats</span>
+          </div>
+          <p class="pr-calc-hint">Standard rate is $12/seat/mo. Automatically saves 15% on seats when configuring 25+ seats.</p>
+        </div>
+
+        <!-- Input 2: Encrypted Storage Slider -->
+        <div class="pr-calc-group">
+          <div class="pr-calc-group-head">
+            <label for="prCalcStorageSlider" class="pr-calc-label">Encrypted NVMe Storage</label>
+            <div class="pr-calc-val-badge">
+              <span id="prCalcStorageVal">250</span> GB
+            </div>
+          </div>
+          <input 
+            type="range" 
+            id="prCalcStorageSlider" 
+            class="pr-calc-slider" 
+            min="50" 
+            max="2000" 
+            value="250" 
+            step="50"
+            aria-label="Encrypted Storage capacity in gigabytes"
+          >
+          <div class="pr-calc-scale-labels">
+            <span>50 GB (Base)</span>
+            <span>500 GB</span>
+            <span>1,000 GB</span>
+            <span>2,000 GB</span>
+          </div>
+          <p class="pr-calc-hint">First 50 GB included free. Additional storage is billed at $0.10 per GB/month.</p>
+        </div>
+
+        <!-- Input 3: SLA Level Radio Group -->
+        <div class="pr-calc-group">
+          <span class="pr-calc-label">Service Level Agreement (SLA)</span>
+          <div class="pr-calc-sla-grid" role="radiogroup" aria-label="Support SLA Level">
+            
+            <label class="pr-calc-sla-card">
+              <input type="radio" name="prCalcSla" class="pr-calc-sla-radio" value="0" checked>
+              <div class="pr-calc-sla-body">
+                <span class="pr-calc-sla-tier">Standard</span>
+                <span class="pr-calc-sla-cost">Included ($0)</span>
+                <span class="pr-calc-sla-time">24h response</span>
+              </div>
+            </label>
+
+            <label class="pr-calc-sla-card">
+              <input type="radio" name="prCalcSla" class="pr-calc-sla-radio" value="49">
+              <div class="pr-calc-sla-body">
+                <span class="pr-calc-sla-tier">Business 99.9%</span>
+                <span class="pr-calc-sla-cost">+$49 / mo</span>
+                <span class="pr-calc-sla-time">4h response SLA</span>
+              </div>
+            </label>
+
+            <label class="pr-calc-sla-card">
+              <input type="radio" name="prCalcSla" class="pr-calc-sla-radio" value="199">
+              <div class="pr-calc-sla-body">
+                <span class="pr-calc-sla-tier">Mission-Critical</span>
+                <span class="pr-calc-sla-cost">+$199 / mo</span>
+                <span class="pr-calc-sla-time">1h 24/7 dedicated</span>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <div class="pr-calc-reset-wrap">
+          <button type="button" id="prCalcResetBtn" class="pr-calc-reset-btn">Reset to Defaults</button>
+        </div>
+      </div>
+
+      <!-- Right Column: Transparent Ledger & Invoice Summary -->
+      <div class="pr-calc-ledger-pane">
+        <div class="pr-calc-ledger-card">
+          <h3 class="pr-calc-ledger-title">Estimated Monthly Breakdown</h3>
+          
+          <ul class="pr-calc-ledger-list">
+            <li class="pr-calc-ledger-item">
+              <div class="pr-calc-item-desc">
+                <span class="pr-calc-item-name">Seats Subtotal</span>
+                <span class="pr-calc-item-calc" id="prCalcSeatsMath">10 seats &times; $12</span>
+              </div>
+              <span class="pr-calc-item-price" id="prCalcSeatsTotal">$120.00</span>
+            </li>
+
+            <li class="pr-calc-ledger-item">
+              <div class="pr-calc-item-desc">
+                <span class="pr-calc-item-name">Storage Add-on</span>
+                <span class="pr-calc-item-calc" id="prCalcStorageMath">200 extra GB &times; $0.10</span>
+              </div>
+              <span class="pr-calc-item-price" id="prCalcStorageTotal">$20.00</span>
+            </li>
+
+            <li class="pr-calc-ledger-item">
+              <div class="pr-calc-item-desc">
+                <span class="pr-calc-item-name">SLA Tier</span>
+                <span class="pr-calc-item-calc" id="prCalcSlaName">Standard (Community)</span>
+              </div>
+              <span class="pr-calc-item-price" id="prCalcSlaTotal">$0.00</span>
+            </li>
+
+            <li class="pr-calc-ledger-item pr-calc-discount-row" id="prCalcDiscountRow" hidden>
+              <div class="pr-calc-item-desc">
+                <span class="pr-calc-item-name pr-calc-discount-label">Team Volume Discount</span>
+                <span class="pr-calc-item-calc">15% off team seats</span>
+              </div>
+              <span class="pr-calc-item-price pr-calc-discount-val" id="prCalcDiscountTotal">-$0.00</span>
+            </li>
+          </ul>
+
+          <div class="pr-calc-total-box">
+            <div class="pr-calc-total-meta">
+              <span class="pr-calc-total-label">Estimated Monthly Total</span>
+              <span class="pr-calc-total-sub">Billed on calendar month cycle</span>
+            </div>
+            <div class="pr-calc-total-amt">
+              <span class="pr-calc-total-curr">$</span>
+              <span class="pr-calc-total-num" id="prCalcGrandTotal">140</span>
+              <span class="pr-calc-total-period">/ mo</span>
+            </div>
+          </div>
+
+          <div class="pr-calc-formula-explainer">
+            <span class="pr-calc-explainer-tag">Formula Transparency</span>
+            <p id="prCalcFormulaText" class="pr-calc-formula-text">
+              Total = (10 &times; $12) + (200 &times; $0.10) + $0 = $140/mo
+            </p>
+          </div>
+
+          <button type="button" class="pr-calc-quote-btn" id="prCalcSaveQuoteBtn">
+            <span>Save Simulated Quote</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footnote -->
+    <footer class="pr-calc-footer">
+      <p class="pr-calc-note">
+        All calculations are based on clearly defined sample unit rates. Demonstrative simulation &bull; No active payment gateway.
+      </p>
+    </footer>
+
+  </div>
+</div>

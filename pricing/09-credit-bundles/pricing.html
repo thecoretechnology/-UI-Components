@@ -1,0 +1,402 @@
+<div class="pr-bundle-stage" data-pricing="credit-bundles">
+  <div class="pr-bundle-container">
+    
+    <!-- Top Fintech Tenant Wallet Bar -->
+    <div class="pr-bundle-wallet-bar" role="region" aria-label="Active Tenant Wallet Status">
+      <div class="pr-bundle-wallet-info">
+        <div class="pr-bundle-wallet-avatar" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+            <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path>
+            <circle cx="18" cy="12" r="2"></circle>
+          </svg>
+        </div>
+        <div>
+          <span class="pr-bundle-wallet-org">Tenant: <strong>solar-analytics-core</strong></span>
+          <span class="pr-bundle-wallet-sub">API Wallet ID: <code>wlt_98f4-compute</code></span>
+        </div>
+      </div>
+      
+      <div class="pr-bundle-wallet-stats">
+        <div class="pr-bundle-stat-item">
+          <span class="pr-bundle-stat-label">Active Balance</span>
+          <span class="pr-bundle-stat-value">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#f59e0b" stroke="#d97706" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 7v10M9 9.5h6M9 14.5h6"></path>
+            </svg>
+            <strong>12,450</strong> Credits
+          </span>
+        </div>
+        <div class="pr-bundle-stat-badge">
+          <span class="pr-bundle-dot" aria-hidden="true"></span>
+          <span>Perpetual Rollover &bull; Never Expire</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="pr-bundle-header">
+      <span class="pr-bundle-pill">Prepaid Compute &amp; Token Packs</span>
+      <h2 class="pr-bundle-title">Purchase On-Demand Compute Credits</h2>
+      <p class="pr-bundle-subtitle">
+        Zero recurring subscription contracts. Buy token bundles as needed for AI inference, vector searches, and distributed data pipelines with steep volume discounts.
+      </p>
+    </header>
+
+    <!-- Feedback Notice -->
+    <div id="prBundleAlert" class="pr-bundle-alert" role="alert" aria-live="polite" hidden></div>
+
+    <!-- 4 Prepaid Bundles Grid -->
+    <div class="pr-bundle-grid" role="region" aria-label="Available Credit Bundles">
+      
+      <!-- Bundle 1: Micro -->
+      <article class="pr-bundle-card" data-bundle="Micro" data-credits="1000" data-price="50" data-unit="0.050">
+        <div class="pr-bundle-coin-graphic" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <circle cx="22" cy="22" r="20" fill="url(#coinGrad1)" stroke="#f59e0b" stroke-width="1.5"></circle>
+            <circle cx="22" cy="22" r="14" stroke="#d97706" stroke-width="1.2" stroke-dasharray="2 2"></circle>
+            <text x="22" y="27" font-size="16" font-weight="bold" fill="#78350f" text-anchor="middle">1k</text>
+            <defs>
+              <linearGradient id="coinGrad1" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#fef3c7"/>
+                <stop offset="1" stop-color="#fde68a"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="pr-bundle-card-top">
+          <span class="pr-bundle-name">Micro Pack</span>
+          <span class="pr-bundle-discount-badge">Prototyping</span>
+        </div>
+
+        <div class="pr-bundle-qty">
+          <span class="pr-bundle-qty-num">1,000</span>
+          <span class="pr-bundle-qty-label">Compute Credits</span>
+        </div>
+
+        <div class="pr-bundle-pricing">
+          <div class="pr-bundle-total">
+            <span class="pr-bundle-curr">$</span>
+            <span class="pr-bundle-amt">50</span>
+          </div>
+          <div class="pr-bundle-unit-box">
+            <span class="pr-bundle-unit-rate">$0.050</span>
+            <span class="pr-bundle-unit-text">per credit</span>
+          </div>
+        </div>
+
+        <ul class="pr-bundle-specs">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>5 Concurrency Slots</span>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Standard API Priority</span>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Instant Balance Delivery</span>
+          </li>
+        </ul>
+
+        <button type="button" class="pr-bundle-btn pr-bundle-btn-outline" data-bundle="Micro">
+          Purchase Micro Pack
+        </button>
+      </article>
+
+      <!-- Bundle 2: Builder -->
+      <article class="pr-bundle-card" data-bundle="Builder" data-credits="5000" data-price="200" data-unit="0.040">
+        <div class="pr-bundle-coin-graphic" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <circle cx="20" cy="24" r="16" fill="#fde68a" stroke="#d97706" stroke-width="1.2"></circle>
+            <circle cx="24" cy="18" r="16" fill="url(#coinGrad2)" stroke="#f59e0b" stroke-width="1.5"></circle>
+            <text x="24" y="23" font-size="14" font-weight="bold" fill="#78350f" text-anchor="middle">5k</text>
+            <defs>
+              <linearGradient id="coinGrad2" x1="8" y1="2" x2="40" y2="34" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#fffbeb"/>
+                <stop offset="1" stop-color="#fcd34d"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="pr-bundle-card-top">
+          <span class="pr-bundle-name">Builder Pack</span>
+          <span class="pr-bundle-discount-badge is-saving">Save 20%</span>
+        </div>
+
+        <div class="pr-bundle-qty">
+          <span class="pr-bundle-qty-num">5,000</span>
+          <span class="pr-bundle-qty-label">Compute Credits</span>
+        </div>
+
+        <div class="pr-bundle-pricing">
+          <div class="pr-bundle-total">
+            <span class="pr-bundle-curr">$</span>
+            <span class="pr-bundle-amt">200</span>
+          </div>
+          <div class="pr-bundle-unit-box">
+            <span class="pr-bundle-unit-rate">$0.040</span>
+            <span class="pr-bundle-unit-text">per credit</span>
+          </div>
+        </div>
+
+        <ul class="pr-bundle-specs">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>20 Concurrency Slots</span>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Enhanced Routing Priority</span>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Automated Invoicing</span>
+          </li>
+        </ul>
+
+        <button type="button" class="pr-bundle-btn pr-bundle-btn-outline" data-bundle="Builder">
+          Purchase Builder Pack
+        </button>
+      </article>
+
+      <!-- Bundle 3: Production (Featured) -->
+      <article class="pr-bundle-card is-popular" data-bundle="Production" data-credits="25000" data-price="750" data-unit="0.030">
+        <div class="pr-bundle-pop-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          Most Selected &bull; Save 40%
+        </div>
+
+        <div class="pr-bundle-coin-graphic" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <circle cx="16" cy="24" r="14" fill="#fde68a" stroke="#d97706" stroke-width="1"></circle>
+            <circle cx="28" cy="24" r="14" fill="#fde68a" stroke="#d97706" stroke-width="1"></circle>
+            <circle cx="22" cy="16" r="15" fill="url(#coinGrad3)" stroke="#b45309" stroke-width="1.5"></circle>
+            <text x="22" y="21" font-size="13" font-weight="bold" fill="#78350f" text-anchor="middle">25k</text>
+            <defs>
+              <linearGradient id="coinGrad3" x1="7" y1="1" x2="37" y2="31" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#fffbeb"/>
+                <stop offset="0.6" stop-color="#f59e0b"/>
+                <stop offset="1" stop-color="#d97706"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="pr-bundle-card-top">
+          <span class="pr-bundle-name">Production Pack</span>
+          <span class="pr-bundle-discount-badge is-popular-badge">Save 40%</span>
+        </div>
+
+        <div class="pr-bundle-qty">
+          <span class="pr-bundle-qty-num">25,000</span>
+          <span class="pr-bundle-qty-label">Compute Credits</span>
+        </div>
+
+        <div class="pr-bundle-pricing">
+          <div class="pr-bundle-total">
+            <span class="pr-bundle-curr">$</span>
+            <span class="pr-bundle-amt">750</span>
+          </div>
+          <div class="pr-bundle-unit-box">
+            <span class="pr-bundle-unit-rate">$0.030</span>
+            <span class="pr-bundle-unit-text">per credit</span>
+          </div>
+        </div>
+
+        <ul class="pr-bundle-specs">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>75 Concurrency Slots</strong></span>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>High-Priority GPU Queue</span>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Webhook Alert Dispatchers</span>
+          </li>
+        </ul>
+
+        <button type="button" class="pr-bundle-btn pr-bundle-btn-accent" data-bundle="Production">
+          Purchase Production Pack
+        </button>
+      </article>
+
+      <!-- Bundle 4: Scale -->
+      <article class="pr-bundle-card" data-bundle="Scale" data-credits="100000" data-price="1800" data-unit="0.018">
+        <div class="pr-bundle-coin-graphic" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <rect x="6" y="8" width="32" height="28" rx="6" fill="url(#vaultGrad)" stroke="#7c3aed" stroke-width="1.5"></rect>
+            <circle cx="22" cy="22" r="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"></circle>
+            <circle cx="22" cy="22" r="3" fill="#7c3aed"></circle>
+            <line x1="22" y1="10" x2="22" y2="14" stroke="#7c3aed" stroke-width="1.5"></line>
+            <line x1="22" y1="30" x2="22" y2="34" stroke="#7c3aed" stroke-width="1.5"></line>
+            <defs>
+              <linearGradient id="vaultGrad" x1="6" y1="8" x2="38" y2="36" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f5f3ff"/>
+                <stop offset="1" stop-color="#ddd6fe"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="pr-bundle-card-top">
+          <span class="pr-bundle-name">Enterprise Scale</span>
+          <span class="pr-bundle-discount-badge is-saving">Save 64%</span>
+        </div>
+
+        <div class="pr-bundle-qty">
+          <span class="pr-bundle-qty-num">100,000</span>
+          <span class="pr-bundle-qty-label">Compute Credits</span>
+        </div>
+
+        <div class="pr-bundle-pricing">
+          <div class="pr-bundle-total">
+            <span class="pr-bundle-curr">$</span>
+            <span class="pr-bundle-amt">1,800</span>
+          </div>
+          <div class="pr-bundle-unit-box">
+            <span class="pr-bundle-unit-rate">$0.018</span>
+            <span class="pr-bundle-unit-text">per credit</span>
+          </div>
+        </div>
+
+        <ul class="pr-bundle-specs">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>Unlimited Concurrency</strong></span>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Dedicated Multi-Region Fleet</span>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Custom Invoicing &amp; Wire Transfer</span>
+          </li>
+        </ul>
+
+        <button type="button" class="pr-bundle-btn pr-bundle-btn-outline" data-bundle="Enterprise Scale">
+          Purchase Scale Pack
+        </button>
+      </article>
+
+    </div>
+
+    <!-- Interactive Workload & Burn-Rate Recommender Tool -->
+    <div class="pr-bundle-recommender">
+      <div class="pr-bundle-rec-header-row">
+        <div class="pr-bundle-rec-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2">
+            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+            <line x1="8" y1="6" x2="16" y2="6"></line>
+            <line x1="8" y1="10" x2="16" y2="10"></line>
+            <line x1="8" y1="14" x2="12" y2="14"></line>
+          </svg>
+        </div>
+        <div>
+          <span class="pr-bundle-rec-tag">Smart Token Calculator</span>
+          <h3 class="pr-bundle-rec-title">Workload Credit Burn &amp; Bundle Estimator</h3>
+          <p class="pr-bundle-rec-desc">Select your workload task type and projected monthly operations to calculate your required credits and receive an automatic optimal pack recommendation.</p>
+        </div>
+      </div>
+
+      <div class="pr-bundle-rec-workbench">
+        <div class="pr-bundle-rec-controls">
+          <div class="pr-bundle-rec-input">
+            <label for="prBundleOpSelect" class="pr-bundle-rec-label">Target Workload Operation Type:</label>
+            <select id="prBundleOpSelect" class="pr-bundle-rec-select">
+              <option value="1">Standard REST API Invocations (1 credit / 10 calls)</option>
+              <option value="5" selected>PDF OCR / Document Parsers (5 credits / page)</option>
+              <option value="25">Deep ML Vector Embeddings (25 credits / 1k tokens)</option>
+              <option value="100">GPU Accelerated Video Transcoding (100 credits / min)</option>
+            </select>
+          </div>
+
+          <div class="pr-bundle-rec-slider-wrap">
+            <div class="pr-bundle-rec-slider-header">
+              <label for="prBundleVolumeSlider" class="pr-bundle-rec-label">Projected Operations Volume:</label>
+              <strong id="prBundleVolumeLabel" class="pr-bundle-vol-badge">2,000 units</strong>
+            </div>
+            <input 
+              type="range" 
+              id="prBundleVolumeSlider" 
+              class="pr-bundle-slider" 
+              min="200" 
+              max="10000" 
+              step="200" 
+              value="2000"
+              aria-label="Estimated Monthly Volume Slider"
+            >
+            <div class="pr-bundle-slider-ticks" aria-hidden="true">
+              <span>200 units</span>
+              <span>2,500</span>
+              <span>5,000</span>
+              <span>7,500</span>
+              <span>10,000 units</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pr-bundle-rec-summary-panel">
+          <div class="pr-bundle-calc-row">
+            <span class="pr-bundle-calc-lbl">Required Monthly Pool</span>
+            <div class="pr-bundle-rec-credits">
+              <span id="prBundleNeededCredits">10,000</span>
+              <span class="pr-bundle-rec-unit">Credits</span>
+            </div>
+          </div>
+
+          <div class="pr-bundle-calc-row pr-bundle-calc-rec">
+            <span class="pr-bundle-calc-lbl">Optimal Recommended Pack</span>
+            <strong id="prBundleRecPack" class="pr-bundle-rec-pack-val">Production Pack (25k)</strong>
+          </div>
+
+          <div class="pr-bundle-rec-footer-tip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Unused balance rolls over indefinitely with zero penalty.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Assurance Badges Strip -->
+    <div class="pr-bundle-assurances">
+      <div class="pr-bundle-assure-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+        <div>
+          <strong>Perpetual Rollover</strong>
+          <p>Unconsumed credits remain active in your tenant ledger forever.</p>
+        </div>
+      </div>
+      <div class="pr-bundle-assure-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+        <div>
+          <strong>Instant Stripe &amp; Wire Delivery</strong>
+          <p>API keys immediately credited upon payment confirmation.</p>
+        </div>
+      </div>
+      <div class="pr-bundle-assure-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <div>
+          <strong>Transparent Unit Rate</strong>
+          <p>No unexpected overages, hidden monthly fees, or per-seat costs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footnote -->
+    <footer class="pr-bundle-footer">
+      <p class="pr-bundle-note">
+        Interactive credit economics simulation &bull; Zero real charges &bull; Pure client-side prototype.
+      </p>
+    </footer>
+
+  </div>
+</div>
