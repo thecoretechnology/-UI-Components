@@ -1,0 +1,252 @@
+/* 03: Dark, High-Contrast Testimonial Styles - Obsidian Industrial */
+
+.ts-dark-stage {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 56px 24px;
+  background-color: #050505;
+  color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  container-type: inline-size;
+}
+
+.ts-dark-stage *,
+.ts-dark-stage *::before,
+.ts-dark-stage *::after {
+  box-sizing: border-box;
+}
+
+.ts-dark-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.ts-dark-panel {
+  background: #0d0d0d;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+}
+
+/* Header */
+.ts-dark-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.ts-dark-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ts-dark-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #171717;
+  border: 1px solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ts-dark-org-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.ts-dark-org-sub {
+  display: block;
+  font-size: 11px;
+  color: #737373;
+}
+
+.ts-dark-audit-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #171717;
+  border: 1px solid #333333;
+  color: #a3a3a3;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.ts-dark-audit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+/* Bold Quote */
+.ts-dark-quote {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* Specs Strip */
+.ts-dark-specs-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  background: #141414;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.ts-dark-spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ts-dark-spec-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #737373;
+  font-weight: 600;
+}
+
+.ts-dark-spec-val {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e5e5e5;
+}
+
+/* Footer & Attribution */
+.ts-dark-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid #1f1f1f;
+}
+
+.ts-dark-author {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ts-dark-author-name {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.ts-dark-author-role {
+  font-size: 13px;
+  color: #a3a3a3;
+}
+
+.ts-dark-signature-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #171717;
+  border: 1px solid #2e2e2e;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.ts-dark-sig-label {
+  font-size: 11px;
+  color: #737373;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ts-dark-sig-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  color: #d4d4d4;
+}
+
+.ts-dark-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #262626;
+  border: 1px solid #404040;
+  color: #e5e5e5;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ts-dark-copy-btn:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.ts-dark-notice {
+  font-size: 11px;
+  color: #525252;
+  text-align: center;
+}
+
+/* Responsive & Container Queries */
+@container (max-width: 760px) {
+  .ts-dark-panel {
+    padding: 28px 20px;
+  }
+  .ts-dark-quote {
+    font-size: 20px;
+  }
+  .ts-dark-specs-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container (max-width: 520px) {
+  .ts-dark-quote {
+    font-size: 18px;
+  }
+  .ts-dark-specs-strip {
+    grid-template-columns: 1fr;
+  }
+  .ts-dark-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ts-dark-signature-wrap {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 760px) {
+  .ts-dark-specs-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

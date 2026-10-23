@@ -1,0 +1,91 @@
+<div class="ts-story-stage" data-testimonial="customer-story">
+  <div class="ts-story-container">
+    
+    <article class="ts-story-card" role="region" aria-label="Customer Story: Linearis Data Systems">
+      
+      <!-- Asymmetric Left Column: Portrait & Meta -->
+      <div class="ts-story-sidebar">
+        
+        <div class="ts-story-portrait-frame">
+          <div class="ts-story-avatar-art" aria-hidden="true">
+            <svg width="84" height="84" viewBox="0 0 84 84" fill="none">
+              <rect width="84" height="84" rx="16" fill="#e2e8f0"></rect>
+              <circle cx="42" cy="34" r="16" fill="#94a3b8"></circle>
+              <path d="M18 70C18 56.7452 28.7452 46 42 46C55.2548 46 66 56.7452 66 70" fill="#64748b"></path>
+              <rect x="52" y="10" width="22" height="22" rx="6" fill="#2563eb"></rect>
+              <polyline points="58 21 62 25 68 17" stroke="#ffffff" stroke-width="2.5" fill="none"></polyline>
+            </svg>
+          </div>
+          <span class="ts-story-verified-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Verified Deployment
+          </span>
+        </div>
+
+        <div class="ts-story-author-meta">
+          <cite class="ts-story-name">Henrik Lindqvist</cite>
+          <span class="ts-story-role">Head of Platform Infrastructure</span>
+          <span class="ts-story-company">Linearis Data Systems</span>
+          <span class="ts-story-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Zurich, Switzerland
+          </span>
+        </div>
+
+        <div class="ts-story-stats-preview">
+          <div class="ts-story-stat-mini">
+            <span class="ts-story-stat-num">4.2M</span>
+            <span class="ts-story-stat-lbl">Daily Events</span>
+          </div>
+          <div class="ts-story-stat-mini">
+            <span class="ts-story-stat-num">99.99%</span>
+            <span class="ts-story-stat-lbl">SLA Maintained</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Asymmetric Right Column: Customer Narrative -->
+      <div class="ts-story-body">
+        
+        <div class="ts-story-kicker">CUSTOMER CASE STUDY &bull; FINTECH SCALE</div>
+        
+        <h3 class="ts-story-headline">
+          &ldquo;We replaced three brittle microservices in a single sprint and cut p99 latency by 62%.&rdquo;
+        </h3>
+
+        <div class="ts-story-narrative">
+          <p>
+            When our transaction routing engine crossed 4 million events daily, telemetry fragmentation started creating blind spots in our audit logs. Traditional APM tools either swallowed memory or required invasive proprietary SDKs.
+          </p>
+          <p>
+            Implementing these components felt like switching from heavy machinery to surgical instruments. The separation between data pipelines and visual feedback allowed our frontend and infrastructure teams to deploy independently without a single breaking schema change.
+          </p>
+        </div>
+
+        <!-- Interactive Case Study Expandable Details -->
+        <div id="tsStoryDetails" class="ts-story-details" hidden>
+          <div class="ts-story-details-box">
+            <h4 class="ts-story-details-title">Architecture Migration Summary</h4>
+            <ul class="ts-story-details-list">
+              <li><strong>Previous Stack:</strong> Monolithic Express gateway with coupled state polling</li>
+              <li><strong>Migrated Topology:</strong> Isolated event workers with client-side reactive rendering</li>
+              <li><strong>Observed Impact:</strong> Zero cold-start regressions across 14 European edge nodes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ts-story-actions">
+          <button type="button" class="ts-story-toggle-btn" id="tsStoryToggle" aria-expanded="false" aria-controls="tsStoryDetails">
+            <span class="ts-story-btn-text">Read Architecture Details</span>
+            <svg class="ts-story-btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <span class="ts-story-disclaimer">Fictional customer narrative &bull; Illustrative engineering scenario</span>
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+</div>

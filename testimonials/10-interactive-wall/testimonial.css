@@ -1,0 +1,347 @@
+/* 10: Interactive Testimonial Wall Styles */
+
+.ts-wall-stage {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 56px 24px;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  container-type: inline-size;
+}
+
+.ts-wall-stage *,
+.ts-wall-stage *::before,
+.ts-wall-stage *::after {
+  box-sizing: border-box;
+}
+
+.ts-wall-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Header */
+.ts-wall-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.ts-wall-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  margin-bottom: 8px;
+}
+
+.ts-wall-title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+
+.ts-wall-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.ts-wall-count-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Toolbar */
+.ts-wall-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.ts-wall-filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ts-wall-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ts-wall-filter-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.ts-wall-filter-btn.is-active {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+}
+
+.ts-wall-tab-count {
+  font-size: 10px;
+  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1px 5px;
+  border-radius: 9999px;
+}
+
+.ts-wall-filter-btn.is-active .ts-wall-tab-count {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ts-wall-search-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: 240px;
+}
+
+.ts-wall-search-icon {
+  position: absolute;
+  left: 10px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.ts-wall-search-input {
+  width: 100%;
+  padding: 6px 12px 6px 32px;
+  font-size: 12px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.ts-wall-search-input:focus {
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Wall Grid */
+.ts-wall-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.ts-wall-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+}
+
+.ts-wall-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 16px -4px rgba(15, 23, 42, 0.08);
+}
+
+.ts-wall-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.ts-wall-cat-pill {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.ts-wall-cat-saas { background: #eff6ff; color: #1d4ed8; }
+.ts-wall-cat-design { background: #faf5ff; color: #7e22ce; }
+.ts-wall-cat-edu { background: #ecfdf5; color: #047857; }
+.ts-wall-cat-services { background: #fff7ed; color: #c2410c; }
+
+.ts-wall-rating {
+  color: #f59e0b;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.ts-wall-card-quote {
+  margin: 0 0 16px;
+  padding: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #334155;
+  flex: 1;
+}
+
+.ts-wall-card-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.ts-wall-name {
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  color: #0f172a;
+}
+
+.ts-wall-role {
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* Empty State */
+.ts-wall-empty {
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 48px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.ts-wall-empty[hidden] {
+  display: none !important;
+}
+
+.ts-wall-empty-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.ts-wall-empty-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.ts-wall-empty-desc {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+  max-width: 400px;
+}
+
+.ts-wall-reset-btn {
+  margin-top: 8px;
+  padding: 8px 18px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.ts-wall-reset-btn:hover {
+  background: #1e293b;
+}
+
+/* Footer */
+.ts-wall-footer {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.ts-wall-demo-notice {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* Responsive & Container Queries */
+@container (max-width: 880px) {
+  .ts-wall-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container (max-width: 580px) {
+  .ts-wall-grid {
+    grid-template-columns: 1fr;
+  }
+  .ts-wall-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ts-wall-search-wrap {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 880px) {
+  .ts-wall-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .ts-wall-grid {
+    grid-template-columns: 1fr;
+  }
+}

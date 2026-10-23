@@ -1,0 +1,167 @@
+<div class="ts-wall-stage" data-testimonial="interactive-wall">
+  <div class="ts-wall-container">
+    
+    <!-- Header -->
+    <header class="ts-wall-header">
+      <div>
+        <span class="ts-wall-pill">Cross-Industry Wall</span>
+        <h3 class="ts-wall-title">Interactive Testimonial Directory</h3>
+        <p class="ts-wall-subtitle">Filter customer verification records across industry verticals and specialized practice areas.</p>
+      </div>
+
+      <div class="ts-wall-count-badge" id="tsWallCount" aria-live="polite">
+        Showing 6 of 6 reviews
+      </div>
+    </header>
+
+    <!-- Controls Toolbar: Category Pills & Search -->
+    <div class="ts-wall-toolbar">
+      <div class="ts-wall-filters" role="tablist" aria-label="Testimonial Categories">
+        <button type="button" class="ts-wall-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+          <span>All</span>
+          <span class="ts-wall-tab-count">6</span>
+        </button>
+        <button type="button" class="ts-wall-filter-btn" data-filter="design" role="tab" aria-selected="false">
+          <span>Design</span>
+          <span class="ts-wall-tab-count">2</span>
+        </button>
+        <button type="button" class="ts-wall-filter-btn" data-filter="saas" role="tab" aria-selected="false">
+          <span>SaaS</span>
+          <span class="ts-wall-tab-count">2</span>
+        </button>
+        <button type="button" class="ts-wall-filter-btn" data-filter="education" role="tab" aria-selected="false">
+          <span>Education</span>
+          <span class="ts-wall-tab-count">1</span>
+        </button>
+        <button type="button" class="ts-wall-filter-btn" data-filter="services" role="tab" aria-selected="false">
+          <span>Services</span>
+          <span class="ts-wall-tab-count">1</span>
+        </button>
+      </div>
+
+      <div class="ts-wall-search-wrap">
+        <svg class="ts-wall-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input 
+          type="search" 
+          id="tsWallSearch" 
+          class="ts-wall-search-input" 
+          placeholder="Filter by keyword or author..."
+          aria-label="Filter testimonials by keyword or author"
+        >
+      </div>
+    </div>
+
+    <!-- Testimonial Wall Grid -->
+    <div class="ts-wall-grid" id="tsWallGrid" role="region" aria-label="Customer Testimonials Wall">
+      
+      <!-- Card 1: SaaS -->
+      <article class="ts-wall-card" data-category="saas">
+        <div class="ts-wall-card-head">
+          <span class="ts-wall-cat-pill ts-wall-cat-saas">SaaS</span>
+          <span class="ts-wall-rating" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <blockquote class="ts-wall-card-quote">
+          &ldquo;Our subscription dashboard load time dropped below 200ms globally after replacing bulky component libraries with these vanilla primitives.&rdquo;
+        </blockquote>
+        <footer class="ts-wall-card-author">
+          <cite class="ts-wall-name">Priya Sharma</cite>
+          <span class="ts-wall-role">VP of Product &bull; Horizon Analytics</span>
+        </footer>
+      </article>
+
+      <!-- Card 2: Design -->
+      <article class="ts-wall-card" data-category="design">
+        <div class="ts-wall-card-head">
+          <span class="ts-wall-cat-pill ts-wall-cat-design">Design</span>
+          <span class="ts-wall-rating" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <blockquote class="ts-wall-card-quote">
+          &ldquo;The typographic balance and intentional whitespace feel like Swiss editorial posters. It honors visual craft instead of generic SaaS templates.&rdquo;
+        </blockquote>
+        <footer class="ts-wall-card-author">
+          <cite class="ts-wall-name">Lucas Moretti</cite>
+          <span class="ts-wall-role">Design Director &bull; Studio Forma Milan</span>
+        </footer>
+      </article>
+
+      <!-- Card 3: Education -->
+      <article class="ts-wall-card" data-category="education">
+        <div class="ts-wall-card-head">
+          <span class="ts-wall-cat-pill ts-wall-cat-edu">Education</span>
+          <span class="ts-wall-rating" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <blockquote class="ts-wall-card-quote">
+          &ldquo;Students accessing course modules on low-bandwidth satellite links reported immediate responsiveness. Zero external asset blockers was the breakthrough.&rdquo;
+        </blockquote>
+        <footer class="ts-wall-card-author">
+          <cite class="ts-wall-name">Dr. Claire Moreau</cite>
+          <span class="ts-wall-role">Academic Computing &bull; Global Learning Initiative</span>
+        </footer>
+      </article>
+
+      <!-- Card 4: Services -->
+      <article class="ts-wall-card" data-category="services">
+        <div class="ts-wall-card-head">
+          <span class="ts-wall-cat-pill ts-wall-cat-services">Services</span>
+          <span class="ts-wall-rating" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <blockquote class="ts-wall-card-quote">
+          &ldquo;As an agency shipping turnkey deliverables, handing over plain HTML/CSS without npm dependency traps made client handoffs completely painless.&rdquo;
+        </blockquote>
+        <footer class="ts-wall-card-author">
+          <cite class="ts-wall-name">Anton Volkov</cite>
+          <span class="ts-wall-role">Managing Partner &bull; Foundry Systems Agency</span>
+        </footer>
+      </article>
+
+      <!-- Card 5: SaaS -->
+      <article class="ts-wall-card" data-category="saas">
+        <div class="ts-wall-card-head">
+          <span class="ts-wall-cat-pill ts-wall-cat-saas">SaaS</span>
+          <span class="ts-wall-rating" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <blockquote class="ts-wall-card-quote">
+          &ldquo;Our security audit cleared on the first review because there was no mystery transitive dependency code running in our clients' browsers.&rdquo;
+        </blockquote>
+        <footer class="ts-wall-card-author">
+          <cite class="ts-wall-name">Jason Vance</cite>
+          <span class="ts-wall-role">Staff Security Engineer &bull; CloudGuard</span>
+        </footer>
+      </article>
+
+      <!-- Card 6: Design -->
+      <article class="ts-wall-card" data-category="design">
+        <div class="ts-wall-card-head">
+          <span class="ts-wall-cat-pill ts-wall-cat-design">Design</span>
+          <span class="ts-wall-rating" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <blockquote class="ts-wall-card-quote">
+          &ldquo;Container queries allow each card to adapt naturally to its parent container without breaking typography or causing layout reflow jank.&rdquo;
+        </blockquote>
+        <footer class="ts-wall-card-author">
+          <cite class="ts-wall-name">Chloe Dubois</cite>
+          <span class="ts-wall-role">Design Technologist &bull; Atelier Nuance</span>
+        </footer>
+      </article>
+
+    </div>
+
+    <!-- Empty State (Shown when 0 cards match) -->
+    <div id="tsWallEmpty" class="ts-wall-empty" hidden>
+      <div class="ts-wall-empty-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+      </div>
+      <h4 class="ts-wall-empty-title">No Testimonials Match Your Filter</h4>
+      <p class="ts-wall-empty-desc">We couldn't find any reviews matching your current search query or category selection.</p>
+      <button type="button" class="ts-wall-reset-btn" id="tsWallResetBtn">
+        <span>Reset All Filters</span>
+      </button>
+    </div>
+
+    <!-- Footnote -->
+    <footer class="ts-wall-footer">
+      <span class="ts-wall-demo-notice">Interactive testimonial wall directory &bull; Filterable client-side demonstration &bull; Fictional records</span>
+    </footer>
+
+  </div>
+</div>

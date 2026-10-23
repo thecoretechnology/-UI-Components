@@ -1,6 +1,6 @@
 # UI Components Collection
 
-A curated library of 60 responsive navigation bars, footers, hero sections, contact forms, authentication screens, and pricing sections built with plain HTML, CSS, and vanilla JavaScript.
+A curated library of 70 responsive navigation bars, footers, hero sections, contact forms, authentication screens, pricing sections, and testimonials built with plain HTML, CSS, and vanilla JavaScript.
 
 No frameworks, build tools, or runtime dependencies. All icons, graphs, indicators, and dials are implemented purely with CSS and inline SVGs. Each component includes scoped styling and an independent JavaScript controller.
 
@@ -11,11 +11,11 @@ No frameworks, build tools, or runtime dependencies. All icons, graphs, indicato
 Open `index.html` in any modern web browser to view the interactive showcase.
 
 The showcase includes:
-- Section toggle to switch between **Pricing Sections (10)**, **Authentication (10)**, **Contact Forms (10)**, **Navigation Bars (10)**, **Footers (10)**, and **Hero Sections (10)**
+- Section toggle to switch between **Testimonials (10)**, **Pricing Sections (10)**, **Authentication (10)**, **Contact Forms (10)**, **Navigation Bars (10)**, **Footers (10)**, and **Hero Sections (10)**
 - Viewport switcher (Desktop 1200px, Tablet 768px, Mobile 375px)
 - Canvas background switcher (Light, White, Dark)
-- Live interactive behaviors (dynamic billing-period toggles, usage sliders, currency converters, feature diff filters, transparent cost calculators, token estimators, statement of work modals, custom scope intake generators, multi-step wizards, diagnostic report triage, password eye toggles, and variable font morphers)
-- Source code modal with tabs for HTML, CSS, and JS with one-click copy (100% offline & `file://` compatible, 180 embedded cache entries)
+- Live interactive behaviors (dynamic testimonial carousels, video interview modals, category directory filters, metric deep-dive ledgers, billing-period toggles, usage sliders, currency converters, feature diff filters, transparent cost calculators, token estimators, statement of work modals, custom scope intake generators, multi-step wizards, diagnostic report triage, password eye toggles, and variable font morphers)
+- Source code modal with tabs for HTML, CSS, and JS with one-click copy (100% offline & `file://` compatible, 210 embedded cache entries)
 
 To run locally with a static server (recommended for ES module imports):
 ```bash
@@ -33,8 +33,24 @@ Then open `http://localhost:3000`.
 
 ```
 ├── .gitignore               # Ignores references/, node_modules/, temp files
-├── index.html               # Interactive showcase page for all 60 components
+├── index.html               # Interactive showcase page for all 70 components
 ├── README.md                # Project documentation
+│
+├── testimonials/            # Testimonials (Day 7 — 10 Distinct Client-Ready Variations)
+│   ├── testimonials.css     # Master stylesheet bundle for all 10 testimonials
+│   ├── testimonials.js      # Master script bundle for all 10 testimonials
+│   ├── README.md            # Testimonial catalog & design tokens
+│   │
+│   ├── 01-editorial-quote/      # Print-inspired broadsheet quote, generous whitespace & publication folios
+│   ├── 02-customer-story/       # Asymmetric 40/60 split with author details, location & architecture expander
+│   ├── 03-dark-contrast/        # Stark obsidian surface (`#050505`), deployment specs & cryptographic verification
+│   ├── 04-horizontal-slider/    # Fluid carousel with prev/next buttons, pagination, touch swipe & reduced-motion
+│   ├── 05-compact-grid/         # 3-column irregular density matrix (compact, medium technical, full architectural)
+│   ├── 06-video-preview/        # Video thumbnail layout with duration badge & simulated player modal with transcript
+│   ├── 07-numbers-results/      # 3 quantified engineering metric cards with interactive deep-dive ledger
+│   ├── 08-minimal-logo/         # Ultra-restrained monochrome wordmark, single quote line & generous whitespace
+│   ├── 09-featured-supporting/  # Asymmetric 60/40 layout with dominant spotlight review & supporting peer stack
+│   └── 10-interactive-wall/     # Filterable directory wall with category tabs (All, Design, SaaS, Edu, Services) & search
 │
 ├── pricing/                 # Pricing Sections (Day 6 — 10 Distinct Client-Ready Designs)
 │   ├── pricing.css          # Master stylesheet bundle for all 10 pricing sections
@@ -172,6 +188,7 @@ To use the entire collection together:
 <link rel="stylesheet" href="./forms/forms.css">
 <link rel="stylesheet" href="./auth/auth.css">
 <link rel="stylesheet" href="./pricing/pricing.css">
+<link rel="stylesheet" href="./testimonials/testimonials.css">
 
 <script type="module">
   import { initAllNavbars } from './navbars/navbars.js';
@@ -180,6 +197,7 @@ To use the entire collection together:
   import { initAllForms } from './forms/forms.js';
   import { initAllAuth } from './auth/auth.js';
   import { initAllPricing } from './pricing/pricing.js';
+  import { initAllTestimonials } from './testimonials/testimonials.js';
 
   initAllNavbars();
   initAllFooters();
@@ -187,6 +205,7 @@ To use the entire collection together:
   initAllForms();
   initAllAuth();
   initAllPricing();
+  initAllTestimonials();
 </script>
 ```
 

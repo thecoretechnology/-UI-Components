@@ -1,0 +1,103 @@
+<div class="ts-slider-stage" data-testimonial="horizontal-slider">
+  <div class="ts-slider-container">
+    
+    <!-- Header with Controls -->
+    <header class="ts-slider-header">
+      <div>
+        <span class="ts-slider-pill">Field Notes &amp; Reviews</span>
+        <h3 class="ts-slider-title">Continuous Production Feedback</h3>
+      </div>
+
+      <div class="ts-slider-nav" role="toolbar" aria-label="Slider Controls">
+        <button type="button" class="ts-slider-btn" id="tsSliderPrev" aria-label="Previous testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <span class="ts-slider-counter" id="tsSliderCounter" aria-live="polite">01 / 03</span>
+        <button type="button" class="ts-slider-btn" id="tsSliderNext" aria-label="Next testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Slider Viewport and Track -->
+    <div class="ts-slider-viewport" id="tsSliderViewport" tabindex="0" role="region" aria-label="Testimonial Carousel" aria-roledescription="carousel">
+      <div class="ts-slider-track" id="tsSliderTrack">
+        
+        <!-- Slide 1: Fintech -->
+        <article class="ts-slider-card is-active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 of 3: Maya Lin">
+          <div class="ts-slider-card-top">
+            <span class="ts-slider-badge">Fintech Infrastructure</span>
+            <div class="ts-slider-rating" aria-label="5 out of 5 stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+          </div>
+          <blockquote class="ts-slider-quote">
+            &ldquo;In financial transaction pipelines, UI lag isn't just an annoyance—it causes double-clicks and order reconciliation desync. These lightweight primitives give our trading desk sub-16ms deterministic paint times under heavy market load.&rdquo;
+          </blockquote>
+          <div class="ts-slider-author">
+            <div class="ts-slider-avatar" aria-hidden="true">ML</div>
+            <div>
+              <cite class="ts-slider-author-name">Maya Lin</cite>
+              <span class="ts-slider-author-role">Lead Trading Systems Engineer &bull; Cobalt Financial</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 2: Healthtech -->
+        <article class="ts-slider-card" data-index="1" role="group" aria-roledescription="slide" aria-label="2 of 3: Dr. Aris Thorne">
+          <div class="ts-slider-card-top">
+            <span class="ts-slider-badge">Genomics &amp; Healthcare</span>
+            <div class="ts-slider-rating" aria-label="5 out of 5 stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+          </div>
+          <blockquote class="ts-slider-quote">
+            &ldquo;We operate under strict HIPAA BAA and air-gapped workstation constraints. Zero external runtime dependencies meant our internal security review took 48 hours instead of the usual 3-month vendor compliance audit.&rdquo;
+          </blockquote>
+          <div class="ts-slider-author">
+            <div class="ts-slider-avatar" aria-hidden="true">AT</div>
+            <div>
+              <cite class="ts-slider-author-name">Dr. Aris Thorne</cite>
+              <span class="ts-slider-author-role">Chief Information Security Officer &bull; BioMesh Genomics</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 3: DevTools -->
+        <article class="ts-slider-card" data-index="2" role="group" aria-roledescription="slide" aria-label="3 of 3: Soren Kjaer">
+          <div class="ts-slider-card-top">
+            <span class="ts-slider-badge">Developer Tooling</span>
+            <div class="ts-slider-rating" aria-label="5 out of 5 stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+          </div>
+          <blockquote class="ts-slider-quote">
+            &ldquo;Building a developer CLI showcase usually means fighting massive bundle bloat. By embedding clean vanilla HTML/CSS directly into our binary documentation, our pages load instantly even over restricted cellular links.&rdquo;
+          </blockquote>
+          <div class="ts-slider-author">
+            <div class="ts-slider-avatar" aria-hidden="true">SK</div>
+            <div>
+              <cite class="ts-slider-author-name">Soren Kjaer</cite>
+              <span class="ts-slider-author-role">Founder &amp; Core Maintainer &bull; Prismatic CLI</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Pagination Dots & Keyboard Hint -->
+    <footer class="ts-slider-footer">
+      <div class="ts-slider-dots" id="tsSliderDots" role="tablist" aria-label="Slide Selector">
+        <button type="button" class="ts-slider-dot is-active" data-slide="0" role="tab" aria-selected="true" aria-label="Jump to slide 1"></button>
+        <button type="button" class="ts-slider-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Jump to slide 2"></button>
+        <button type="button" class="ts-slider-dot" data-slide="2" role="tab" aria-selected="false" aria-label="Jump to slide 3"></button>
+      </div>
+
+      <div class="ts-slider-hint">
+        <span>Use <kbd>&larr;</kbd> <kbd>&rarr;</kbd> arrow keys or swipe on mobile</span>
+      </div>
+    </footer>
+
+  </div>
+</div>

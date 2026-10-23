@@ -1,0 +1,166 @@
+/* 01: Editorial Quote Styles - Print-Inspired Broadsheet */
+
+.ts-edit-stage {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 64px 32px;
+  background-color: #fcfbf9;
+  color: #1a1917;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  container-type: inline-size;
+}
+
+.ts-edit-stage *,
+.ts-edit-stage *::before,
+.ts-edit-stage *::after {
+  box-sizing: border-box;
+}
+
+.ts-edit-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Folio Header */
+.ts-edit-header {
+  margin-bottom: 40px;
+}
+
+.ts-edit-folio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #78716c;
+  padding-bottom: 12px;
+}
+
+.ts-edit-hairline {
+  height: 1px;
+  background: #e7e5e4;
+  width: 100%;
+}
+
+/* Quote Composition */
+.ts-edit-content {
+  position: relative;
+  padding: 20px 0 36px;
+}
+
+.ts-edit-mark {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 88px;
+  line-height: 1;
+  color: #d6d3d1;
+  position: absolute;
+  top: -16px;
+  left: -32px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.ts-edit-quote {
+  margin: 0 0 36px;
+  padding: 0;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #1c1917;
+  letter-spacing: -0.015em;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* Attribution Block */
+.ts-edit-attribution {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.ts-edit-rule {
+  width: 48px;
+  height: 2px;
+  background: #1c1917;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.ts-edit-author-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ts-edit-name {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  color: #1c1917;
+  letter-spacing: -0.01em;
+}
+
+.ts-edit-role {
+  font-size: 13px;
+  color: #57534e;
+  font-weight: 500;
+}
+
+.ts-edit-note {
+  font-size: 11px;
+  color: #a8a29e;
+  margin-top: 2px;
+}
+
+/* Colophon Footer */
+.ts-edit-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px dashed #e7e5e4;
+  font-size: 11px;
+  color: #a8a29e;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Responsive & Container Queries */
+@container (max-width: 640px) {
+  .ts-edit-stage {
+    padding: 40px 20px;
+  }
+  .ts-edit-folio {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .ts-edit-mark {
+    display: none;
+  }
+  .ts-edit-quote {
+    font-size: 21px;
+    line-height: 1.5;
+  }
+  .ts-edit-attribution {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ts-edit-stage {
+    padding: 40px 20px;
+  }
+  .ts-edit-mark {
+    display: none;
+  }
+  .ts-edit-quote {
+    font-size: 21px;
+  }
+}

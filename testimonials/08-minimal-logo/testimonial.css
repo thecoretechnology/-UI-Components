@@ -1,0 +1,132 @@
+/* 08: Minimal Logo and Quote Styles */
+
+.ts-logo-stage {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 64px 32px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  container-type: inline-size;
+}
+
+.ts-logo-stage *,
+.ts-logo-stage *::before,
+.ts-logo-stage *::after {
+  box-sizing: border-box;
+}
+
+.ts-logo-container {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.ts-logo-canvas {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 56px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border-color 0.2s ease;
+}
+
+.ts-logo-canvas:hover {
+  border-color: #d1d1d1;
+}
+
+/* Brand Wordmark */
+.ts-logo-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.ts-logo-icon {
+  flex-shrink: 0;
+}
+
+.ts-logo-wordmark {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* Quote */
+.ts-logo-quote {
+  margin: 0 0 32px;
+  padding: 0;
+  font-size: 23px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #111111;
+  letter-spacing: -0.015em;
+  max-width: 680px;
+}
+
+/* Hairline Divider */
+.ts-logo-divider {
+  width: 40px;
+  height: 1px;
+  background: #000000;
+  margin-bottom: 24px;
+}
+
+/* Attribution */
+.ts-logo-attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.ts-logo-author {
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  color: #000000;
+}
+
+.ts-logo-role {
+  font-size: 12px;
+  color: #666666;
+}
+
+.ts-logo-note {
+  font-size: 10px;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+}
+
+/* Responsive & Container Queries */
+@container (max-width: 640px) {
+  .ts-logo-stage {
+    padding: 36px 16px;
+  }
+  .ts-logo-canvas {
+    padding: 36px 20px;
+  }
+  .ts-logo-quote {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ts-logo-stage {
+    padding: 36px 16px;
+  }
+  .ts-logo-canvas {
+    padding: 36px 20px;
+  }
+  .ts-logo-quote {
+    font-size: 18px;
+  }
+}

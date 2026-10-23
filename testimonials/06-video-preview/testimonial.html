@@ -1,0 +1,131 @@
+<div class="ts-video-stage" data-testimonial="video-preview">
+  <div class="ts-video-container">
+    
+    <article class="ts-video-card" role="region" aria-label="Customer Video Interview: Sarah Lin">
+      
+      <!-- Video Thumbnail Column -->
+      <div class="ts-video-thumbnail-wrap">
+        <div class="ts-video-thumb" id="tsVideoThumb" role="button" tabindex="0" aria-label="Play video interview with Sarah Lin (2 minutes 45 seconds)">
+          
+          <!-- Stylized Thumbnail Graphic -->
+          <div class="ts-video-thumb-art" aria-hidden="true">
+            <svg width="100%" height="100%" viewBox="0 0 320 200" preserveAspectRatio="none" fill="none">
+              <rect width="320" height="200" fill="#0f172a"></rect>
+              <circle cx="160" cy="90" r="44" fill="#1e293b"></circle>
+              <path d="M110 180C110 148 132 130 160 130C188 130 210 148 210 180" fill="#334155"></path>
+              <line x1="20" y1="20" x2="100" y2="20" stroke="#334155" stroke-width="2"></line>
+              <line x1="20" y1="28" x2="60" y2="28" stroke="#1e293b" stroke-width="2"></line>
+            </svg>
+          </div>
+
+          <!-- Play Button Overlay -->
+          <div class="ts-video-play-btn" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+          </div>
+
+          <!-- Duration Pill -->
+          <div class="ts-video-duration">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+            <span>2:45 MIN</span>
+          </div>
+
+          <!-- Subtitle Pill -->
+          <div class="ts-video-caption-bar">
+            <span>Interview: Monolith to Edge Micro-Frontends</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Video Content & Overview Column -->
+      <div class="ts-video-content">
+        <div class="ts-video-kicker">VIDEO CASE STUDY &bull; PRODUCTION RETROSPECTIVE</div>
+        
+        <h3 class="ts-video-headline">
+          &ldquo;How we unified forty internal tool dashboards without pulling in a single heavy third-party framework.&rdquo;
+        </h3>
+
+        <div class="ts-video-topics" aria-label="Key discussion topics">
+          <span class="ts-video-topic-tag">Multi-Cloud Ingestion</span>
+          <span class="ts-video-topic-tag">Sub-10ms Paint</span>
+          <span class="ts-video-topic-tag">Zero Vulnerabilities</span>
+        </div>
+
+        <div class="ts-video-author">
+          <cite class="ts-video-author-name">Sarah Lin</cite>
+          <span class="ts-video-author-role">Staff Frontend Infrastructure Architect &bull; CloudScale Network</span>
+        </div>
+
+        <div class="ts-video-action-row">
+          <button type="button" class="ts-video-action-btn" id="tsVideoActionBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+            <span>Open Video Interview Preview</span>
+          </button>
+          <span class="ts-video-disclaimer">Simulated video preview &bull; Pure prototype demo</span>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- Functional Accessible Video Modal Dialog -->
+    <div id="tsVideoModal" class="ts-video-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="tsVideoModalTitle" hidden>
+      <div class="ts-video-modal">
+        
+        <header class="ts-video-modal-head">
+          <div class="ts-video-modal-title-wrap">
+            <span class="ts-video-modal-kicker">CUSTOMER INTERVIEW PREVIEW</span>
+            <h4 class="ts-video-modal-title" id="tsVideoModalTitle">Sarah Lin &bull; CloudScale Network Retrospective</h4>
+          </div>
+          <button type="button" class="ts-video-modal-close" id="tsVideoModalClose" aria-label="Close video preview modal">
+            &times;
+          </button>
+        </header>
+
+        <!-- Simulated Player Viewport -->
+        <div class="ts-video-player-sim">
+          <div class="ts-video-player-screen">
+            <div class="ts-video-player-center" aria-hidden="true">
+              <div class="ts-video-wave-bars">
+                <span style="height: 24px;"></span>
+                <span style="height: 38px;"></span>
+                <span style="height: 18px;"></span>
+                <span style="height: 44px;"></span>
+                <span style="height: 28px;"></span>
+                <span style="height: 34px;"></span>
+                <span style="height: 16px;"></span>
+              </div>
+              <div class="ts-video-sim-label">SIMULATED INTERVIEW STREAM</div>
+            </div>
+
+            <!-- Simulated Player Bottom Controls -->
+            <div class="ts-video-player-controls">
+              <button type="button" class="ts-video-play-toggle" id="tsSimPlayPause" aria-label="Play or pause simulated audio stream">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+              </button>
+              <div class="ts-video-scrubber" aria-hidden="true">
+                <div class="ts-video-scrubber-fill" style="width: 28%;"></div>
+              </div>
+              <span class="ts-video-timecode">0:46 / 2:45</span>
+            </div>
+          </div>
+
+          <div class="ts-video-player-notice">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <span>Demonstration Player Simulation: No real remote video media is bundled or loaded.</span>
+          </div>
+        </div>
+
+        <!-- Transcript Excerpt Tab -->
+        <div class="ts-video-transcript-box">
+          <div class="ts-video-transcript-head">Interview Transcript Excerpt</div>
+          <div class="ts-video-transcript-text">
+            <p><strong>[00:15] Sarah Lin:</strong> "The primary constraint for our infrastructure team was eliminating runtime supply-chain risks. When you have hundreds of production micro-frontends, pulling in third-party UI packages creates continuous vulnerability patch cycles."</p>
+            <p><strong>[01:10] Sarah Lin:</strong> "Moving to clean, unbundled vanilla HTML and scoped CSS cut our average page delivery time from 840ms down to 180ms worldwide."</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
