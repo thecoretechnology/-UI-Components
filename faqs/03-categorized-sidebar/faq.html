@@ -1,0 +1,278 @@
+<div class="faq-cat-stage" data-faq="categorized-sidebar">
+  <div class="faq-cat-container">
+    
+    <!-- Top Header -->
+    <header class="faq-cat-header">
+      <span class="faq-cat-pill">Topic Directory</span>
+      <h3 class="faq-cat-title">Categorized Knowledge Base</h3>
+      <p class="faq-cat-subtitle">Select a subject vertical on the sidebar to filter operational policies, invoices, and compliance documentation.</p>
+    </header>
+
+    <!-- Layout Grid: Sidebar Rail + Question Panes -->
+    <div class="faq-cat-layout">
+      
+      <!-- Category Navigation Rail -->
+      <aside class="faq-cat-sidebar" role="region" aria-label="FAQ Categories">
+        <nav class="faq-cat-nav" role="tablist" aria-label="Topic Categories">
+          <button 
+            type="button" 
+            class="faq-cat-tab is-active" 
+            data-category="all" 
+            role="tab" 
+            aria-selected="true" 
+            id="faqCatTabAll"
+          >
+            <span class="faq-cat-tab-name">All Questions</span>
+            <span class="faq-cat-count">8</span>
+          </button>
+          
+          <button 
+            type="button" 
+            class="faq-cat-tab" 
+            data-category="account" 
+            role="tab" 
+            aria-selected="false" 
+            id="faqCatTabAccount"
+          >
+            <span class="faq-cat-tab-name">Account &amp; Access</span>
+            <span class="faq-cat-count">2</span>
+          </button>
+
+          <button 
+            type="button" 
+            class="faq-cat-tab" 
+            data-category="billing" 
+            role="tab" 
+            aria-selected="false" 
+            id="faqCatTabBilling"
+          >
+            <span class="faq-cat-tab-name">Billing &amp; Invoices</span>
+            <span class="faq-cat-count">2</span>
+          </button>
+
+          <button 
+            type="button" 
+            class="faq-cat-tab" 
+            data-category="features" 
+            role="tab" 
+            aria-selected="false" 
+            id="faqCatTabFeatures"
+          >
+            <span class="faq-cat-tab-name">Features &amp; Speed</span>
+            <span class="faq-cat-count">2</span>
+          </button>
+
+          <button 
+            type="button" 
+            class="faq-cat-tab" 
+            data-category="security" 
+            role="tab" 
+            aria-selected="false" 
+            id="faqCatTabSecurity"
+          >
+            <span class="faq-cat-tab-name">Security &amp; Privacy</span>
+            <span class="faq-cat-count">2</span>
+          </button>
+        </nav>
+
+        <div class="faq-cat-sidebar-note">
+          <span class="faq-cat-note-icon" aria-hidden="true">ℹ</span>
+          <p class="faq-cat-note-text">Need custom corporate terms? Inquire directly with our enterprise counsel.</p>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="faq-cat-main">
+        
+        <!-- Active Filter Indicator Banner -->
+        <div class="faq-cat-active-bar">
+          <span class="faq-cat-active-label" id="faqCatActiveTitle">Showing all 8 questions</span>
+          <span class="faq-cat-active-badge" id="faqCatBadge">All Topics</span>
+        </div>
+
+        <!-- Question List -->
+        <div class="faq-cat-list" id="faqCatList">
+          
+          <!-- Q1: Account -->
+          <article class="faq-cat-item is-open" data-category="account">
+            <button 
+              type="button" 
+              class="faq-cat-trigger" 
+              id="faqCatTrigger1" 
+              aria-expanded="true" 
+              aria-controls="faqCatPanel1"
+            >
+              <div class="faq-cat-q-head">
+                <span class="faq-cat-tag faq-cat-tag-account">Account</span>
+                <span class="faq-cat-q-text">How do team invitations and seat permissions work?</span>
+              </div>
+              <span class="faq-cat-toggle-sign" aria-hidden="true">&minus;</span>
+            </button>
+            <div id="faqCatPanel1" class="faq-cat-panel" role="region" aria-labelledby="faqCatTrigger1">
+              <div class="faq-cat-panel-inner">
+                <p>Workspace owners can invite an unlimited number of collaborators with granular roles: Admin, Contributor, or Read-Only Reviewer. Role changes take effect immediately across all active browser sessions via standard HTTP cookie refresh.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Q2: Account -->
+          <article class="faq-cat-item" data-category="account">
+            <button 
+              type="button" 
+              class="faq-cat-trigger" 
+              id="faqCatTrigger2" 
+              aria-expanded="false" 
+              aria-controls="faqCatPanel2"
+            >
+              <div class="faq-cat-q-head">
+                <span class="faq-cat-tag faq-cat-tag-account">Account</span>
+                <span class="faq-cat-q-text">Can I transfer project ownership to another developer account?</span>
+              </div>
+              <span class="faq-cat-toggle-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqCatPanel2" class="faq-cat-panel" role="region" aria-labelledby="faqCatTrigger2" hidden>
+              <div class="faq-cat-panel-inner">
+                <p>Yes. From your Workspace Settings &gt; General &gt; Transfer Ownership, enter the recipient's verified account email. The recipient must confirm within 48 hours to finalize the handoff without downtime.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Q3: Billing -->
+          <article class="faq-cat-item" data-category="billing">
+            <button 
+              type="button" 
+              class="faq-cat-trigger" 
+              id="faqCatTrigger3" 
+              aria-expanded="false" 
+              aria-controls="faqCatPanel3"
+            >
+              <div class="faq-cat-q-head">
+                <span class="faq-cat-tag faq-cat-tag-billing">Billing</span>
+                <span class="faq-cat-q-text">What payment methods and invoicing cycles are accepted?</span>
+              </div>
+              <span class="faq-cat-toggle-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqCatPanel3" class="faq-cat-panel" role="region" aria-labelledby="faqCatTrigger3" hidden>
+              <div class="faq-cat-panel-inner">
+                <p>We support all major credit cards (Visa, MasterCard, American Express), automated SEPA direct debits, and annual ACH bank wires for institutional accounts. PDF invoices with tax VAT identifiers are delivered automatically on the first of each month.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Q4: Billing -->
+          <article class="faq-cat-item" data-category="billing">
+            <button 
+              type="button" 
+              class="faq-cat-trigger" 
+              id="faqCatTrigger4" 
+              aria-expanded="false" 
+              aria-controls="faqCatPanel4"
+            >
+              <div class="faq-cat-q-head">
+                <span class="faq-cat-tag faq-cat-tag-billing">Billing</span>
+                <span class="faq-cat-q-text">How does your 30-day money-back guarantee operate?</span>
+              </div>
+              <span class="faq-cat-toggle-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqCatPanel4" class="faq-cat-panel" role="region" aria-labelledby="faqCatTrigger4" hidden>
+              <div class="faq-cat-panel-inner">
+                <p>If the design system primitives do not integrate seamlessly into your engineering workflow, contact our billing desk within 30 days of purchase for a 100% full refund with zero cancellation penalties or forced interviews.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Q5: Features -->
+          <article class="faq-cat-item" data-category="features">
+            <button 
+              type="button" 
+              class="faq-cat-trigger" 
+              id="faqCatTrigger5" 
+              aria-expanded="false" 
+              aria-controls="faqCatPanel5"
+            >
+              <div class="faq-cat-q-head">
+                <span class="faq-cat-tag faq-cat-tag-features">Features</span>
+                <span class="faq-cat-q-text">How are component animations optimized for 60fps performance?</span>
+              </div>
+              <span class="faq-cat-toggle-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqCatPanel5" class="faq-cat-panel" role="region" aria-labelledby="faqCatTrigger5" hidden>
+              <div class="faq-cat-panel-inner">
+                <p>All micro-interactions strictly animate composite-only CSS properties (<code>transform</code> and <code>opacity</code>) to avoid layout recalculations and repaint thrashing. Furthermore, all transitions immediately disable when <code>prefers-reduced-motion: reduce</code> is signaled by the OS.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Q6: Features -->
+          <article class="faq-cat-item" data-category="features">
+            <button 
+              type="button" 
+              class="faq-cat-trigger" 
+              id="faqCatTrigger6" 
+              aria-expanded="false" 
+              aria-controls="faqCatPanel6"
+            >
+              <div class="faq-cat-q-head">
+                <span class="faq-cat-tag faq-cat-tag-features">Features</span>
+                <span class="faq-cat-q-text">Are dark mode and high-contrast colorways included?</span>
+              </div>
+              <span class="faq-cat-toggle-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqCatPanel6" class="faq-cat-panel" role="region" aria-labelledby="faqCatTrigger6" hidden>
+              <div class="faq-cat-panel-inner">
+                <p>Yes. Each component family features calibrated semantic color tokens that adapt cleanly. You can apply <code>canvas-dark</code> or custom dark themes by simply adjusting CSS custom property definitions on the root element.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Q7: Security -->
+          <article class="faq-cat-item" data-category="security">
+            <button 
+              type="button" 
+              class="faq-cat-trigger" 
+              id="faqCatTrigger7" 
+              aria-expanded="false" 
+              aria-controls="faqCatPanel7"
+            >
+              <div class="faq-cat-q-head">
+                <span class="faq-cat-tag faq-cat-tag-security">Security</span>
+                <span class="faq-cat-q-text">Does the component code transmit telemetry or external analytical tracking?</span>
+              </div>
+              <span class="faq-cat-toggle-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqCatPanel7" class="faq-cat-panel" role="region" aria-labelledby="faqCatTrigger7" hidden>
+              <div class="faq-cat-panel-inner">
+                <p>No. There are zero tracking beacons, telemetry pings, third-party CDNs, or external script injections. The code runs completely air-gapped on your servers or client devices, ensuring complete compliance with GDPR and HIPAA data isolation mandates.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Q8: Security -->
+          <article class="faq-cat-item" data-category="security">
+            <button 
+              type="button" 
+              class="faq-cat-trigger" 
+              id="faqCatTrigger8" 
+              aria-expanded="false" 
+              aria-controls="faqCatPanel8"
+            >
+              <div class="faq-cat-q-head">
+                <span class="faq-cat-tag faq-cat-tag-security">Security</span>
+                <span class="faq-cat-q-text">How do you sanitize input fields against XSS attacks?</span>
+              </div>
+              <span class="faq-cat-toggle-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqCatPanel8" class="faq-cat-panel" role="region" aria-labelledby="faqCatTrigger8" hidden>
+              <div class="faq-cat-panel-inner">
+                <p>All DOM text updates rely strictly on <code>textContent</code> rather than unsafe <code>innerHTML</code> assignments. Any user input is sanitized before rendering, neutralizing script injections and prototype pollution vulnerabilities entirely.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </main>
+
+    </div>
+
+  </div>
+</div>

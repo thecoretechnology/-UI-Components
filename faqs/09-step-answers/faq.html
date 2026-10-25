@@ -1,0 +1,210 @@
+<div class="faq-step-stage" data-faq="step-answers">
+  <div class="faq-step-container">
+    
+    <!-- Header -->
+    <header class="faq-step-header">
+      <span class="faq-step-pill">Procedural Walkthroughs</span>
+      <h3 class="faq-step-title">Interactive Step-by-Step Solutions</h3>
+      <p class="faq-step-subtitle">Detailed engineering operational guides broken into numbered, verified phases with structural visual diagrams.</p>
+    </header>
+
+    <!-- Walkthrough Accordion List -->
+    <div class="faq-step-list">
+      
+      <!-- Walkthrough 1: DNS & Custom Domain -->
+      <article class="faq-step-card is-open">
+        <button 
+          type="button" 
+          class="faq-step-trigger" 
+          id="faqStepTrigger1" 
+          aria-expanded="true" 
+          aria-controls="faqStepPanel1"
+        >
+          <div class="faq-step-trigger-left">
+            <span class="faq-step-badge">NETWORKING</span>
+            <span class="faq-step-trigger-title">How do I bind a custom domain with automatic TLS certificate provisioning?</span>
+          </div>
+          <span class="faq-step-toggle-btn" aria-hidden="true">&minus;</span>
+        </button>
+        <div id="faqStepPanel1" class="faq-step-panel" role="region" aria-labelledby="faqStepTrigger1">
+          <div class="faq-step-panel-body">
+            <p class="faq-step-lead">Follow this 3-step operational procedure to map your apex or sub-domain to our distributed edge mesh:</p>
+            
+            <!-- Step Sequence -->
+            <ol class="faq-step-sequence">
+              <li class="faq-step-seq-item">
+                <div class="faq-step-num">1</div>
+                <div class="faq-step-detail">
+                  <h5 class="faq-step-name">Create DNS Canonical Name (CNAME)</h5>
+                  <p class="faq-step-desc">Log into your domain registrar (Cloudflare, Route53, Namecheap) and create a CNAME record pointing your desired hostname to our edge ingress:</p>
+                  <div class="faq-step-code-inline">
+                    <span>CNAME</span>
+                    <code>app.yourdomain.com</code>
+                    <span>&rarr;</span>
+                    <code>edge.internal-mesh.net</code>
+                  </div>
+                </div>
+              </li>
+
+              <li class="faq-step-seq-item">
+                <div class="faq-step-num">2</div>
+                <div class="faq-step-detail">
+                  <h5 class="faq-step-name">Publish ACME Challenge TXT Record</h5>
+                  <p class="faq-step-desc">For wildcard or apex certificates, add an automated verification token in your DNS zone file to satisfy Let's Encrypt automated challenge checks:</p>
+                  <div class="faq-step-code-inline">
+                    <span>TXT</span>
+                    <code>_acme-challenge.yourdomain.com</code>
+                    <span>&rarr;</span>
+                    <code>vx89_auth_k91b48</code>
+                  </div>
+                </div>
+              </li>
+
+              <li class="faq-step-seq-item">
+                <div class="faq-step-num">3</div>
+                <div class="faq-step-detail">
+                  <h5 class="faq-step-name">Verify Edge Handshake &amp; OCSP Stapling</h5>
+                  <p class="faq-step-desc">Once DNS propagates (usually &lt; 90 seconds), test the TLS handshake using the command below to confirm HTTP/2 negotiation and zero mixed-content warnings:</p>
+                  <div class="faq-step-code-inline">
+                    <span>CLI</span>
+                    <code>curl -Iv https://app.yourdomain.com --http2</code>
+                  </div>
+                </div>
+              </li>
+            </ol>
+
+            <!-- CSS/SVG Visual Diagram -->
+            <div class="faq-step-diagram-box" aria-label="DNS Propagation Diagram">
+              <span class="faq-step-diag-title">Propagation Flow Architecture</span>
+              <div class="faq-step-flow">
+                <div class="faq-step-node">
+                  <span class="faq-step-node-sub">Client Browser</span>
+                  <strong>DNS Query</strong>
+                </div>
+                <div class="faq-step-arrow" aria-hidden="true">&rarr;</div>
+                <div class="faq-step-node">
+                  <span class="faq-step-node-sub">Edge Gateway</span>
+                  <strong>CNAME Resolution</strong>
+                </div>
+                <div class="faq-step-arrow" aria-hidden="true">&rarr;</div>
+                <div class="faq-step-node faq-step-node-active">
+                  <span class="faq-step-node-sub">Origin Mesh</span>
+                  <strong>TLS 1.3 Handshake</strong>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- Walkthrough 2: Air-Gapped Local Deployment -->
+      <article class="faq-step-card">
+        <button 
+          type="button" 
+          class="faq-step-trigger" 
+          id="faqStepTrigger2" 
+          aria-expanded="false" 
+          aria-controls="faqStepPanel2"
+        >
+          <div class="faq-step-trigger-left">
+            <span class="faq-step-badge">DEPLOYMENT</span>
+            <span class="faq-step-trigger-title">How do I deploy these components inside an air-gapped intranet?</span>
+          </div>
+          <span class="faq-step-toggle-btn" aria-hidden="true">&plus;</span>
+        </button>
+        <div id="faqStepPanel2" class="faq-step-panel" role="region" aria-labelledby="faqStepTrigger2" hidden>
+          <div class="faq-step-panel-body">
+            <p class="faq-step-lead">Because the library contains zero external npm dependencies, air-gapped deployment requires three simple operational commands:</p>
+            
+            <ol class="faq-step-sequence">
+              <li class="faq-step-seq-item">
+                <div class="faq-step-num">1</div>
+                <div class="faq-step-detail">
+                  <h5 class="faq-step-name">Transfer Compressed Tarball</h5>
+                  <p class="faq-step-desc">Export the repository from a secure staging machine into an archive without downloading node packages:</p>
+                  <div class="faq-step-code-inline">
+                    <span>CLI</span>
+                    <code>tar -czvf ui-components.tar.gz ./navbars ./faqs ./index.html</code>
+                  </div>
+                </div>
+              </li>
+
+              <li class="faq-step-seq-item">
+                <div class="faq-step-num">2</div>
+                <div class="faq-step-detail">
+                  <h5 class="faq-step-name">Mount to Static Server Ingress</h5>
+                  <p class="faq-step-desc">Extract files directly into your local Nginx, Caddy, or Apache root directory. No compilation or transpile step needed:</p>
+                  <div class="faq-step-code-inline">
+                    <span>CLI</span>
+                    <code>tar -xzvf ui-components.tar.gz -C /var/www/internal-docs/</code>
+                  </div>
+                </div>
+              </li>
+
+              <li class="faq-step-seq-item">
+                <div class="faq-step-num">3</div>
+                <div class="faq-step-detail">
+                  <h5 class="faq-step-name">Verify Local Hash Integrity</h5>
+                  <p class="faq-step-desc">Run sha256 checksums on all static bundles to verify that files transferred cleanly across network boundaries:</p>
+                  <div class="faq-step-code-inline">
+                    <span>CLI</span>
+                    <code>sha256sum index.html ./faqs/faqs.css</code>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- Walkthrough 3: Webhook Verification -->
+      <article class="faq-step-card">
+        <button 
+          type="button" 
+          class="faq-step-trigger" 
+          id="faqStepTrigger3" 
+          aria-expanded="false" 
+          aria-controls="faqStepPanel3"
+        >
+          <div class="faq-step-trigger-left">
+            <span class="faq-step-badge">SECURITY</span>
+            <span class="faq-step-trigger-title">How do I validate webhook payload signatures against timing attacks?</span>
+          </div>
+          <span class="faq-step-toggle-btn" aria-hidden="true">&plus;</span>
+        </button>
+        <div id="faqStepPanel3" class="faq-step-panel" role="region" aria-labelledby="faqStepTrigger3" hidden>
+          <div class="faq-step-panel-body">
+            <p class="faq-step-lead">Defend against timing side-channel attacks by implementing constant-time comparison in your intake endpoint:</p>
+            
+            <ol class="faq-step-sequence">
+              <li class="faq-step-seq-item">
+                <div class="faq-step-num">1</div>
+                <div class="faq-step-detail">
+                  <h5 class="faq-step-name">Read Raw Request Buffer</h5>
+                  <p class="faq-step-desc">Do not parse JSON before signature validation. Read the raw unparsed UTF-8 body bytes.</p>
+                </div>
+              </li>
+              <li class="faq-step-seq-item">
+                <div class="faq-step-num">2</div>
+                <div class="faq-step-detail">
+                  <h5 class="faq-step-name">Calculate HMAC-SHA256</h5>
+                  <p class="faq-step-desc">Hash the raw body using your secret webhook signing key.</p>
+                </div>
+              </li>
+              <li class="faq-step-seq-item">
+                <div class="faq-step-num">3</div>
+                <div class="faq-step-detail">
+                  <h5 class="faq-step-name">Execute Constant-Time Comparison</h5>
+                  <p class="faq-step-desc">Use <code>crypto.timingSafeEqual()</code> rather than string <code>===</code> operators to prevent leakages.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</div>

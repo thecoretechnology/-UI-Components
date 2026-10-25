@@ -1,0 +1,198 @@
+<div class="faq-split-stage" data-faq="split-screen">
+  <div class="faq-split-container">
+    
+    <!-- Left Column: Sticky Sidebar / Info Panel -->
+    <aside class="faq-split-sidebar">
+      <div class="faq-split-sidebar-inner">
+        <span class="faq-split-badge">Engineering & Architecture</span>
+        <h3 class="faq-split-title">Questions about architecture &amp; deployment?</h3>
+        <p class="faq-split-desc">Explore how our decentralized primitives integrate with zero-runtime pipelines. If you have unique edge cases, our lead engineers are on standby.</p>
+
+        <!-- Response Metrics Card -->
+        <div class="faq-split-meta-card">
+          <div class="faq-split-meta-row">
+            <span class="faq-split-meta-dot" aria-hidden="true"></span>
+            <span class="faq-split-meta-label">Technical Support Desk:</span>
+            <strong class="faq-split-meta-val">Online</strong>
+          </div>
+          <div class="faq-split-meta-row">
+            <span class="faq-split-meta-label">Typical Response:</span>
+            <strong class="faq-split-meta-val">&lt; 15 Minutes</strong>
+          </div>
+          <div class="faq-split-meta-row">
+            <span class="faq-split-meta-label">Operating Hours:</span>
+            <span class="faq-split-meta-val">24/7 Global Follow-the-Sun</span>
+          </div>
+        </div>
+
+        <!-- Interactive Direct Inquiry Card -->
+        <div class="faq-split-action-box">
+          <h4 class="faq-split-action-title">Can't find what you need?</h4>
+          <p class="faq-split-action-text">Send an instant question to our core maintainers without navigating away.</p>
+          <div class="faq-split-inquiry-form">
+            <label for="faqSplitQueryInput" class="faq-split-visually-hidden">Ask a question</label>
+            <input 
+              type="text" 
+              id="faqSplitQueryInput" 
+              class="faq-split-input" 
+              placeholder="e.g., Docker alpine compatibility..."
+              aria-label="Ask our architecture team a direct question"
+            >
+            <button type="button" class="faq-split-btn" id="faqSplitSubmitBtn">
+              <span>Send Query</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
+          <div id="faqSplitInquiryFeedback" class="faq-split-feedback" role="status" aria-live="polite" hidden></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Column: Accordion Questions -->
+    <main class="faq-split-main">
+      <div class="faq-split-list">
+        
+        <!-- Question 1 -->
+        <article class="faq-split-card is-open">
+          <button 
+            type="button" 
+            class="faq-split-trigger" 
+            id="faqSplitTrigger1" 
+            aria-expanded="true" 
+            aria-controls="faqSplitPanel1"
+          >
+            <span class="faq-split-q-num" aria-hidden="true">01</span>
+            <span class="faq-split-q-text">How do these components function without React or npm packages?</span>
+            <span class="faq-split-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div 
+            id="faqSplitPanel1" 
+            class="faq-split-panel" 
+            role="region" 
+            aria-labelledby="faqSplitTrigger1"
+          >
+            <div class="faq-split-panel-body">
+              <p>Modern browser JavaScript standards support ES modules, query selectors, event listeners, and Web Components natively. By relying exclusively on web standards, our components bypass the 400MB <code>node_modules</code> bloat, eliminate bundler misconfigurations, and execute instantly with zero hydration lag.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Question 2 -->
+        <article class="faq-split-card">
+          <button 
+            type="button" 
+            class="faq-split-trigger" 
+            id="faqSplitTrigger2" 
+            aria-expanded="false" 
+            aria-controls="faqSplitPanel2"
+          >
+            <span class="faq-split-q-num" aria-hidden="true">02</span>
+            <span class="faq-split-q-text">Can I embed these vanilla components inside a Next.js or Astro project?</span>
+            <span class="faq-split-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div 
+            id="faqSplitPanel2" 
+            class="faq-split-panel" 
+            role="region" 
+            aria-labelledby="faqSplitTrigger2" 
+            hidden
+          >
+            <div class="faq-split-panel-body">
+              <p>Absolutely. Because HTML and vanilla JS are the universal denominator of all web applications, you can paste the markup straight into React JSX, Vue SFCs, or Astro <code>.astro</code> files. The CSS can either be imported into your global style stack or scoped directly within component style blocks.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Question 3 -->
+        <article class="faq-split-card">
+          <button 
+            type="button" 
+            class="faq-split-trigger" 
+            id="faqSplitTrigger3" 
+            aria-expanded="false" 
+            aria-controls="faqSplitPanel3"
+          >
+            <span class="faq-split-q-num" aria-hidden="true">03</span>
+            <span class="faq-split-q-text">What browser versions and operating systems are officially supported?</span>
+            <span class="faq-split-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div 
+            id="faqSplitPanel3" 
+            class="faq-split-panel" 
+            role="region" 
+            aria-labelledby="faqSplitTrigger3" 
+            hidden
+          >
+            <div class="faq-split-panel-body">
+              <p>All evergreen desktop and mobile browsers released in the last four years: Chromium (Chrome, Edge, Brave, Opera) 88+, Apple WebKit (Safari on iOS and macOS) 14+, and Mozilla Firefox 85+. Legacy Internet Explorer is explicitly not supported to avoid bloated polyfills.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Question 4 -->
+        <article class="faq-split-card">
+          <button 
+            type="button" 
+            class="faq-split-trigger" 
+            id="faqSplitTrigger4" 
+            aria-expanded="false" 
+            aria-controls="faqSplitPanel4"
+          >
+            <span class="faq-split-q-num" aria-hidden="true">04</span>
+            <span class="faq-split-q-text">How do you handle automated unit and visual regression testing?</span>
+            <span class="faq-split-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div 
+            id="faqSplitPanel4" 
+            class="faq-split-panel" 
+            role="region" 
+            aria-labelledby="faqSplitTrigger4" 
+            hidden
+          >
+            <div class="faq-split-panel-body">
+              <p>We test directly against headless Chrome via the native Chrome DevTools Protocol (CDP) WebSocket without needing heavy third-party runners. We verify zero console exceptions, 100% tag balance, keyboard tab loops, ARIA state updates, and container width transitions across 375px, 768px, and 1200px viewports.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Question 5 -->
+        <article class="faq-split-card">
+          <button 
+            type="button" 
+            class="faq-split-trigger" 
+            id="faqSplitTrigger5" 
+            aria-expanded="false" 
+            aria-controls="faqSplitPanel5"
+          >
+            <span class="faq-split-q-num" aria-hidden="true">05</span>
+            <span class="faq-split-q-text">Are updates and security patches published to a centralized registry?</span>
+            <span class="faq-split-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div 
+            id="faqSplitPanel5" 
+            class="faq-split-panel" 
+            role="region" 
+            aria-labelledby="faqSplitTrigger5" 
+            hidden
+          >
+            <div class="faq-split-panel-body">
+              <p>Since the library has zero external dependencies, security vulnerabilities from upstream npm packages are impossible. Improvements and additions are committed directly to our public git repository with semantic changelogs and zero mandatory breaking updates.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+  </div>
+</div>

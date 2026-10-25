@@ -1,0 +1,219 @@
+<div class="faq-help-stage" data-faq="help-center">
+  <div class="faq-help-container">
+    
+    <!-- Help Center Hero -->
+    <header class="faq-help-hero">
+      <span class="faq-help-badge">Support Desk &amp; Knowledge Base</span>
+      <h3 class="faq-help-title">How can our engineering team assist you today?</h3>
+      <p class="faq-help-subtitle">Browse frequently searched documentation or filter by specialized practice area.</p>
+
+      <!-- Live Search Box -->
+      <div class="faq-help-search-box">
+        <svg class="faq-help-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input 
+          type="search" 
+          id="faqHelpSearch" 
+          class="faq-help-input" 
+          placeholder="Type keywords (e.g. refund, api, install, password)..."
+          aria-label="Search the knowledge base"
+        >
+        <button type="button" id="faqHelpClearBtn" class="faq-help-clear-btn" aria-label="Clear help search" hidden>&times;</button>
+      </div>
+    </header>
+
+    <!-- 4 Topic Navigation Tiles -->
+    <nav class="faq-help-tiles" aria-label="Help Center Topics">
+      <button type="button" class="faq-help-tile is-active" data-topic="all">
+        <div class="faq-help-tile-icon" aria-hidden="true">★</div>
+        <span class="faq-help-tile-name">All Topics</span>
+        <span class="faq-help-tile-meta">6 Articles</span>
+      </button>
+
+      <button type="button" class="faq-help-tile" data-topic="getting-started">
+        <div class="faq-help-tile-icon" aria-hidden="true">⚡</div>
+        <span class="faq-help-tile-name">Getting Started</span>
+        <span class="faq-help-tile-meta">Setup &amp; Basics</span>
+      </button>
+
+      <button type="button" class="faq-help-tile" data-topic="billing">
+        <div class="faq-help-tile-icon" aria-hidden="true">💳</div>
+        <span class="faq-help-tile-name">Billing &amp; Plans</span>
+        <span class="faq-help-tile-meta">Invoices &amp; Terms</span>
+      </button>
+
+      <button type="button" class="faq-help-tile" data-topic="api">
+        <div class="faq-help-tile-icon" aria-hidden="true">⚙</div>
+        <span class="faq-help-tile-name">API &amp; Webhooks</span>
+        <span class="faq-help-tile-meta">Technical Specs</span>
+      </button>
+    </nav>
+
+    <!-- Popular Questions Section Header -->
+    <div class="faq-help-section-bar">
+      <h4 class="faq-help-section-heading" id="faqHelpSectionHeading">Popular &amp; Verified Questions</h4>
+      <span class="faq-help-count-tag" id="faqHelpCountTag">Showing 6 Articles</span>
+    </div>
+
+    <!-- Empty State -->
+    <div id="faqHelpEmpty" class="faq-help-empty" role="status" hidden>
+      <div class="faq-help-empty-icon" aria-hidden="true">∅</div>
+      <h5 class="faq-help-empty-title">No matching help articles found</h5>
+      <p class="faq-help-empty-desc">We couldn't find any articles matching your search query. Try clearing your search or open a support ticket below.</p>
+      <button type="button" id="faqHelpResetBtn" class="faq-help-reset-btn">View All Articles</button>
+    </div>
+
+    <!-- Questions Accordion List -->
+    <div class="faq-help-list" id="faqHelpList">
+      
+      <!-- Article 1: Getting Started -->
+      <article class="faq-help-item is-open" data-topic="getting-started">
+        <button type="button" class="faq-help-trigger" aria-expanded="true" aria-controls="faqHelpPan1">
+          <span class="faq-help-tag">Getting Started</span>
+          <span class="faq-help-q">How do I import the master stylesheet into my project?</span>
+          <span class="faq-help-chevron" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqHelpPan1" class="faq-help-panel" role="region">
+          <div class="faq-help-panel-content">
+            <p>Add a standard <code>&lt;link rel="stylesheet" href="./faqs/faqs.css"&gt;</code> tag in your document head. All ten FAQ components are pre-compiled with strict class namespaces, so you can drop in whichever markup variation you need without styling cross-talk.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2: Getting Started -->
+      <article class="faq-help-item" data-topic="getting-started">
+        <button type="button" class="faq-help-trigger" aria-expanded="false" aria-controls="faqHelpPan2">
+          <span class="faq-help-tag">Getting Started</span>
+          <span class="faq-help-q">Is there a required directory structure for assets?</span>
+          <span class="faq-help-chevron" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqHelpPan2" class="faq-help-panel" role="region" hidden>
+          <div class="faq-help-panel-content">
+            <p>No. Each component folder is entirely self-contained with its own <code>faq.html</code>, <code>faq.css</code>, <code>faq.js</code>, and <code>README.md</code>. You can relocate folders, rename paths, or inline styles directly into your application templates without broken relative imports.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3: Billing -->
+      <article class="faq-help-item" data-topic="billing">
+        <button type="button" class="faq-help-trigger" aria-expanded="false" aria-controls="faqHelpPan3">
+          <span class="faq-help-tag">Billing</span>
+          <span class="faq-help-q">How do I update company tax ID and invoice details?</span>
+          <span class="faq-help-chevron" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqHelpPan3" class="faq-help-panel" role="region" hidden>
+          <div class="faq-help-panel-content">
+            <p>Navigate to your Billing Settings &gt; Company Invoices to add European VAT, Australian ABN, or United States EIN identifiers. All past and future automated receipt PDFs will regenerate automatically with the updated corporate information.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 4: Billing -->
+      <article class="faq-help-item" data-topic="billing">
+        <button type="button" class="faq-help-trigger" aria-expanded="false" aria-controls="faqHelpPan4">
+          <span class="faq-help-tag">Billing</span>
+          <span class="faq-help-q">Can I request a customized master service agreement (MSA)?</span>
+          <span class="faq-help-chevron" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqHelpPan4" class="faq-help-panel" role="region" hidden>
+          <div class="faq-help-panel-content">
+            <p>Yes. For enterprise teams purchasing volume commercial seat tiers, our legal team provides redlined Master Service Agreements, custom security addenda (SOC2/HIPAA), and dedicated vendor onboarding packets upon request.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 5: API -->
+      <article class="faq-help-item" data-topic="api">
+        <button type="button" class="faq-help-trigger" aria-expanded="false" aria-controls="faqHelpPan5">
+          <span class="faq-help-tag">API</span>
+          <span class="faq-help-q">What are the rate limits on automated webhook dispatches?</span>
+          <span class="faq-help-chevron" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqHelpPan5" class="faq-help-panel" role="region" hidden>
+          <div class="faq-help-panel-content">
+            <p>Standard endpoints permit up to 10,000 requests per minute with burst allowance up to 25,000. When thresholds are exceeded, servers return a clean <code>HTTP 429 Too Many Requests</code> with an explicit <code>Retry-After</code> second timestamp.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 6: API -->
+      <article class="faq-help-item" data-topic="api">
+        <button type="button" class="faq-help-trigger" aria-expanded="false" aria-controls="faqHelpPan6">
+          <span class="faq-help-tag">API</span>
+          <span class="faq-help-q">How are failed webhook deliveries retried?</span>
+          <span class="faq-help-chevron" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqHelpPan6" class="faq-help-panel" role="region" hidden>
+          <div class="faq-help-panel-content">
+            <p>Webhooks employ exponential backoff with jitter across 5 retries (1m, 5m, 30m, 2h, 12h). If an endpoint continues returning 5xx responses after 24 hours, the subscriber receives an email alert and the webhook is paused safely.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Support Desk Contact Section -->
+    <footer class="faq-help-support-bar">
+      <div class="faq-help-support-info">
+        <div class="faq-help-support-status">
+          <span class="faq-help-live-dot" aria-hidden="true"></span>
+          <span class="faq-help-live-text">Support Engineers Online &bull; Average Wait: &lt; 4 Minutes</span>
+        </div>
+        <h4 class="faq-help-support-title">Still unable to find an answer?</h4>
+        <p class="faq-help-support-desc">Open a priority technical ticket or start an instant asynchronous inquiry with our engineering on-call desk.</p>
+      </div>
+
+      <div class="faq-help-support-actions">
+        <button type="button" id="faqHelpTicketBtn" class="faq-help-action-btn">
+          <span>Open Support Ticket</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </button>
+      </div>
+    </footer>
+
+    <!-- Interactive Simulated Support Modal -->
+    <div id="faqHelpModal" class="faq-help-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="faqHelpModalTitle" hidden>
+      <div class="faq-help-modal-dialog">
+        <header class="faq-help-modal-header">
+          <div>
+            <span class="faq-help-modal-kicker">Help Desk Ticket Intake</span>
+            <h4 id="faqHelpModalTitle" class="faq-help-modal-title">Submit Priority Support Request</h4>
+          </div>
+          <button type="button" id="faqHelpModalClose" class="faq-help-modal-close" aria-label="Close support dialog">&times;</button>
+        </header>
+
+        <form id="faqHelpTicketForm" class="faq-help-modal-body" onsubmit="return false;">
+          <div class="faq-help-field">
+            <label for="faqHelpName" class="faq-help-label">Your Name</label>
+            <input type="text" id="faqHelpName" class="faq-help-modal-input" placeholder="e.g. Alex Morgan" required>
+          </div>
+
+          <div class="faq-help-field">
+            <label for="faqHelpEmail" class="faq-help-label">Work Email</label>
+            <input type="email" id="faqHelpEmail" class="faq-help-modal-input" placeholder="alex@company.com" required>
+          </div>
+
+          <div class="faq-help-field">
+            <label for="faqHelpTopic" class="faq-help-label">Urgency Tier</label>
+            <select id="faqHelpTopic" class="faq-help-modal-select">
+              <option value="normal">Normal (Under 2 hours)</option>
+              <option value="urgent">Urgent Production Blocker (Under 15 mins)</option>
+            </select>
+          </div>
+
+          <div class="faq-help-field">
+            <label for="faqHelpDesc" class="faq-help-label">Problem Summary</label>
+            <textarea id="faqHelpDesc" class="faq-help-modal-textarea" rows="3" placeholder="Describe the behavior or question..." required></textarea>
+          </div>
+
+          <div id="faqHelpTicketFeedback" class="faq-help-feedback" role="status" aria-live="polite" hidden></div>
+
+          <div class="faq-help-modal-footer">
+            <button type="button" id="faqHelpModalCancel" class="faq-help-btn-secondary">Cancel</button>
+            <button type="submit" id="faqHelpModalSubmit" class="faq-help-btn-primary">Submit Ticket</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

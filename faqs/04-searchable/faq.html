@@ -1,0 +1,186 @@
+<div class="faq-search-stage" data-faq="searchable">
+  <div class="faq-search-container">
+    
+    <!-- Top Header -->
+    <header class="faq-search-header">
+      <span class="faq-search-badge">Live Search &amp; Index</span>
+      <h3 class="faq-search-title">Instant Knowledge Search</h3>
+      <p class="faq-search-subtitle">Search real-time answers across our entire engineering and operational documentation base.</p>
+      
+      <!-- Search Input Console -->
+      <div class="faq-search-box">
+        <svg class="faq-search-glass-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+
+        <input 
+          type="search" 
+          id="faqSearchInput" 
+          class="faq-search-input" 
+          placeholder="Search by keywords (e.g. offline, license, docker, bundle)..."
+          aria-label="Search frequently asked questions"
+          autocomplete="off"
+        >
+
+        <button 
+          type="button" 
+          id="faqSearchClearBtn" 
+          class="faq-search-clear-btn" 
+          title="Clear search" 
+          aria-label="Clear search input"
+          hidden
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Quick Suggestion Tags -->
+      <div class="faq-search-suggestions">
+        <span class="faq-search-sug-label">Popular queries:</span>
+        <div class="faq-search-sug-tags">
+          <button type="button" class="faq-search-tag-btn" data-query="bundle">bundle</button>
+          <button type="button" class="faq-search-tag-btn" data-query="license">license</button>
+          <button type="button" class="faq-search-tag-btn" data-query="offline">offline</button>
+          <button type="button" class="faq-search-tag-btn" data-query="tailwind">tailwind</button>
+        </div>
+      </div>
+
+      <!-- Live Counter Bar -->
+      <div class="faq-search-status-bar" aria-live="polite">
+        <span id="faqSearchResultCount" class="faq-search-count-text">Showing all 6 verified answers</span>
+      </div>
+    </header>
+
+    <!-- Empty State -->
+    <div id="faqSearchEmpty" class="faq-search-empty-box" role="status" hidden>
+      <div class="faq-search-empty-icon" aria-hidden="true">∅</div>
+      <h4 class="faq-search-empty-title">No matching articles found</h4>
+      <p class="faq-search-empty-desc">We couldn't locate any records matching your search term. Check for typos or try one of our popular tags above.</p>
+      <button type="button" id="faqSearchResetBtn" class="faq-search-reset-btn">Reset Search</button>
+    </div>
+
+    <!-- Question Cards List -->
+    <div class="faq-search-list" id="faqSearchList">
+      
+      <!-- Card 1 -->
+      <article class="faq-search-card is-open">
+        <button 
+          type="button" 
+          class="faq-search-trigger" 
+          id="faqSearchTrigger1" 
+          aria-expanded="true" 
+          aria-controls="faqSearchPanel1"
+        >
+          <span class="faq-search-q-text">Can I use these components in an offline or air-gapped development environment?</span>
+          <span class="faq-search-arrow" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqSearchPanel1" class="faq-search-panel" role="region" aria-labelledby="faqSearchTrigger1">
+          <div class="faq-search-panel-content">
+            <p>Yes. Because the entire library is authored in zero-dependency native HTML and CSS with embedded SVG icons, no external CDN requests or remote license pingbacks are executed. You can clone the repository to an internal secure server and build without internet connectivity.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="faq-search-card">
+        <button 
+          type="button" 
+          class="faq-search-trigger" 
+          id="faqSearchTrigger2" 
+          aria-expanded="false" 
+          aria-controls="faqSearchPanel2"
+        >
+          <span class="faq-search-q-text">Why does this project avoid Tailwind CSS and Bootstrap?</span>
+          <span class="faq-search-arrow" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqSearchPanel2" class="faq-search-panel" role="region" aria-labelledby="faqSearchTrigger2" hidden>
+          <div class="faq-search-panel-content">
+            <p>Frameworks like Tailwind introduce build-step friction, version skew, node runtime dependencies, and class churn across production codebases. Native CSS gives you full architectural autonomy, effortless cascade control, container queries, and maximum runtime rendering speed without vendor lock-in.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="faq-search-card">
+        <button 
+          type="button" 
+          class="faq-search-trigger" 
+          id="faqSearchTrigger3" 
+          aria-expanded="false" 
+          aria-controls="faqSearchPanel3"
+        >
+          <span class="faq-search-q-text">What does the commercial bundle license permit?</span>
+          <span class="faq-search-arrow" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqSearchPanel3" class="faq-search-panel" role="region" aria-labelledby="faqSearchTrigger3" hidden>
+          <div class="faq-search-panel-content">
+            <p>The license grant allows unlimited commercial projects, SaaS deployments, internal administrative tools, and client deliverables. The only restriction is that you cannot redistribute or resell the raw component files as a standalone competing UI library or theme template.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="faq-search-card">
+        <button 
+          type="button" 
+          class="faq-search-trigger" 
+          id="faqSearchTrigger4" 
+          aria-expanded="false" 
+          aria-controls="faqSearchPanel4"
+        >
+          <span class="faq-search-q-text">How do container queries enhance responsive layout resilience?</span>
+          <span class="faq-search-arrow" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqSearchPanel4" class="faq-search-panel" role="region" aria-labelledby="faqSearchTrigger4" hidden>
+          <div class="faq-search-panel-content">
+            <p>Each component preview is wrapped with <code>container-type: inline-size</code>. Instead of relying solely on global viewport width, components adapt dynamically based on the exact width of their parent container, ensuring flawless layout whether rendered in a full page, a modal, or a dashboard sidebar.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="faq-search-card">
+        <button 
+          type="button" 
+          class="faq-search-trigger" 
+          id="faqSearchTrigger5" 
+          aria-expanded="false" 
+          aria-controls="faqSearchPanel5"
+        >
+          <span class="faq-search-q-text">How is text contrast and WCAG 2.1 AA compliance verified?</span>
+          <span class="faq-search-arrow" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqSearchPanel5" class="faq-search-panel" role="region" aria-labelledby="faqSearchTrigger5" hidden>
+          <div class="faq-search-panel-content">
+            <p>All body copy maintains at least a 4.5:1 contrast ratio against container surfaces, and large headings exceed 3:1. Visible focus rings, keyboard tab traps, and semantic region labels ensure that assistive technologies interpret the document tree effortlessly.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="faq-search-card">
+        <button 
+          type="button" 
+          class="faq-search-trigger" 
+          id="faqSearchTrigger6" 
+          aria-expanded="false" 
+          aria-controls="faqSearchPanel6"
+        >
+          <span class="faq-search-q-text">Can I bundle all component styles into a single production stylesheet?</span>
+          <span class="faq-search-arrow" aria-hidden="true">&darr;</span>
+        </button>
+        <div id="faqSearchPanel6" class="faq-search-panel" role="region" aria-labelledby="faqSearchTrigger6" hidden>
+          <div class="faq-search-panel-content">
+            <p>Yes. We provide master bundle files (such as <code>faqs.css</code> and <code>faqs.js</code>) that compile all individual components cleanly while maintaining strict prefix isolation. You can import one master file or pick individual modular folders as needed.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,337 @@
+/* ==========================================================================
+   09: INTERACTIVE STEP-BY-STEP ANSWERS FAQ
+   Numbered sequence guides, connecting lines, CSS architectural flow diagram
+   ========================================================================== */
+
+.faq-step-stage {
+  --faq-st-bg: #ffffff;
+  --faq-st-surface: #ffffff;
+  --faq-st-border: #e2e8f0;
+  --faq-st-text: #0f172a;
+  --faq-st-muted: #475569;
+  --faq-st-subtle: #94a3b8;
+  --faq-st-accent: #0284c7;
+  --faq-st-radius: 10px;
+
+  background-color: var(--faq-st-bg);
+  color: var(--faq-st-text);
+  padding: 56px 24px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.faq-step-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Header */
+.faq-step-header {
+  margin-bottom: 36px;
+}
+
+.faq-step-pill {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0369a1;
+  background: #e0f2fe;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.faq-step-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0 0 8px;
+  color: var(--faq-st-text);
+}
+
+.faq-step-subtitle {
+  font-size: 14.5px;
+  color: var(--faq-st-muted);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 650px;
+}
+
+/* List */
+.faq-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-step-card {
+  background: var(--faq-st-surface);
+  border: 1px solid var(--faq-st-border);
+  border-radius: var(--faq-st-radius);
+  overflow: hidden;
+  transition: border-color 140ms ease;
+}
+
+.faq-step-card:hover {
+  border-color: #cbd5e1;
+}
+
+.faq-step-card.is-open {
+  border-color: #94a3b8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.faq-step-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: var(--faq-st-text);
+}
+
+.faq-step-trigger:focus-visible {
+  outline: 2px solid var(--faq-st-accent);
+  outline-offset: -2px;
+}
+
+.faq-step-trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.faq-step-badge {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: #f1f5f9;
+  color: #334155;
+  padding: 3px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.faq-step-trigger-title {
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--faq-st-text);
+}
+
+.faq-step-toggle-btn {
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--faq-st-subtle);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-step-card.is-open .faq-step-toggle-btn {
+  color: var(--faq-st-accent);
+}
+
+.faq-step-panel[hidden] {
+  display: none;
+}
+
+.faq-step-panel-body {
+  padding: 0 22px 24px 22px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.faq-step-lead {
+  font-size: 14px;
+  color: var(--faq-st-muted);
+  line-height: 1.5;
+  margin: 16px 0 20px;
+}
+
+/* Numbered Step Sequence */
+.faq-step-sequence {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.faq-step-seq-item {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.faq-step-seq-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Vertical guide line */
+.faq-step-seq-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 32px;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.faq-step-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-step-detail {
+  flex: 1;
+}
+
+.faq-step-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 4px 0 6px;
+  color: var(--faq-st-text);
+}
+
+.faq-step-desc {
+  font-size: 13.5px;
+  color: var(--faq-st-muted);
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.faq-step-code-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid var(--faq-st-border);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12.5px;
+  color: #0f172a;
+  flex-wrap: wrap;
+}
+
+.faq-step-code-inline span {
+  font-weight: 700;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.faq-step-code-inline code {
+  color: #0369a1;
+  font-weight: 600;
+}
+
+/* Flow Architecture Diagram */
+.faq-step-diagram-box {
+  background: #f8fafc;
+  border: 1px solid var(--faq-st-border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 20px;
+}
+
+.faq-step-diag-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faq-st-subtle);
+  margin-bottom: 12px;
+}
+
+.faq-step-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.faq-step-node {
+  background: #ffffff;
+  border: 1px solid var(--faq-st-border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12.5px;
+  color: var(--faq-st-text);
+  flex: 1;
+  min-width: 140px;
+}
+
+.faq-step-node-sub {
+  font-size: 10.5px;
+  color: var(--faq-st-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.faq-step-node-active {
+  border-color: #38bdf8;
+  background: #f0f9ff;
+}
+
+.faq-step-arrow {
+  color: var(--faq-st-subtle);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .faq-step-stage {
+    padding: 36px 16px;
+  }
+  .faq-step-title {
+    font-size: 23px;
+  }
+  .faq-step-trigger-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .faq-step-flow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .faq-step-arrow {
+    align-self: center;
+    transform: rotate(90deg);
+  }
+}

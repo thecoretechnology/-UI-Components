@@ -1,0 +1,183 @@
+<div class="faq-classic-stage" data-faq="classic-accordion">
+  <div class="faq-classic-container">
+    
+    <!-- Header with Behavior Mode Selector -->
+    <header class="faq-classic-header">
+      <div class="faq-classic-header-text">
+        <span class="faq-classic-kicker">Essential Guidance</span>
+        <h3 class="faq-classic-title">Frequently Asked Questions</h3>
+        <p class="faq-classic-desc">Direct answers to core architectural, billing, and operational queries regarding our zero-dependency design system.</p>
+      </div>
+
+      <!-- Mode Switcher: Single-open vs Multi-open -->
+      <div class="faq-classic-mode-wrap">
+        <span class="faq-classic-mode-label" id="faqClassicModeLabel">Accordion Mode:</span>
+        <div class="faq-classic-mode-toggles" role="radiogroup" aria-labelledby="faqClassicModeLabel">
+          <label class="faq-classic-mode-option">
+            <input type="radio" name="faqClassicMode" value="single" checked class="faq-classic-radio">
+            <span class="faq-classic-radio-btn">Single Open</span>
+          </label>
+          <label class="faq-classic-mode-option">
+            <input type="radio" name="faqClassicMode" value="multiple" class="faq-classic-radio">
+            <span class="faq-classic-radio-btn">Multi Open</span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <!-- Accordion List -->
+    <div class="faq-classic-list" role="presentation">
+      
+      <!-- Item 1 -->
+      <article class="faq-classic-item is-open">
+        <button 
+          type="button" 
+          class="faq-classic-trigger" 
+          id="faqClassicTrigger1" 
+          aria-expanded="true" 
+          aria-controls="faqClassicPanel1"
+        >
+          <span class="faq-classic-question">Are there any hidden npm packages or build-time bundlers required?</span>
+          <span class="faq-classic-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </span>
+        </button>
+        <div 
+          id="faqClassicPanel1" 
+          class="faq-classic-panel" 
+          role="region" 
+          aria-labelledby="faqClassicTrigger1"
+        >
+          <div class="faq-classic-panel-content">
+            <p>None whatsoever. Every component is engineered strictly with vanilla semantic HTML, native CSS, and vanilla ES modules. You can copy the code directly into an existing file or load it via a local <code>&lt;script&gt;</code> tag without running <code>npm install</code> or configuring Vite, Webpack, or Babel.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="faq-classic-item">
+        <button 
+          type="button" 
+          class="faq-classic-trigger" 
+          id="faqClassicTrigger2" 
+          aria-expanded="false" 
+          aria-controls="faqClassicPanel2"
+        >
+          <span class="faq-classic-question">How does CSS scoping prevent collisions across different sections?</span>
+          <span class="faq-classic-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </span>
+        </button>
+        <div 
+          id="faqClassicPanel2" 
+          class="faq-classic-panel" 
+          role="region" 
+          aria-labelledby="faqClassicTrigger2"
+          hidden
+        >
+          <div class="faq-classic-panel-content">
+            <p>Each design uses a dedicated, collision-proof BEM-inspired namespace prefix (such as <code>.faq-classic-*</code>, <code>.faq-split-*</code>, etc.). There are zero global tag selectors, universal resets, or root leaks, allowing you to drop components into complex legacy apps safely.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="faq-classic-item">
+        <button 
+          type="button" 
+          class="faq-classic-trigger" 
+          id="faqClassicTrigger3" 
+          aria-expanded="false" 
+          aria-controls="faqClassicPanel3"
+        >
+          <span class="faq-classic-question">Can I customize colors, fonts, and border radii without Sass variables?</span>
+          <span class="faq-classic-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </span>
+        </button>
+        <div 
+          id="faqClassicPanel3" 
+          class="faq-classic-panel" 
+          role="region" 
+          aria-labelledby="faqClassicTrigger3"
+          hidden
+        >
+          <div class="faq-classic-panel-content">
+            <p>Yes. All dimensions, colors, and typography styles leverage native CSS Custom Properties defined at the stage root. You can easily override tokens like <code>--faq-cl-accent</code>, <code>--faq-cl-border</code>, or <code>--faq-cl-radius</code> locally on your parent container.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 4 -->
+      <article class="faq-classic-item">
+        <button 
+          type="button" 
+          class="faq-classic-trigger" 
+          id="faqClassicTrigger4" 
+          aria-expanded="false" 
+          aria-controls="faqClassicPanel4"
+        >
+          <span class="faq-classic-question">Are keyboard navigation and screen-reader accessibility supported out of the box?</span>
+          <span class="faq-classic-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </span>
+        </button>
+        <div 
+          id="faqClassicPanel4" 
+          class="faq-classic-panel" 
+          role="region" 
+          aria-labelledby="faqClassicTrigger4"
+          hidden
+        >
+          <div class="faq-classic-panel-content">
+            <p>Yes, fully compliant with WAI-ARIA Accordion design patterns. Buttons feature dynamic <code>aria-expanded</code> and <code>aria-controls</code> attributes, panels announce themselves as labeled regions, focus rings are clearly visible, and users can navigate via Tab and Enter/Space keys.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 5 -->
+      <article class="faq-classic-item">
+        <button 
+          type="button" 
+          class="faq-classic-trigger" 
+          id="faqClassicTrigger5" 
+          aria-expanded="false" 
+          aria-controls="faqClassicPanel5"
+        >
+          <span class="faq-classic-question">What is the licensing policy for commercial client applications?</span>
+          <span class="faq-classic-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </span>
+        </button>
+        <div 
+          id="faqClassicPanel5" 
+          class="faq-classic-panel" 
+          role="region" 
+          aria-labelledby="faqClassicTrigger5"
+          hidden
+        >
+          <div class="faq-classic-panel-content">
+            <p>All components are provided under a royalty-free perpetual commercial license. You may use, adapt, and distribute them within internal dashboards, client SaaS platforms, and public marketing sites without attribution or recurring renewal fees.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Footer Note -->
+    <footer class="faq-classic-footer">
+      <p class="faq-classic-subnote">Have a question that isn't answered here? Check our categorized knowledge base or email our engineering staff directly.</p>
+    </footer>
+
+  </div>
+</div>

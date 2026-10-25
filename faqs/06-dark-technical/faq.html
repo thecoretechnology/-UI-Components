@@ -1,0 +1,170 @@
+<div class="faq-tech-stage" data-faq="dark-technical">
+  <div class="faq-tech-container">
+    
+    <!-- Console Header -->
+    <header class="faq-tech-header">
+      <div class="faq-tech-status-row">
+        <span class="faq-tech-status-pill">
+          <span class="faq-tech-status-dot" aria-hidden="true"></span>
+          <span>API SPEC v2.4 // PRODUCTION</span>
+        </span>
+        <span class="faq-tech-env-pill">AIR-GAPPED RUNTIME</span>
+      </div>
+
+      <h3 class="faq-tech-title">Developer &amp; Infrastructure FAQ</h3>
+      <p class="faq-tech-subtitle">Protocol specifications, token revocation lifecycles, rate limiting, and zero-dependency integration guidelines.</p>
+    </header>
+
+    <!-- Technical Accordion List -->
+    <div class="faq-tech-list">
+      
+      <!-- Tech Item 1: Auth & JWT -->
+      <article class="faq-tech-card is-open">
+        <button 
+          type="button" 
+          class="faq-tech-trigger" 
+          id="faqTechTrigger1" 
+          aria-expanded="true" 
+          aria-controls="faqTechPanel1"
+        >
+          <div class="faq-tech-q-left">
+            <span class="faq-tech-verb">AUTH</span>
+            <span class="faq-tech-q-text">How are HMAC request signatures verified on self-hosted gateways?</span>
+          </div>
+          <span class="faq-tech-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div id="faqTechPanel1" class="faq-tech-panel" role="region" aria-labelledby="faqTechTrigger1">
+          <div class="faq-tech-panel-content">
+            <p>Every outbound dispatch includes an <code>X-Signature-SHA256</code> header computed over the raw canonical request body and timestamp. You can verify payloads locally without contacting an authentication server:</p>
+            
+            <!-- Code Block with Copy Action -->
+            <div class="faq-tech-snippet-box">
+              <div class="faq-tech-snippet-head">
+                <span class="faq-tech-lang">bash // cURL verification probe</span>
+                <button type="button" class="faq-tech-copy-btn" data-snippet="curl -X POST https://api.internal.network/v2/verify \
+  -H 'Content-Type: application/json' \
+  -H 'X-Signature-SHA256: 7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069' \
+  -d '{\"timestamp\": 1730000000, \"event\": \"ping\"}'">
+                  <span>Copy</span>
+                </button>
+              </div>
+              <pre class="faq-tech-pre"><code>curl -X POST https://api.internal.network/v2/verify \
+  -H 'Content-Type: application/json' \
+  -H 'X-Signature-SHA256: 7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069' \
+  -d '{"timestamp": 1730000000, "event": "ping"}'</code></pre>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tech Item 2: CORS & Headers -->
+      <article class="faq-tech-card">
+        <button 
+          type="button" 
+          class="faq-tech-trigger" 
+          id="faqTechTrigger2" 
+          aria-expanded="false" 
+          aria-controls="faqTechPanel2"
+        >
+          <div class="faq-tech-q-left">
+            <span class="faq-tech-verb">CORS</span>
+            <span class="faq-tech-q-text">What headers are required for cross-origin font rendering in microfrontends?</span>
+          </div>
+          <span class="faq-tech-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div id="faqTechPanel2" class="faq-tech-panel" role="region" aria-labelledby="faqTechTrigger2" hidden>
+          <div class="faq-tech-panel-content">
+            <p>Ensure your asset edge reverse proxy includes <code>Access-Control-Allow-Origin: *</code> and standard Cache-Control parameters for immutable static fonts (WOFF2):</p>
+            <div class="faq-tech-snippet-box">
+              <div class="faq-tech-snippet-head">
+                <span class="faq-tech-lang">nginx // Edge asset config</span>
+                <button type="button" class="faq-tech-copy-btn" data-snippet="location ~* \.(woff2|css|js)$ {
+    add_header Access-Control-Allow-Origin *;
+    add_header Cache-Control 'public, max-age=31536000, immutable';
+    try_files $uri =404;
+}">
+                  <span>Copy</span>
+                </button>
+              </div>
+              <pre class="faq-tech-pre"><code>location ~* \.(woff2|css|js)$ {
+    add_header Access-Control-Allow-Origin *;
+    add_header Cache-Control 'public, max-age=31536000, immutable';
+    try_files $uri =404;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tech Item 3: Concurrency & Rate Limiting -->
+      <article class="faq-tech-card">
+        <button 
+          type="button" 
+          class="faq-tech-trigger" 
+          id="faqTechTrigger3" 
+          aria-expanded="false" 
+          aria-controls="faqTechPanel3"
+        >
+          <div class="faq-tech-q-left">
+            <span class="faq-tech-verb">LIMITS</span>
+            <span class="faq-tech-q-text">How does client-side rate limiting prevent thread lockups during rapid filtering?</span>
+          </div>
+          <span class="faq-tech-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div id="faqTechPanel3" class="faq-tech-panel" role="region" aria-labelledby="faqTechTrigger3" hidden>
+          <div class="faq-tech-panel-content">
+            <p>All interactive controllers employ non-blocking microtask queues with <code>requestAnimationFrame</code> debouncing. Even when filtering lists with thousands of DOM nodes, operations run in under 4ms per frame, maintaining a consistent 60fps refresh rate on modest mobile hardware.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tech Item 4: Content Security Policy (CSP) -->
+      <article class="faq-tech-card">
+        <button 
+          type="button" 
+          class="faq-tech-trigger" 
+          id="faqTechTrigger4" 
+          aria-expanded="false" 
+          aria-controls="faqTechPanel4"
+        >
+          <div class="faq-tech-q-left">
+            <span class="faq-tech-verb">POLICY</span>
+            <span class="faq-tech-q-text">Are these components compliant with strict Content Security Policy directives?</span>
+          </div>
+          <span class="faq-tech-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div id="faqTechPanel4" class="faq-tech-panel" role="region" aria-labelledby="faqTechTrigger4" hidden>
+          <div class="faq-tech-panel-content">
+            <p>Yes. They require zero <code>'unsafe-eval'</code> or inline JavaScript event attributes (no <code>onclick=""</code>). Everything is bound through clean <code>addEventListener()</code> calls within ES modules, complying with high-security enterprise CSP rules (<code>default-src 'self'</code>).</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Telemetry Footer Bar -->
+    <footer class="faq-tech-footer">
+      <div class="faq-tech-foot-cell">
+        <span class="faq-tech-foot-key">RUNTIME</span>
+        <span class="faq-tech-foot-val">Zero Node Dependencies</span>
+      </div>
+      <div class="faq-tech-foot-cell">
+        <span class="faq-tech-foot-key">PARSER OVERHEAD</span>
+        <span class="faq-tech-foot-val">&lt; 1.2ms Compilation</span>
+      </div>
+      <div class="faq-tech-foot-cell">
+        <span class="faq-tech-foot-key">CRYPTOGRAPHIC AUDIT</span>
+        <span class="faq-tech-foot-val">SHA256 Passed</span>
+      </div>
+    </footer>
+
+  </div>
+</div>

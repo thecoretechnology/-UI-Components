@@ -1,0 +1,173 @@
+<div class="faq-grid-stage" data-faq="card-grid">
+  <div class="faq-grid-container">
+    
+    <!-- Header -->
+    <header class="faq-grid-header">
+      <span class="faq-grid-pill">Domain Matrix</span>
+      <h3 class="faq-grid-title">Topic-Clustered Knowledge Grid</h3>
+      <p class="faq-grid-subtitle">Explore architectural standards, regulatory clearances, and deployment mechanics organized into dedicated topic clusters.</p>
+    </header>
+
+    <!-- 2x2 Domain Cards Grid -->
+    <div class="faq-grid-matrix">
+      
+      <!-- Cluster 1: Architecture & Bundling -->
+      <section class="faq-grid-card">
+        <div class="faq-grid-card-head">
+          <div class="faq-grid-icon-box faq-grid-icon-blue" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <div>
+            <h4 class="faq-grid-card-title">Architecture &amp; Stacks</h4>
+            <p class="faq-grid-card-desc">Zero-dependency primitives, native ES modules, and framework agnosticism.</p>
+          </div>
+        </div>
+
+        <div class="faq-grid-sublist">
+          <div class="faq-grid-item is-open">
+            <button type="button" class="faq-grid-trigger" aria-expanded="true" aria-controls="faqGridPan1">
+              <span class="faq-grid-q">Can components run without node or npm?</span>
+              <span class="faq-grid-sign" aria-hidden="true">&minus;</span>
+            </button>
+            <div id="faqGridPan1" class="faq-grid-panel" role="region">
+              <div class="faq-grid-panel-body">
+                <p>Yes. The entire code operates as vanilla ES modules. You can open any HTML file directly from disk using the <code>file:///</code> protocol or a lightweight Python/Go local static server.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-grid-item">
+            <button type="button" class="faq-grid-trigger" aria-expanded="false" aria-controls="faqGridPan2">
+              <span class="faq-grid-q">How does vanilla JS handle reactive state?</span>
+              <span class="faq-grid-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqGridPan2" class="faq-grid-panel" role="region" hidden>
+              <div class="faq-grid-panel-body">
+                <p>We use lightweight scoped closures and standard event dispatchers rather than heavy Virtual DOM diffing. State changes directly update necessary DOM nodes in single-digit milliseconds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cluster 2: Licensing & Compliance -->
+      <section class="faq-grid-card">
+        <div class="faq-grid-card-head">
+          <div class="faq-grid-icon-box faq-grid-icon-emerald" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h4 class="faq-grid-card-title">Licensing &amp; Legal</h4>
+            <p class="faq-grid-card-desc">Commercial redistribution terms, royalty exemptions, and client deliverables.</p>
+          </div>
+        </div>
+
+        <div class="faq-grid-sublist">
+          <div class="faq-grid-item">
+            <button type="button" class="faq-grid-trigger" aria-expanded="false" aria-controls="faqGridPan3">
+              <span class="faq-grid-q">Do I need to pay ongoing subscription royalties?</span>
+              <span class="faq-grid-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqGridPan3" class="faq-grid-panel" role="region" hidden>
+              <div class="faq-grid-panel-body">
+                <p>No. Each license grant is perpetual and royalty-free. Once purchased, you are never charged recurring seat licenses or pageview fees.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-grid-item">
+            <button type="button" class="faq-grid-trigger" aria-expanded="false" aria-controls="faqGridPan4">
+              <span class="faq-grid-q">Can multiple developers share one codebase?</span>
+              <span class="faq-grid-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqGridPan4" class="faq-grid-panel" role="region" hidden>
+              <div class="faq-grid-panel-body">
+                <p>Yes. The license covers your entire internal engineering organization, allowing team members to commit components across all company git repositories.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cluster 3: Accessibility & WCAG -->
+      <section class="faq-grid-card">
+        <div class="faq-grid-card-head">
+          <div class="faq-grid-icon-box faq-grid-icon-amber" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          </div>
+          <div>
+            <h4 class="faq-grid-card-title">Accessibility &amp; Assistive</h4>
+            <p class="faq-grid-card-desc">Screen reader compatibility, keyboard focus rings, and WCAG AA verification.</p>
+          </div>
+        </div>
+
+        <div class="faq-grid-sublist">
+          <div class="faq-grid-item">
+            <button type="button" class="faq-grid-trigger" aria-expanded="false" aria-controls="faqGridPan5">
+              <span class="faq-grid-q">Are focus rings visible during keyboard navigation?</span>
+              <span class="faq-grid-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqGridPan5" class="faq-grid-panel" role="region" hidden>
+              <div class="faq-grid-panel-body">
+                <p>All interactive triggers implement high-contrast <code>:focus-visible</code> styles with offset outlines, complying with WCAG 2.4.7 Focus Visible requirements.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-grid-item">
+            <button type="button" class="faq-grid-trigger" aria-expanded="false" aria-controls="faqGridPan6">
+              <span class="faq-grid-q">How is reduced-motion preference honored?</span>
+              <span class="faq-grid-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqGridPan6" class="faq-grid-panel" role="region" hidden>
+              <div class="faq-grid-panel-body">
+                <p>Media queries for <code>prefers-reduced-motion: reduce</code> immediately disable transitions, chevron rotations, and layout shifts for users with vestibular sensitivities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cluster 4: Performance & Edge Speed -->
+      <section class="faq-grid-card">
+        <div class="faq-grid-card-head">
+          <div class="faq-grid-icon-box faq-grid-icon-indigo" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <h4 class="faq-grid-card-title">Performance &amp; Speed</h4>
+            <p class="faq-grid-card-desc">Sub-millisecond execution, minimal memory footprint, and Lighthouse scores.</p>
+          </div>
+        </div>
+
+        <div class="faq-grid-sublist">
+          <div class="faq-grid-item">
+            <button type="button" class="faq-grid-trigger" aria-expanded="false" aria-controls="faqGridPan7">
+              <span class="faq-grid-q">What is the total gzipped footprint?</span>
+              <span class="faq-grid-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqGridPan7" class="faq-grid-panel" role="region" hidden>
+              <div class="faq-grid-panel-body">
+                <p>Each individual FAQ layout weighs under 4KB total CSS and JS combined. The entire 10-design FAQ master bundle compresses to under 12KB gzipped.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-grid-item">
+            <button type="button" class="faq-grid-trigger" aria-expanded="false" aria-controls="faqGridPan8">
+              <span class="faq-grid-q">How does static HTML impact Google Lighthouse metrics?</span>
+              <span class="faq-grid-sign" aria-hidden="true">&plus;</span>
+            </button>
+            <div id="faqGridPan8" class="faq-grid-panel" role="region" hidden>
+              <div class="faq-grid-panel-body">
+                <p>Because there is no JavaScript framework runtime parsing before initial paint, First Contentful Paint (FCP) and Largest Contentful Paint (LCP) clock at under 300ms, consistently securing 100/100 Lighthouse performance scores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</div>
