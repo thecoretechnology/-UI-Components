@@ -1,0 +1,288 @@
+/* ==========================================================================
+   05: FILTERABLE PORTFOLIO GALLERY
+   Functional category filtering (All, Architecture, Portraits, Nature)
+   Class Prefix: .gal-filter-*
+   ========================================================================== */
+
+.gal-filter-stage {
+  width: 100%;
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 48px 32px;
+  box-sizing: border-box;
+}
+
+.gal-filter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.gal-filter-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 24px;
+  margin-bottom: 36px;
+}
+
+@media (min-width: 768px) {
+  .gal-filter-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.gal-filter-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.gal-filter-title {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* Filter Tabs */
+.gal-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.gal-filter-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gal-filter-tab:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+.gal-filter-tab.is-active {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+}
+
+.gal-filter-tab:focus-visible {
+  outline: 2px solid #0f172a;
+  outline-offset: 2px;
+}
+
+.gal-filter-badge {
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.08);
+  color: inherit;
+  padding: 2px 6px;
+  border-radius: 999px;
+  line-height: 1.1;
+}
+
+.gal-filter-tab.is-active .gal-filter-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Portfolio Grid */
+.gal-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 28px;
+}
+
+@media (min-width: 640px) {
+  .gal-filter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gal-filter-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.gal-filter-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.25s ease;
+}
+
+.gal-filter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
+.gal-filter-card[hidden] {
+  display: none !important;
+}
+
+.gal-filter-media {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.gal-filter-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gal-filter-card:hover .gal-filter-img {
+  transform: scale(1.04);
+}
+
+.gal-filter-pill {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0f172a;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.gal-filter-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gal-filter-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.gal-filter-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.gal-filter-year {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.gal-filter-client {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Empty State */
+.gal-filter-empty {
+  text-align: center;
+  padding: 48px 20px;
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+}
+
+.gal-filter-empty[hidden] {
+  display: none !important;
+}
+
+.gal-filter-empty-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.gal-filter-empty-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+
+.gal-filter-empty-desc {
+  font-size: 13px;
+  color: #64748b;
+  max-width: 420px;
+  margin: 0 auto 18px;
+  line-height: 1.5;
+}
+
+.gal-filter-reset-btn {
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.gal-filter-reset-btn:hover {
+  background: #334155;
+}
+
+.gal-filter-reset-btn:focus-visible {
+  outline: 2px solid #0f172a;
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .gal-filter-card,
+  .gal-filter-img,
+  .gal-filter-tab {
+    transition: none !important;
+  }
+}

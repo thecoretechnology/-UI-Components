@@ -1,0 +1,129 @@
+<div class="gal-immersive-stage" data-gallery="full-bleed-immersive">
+  <div class="gal-immersive-container">
+    
+    <!-- Minimalist Header -->
+    <header class="gal-immersive-header">
+      <div class="gal-immersive-branding">
+        <span class="gal-immersive-kicker">CINEMATIC ARCHIVE // 21:9 PANORAMA</span>
+        <h2 class="gal-immersive-title">Earth&rsquo;s Wild Frontiers</h2>
+      </div>
+      <div class="gal-immersive-playback-wrap">
+        <button type="button" class="gal-immersive-play-btn" id="galImmersivePlayBtn" aria-label="Toggle panorama cycle">
+          <svg class="gal-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          <svg class="gal-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+          <span id="galImmersivePlayLabel">Auto-Cycle: Off</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Edge-to-Edge Cinematic Canvas -->
+    <div class="gal-immersive-viewport" id="galImmersiveViewport">
+
+      <!-- Slide 1: Aurora Fjords -->
+      <figure class="gal-immersive-slide is-active" data-index="0">
+        <img 
+          src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=1600&h=750&q=80" 
+          alt="Ethereal emerald aurora borealis rippling across starry sky above icy Norwegian fjord waters"
+          class="gal-immersive-img"
+          loading="lazy"
+          onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'750\' viewBox=\'0 0 1600 750\'><rect width=\'1600\' height=\'750\' fill=\'%23050a14\'/><text x=\'800\' y=\'375\' fill=\'%2338bdf8\' font-family=\'system-ui\' font-size=\'24\' text-anchor=\'middle\'>Frontier 01 &bull; Aurora Fjords (Tromsø)</text></svg>';"
+        >
+        <figcaption class="gal-immersive-caption">
+          <span class="gal-immersive-geo">69.6492&deg; N, 18.9553&deg; E &bull; TROMS&Oslash;</span>
+          <h3 class="gal-immersive-caption-heading">Aurora Over Kaldfjord</h3>
+          <p class="gal-immersive-caption-text">Solar geomagnetism meeting upper atmospheric nitrogen above the Arctic sea shelf.</p>
+        </figcaption>
+      </figure>
+
+      <!-- Slide 2: Mist Ridge -->
+      <figure class="gal-immersive-slide" data-index="1">
+        <img 
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&h=750&q=80" 
+          alt="Misty mountain crests rising above morning fog in the Bernese Alps"
+          class="gal-immersive-img"
+          loading="lazy"
+          onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'750\' viewBox=\'0 0 1600 750\'><rect width=\'1600\' height=\'750\' fill=\'%23050a14\'/><text x=\'800\' y=\'375\' fill=\'%2338bdf8\' font-family=\'system-ui\' font-size=\'24\' text-anchor=\'middle\'>Frontier 02 &bull; Alpine Mist Ridge</text></svg>';"
+        >
+        <figcaption class="gal-immersive-caption">
+          <span class="gal-immersive-geo">46.5369&deg; N, 8.1256&deg; E &bull; BERNESE OBERLAND</span>
+          <h3 class="gal-immersive-caption-heading">Crest Above the Sea of Cloud</h3>
+          <p class="gal-immersive-caption-text">Glacial peaks catching the first horizontal rays of dawn above dense valley inversion.</p>
+        </figcaption>
+      </figure>
+
+      <!-- Slide 3: Desert Dune -->
+      <figure class="gal-immersive-slide" data-index="2">
+        <img 
+          src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1600&h=750&q=80" 
+          alt="Sinuous golden sand dunes carved by desert winds under warm sunset horizon"
+          class="gal-immersive-img"
+          loading="lazy"
+          onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'750\' viewBox=\'0 0 1600 750\'><rect width=\'1600\' height=\'750\' fill=\'%23050a14\'/><text x=\'800\' y=\'375\' fill=\'%2338bdf8\' font-family=\'system-ui\' font-size=\'24\' text-anchor=\'middle\'>Frontier 03 &bull; Erg Chebbi Dunes</text></svg>';"
+        >
+        <figcaption class="gal-immersive-caption">
+          <span class="gal-immersive-geo">31.1492&deg; N, 3.9782&deg; W &bull; SAHARA</span>
+          <h3 class="gal-immersive-caption-heading">Erg Chebbi Wind Ridges</h3>
+          <p class="gal-immersive-caption-text">Dynamic shifting barchan dunes reaching 150 meters in height above the desert plain.</p>
+        </figcaption>
+      </figure>
+
+      <!-- Slide 4: Atlantic Coast -->
+      <figure class="gal-immersive-slide" data-index="3">
+        <img 
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&h=750&q=80" 
+          alt="Heavy Atlantic ocean surf breaking against rugged volcanic sea cliffs"
+          class="gal-immersive-img"
+          loading="lazy"
+          onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'750\' viewBox=\'0 0 1600 750\'><rect width=\'1600\' height=\'750\' fill=\'%23050a14\'/><text x=\'800\' y=\'375\' fill=\'%2338bdf8\' font-family=\'system-ui\' font-size=\'24\' text-anchor=\'middle\'>Frontier 04 &bull; Atlantic Basalt Cliffs</text></svg>';"
+        >
+        <figcaption class="gal-immersive-caption">
+          <span class="gal-immersive-geo">63.5321&deg; N, 19.5113&deg; W &bull; VIK COAST</span>
+          <h3 class="gal-immersive-caption-heading">Basalt Sea Columns</h3>
+          <p class="gal-immersive-caption-text">Black volcanic shorelines carved by uninterrupted subpolar North Atlantic storm swells.</p>
+        </figcaption>
+      </figure>
+
+      <!-- Slide 5: Redwood Canopy -->
+      <figure class="gal-immersive-slide" data-index="4">
+        <img 
+          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&h=750&q=80" 
+          alt="Towering ancient redwood forest canopy with filtered golden morning light"
+          class="gal-immersive-img"
+          loading="lazy"
+          onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'750\' viewBox=\'0 0 1600 750\'><rect width=\'1600\' height=\'750\' fill=\'%23050a14\'/><text x=\'800\' y=\'375\' fill=\'%2338bdf8\' font-family=\'system-ui\' font-size=\'24\' text-anchor=\'middle\'>Frontier 05 &bull; Redwood Primeval Canopy</text></svg>';"
+        >
+        <figcaption class="gal-immersive-caption">
+          <span class="gal-immersive-geo">41.2132&deg; N, 124.0046&deg; W &bull; PACIFIC COAST</span>
+          <h3 class="gal-immersive-caption-heading">Primeval Coast Redwood</h3>
+          <p class="gal-immersive-caption-text">Ancient biosphere sustained by coastal marine fog layer throughout the summer months.</p>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <!-- Chapter Timeline Bar -->
+    <nav class="gal-immersive-timeline" role="tablist" aria-label="Cinematic panorama chapters">
+      <button type="button" class="gal-immersive-tab is-active" data-index="0" role="tab" aria-selected="true">
+        <span class="gal-immersive-tab-num">01</span>
+        <span class="gal-immersive-tab-title">Aurora Fjords</span>
+      </button>
+      <button type="button" class="gal-immersive-tab" data-index="1" role="tab" aria-selected="false">
+        <span class="gal-immersive-tab-num">02</span>
+        <span class="gal-immersive-tab-title">Alpine Mist</span>
+      </button>
+      <button type="button" class="gal-immersive-tab" data-index="2" role="tab" aria-selected="false">
+        <span class="gal-immersive-tab-num">03</span>
+        <span class="gal-immersive-tab-title">Desert Dunes</span>
+      </button>
+      <button type="button" class="gal-immersive-tab" data-index="3" role="tab" aria-selected="false">
+        <span class="gal-immersive-tab-num">04</span>
+        <span class="gal-immersive-tab-title">Basalt Coast</span>
+      </button>
+      <button type="button" class="gal-immersive-tab" data-index="4" role="tab" aria-selected="false">
+        <span class="gal-immersive-tab-num">05</span>
+        <span class="gal-immersive-tab-title">Redwood Canopy</span>
+      </button>
+    </nav>
+
+  </div>
+</div>

@@ -1,6 +1,6 @@
 # UI Components Collection
 
-A curated library of 80 responsive navigation bars, footers, hero sections, contact forms, authentication screens, pricing sections, testimonials, and FAQ sections built with plain HTML, CSS, and vanilla JavaScript.
+A curated library of 90 responsive navigation bars, footers, hero sections, contact forms, authentication screens, pricing sections, testimonials, FAQ sections, and image galleries built with plain HTML, CSS, and vanilla JavaScript.
 
 No frameworks, build tools, or runtime dependencies. All icons, graphs, indicators, and dials are implemented purely with CSS and inline SVGs. Each component includes scoped styling and an independent JavaScript controller.
 
@@ -11,11 +11,11 @@ No frameworks, build tools, or runtime dependencies. All icons, graphs, indicato
 Open `index.html` in any modern web browser to view the interactive showcase.
 
 The showcase includes:
-- Section toggle to switch between **FAQ Sections (10)**, **Testimonials (10)**, **Pricing Sections (10)**, **Authentication (10)**, **Contact Forms (10)**, **Navigation Bars (10)**, **Footers (10)**, and **Hero Sections (10)**
+- Section toggle to switch between **Gallery Sections (10)**, **FAQ Sections (10)**, **Testimonials (10)**, **Pricing Sections (10)**, **Authentication (10)**, **Contact Forms (10)**, **Navigation Bars (10)**, **Footers (10)**, and **Hero Sections (10)**
 - Viewport switcher (Desktop 1200px, Tablet 768px, Mobile 375px)
 - Canvas background switcher (Light, White, Dark)
-- Live interactive behaviors (single/multi-open accordions, live search filtering with text highlights, categorized sidebars, dark technical consoles with copy buttons, step-by-step procedural guides, wide-format briefing ledgers, dynamic testimonial carousels, video interview modals, category directory filters, metric deep-dive ledgers, billing-period toggles, usage sliders, currency converters, feature diff filters, transparent cost calculators, token estimators, statement of work modals, custom scope intake generators, multi-step wizards, diagnostic report triage, password eye toggles, and variable font morphers)
-- Source code modal with tabs for HTML, CSS, and JS with one-click copy (100% offline & `file://` compatible, 240 embedded cache entries)
+- Live interactive behaviors (fullscreen lightboxes, before/after comparison sliders, horizontal scroll snapping, live category filtering, column masonry, multi-layer collage shuffling, single/multi-open accordions, live search filtering with text highlights, categorized sidebars, dark technical consoles with copy buttons, step-by-step procedural guides, wide-format briefing ledgers, dynamic testimonial carousels, video interview modals, category directory filters, metric deep-dive ledgers, billing-period toggles, usage sliders, currency converters, feature diff filters, transparent cost calculators, token estimators, statement of work modals, custom scope intake generators, multi-step wizards, diagnostic report triage, password eye toggles, and variable font morphers)
+- Source code modal with tabs for HTML, CSS, and JS with one-click copy (100% offline & `file://` compatible, 270 embedded cache entries)
 
 To run locally with a static server (recommended for ES module imports):
 ```bash
@@ -33,8 +33,24 @@ Then open `http://localhost:3000`.
 
 ```
 ├── .gitignore               # Ignores references/, node_modules/, temp files
-├── index.html               # Interactive showcase page for all 80 components
+├── index.html               # Interactive showcase page for all 90 components
 ├── README.md                # Project documentation
+│
+├── galleries/               # Gallery Sections (10 Distinct Client-Ready Variations)
+│   ├── galleries.css        # Master stylesheet bundle for all 10 gallery layouts
+│   ├── galleries.js         # Master script bundle for all 10 gallery layouts
+│   ├── README.md            # Gallery section catalog & design tokens
+│   │
+│   ├── 01-asymmetric-editorial/ # Art-directed 7/5 magazine column grid, dominant hero plate & camera spec drawer
+│   ├── 02-masonry-grid/         # Pure CSS columns masonry, varied aspect ratios, dark slate theme & live bookmarks
+│   ├── 03-minimal-uniform/      # Swiss precision 1:1 square grid with index numbers & density controls (2, 3, 4 cols)
+│   ├── 04-fullscreen-lightbox/  # 6-plate landscape print grid with full-featured modal lightbox viewer & keyboard nav
+│   ├── 05-filterable-portfolio/ # Live category filtering (All, Architecture, Portraits, Nature) with active counters
+│   ├── 06-horizontal-scrolling/ # Horizontal panorama track with CSS scroll-snap, dynamic progress bar & arrow controls
+│   ├── 07-full-bleed-immersive/ # Edge-to-edge 21:9 panorama with coordinate stamps, cross-fades & chapter timeline
+│   ├── 08-captions-descriptions/# Four typographically distinct caption treatments: drop-caps, ledgers, curator notes & audio
+│   ├── 09-image-comparison/     # Draggable before-and-after split slider with keyboard arrows & dual-scene switcher
+│   └── 10-creative-collage/     # 12-column grid with deliberate cell overlaps, subtle rotational tilts & layout shuffle
 │
 ├── faqs/                    # FAQ Sections (10 Distinct Client-Ready Variations)
 │   ├── faqs.css             # Master stylesheet bundle for all 10 FAQ layouts

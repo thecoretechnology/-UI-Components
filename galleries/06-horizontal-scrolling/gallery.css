@@ -1,0 +1,255 @@
+/* ==========================================================================
+   06: HORIZONTAL SCROLLING GALLERY
+   Editorial horizontal strip, snap points, custom progress bar, arrow controls
+   Class Prefix: .gal-hscroll-*
+   ========================================================================== */
+
+.gal-hscroll-stage {
+  width: 100%;
+  background: #18181b;
+  color: #f4f4f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 48px 32px;
+  box-sizing: border-box;
+}
+
+.gal-hscroll-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header & Controls */
+.gal-hscroll-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-bottom: 1px solid #27272a;
+  padding-bottom: 28px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 800px) {
+  .gal-hscroll-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.gal-hscroll-chapter {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e4d4b2;
+  margin-bottom: 8px;
+}
+
+.gal-hscroll-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #fafafa;
+  margin: 0 0 8px;
+}
+
+.gal-hscroll-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a1a1aa;
+  max-width: 500px;
+  margin: 0;
+}
+
+/* Controls Block */
+.gal-hscroll-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gal-hscroll-progress-wrap {
+  width: 120px;
+  height: 4px;
+  background: #27272a;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.gal-hscroll-progress-bar {
+  height: 100%;
+  background: #e4d4b2;
+  transition: width 0.15s ease-out;
+}
+
+.gal-hscroll-btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.gal-hscroll-nav-btn {
+  background: #27272a;
+  border: 1px solid #3f3f46;
+  color: #f4f4f5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gal-hscroll-nav-btn:hover {
+  background: #e4d4b2;
+  border-color: #e4d4b2;
+  color: #18181b;
+}
+
+.gal-hscroll-nav-btn:focus-visible {
+  outline: 2px solid #e4d4b2;
+  outline-offset: 2px;
+}
+
+/* Horizontal Track */
+.gal-hscroll-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 0 20px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.gal-hscroll-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.gal-hscroll-track:focus-visible {
+  outline: 2px dashed #e4d4b2;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* Frame Cards */
+.gal-hscroll-frame {
+  margin: 0;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gal-frame-wide {
+  width: clamp(280px, 48vw, 540px);
+}
+
+.gal-frame-panoramic {
+  width: clamp(320px, 60vw, 680px);
+}
+
+.gal-frame-standard {
+  width: clamp(260px, 38vw, 420px);
+}
+
+.gal-hscroll-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #27272a;
+  border-radius: 4px;
+}
+
+.gal-hscroll-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gal-hscroll-frame:hover .gal-hscroll-img {
+  transform: scale(1.03);
+}
+
+.gal-hscroll-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(24, 24, 27, 0.85);
+  backdrop-filter: blur(4px);
+  color: #e4d4b2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 8px;
+  border-radius: 2px;
+  border: 1px solid rgba(228, 212, 178, 0.2);
+}
+
+/* Caption */
+.gal-hscroll-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gal-hscroll-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.gal-hscroll-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fafafa;
+  margin: 0;
+}
+
+.gal-hscroll-elev {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  color: #e4d4b2;
+  background: rgba(228, 212, 178, 0.1);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.gal-hscroll-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+/* Footer */
+.gal-hscroll-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #27272a;
+  padding-top: 16px;
+  font-size: 11px;
+  color: #71717a;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .gal-hscroll-track {
+    scroll-behavior: auto !important;
+  }
+  .gal-hscroll-img,
+  .gal-hscroll-nav-btn {
+    transition: none !important;
+  }
+}

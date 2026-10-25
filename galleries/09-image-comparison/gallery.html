@@ -1,0 +1,87 @@
+<div class="gal-compare-stage" data-gallery="image-comparison">
+  <div class="gal-compare-container">
+    
+    <!-- Comparison Header -->
+    <header class="gal-compare-header">
+      <div class="gal-compare-header-info">
+        <span class="gal-compare-tag">DIAGNOSTIC COMPARATOR // DUAL-LAYER PROBE</span>
+        <h2 class="gal-compare-title">Longitudinal Visual Analysis</h2>
+        <p class="gal-compare-desc">High-precision comparative overlay demonstrating surface alteration. Drag the interactive divider or use keyboard arrows to inspect deltas.</p>
+      </div>
+
+      <!-- Scene Selector Switcher -->
+      <div class="gal-compare-scene-tabs" role="tablist" aria-label="Comparison Subjects">
+        <button type="button" class="gal-compare-scene-btn is-active" data-scene="cathedral" role="tab" aria-selected="true">
+          <span>01. Cathedral Laser Restoration</span>
+        </button>
+        <button type="button" class="gal-compare-scene-btn" data-scene="glacier" role="tab" aria-selected="false">
+          <span>02. Glacial Moraine Retreat</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Interactive Before / After Comparator Container -->
+    <div class="gal-compare-viewport" id="galCompareViewport" style="--split-pos: 50%;">
+
+      <!-- Under Layer: AFTER image -->
+      <div class="gal-compare-layer gal-layer-after">
+        <img 
+          id="galCompareImgAfter"
+          src="https://images.unsplash.com/photo-1548625361-1ac9a4216892?auto=format&fit=crop&w=1200&h=750&q=80" 
+          alt="Restored limestone cathedral facade detailing following precision conservation"
+          class="gal-compare-img"
+          loading="lazy"
+          onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1200\' height=\'750\' viewBox=\'0 0 1200 750\'><rect width=\'1200\' height=\'750\' fill=\'%231e293b\'/><text x=\'600\' y=\'375\' fill=\'%2338bdf8\' font-family=\'system-ui\' font-size=\'22\' text-anchor=\'middle\'>After: Restored State (Cleaned)</text></svg>';"
+        >
+        <div class="gal-compare-badge gal-badge-after" id="galCompareBadgeAfter">After: 2024 Laser Cleaning</div>
+      </div>
+
+      <!-- Over Layer: BEFORE image (Clipped to split percentage) -->
+      <div class="gal-compare-layer gal-layer-before" id="galCompareLayerBefore">
+        <img 
+          id="galCompareImgBefore"
+          src="https://images.unsplash.com/photo-1548625361-195973c9d7d2?auto=format&fit=crop&w=1200&h=750&q=80" 
+          alt="Weathered limestone cathedral facade with centuries of soot and pollution patina"
+          class="gal-compare-img"
+          loading="lazy"
+          onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1200\' height=\'750\' viewBox=\'0 0 1200 750\'><rect width=\'1200\' height=\'750\' fill=\'%23334155\'/><text x=\'600\' y=\'375\' fill=\'%23f1f5f9\' font-family=\'system-ui\' font-size=\'22\' text-anchor=\'middle\'>Before: Weathered State (Patina)</text></svg>';"
+        >
+        <div class="gal-compare-badge gal-badge-before" id="galCompareBadgeBefore">Before: Pre-Intervention</div>
+      </div>
+
+      <!-- Draggable Divider Line & Thumb -->
+      <div 
+        class="gal-compare-handle" 
+        id="galCompareHandle" 
+        role="slider" 
+        tabindex="0" 
+        aria-label="Before and after split position slider" 
+        aria-valuemin="0" 
+        aria-valuemax="100" 
+        aria-valuenow="50"
+      >
+        <div class="gal-compare-line"></div>
+        <div class="gal-compare-thumb">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Quick Presets & Technical Data Bar -->
+    <footer class="gal-compare-footer">
+      <div class="gal-compare-presets" role="group" aria-label="Preset split ratios">
+        <span class="gal-compare-presets-lbl">Quick Jump:</span>
+        <button type="button" class="gal-compare-preset-btn" data-pos="25">25% (Mostly After)</button>
+        <button type="button" class="gal-compare-preset-btn is-active" data-pos="50">50% (Split)</button>
+        <button type="button" class="gal-compare-preset-btn" data-pos="75">75% (Mostly Before)</button>
+      </div>
+
+      <div class="gal-compare-telemetry">
+        <span class="gal-compare-split-val" id="galCompareSplitLabel">Split Position: 50%</span>
+        <span class="gal-compare-nav-tip">Use &larr; / &rarr; keys or drag divider</span>
+      </div>
+    </footer>
+
+  </div>
+</div>

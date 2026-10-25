@@ -1,0 +1,152 @@
+<div class="gal-hscroll-stage" data-gallery="horizontal-scrolling">
+  <div class="gal-hscroll-container">
+    
+    <!-- Gallery Navigation & Header -->
+    <header class="gal-hscroll-header">
+      <div class="gal-hscroll-intro">
+        <span class="gal-hscroll-chapter">EXPEDITION MONOGRAPH // VOL. IX</span>
+        <h2 class="gal-hscroll-title">The Silk Road: Overland Transits</h2>
+        <p class="gal-hscroll-desc">A continuous visual traversal spanning high desert dunes, glacial mountain cols, ancient clay fortresses, and oasis settlements.</p>
+      </div>
+
+      <!-- Controls: Progress Bar & Scroll Buttons -->
+      <div class="gal-hscroll-controls">
+        <div class="gal-hscroll-progress-wrap">
+          <div class="gal-hscroll-progress-bar" id="galHScrollProgress" style="width: 0%;"></div>
+        </div>
+
+        <div class="gal-hscroll-btn-group">
+          <button type="button" class="gal-hscroll-nav-btn" id="galHScrollPrevBtn" aria-label="Scroll left in gallery">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button type="button" class="gal-hscroll-nav-btn" id="galHScrollNextBtn" aria-label="Scroll right in gallery">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Horizontal Scroll Track -->
+    <div 
+      class="gal-hscroll-track" 
+      id="galHScrollTrack" 
+      tabindex="0" 
+      role="region" 
+      aria-label="Horizontal image gallery strip, use left and right arrow keys to scroll"
+    >
+
+      <!-- Frame 01: Wide Dunes -->
+      <figure class="gal-hscroll-frame gal-frame-wide" data-index="01">
+        <div class="gal-hscroll-media">
+          <img 
+            src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=900&h=600&q=80" 
+            alt="Endless golden ridged sand dunes glowing under late desert afternoon light"
+            class="gal-hscroll-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'900\' height=\'600\' viewBox=\'0 0 900 600\'><rect width=\'900\' height=\'600\' fill=\'%231c1917\'/><text x=\'450\' y=\'300\' fill=\'%23d6d3d1\' font-family=\'system-ui\' font-size=\'20\' text-anchor=\'middle\'>Station 01 &bull; Taklamakan Dunes</text></svg>';"
+          >
+          <span class="gal-hscroll-tag">01 / DUNE SECTOR</span>
+        </div>
+        <figcaption class="gal-hscroll-caption">
+          <div class="gal-hscroll-head">
+            <h3 class="gal-hscroll-name">Taklamakan Dune Sea</h3>
+            <span class="gal-hscroll-elev">Elev. 1,100m</span>
+          </div>
+          <p class="gal-hscroll-text">Wind-sculpted barchan dunes stretching over 300 kilometers across the western Tarim Basin.</p>
+        </figcaption>
+      </figure>
+
+      <!-- Frame 02: High Col Ridge -->
+      <figure class="gal-hscroll-frame gal-frame-panoramic" data-index="02">
+        <div class="gal-hscroll-media">
+          <img 
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1100&h=600&q=80" 
+            alt="Sharp snow-covered mountain ridgeline piercing cloud ceiling at high altitude pass"
+            class="gal-hscroll-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1100\' height=\'600\' viewBox=\'0 0 1100 600\'><rect width=\'1100\' height=\'600\' fill=\'%231c1917\'/><text x=\'550\' y=\'300\' fill=\'%23d6d3d1\' font-family=\'system-ui\' font-size=\'20\' text-anchor=\'middle\'>Station 02 &bull; Torugart Pass</text></svg>';"
+          >
+          <span class="gal-hscroll-tag">02 / HIGH PASS</span>
+        </div>
+        <figcaption class="gal-hscroll-caption">
+          <div class="gal-hscroll-head">
+            <h3 class="gal-hscroll-name">Torugart Crest Ascent</h3>
+            <span class="gal-hscroll-elev">Elev. 3,752m</span>
+          </div>
+          <p class="gal-hscroll-text">Sub-zero transit corridor between the Tian Shan and the high Pamir mountain convergence.</p>
+        </figcaption>
+      </figure>
+
+      <!-- Frame 03: Adobe Citadel -->
+      <figure class="gal-hscroll-frame gal-frame-standard" data-index="03">
+        <div class="gal-hscroll-media">
+          <img 
+            src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=750&h=600&q=80" 
+            alt="Sun-baked mudbrick fortified outpost walls and battlements against deep blue sky"
+            class="gal-hscroll-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'750\' height=\'600\' viewBox=\'0 0 750 600\'><rect width=\'750\' height=\'600\' fill=\'%231c1917\'/><text x=\'375\' y=\'300\' fill=\'%23d6d3d1\' font-family=\'system-ui\' font-size=\'18\' text-anchor=\'middle\'>Station 03 &bull; Mudbrick Bastion</text></svg>';"
+          >
+          <span class="gal-hscroll-tag">03 / CARAVANSERAI</span>
+        </div>
+        <figcaption class="gal-hscroll-caption">
+          <div class="gal-hscroll-head">
+            <h3 class="gal-hscroll-name">Mudbrick Bastion</h3>
+            <span class="gal-hscroll-elev">Elev. 1,420m</span>
+          </div>
+          <p class="gal-hscroll-text">Rammed-earth fortification serving historical merchant caravans since the 11th century.</p>
+        </figcaption>
+      </figure>
+
+      <!-- Frame 04: Alpine Glacier Basin -->
+      <figure class="gal-hscroll-frame gal-frame-wide" data-index="04">
+        <div class="gal-hscroll-media">
+          <img 
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=950&h=600&q=80" 
+            alt="Turquoise glacial meltwater lake bordered by granite cliffs and alpine pines"
+            class="gal-hscroll-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'950\' height=\'600\' viewBox=\'0 0 950 600\'><rect width=\'950\' height=\'600\' fill=\'%231c1917\'/><text x=\'475\' y=\'300\' fill=\'%23d6d3d1\' font-family=\'system-ui\' font-size=\'20\' text-anchor=\'middle\'>Station 04 &bull; Glacial Melt Basin</text></svg>';"
+          >
+          <span class="gal-hscroll-tag">04 / OASIS BASIN</span>
+        </div>
+        <figcaption class="gal-hscroll-caption">
+          <div class="gal-hscroll-head">
+            <h3 class="gal-hscroll-name">Issyk Glacier Basin</h3>
+            <span class="gal-hscroll-elev">Elev. 1,760m</span>
+          </div>
+          <p class="gal-hscroll-text">Deep alpine freshwater reservoir fed directly by moraine runoff from the Northern ranges.</p>
+        </figcaption>
+      </figure>
+
+      <!-- Frame 05: Old Alley Market -->
+      <figure class="gal-hscroll-frame gal-frame-standard" data-index="05">
+        <div class="gal-hscroll-media">
+          <img 
+            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=750&h=600&q=80" 
+            alt="Cobblestone narrow alleyway winding past ancient stone dwellings and fabric canopies"
+            class="gal-hscroll-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'750\' height=\'600\' viewBox=\'0 0 750 600\'><rect width=\'750\' height=\'600\' fill=\'%231c1917\'/><text x=\'375\' y=\'300\' fill=\'%23d6d3d1\' font-family=\'system-ui\' font-size=\'18\' text-anchor=\'middle\'>Station 05 &bull; Old Bazaar Lane</text></svg>';"
+          >
+          <span class="gal-hscroll-tag">05 / BAZAAR TERMINAL</span>
+        </div>
+        <figcaption class="gal-hscroll-caption">
+          <div class="gal-hscroll-head">
+            <h3 class="gal-hscroll-name">Bukhara Stone Corridor</h3>
+            <span class="gal-hscroll-elev">Elev. 230m</span>
+          </div>
+          <p class="gal-hscroll-text">Ancient covered trade colonnade featuring ceramic tile vaults and vaulted air shafts.</p>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <!-- Scroll Hint Footer -->
+    <div class="gal-hscroll-footer">
+      <span class="gal-hscroll-swipe-hint">Drag or use arrow keys to explore continuous strip</span>
+      <span class="gal-hscroll-total">5 STATIONS DOCUMENTED</span>
+    </div>
+
+  </div>
+</div>

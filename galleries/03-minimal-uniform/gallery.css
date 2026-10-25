@@ -1,0 +1,226 @@
+/* ==========================================================================
+   03: MINIMAL UNIFORM GRID
+   Precise alignment, 1:1 square proportions, density controls
+   Class Prefix: .gal-uniform-*
+   ========================================================================== */
+
+.gal-uniform-stage {
+  width: 100%;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 48px 32px;
+  box-sizing: border-box;
+}
+
+.gal-uniform-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.gal-uniform-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 24px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .gal-uniform-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.gal-uniform-archive-code {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.gal-uniform-title {
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #0f172a;
+}
+
+/* Density Controls */
+.gal-uniform-density-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.gal-uniform-density-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  padding-left: 8px;
+}
+
+.gal-uniform-density-btn {
+  background: transparent;
+  border: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gal-uniform-density-btn:hover {
+  color: #0f172a;
+  background: #e2e8f0;
+}
+
+.gal-uniform-density-btn.is-active {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.gal-uniform-density-btn:focus-visible {
+  outline: 2px solid #0f172a;
+  outline-offset: 2px;
+}
+
+/* Uniform Grid System */
+.gal-uniform-grid {
+  display: grid;
+  gap: 28px;
+  transition: gap 0.3s ease;
+}
+
+/* Column Variants */
+.gal-uniform-grid.gal-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gal-uniform-grid.gal-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gal-uniform-grid.gal-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Responsive Grid Breakpoints */
+@media (max-width: 960px) {
+  .gal-uniform-grid.gal-cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .gal-uniform-grid.gal-cols-4,
+  .gal-uniform-grid.gal-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 440px) {
+  .gal-uniform-grid.gal-cols-4,
+  .gal-uniform-grid.gal-cols-3,
+  .gal-uniform-grid.gal-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Item */
+.gal-uniform-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  group: "";
+}
+
+.gal-uniform-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.gal-uniform-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gal-uniform-item:hover .gal-uniform-img {
+  transform: scale(1.05);
+}
+
+.gal-uniform-index {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 2px;
+  border: 1px solid #e2e8f0;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.gal-uniform-item:hover .gal-uniform-index {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+/* Caption */
+.gal-uniform-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.gal-uniform-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.gal-uniform-sub {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .gal-uniform-img,
+  .gal-uniform-index,
+  .gal-uniform-density-btn {
+    transition: none !important;
+  }
+}

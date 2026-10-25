@@ -1,0 +1,123 @@
+<div class="gal-collage-stage" data-gallery="creative-collage">
+  <div class="gal-collage-container">
+    
+    <!-- Collage Header -->
+    <header class="gal-collage-header">
+      <div class="gal-collage-meta">
+        <span class="gal-collage-serial">EXPERIMENT // DESSAU-26</span>
+        <h2 class="gal-collage-title">Form &bull; Material &bull; Counterpoint</h2>
+        <p class="gal-collage-manifesto">A multi-planar collage exploring planar intersections, tactile stone, cast bronze, and architectural shadow planes.</p>
+      </div>
+
+      <!-- Interactive Controls -->
+      <div class="gal-collage-controls">
+        <button type="button" class="gal-collage-shuffle-btn" id="galCollageShuffleBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+          <span id="galCollageShuffleLabel">Shuffle Collage Layout</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Multi-Layer Collage Composition Area -->
+    <div class="gal-collage-canvas" id="galCollageCanvas">
+
+      <!-- Layer 1: Monolithic Hero Anchor (Center-Left) -->
+      <figure class="gal-collage-item gal-item-anchor" data-layer="1" tabindex="0">
+        <div class="gal-collage-frame">
+          <img 
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=1000&q=80" 
+            alt="Monolithic concrete structural volume with raking diagonal light plane"
+            class="gal-collage-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'1000\' viewBox=\'0 0 800 1000\'><rect width=\'800\' height=\'1000\' fill=\'%23f5f5f4\'/><text x=\'400\' y=\'500\' fill=\'%2357534e\' font-family=\'system-ui\' font-size=\'22\' text-anchor=\'middle\'>Plate A &bull; Monolithic Volume</text></svg>';"
+          >
+          <div class="gal-collage-tag">LAYER 01 &bull; ANCHOR</div>
+        </div>
+        <figcaption class="gal-collage-caption">
+          <strong class="gal-collage-label">Concrete Formwork No. 1</strong>
+          <span class="gal-collage-sub">Nordic Institute &bull; 1974</span>
+        </figcaption>
+      </figure>
+
+      <!-- Layer 2: Tilted Fine Art Polaroid (Top Right) -->
+      <figure class="gal-collage-item gal-item-tilted" data-layer="2" tabindex="0">
+        <div class="gal-collage-frame">
+          <img 
+            src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&h=600&q=80" 
+            alt="Carved basalt stone geometric sphere on stone plinth"
+            class="gal-collage-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'600\' viewBox=\'0 0 600 600\'><rect width=\'600\' height=\'600\' fill=\'%23f5f5f4\'/><text x=\'300\' y=\'300\' fill=\'%2357534e\' font-family=\'system-ui\' font-size=\'18\' text-anchor=\'middle\'>Plate B &bull; Basalt Sphere</text></svg>';"
+          >
+          <div class="gal-collage-tag">LAYER 02 &bull; POLAROID</div>
+        </div>
+        <figcaption class="gal-collage-caption">
+          <strong class="gal-collage-label">Basalt Sphere Study</strong>
+          <span class="gal-collage-sub">Chiseled Stone &bull; -2&deg; Offset</span>
+        </figcaption>
+      </figure>
+
+      <!-- Layer 3: Wide Horizontal Overlap (Bottom Center) -->
+      <figure class="gal-collage-item gal-item-wide" data-layer="3" tabindex="0">
+        <div class="gal-collage-frame">
+          <img 
+            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=500&q=80" 
+            alt="Monochrome atrium staircase with rhythmic handrail shadows"
+            class="gal-collage-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\' viewBox=\'0 0 800 500\'><rect width=\'800\' height=\'500\' fill=\'%23f5f5f4\'/><text x=\'400\' y=\'250\' fill=\'%2357534e\' font-family=\'system-ui\' font-size=\'18\' text-anchor=\'middle\'>Plate C &bull; Atrium Rhythms</text></svg>';"
+          >
+          <div class="gal-collage-tag">LAYER 03 &bull; PANORAMA</div>
+        </div>
+        <figcaption class="gal-collage-caption">
+          <strong class="gal-collage-label">Atrium Shadow Cascade</strong>
+          <span class="gal-collage-sub">Architectural Linear Grid</span>
+        </figcaption>
+      </figure>
+
+      <!-- Layer 4: Geometric Detail Square (Bottom Left Floating) -->
+      <figure class="gal-collage-item gal-item-detail" data-layer="4" tabindex="0">
+        <div class="gal-collage-frame">
+          <img 
+            src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&h=500&q=80" 
+            alt="Radial ribbed ceramic porcelain plate reflecting soft light"
+            class="gal-collage-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'500\' height=\'500\' viewBox=\'0 0 500 500\'><rect width=\'500\' height=\'500\' fill=\'%23f5f5f4\'/><text x=\'250\' y=\'250\' fill=\'%2357534e\' font-family=\'system-ui\' font-size=\'16\' text-anchor=\'middle\'>Plate D &bull; Radial Ribs</text></svg>';"
+          >
+          <div class="gal-collage-tag">LAYER 04 &bull; DETAIL</div>
+        </div>
+        <figcaption class="gal-collage-caption">
+          <strong class="gal-collage-label">Radial Porcelain</strong>
+          <span class="gal-collage-sub">Bone Glaze Detail</span>
+        </figcaption>
+      </figure>
+
+      <!-- Layer 5: Vertical Texture Accent (Right Edge Floating) -->
+      <figure class="gal-collage-item gal-item-accent" data-layer="5" tabindex="0">
+        <div class="gal-collage-frame">
+          <img 
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=500&h=700&q=80" 
+            alt="Matte bronze cast pedestal with rich natural chemical patina"
+            class="gal-collage-img"
+            loading="lazy"
+            onerror="this.onerror=null; this.dataset.failed='true'; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'500\' height=\'700\' viewBox=\'0 0 500 700\'><rect width=\'500\' height=\'700\' fill=\'%23f5f5f4\'/><text x=\'250\' y=\'350\' fill=\'%2357534e\' font-family=\'system-ui\' font-size=\'16\' text-anchor=\'middle\'>Plate E &bull; Cast Bronze</text></svg>';"
+          >
+          <div class="gal-collage-tag">LAYER 05 &bull; ACCENT</div>
+        </div>
+        <figcaption class="gal-collage-caption">
+          <strong class="gal-collage-label">Bronze Plinth</strong>
+          <span class="gal-collage-sub">+3.5&deg; Dynamic Angle</span>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <!-- Colophon Strip -->
+    <footer class="gal-collage-footer">
+      <div class="gal-collage-colophon">FOLIO EXHIBIT NO. 10 &bull; DESSAU RECONSTRUCTION SERIES</div>
+      <div class="gal-collage-instruction">Hover or focus plates to bring to front</div>
+    </footer>
+
+  </div>
+</div>

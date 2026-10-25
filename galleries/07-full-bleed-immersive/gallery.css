@@ -1,0 +1,274 @@
+/* ==========================================================================
+   07: FULL-BLEED IMMERSIVE GALLERY
+   Cinematic 21:9 panorama showcase with chapter timeline & cross-fade transitions
+   Class Prefix: .gal-immersive-*
+   ========================================================================== */
+
+.gal-immersive-stage {
+  width: 100%;
+  background: #030712;
+  color: #f9fafb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 48px 32px;
+  box-sizing: border-box;
+}
+
+.gal-immersive-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.gal-immersive-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .gal-immersive-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.gal-immersive-kicker {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.gal-immersive-title {
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f9fafb;
+  margin: 0;
+}
+
+.gal-immersive-playback-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.gal-immersive-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111827;
+  border: 1px solid #374151;
+  color: #e5e7eb;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gal-immersive-play-btn:hover {
+  background: #1f2937;
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+.gal-immersive-play-btn.is-playing {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.gal-immersive-play-btn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+/* Viewport Canvas */
+.gal-immersive-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  background: #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 900px) {
+  .gal-immersive-viewport {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 600px) {
+  .gal-immersive-viewport {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* Individual Slides */
+.gal-immersive-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.7s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+.gal-immersive-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.gal-immersive-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Gradient Scrim & Captions */
+.gal-immersive-caption {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 32px 28px 24px;
+  background: linear-gradient(
+    to top,
+    rgba(3, 7, 18, 0.95) 0%,
+    rgba(3, 7, 18, 0.6) 60%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-sizing: border-box;
+}
+
+.gal-immersive-geo {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #38bdf8;
+}
+
+.gal-immersive-caption-heading {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.gal-immersive-caption-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0;
+}
+
+/* Chapter Timeline */
+.gal-immersive-timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+@media (min-width: 680px) {
+  .gal-immersive-timeline {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.gal-immersive-tab {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.gal-immersive-tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  transition: background 0.2s ease;
+}
+
+.gal-immersive-tab:hover {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.gal-immersive-tab.is-active {
+  background: #1e293b;
+  border-color: #38bdf8;
+}
+
+.gal-immersive-tab.is-active::before {
+  background: #38bdf8;
+}
+
+.gal-immersive-tab:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.gal-immersive-tab-num {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.gal-immersive-tab.is-active .gal-immersive-tab-num {
+  color: #38bdf8;
+}
+
+.gal-immersive-tab-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.gal-immersive-tab.is-active .gal-immersive-tab-title {
+  color: #ffffff;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .gal-immersive-slide,
+  .gal-immersive-tab,
+  .gal-immersive-tab::before {
+    transition: none !important;
+  }
+}
